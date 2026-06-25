@@ -5,126 +5,126 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function BiomesPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="生物群系" />
+      <SiteHeader currentPage="Biomes" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">生物群系</h1>
+              <h1 className="chapter-heading">Biomes</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Going Medieval 提供多种生物群系，每种地形拥有独特的气候、资源和挑战。选择适合自己游戏风格的起始位置，是殖民地成功的第一步。本指南将详解各地形的特点、优劣势和推荐策略。以下数据基于社区整理，仅供参考。
+                Going Medieval offers multiple biomes, each with unique climates, resources, and challenges. Choosing a starting location that matches your playstyle is the first step toward colony success. This guide details the characteristics, advantages, and recommended strategies for each terrain type. Data below is based on community compilation and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">温带森林</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Temperate Forest</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                温带森林是最推荐的起始地形，适合新手。四季分明但温差适中，木材资源丰富，土壤肥沃适合农耕。河流穿过提供水源，野生动物种类多样，狩猎和采集都很方便。
+                The Temperate Forest is the most recommended starting terrain, ideal for beginners. It features four distinct but moderate seasons, abundant wood resources, and fertile soil for farming. Rivers provide water, and diverse wildlife makes hunting and gathering easy.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-vermillion">优势</h4>
+                  <h4 className="font-display text-sm font-semibold text-vermillion">Pros</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>木材充足</li>
-                    <li>土壤肥沃</li>
-                    <li>水源丰富</li>
-                    <li>四季温和</li>
-                    <li>猎物多样</li>
+                    <li>Abundant wood</li>
+                    <li>Fertile soil</li>
+                    <li>Rich water sources</li>
+                    <li>Moderate seasons</li>
+                    <li>Diverse game</li>
                   </ul>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-gold">劣势</h4>
+                  <h4 className="font-display text-sm font-semibold text-gold">Cons</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>无特殊优势</li>
-                    <li>矿石一般</li>
-                    <li>突袭频率中等</li>
+                    <li>No special advantages</li>
+                    <li>Average ore</li>
+                    <li>Medium raid frequency</li>
                   </ul>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">山地</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Mountain</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                山地地形拥有丰富的矿石资源，是发展冶金工业的理想选择。山体内部可以挖掘大型地下基地，天然防御力极强。但地表平坦面积有限，农耕需要精心规划。冬季温度更低，取暖需求更大。
+                Mountain terrain boasts rich ore deposits, making it ideal for developing a metal industry. You can excavate large underground bases inside the mountain with superior natural defense. However, flat surface area is limited, requiring careful farming planning. Winter temperatures are even colder, demanding more heating.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-vermillion">优势</h4>
+                  <h4 className="font-display text-sm font-semibold text-vermillion">Pros</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>矿石丰富</li>
-                    <li>天然防御</li>
-                    <li>地下空间大</li>
-                    <li>地下恒温储藏</li>
+                    <li>Rich ores</li>
+                    <li>Natural defense</li>
+                    <li>Large underground space</li>
+                    <li>Constant-temp underground storage</li>
                   </ul>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-gold">劣势</h4>
+                  <h4 className="font-display text-sm font-semibold text-gold">Cons</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>农耕面积小</li>
-                    <li>冬季更冷</li>
-                    <li>木材较少</li>
-                    <li>建造受限</li>
+                    <li>Small farming area</li>
+                    <li>Colder winters</li>
+                    <li>Less wood</li>
+                    <li>Building restricted</li>
                   </ul>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">草原</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Grasslands</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                草原地势平坦开阔，拥有大面积肥沃土壤，是农耕效率最高的地形。但缺乏天然屏障，防御完全依赖人工城墙。木材和矿石资源较少，需要通过贸易补充。适合擅长防守的玩家。
+                Grasslands are flat and open with large areas of the most fertile soil — the most efficient terrain for farming. However, they lack natural barriers, so defense relies entirely on constructed walls. Wood and ore resources are scarcer, requiring trade to supplement. Best suited for players who excel at defense.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-vermillion">优势</h4>
+                  <h4 className="font-display text-sm font-semibold text-vermillion">Pros</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>农耕面积大</li>
-                    <li>土壤最肥沃</li>
-                    <li>建造不受限</li>
-                    <li>视野开阔</li>
+                    <li>Large farming area</li>
+                    <li>Richest soil</li>
+                    <li>Unrestricted building</li>
+                    <li>Wide visibility</li>
                   </ul>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-sm font-semibold text-gold">劣势</h4>
+                  <h4 className="font-display text-sm font-semibold text-gold">Cons</h4>
                   <ul className="font-serif text-xs text-ink-light mt-2 space-y-1">
-                    <li>无天然防御</li>
-                    <li>木材稀缺</li>
-                    <li>矿石少</li>
-                    <li>需要大量城墙</li>
+                    <li>No natural defense</li>
+                    <li>Scarce wood</li>
+                    <li>Few ores</li>
+                    <li>Needs extensive walls</li>
                   </ul>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">选址建议</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Site Selection Tips</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                新手玩家强烈推荐温带森林——资源均衡、难度适中。进阶玩家可以尝试山地，利用地下空间打造坚固基地。草原适合喜欢挑战防御的玩家，需要快速建立城墙。
+                Beginners are strongly recommended to start with Temperate Forest — balanced resources and moderate difficulty. Advanced players can try Mountain terrain, leveraging underground spaces for a fortified base. Grasslands suit players who enjoy defense challenges and need to quickly establish walls.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                无论选择哪种地形，选址时注意三点：1) 靠近水源（河流或湖泊）；2) 地势略高（避免洪水）；3) 附近有树木和岩石（基础建材）。在地图边缘选择位置可以减少被攻击的方向。
+                Regardless of terrain, pay attention to three factors when choosing a site: 1) Near a water source (river or lake); 2) Slightly elevated (avoid flooding); 3) Nearby trees and rocks (basic building materials). Choosing a location near the map edge reduces the number of attack directions.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>哪个地形最适合新手？</summary>
-                  <p>温带森林是最佳选择。资源均衡、四季温差不大、有天然屏障（树木），适合学习游戏机制。等熟悉后再挑战其他地形。</p>
+                  <summary>Which terrain is best for beginners?</summary>
+                  <p>Temperate Forest is the best choice. Balanced resources, moderate seasonal variations, and natural barriers (trees) make it ideal for learning the game mechanics. Try other terrains once you're comfortable.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>山地地形怎么建农场？</summary>
-                  <p>在山脚下的平坦区域开辟农田，或者在山地阶梯式平台上种植。如果平地实在不够，可以优先种植高价值作物（啤酒花、草药），低价值作物（卷心菜）通过贸易获取。</p>
+                  <summary>How do I build a farm on Mountain terrain?</summary>
+                  <p>Create farmland on flat areas at the mountain's base, or plant on terraced platforms along the slope. If flat land is truly insufficient, prioritize high-value crops (hops, herbs) and trade for low-value crops (cabbage).</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>可以中途换地形吗？</summary>
-                  <p>不可以。起始地形在整个游戏过程中固定。但可以在同一张地图上探索不同区域，比如从森林迁居到附近的山地。建议在选址时慎重考虑。</p>
+                  <summary>Can I change terrain mid-game?</summary>
+                  <p>No. The starting terrain is fixed for the entire playthrough. However, you can explore different areas within the same map, such as relocating from the forest to a nearby mountain. Choose your starting location carefully.</p>
                 </details>
               </div>
             </section>
@@ -132,24 +132,24 @@ export default function BiomesPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">地形对比</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Terrain Comparison</h3>
               <table className="parchment-table text-sm">
                 <thead>
-                  <tr><th>地形</th><th>难度</th><th>推荐</th></tr>
+                  <tr><th>Terrain</th><th>Difficulty</th><th>Recommended</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>温带森林</td><td>★☆☆</td><td>新手</td></tr>
-                  <tr><td>山地</td><td>★★☆</td><td>进阶</td></tr>
-                  <tr><td>草原</td><td>★★★</td><td>高手</td></tr>
+                  <tr><td>Temperate Forest</td><td>&#9733;&#9734;&#9734;</td><td>Beginners</td></tr>
+                  <tr><td>Mountain</td><td>&#9733;&#9733;&#9734;</td><td>Intermediate</td></tr>
+                  <tr><td>Grasslands</td><td>&#9733;&#9733;&#9733;</td><td>Experts</td></tr>
                 </tbody>
               </table>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">选址三要素</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Site Selection Checklist</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>1. 靠近水源</li>
-                <li>2. 地势略高</li>
-                <li>3. 附近有树和石</li>
+                <li>1. Near a water source</li>
+                <li>2. Slightly elevated terrain</li>
+                <li>3. Nearby trees and rocks</li>
               </ul>
             </div>
           </aside>

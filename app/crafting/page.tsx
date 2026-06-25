@@ -5,107 +5,107 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function CraftingPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="制作" />
+      <SiteHeader currentPage="Crafting" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">制作系统</h1>
+              <h1 className="chapter-heading">Crafting System</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                制作系统是 Going Medieval 中将原始资源转化为有用物品的核心机制。从简单的木弓到精良的铁甲，所有装备和工具都需要通过工作台制作。本指南将详解各类工作台、制作配方和材料获取方式，帮助你建立高效的生产链。以下数据基于社区整理，仅供参考。
+                The crafting system is the core mechanic in Going Medieval for converting raw resources into useful items. From simple wooden bows to fine iron armor, all equipment and tools must be produced at workbenches. This guide details every workbench type, crafting recipe, and material source to help you build an efficient production chain. Data below is based on community compilation and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">工作台类型</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Workbench Types</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                不同物品需要在不同工作台制作。初期只需木工台和灶台，随着研究推进逐步解锁更多工作台。建议将同类工作台集中布置，形成作坊区域，减少定居者搬运材料的时间。
+                Different items require different workbenches. Early-game you'll only need the carpentry table and stove; as research progresses, more workbenches become available. It's recommended to cluster similar workbenches together into workshop zones to reduce settler hauling time.
               </p>
               <table className="parchment-table">
                 <thead>
                   <tr>
-                    <th>工作台</th>
-                    <th>解锁条件</th>
-                    <th>制作类别</th>
+                    <th>Workbench</th>
+                    <th>Unlock Condition</th>
+                    <th>Crafting Category</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>木工台</td><td>初始</td><td>木制武器、工具、家具</td></tr>
-                  <tr><td>灶台</td><td>初始</td><td>食物加工、烹饪</td></tr>
-                  <tr><td>石匠台</td><td>建筑研究</td><td>石制建材、磨盘</td></tr>
-                  <tr><td>铁匠台</td><td>制作研究</td><td>铁制武器、工具、护甲</td></tr>
-                  <tr><td>纺织台</td><td>制作研究</td><td>布料、衣物</td></tr>
-                  <tr><td>酿酒桶</td><td>农业研究</td><td>啤酒酿造</td></tr>
-                  <tr><td>制药台</td><td>医疗研究</td><td>药物制作</td></tr>
+                  <tr><td>Carpentry Table</td><td>Starting</td><td>Wooden weapons, tools, furniture</td></tr>
+                  <tr><td>Stove</td><td>Starting</td><td>Food processing, cooking</td></tr>
+                  <tr><td>Stonemason Table</td><td>Construction research</td><td>Stone materials, millstone</td></tr>
+                  <tr><td>Blacksmith Table</td><td>Crafting research</td><td>Iron weapons, tools, armor</td></tr>
+                  <tr><td>Loom</td><td>Crafting research</td><td>Cloth, clothing</td></tr>
+                  <tr><td>Brewing Barrel</td><td>Agriculture research</td><td>Beer brewing</td></tr>
+                  <tr><td>Apothecary Table</td><td>Medical research</td><td>Medicine crafting</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区整理</p>
+              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">关键制作配方</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Key Crafting Recipes</h2>
               <div className="space-y-4">
                 <div className="journal-card p-5">
-                  <h4 className="font-display text-base font-semibold text-ink mb-2">武器类</h4>
+                  <h4 className="font-display text-base font-semibold text-ink mb-2">Weapons</h4>
                   <div className="space-y-2 font-serif text-sm text-ink-light">
-                    <div className="flex justify-between border-b border-divider pb-1"><span>弓</span><span className="text-ink-muted">木材×3 绳索×1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>箭矢×10</span><span className="text-ink-muted">木材×1 石头×1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>木矛</span><span className="text-ink-muted">木材×3</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>铁剑</span><span className="text-ink-muted">铁锭×2 皮革×1</span></div>
-                    <div className="flex justify-between"><span>十字弩</span><span className="text-ink-muted">木材×2 铁锭×2 绳索×1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Bow</span><span className="text-ink-muted">Wood x3, Rope x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Arrows x10</span><span className="text-ink-muted">Wood x1, Stone x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Wooden Spear</span><span className="text-ink-muted">Wood x3</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Iron Sword</span><span className="text-ink-muted">Iron Ingot x2, Leather x1</span></div>
+                    <div className="flex justify-between"><span>Crossbow</span><span className="text-ink-muted">Wood x2, Iron Ingot x2, Rope x1</span></div>
                   </div>
                 </div>
                 <div className="journal-card p-5">
-                  <h4 className="font-display text-base font-semibold text-ink mb-2">防具类</h4>
+                  <h4 className="font-display text-base font-semibold text-ink mb-2">Armor</h4>
                   <div className="space-y-2 font-serif text-sm text-ink-light">
-                    <div className="flex justify-between border-b border-divider pb-1"><span>皮甲</span><span className="text-ink-muted">皮革×3 绳索×1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>铁甲</span><span className="text-ink-muted">铁锭×4 皮革×2</span></div>
-                    <div className="flex justify-between"><span>皮帽</span><span className="text-ink-muted">皮革×2</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Leather Armor</span><span className="text-ink-muted">Leather x3, Rope x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Iron Armor</span><span className="text-ink-muted">Iron Ingot x4, Leather x2</span></div>
+                    <div className="flex justify-between"><span>Leather Cap</span><span className="text-ink-muted">Leather x2</span></div>
                   </div>
                 </div>
                 <div className="journal-card p-5">
-                  <h4 className="font-display text-base font-semibold text-ink mb-2">食物类</h4>
+                  <h4 className="font-display text-base font-semibold text-ink mb-2">Food</h4>
                   <div className="space-y-2 font-serif text-sm text-ink-light">
-                    <div className="flex justify-between border-b border-divider pb-1"><span>面包</span><span className="text-ink-muted">面粉×1 水×1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>炖菜</span><span className="text-ink-muted">肉×1 蔬菜×1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>啤酒</span><span className="text-ink-muted">啤酒花×2 水×1</span></div>
-                    <div className="flex justify-between"><span>熏肉</span><span className="text-ink-muted">生肉×1 木材×1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Bread</span><span className="text-ink-muted">Flour x1, Water x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Stew</span><span className="text-ink-muted">Meat x1, Vegetable x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Beer</span><span className="text-ink-muted">Hops x2, Water x1</span></div>
+                    <div className="flex justify-between"><span>Smoked Meat</span><span className="text-ink-muted">Raw Meat x1, Wood x1</span></div>
                   </div>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">材料获取</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Material Gathering</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                制作的基础是材料。木材通过砍伐树木获得，是最基础的建材。石头通过开采岩石获得，石灰岩是最佳建筑石材。铁矿石需要在地下深层开采，经过熔炼成为铁锭。皮革通过宰杀动物后鞣制获得，绳索可以用亚麻纤维制作。
+                Materials are the foundation of crafting. Wood is gathered by chopping trees — the most basic building material. Stone comes from mining rock; limestone is the best building stone. Iron ore must be mined from deep underground and smelted into iron ingots. Leather comes from tanning animal hides, and rope can be made from flax fibers.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">生产链提示：</strong>
-                  铁器制作需要完整生产链：采矿→熔炼→铁锭→锻造。建议在铁矿附近建造熔炉，减少运输时间。亚麻→纤维→布料/绳索同样需要多步加工，提前种植亚麻确保原料供应。
+                  <strong className="text-vermillion">Production Chain Tip:</strong>
+                  Iron crafting requires a full production chain: Mining &rarr; Smelting &rarr; Iron Ingots &rarr; Forging. Build your smelter near iron deposits to reduce transport time. Flax &rarr; Fiber &rarr; Cloth/Rope also requires multi-step processing — plant flax early to ensure a steady supply.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>铁锭怎么获得？</summary>
-                  <p>需要先在地下开采铁矿石，然后在熔炉中用木材或木炭作为燃料熔炼。1 个铁矿石可炼出 1 个铁锭。铁矿通常分布在地下 3 层以下，呈灰色斑点状。</p>
+                  <summary>How do I get iron ingots?</summary>
+                  <p>First mine iron ore underground, then smelt it in a furnace using wood or charcoal as fuel. 1 iron ore produces 1 iron ingot. Iron is typically found 3+ levels underground, appearing as gray speckled patches.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>定居者不制作物品怎么办？</summary>
-                  <p>检查三个方面：1) 工作台是否被占用；2) 制作材料是否齐全且在储藏区可取；3) 定居者的工作优先级中是否开启了对应制作任务。定居者会按优先级顺序执行任务。</p>
+                  <summary>Why aren't settlers crafting items?</summary>
+                  <p>Check three things: 1) Is the workbench occupied? 2) Are all crafting materials available and accessible in the stockpile? 3) Is the corresponding crafting task enabled in the settler's work priorities? Settlers execute tasks in priority order.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>制作品质有区别吗？</summary>
-                  <p>有。定居者的制作技能越高，产出物品的品质越好。高品质武器伤害更高，高品质防具耐久更长。建议将重要装备交给制作技能最高的定居者制作。</p>
+                  <summary>Does crafted item quality matter?</summary>
+                  <p>Yes. The higher the settler's crafting skill, the better the resulting item quality. Higher-quality weapons deal more damage; higher-quality armor lasts longer. Assign important gear crafting to your most skilled crafters.</p>
                 </details>
               </div>
             </section>
@@ -113,23 +113,23 @@ export default function CraftingPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">材料速查</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Material Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">木材</h4><p className="font-serif text-xs text-ink-muted mt-1">砍伐树木 | 基础建材</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">石灰岩</h4><p className="font-serif text-xs text-ink-muted mt-1">开采岩石 | 高级建材</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">铁锭</h4><p className="font-serif text-xs text-ink-muted mt-1">铁矿石→熔炼 | 武器防具</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">皮革</h4><p className="font-serif text-xs text-ink-muted mt-1">动物→鞣制 | 防具材料</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">绳索</h4><p className="font-serif text-xs text-ink-muted mt-1">亚麻纤维×2 | 武器材料</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Wood</h4><p className="font-serif text-xs text-ink-muted mt-1">Chop trees | Basic building material</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Limestone</h4><p className="font-serif text-xs text-ink-muted mt-1">Mine rock | Advanced building material</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Iron Ingot</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron ore &rarr; Smelt | Weapons & armor</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Leather</h4><p className="font-serif text-xs text-ink-muted mt-1">Animals &rarr; Tan | Armor material</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Rope</h4><p className="font-serif text-xs text-ink-muted mt-1">Flax fiber x2 | Weapon material</p></div>
               </div>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">作坊布局建议</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Workshop Layout Tips</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>• 木工台靠近储木区</li>
-                <li>• 灶台靠近厨房和粮仓</li>
-                <li>• 铁匠台靠近熔炉</li>
-                <li>• 纺织台靠近亚麻田</li>
-                <li>• 各台留2格通行空间</li>
+                <li>&bull; Carpentry table near wood stockpile</li>
+                <li>&bull; Stove near kitchen and granary</li>
+                <li>&bull; Blacksmith table near furnace</li>
+                <li>&bull; Loom near flax fields</li>
+                <li>&bull; Leave 2 tiles of walkway between benches</li>
               </ul>
             </div>
           </aside>

@@ -35,7 +35,7 @@ const navLinks = [
   { label: "Settlers", href: "/settlers" },
   { label: "Farming", href: "/farming" },
   { label: "Defense", href: "/defense" },
-  { label: "Beginner Guide", href: "/beginners-guide" },
+  { label: "Beginner Guide", href: "/beginners" },
   { label: "Tips", href: "/tips" },
   { label: "News", href: "/news" },
 ];

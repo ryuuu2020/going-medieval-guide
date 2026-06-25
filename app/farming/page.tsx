@@ -5,109 +5,109 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function FarmingPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="农耕" />
+      <SiteHeader currentPage="Farming" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">农耕系统详解</h1>
+              <h1 className="chapter-heading">Farming System In-Depth</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                农耕是 Going Medieval 中最稳定的食物来源。从播种到收获，你需要合理规划作物种类、种植区域和储藏方式。在严酷的冬季来临之前，充足的粮食储备是殖民地存续的根本保障。本指南将全面解析作物类型、季节规律、灌溉系统和食物储藏策略。以下数据基于社区测试，仅供参考。
+                Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">作物类型与特性</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Crop Types & Characteristics</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Going Medieval 提供多种作物，每种作物的生长周期、产量和用途各不相同。选择适合当前季节和地形的作物，是高效农耕的关键。
+                Going Medieval offers multiple crop types, each with different growth cycles, yields, and uses. Choosing the right crops for the current season and terrain is key to efficient farming.
               </p>
               <table className="parchment-table">
                 <thead>
                   <tr>
-                    <th>作物</th>
-                    <th>生长周期</th>
-                    <th>产量</th>
-                    <th>用途</th>
-                    <th>最佳季节</th>
+                    <th>Crop</th>
+                    <th>Growth Cycle</th>
+                    <th>Yield</th>
+                    <th>Use</th>
+                    <th>Best Season</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>卷心菜</td><td>6天</td><td>高</td><td>直接食用</td><td>春夏</td></tr>
-                  <tr><td>小麦</td><td>10天</td><td>中</td><td>面粉→面包</td><td>春夏</td></tr>
-                  <tr><td>胡萝卜</td><td>5天</td><td>中</td><td>直接食用</td><td>春夏秋</td></tr>
-                  <tr><td>啤酒花</td><td>8天</td><td>低</td><td>酿造啤酒</td><td>夏秋</td></tr>
-                  <tr><td>亚麻</td><td>9天</td><td>低</td><td>纺织布料</td><td>春夏</td></tr>
-                  <tr><td>草药</td><td>7天</td><td>低</td><td>制作药物</td><td>夏秋</td></tr>
+                  <tr><td>Cabbage</td><td>6 days</td><td>High</td><td>Eat raw</td><td>Spring-Summer</td></tr>
+                  <tr><td>Wheat</td><td>10 days</td><td>Medium</td><td>Flour &rarr; Bread</td><td>Spring-Summer</td></tr>
+                  <tr><td>Carrot</td><td>5 days</td><td>Medium</td><td>Eat raw</td><td>Spring-Autumn</td></tr>
+                  <tr><td>Hops</td><td>8 days</td><td>Low</td><td>Brewing beer</td><td>Summer-Autumn</td></tr>
+                  <tr><td>Flax</td><td>9 days</td><td>Low</td><td>Weaving cloth</td><td>Spring-Summer</td></tr>
+                  <tr><td>Herbs</td><td>7 days</td><td>Low</td><td>Making medicine</td><td>Summer-Autumn</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区测试估算</p>
+              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">季节与种植规划</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Seasons & Planting Schedule</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Going Medieval 的季节系统直接影响农耕效率。春夏两季是主要种植期，秋季可以种植耐寒作物，冬季所有作物停止生长。合理的种植规划需要确保在冬季来临前收获足够粮食。
+                Going Medieval's season system directly impacts farming efficiency. Spring and summer are the main growing seasons, autumn can support cold-tolerant crops, and winter halts all plant growth. Smart planting schedules must ensure enough food is harvested before winter hits.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                推荐策略：春季同时种植卷心菜和小麦——卷心菜生长快可提供早期食物，小麦在夏季收获后加工成面包作为冬季储备。夏季种植啤酒花和草药，秋季种植最后一茬胡萝卜。每次收获后立即补种，最大化土地利用效率。冬季到来前，确保储藏区有至少 200 单位食物。
+                Recommended strategy: In spring, plant both cabbage and wheat simultaneously — cabbage grows fast for early food, while wheat harvested in summer gets processed into bread for winter reserves. In summer, plant hops and herbs. In autumn, plant a final round of carrots. Replant immediately after each harvest to maximize land use. Before winter, ensure your stockpile holds at least 200 units of food.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">⚠ 冬季警告：</strong>
-                  冬季作物完全停止生长，大雪覆盖后无法种植也无法狩猎。如果食物不足，定居者会挨饿甚至死亡。务必在秋季最后一个月完成所有收割。
+                  <strong className="text-vermillion">&#9888; Winter Warning:</strong>
+                  All crops stop growing in winter. Once snow covers the ground, neither planting nor hunting is possible. If food runs out, settlers will starve or die. Make sure to complete all harvesting by the final month of autumn.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">灌溉与土壤</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Irrigation & Soil</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                农田需要靠近水源才能高效运作。定居者会自动从最近的水源取水灌溉作物。在农田旁挖掘水渠可以提升灌溉效率，但最简单的方式是将农田建在河流或湖泊附近。
+                Farmland needs to be near a water source for efficient operation. Settlers will automatically fetch water from the nearest source to irrigate crops. Digging irrigation channels near fields improves efficiency, but the simplest approach is building fields near rivers or lakes.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                不同土壤类型影响作物生长速度：肥沃土壤（深褐色）生长速度最快，普通土壤次之，沙土最慢。选择地块时优先使用肥沃土壤。每个农田区域建议不超过 10×10 格，方便管理且不会因过大导致单一定居者忙不过来。
+                Different soil types affect growth speed: fertile soil (dark brown) grows fastest, normal soil is average, sandy soil is slowest. Prioritize fertile soil when choosing field locations. Each field zone should not exceed 10x10 tiles — it's easier to manage and prevents a single settler from being overwhelmed.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">食物储藏与防腐</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Food Storage & Preservation</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                食物会随时间腐烂，储藏方式直接影响保鲜期。地下储藏区温度低且恒定，是保存食物的最佳选择。将储藏区建在山体内部或地下 2 层以下，食物腐烂速度可降低 70% 以上。
+                Food spoils over time, and how you store it directly impacts shelf life. Underground stockpiles stay cool and constant — the best choice for food storage. Building stockpiles inside mountains or 2+ levels below ground can reduce spoilage rate by over 70%.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">地窖储藏</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">在地下 2 层以下建造储藏区，搭配木架增加容量。温度常年保持在 5-10°C，食物保鲜期最长。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Cellar Storage</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Build stockpiles 2+ levels underground, paired with wooden shelves to increase capacity. Temperature stays 5-10&deg;C year-round, maximizing food preservation.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">加工保存</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">将小麦加工成面粉再烤制成面包，将卷心菜腌制成酸菜，都能大幅延长保质期。加工食品的腐烂速度仅为生鲜的 1/3。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Processed Preservation</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Processing wheat into flour then bread, or pickling cabbage, dramatically extends shelf life. Processed food spoils at only 1/3 the rate of raw food.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">烟熏风干</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">猎获的肉类可以通过烟熏处理延长保质期。建造烟熏房（需要研究解锁），将生肉加工为熏肉，保质期可从 3 天延长至 15 天。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Smoking & Drying</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Hunted meat can be smoked to extend shelf life. Build a smokehouse (requires research unlock), and process raw meat into smoked meat — shelf life extends from 3 days to 15 days.</p>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>农田应该建多大合适？</summary>
-                  <p>每个农田区域建议 8×8 到 10×10 格。3-4 个这样的农田足以供养 6-8 名定居者。农田过大反而会导致收割不及时，作物在田间腐烂。</p>
+                  <summary>How big should my farmland be?</summary>
+                  <p>Each field zone should be about 8x8 to 10x10 tiles. 3-4 fields of this size can feed 6-8 settlers. Fields that are too large lead to delayed harvesting, causing crops to rot in the field.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>冬天没有食物怎么办？</summary>
-                  <p>如果冬季食物不足，可以尝试：1) 派定居者到地下洞穴狩猎蝙蝠等生物；2) 与路过的商人交易购买食物；3) 宰杀多余的家畜。但最好的办法是提前储备。</p>
+                  <summary>What if I run out of food in winter?</summary>
+                  <p>If winter food runs short, try: 1) Send settlers to underground caves to hunt bats and similar creatures; 2) Trade with passing merchants for food; 3) Slaughter excess livestock. But the best solution is always advance stockpiling.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>啤酒有什么用，值得种吗？</summary>
-                  <p>啤酒是提升定居者心情的重要物品。心情低于 30 的定居者可能引发负面事件，定期供应啤酒能有效维持士气。建议在食物充足后开始种植啤酒花。</p>
+                  <summary>What's beer used for — is it worth growing hops?</summary>
+                  <p>Beer is an important settler mood booster. Settlers with mood below 30 can trigger negative events. A regular beer supply effectively maintains morale. Plant hops once you have sufficient food reserves.</p>
                 </details>
               </div>
             </section>
@@ -115,21 +115,21 @@ export default function FarmingPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">作物速查</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Crop Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">卷心菜</h4><p className="font-serif text-xs text-ink-muted mt-1">6天 | 春夏 | 生食</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">小麦</h4><p className="font-serif text-xs text-ink-muted mt-1">10天 | 春夏 | 面粉→面包</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">胡萝卜</h4><p className="font-serif text-xs text-ink-muted mt-1">5天 | 春夏秋 | 生食</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">啤酒花</h4><p className="font-serif text-xs text-ink-muted mt-1">8天 | 夏秋 | 酿酒</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">6 days | Spring-Summer | Eat raw</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Wheat</h4><p className="font-serif text-xs text-ink-muted mt-1">10 days | Spring-Summer | Flour &rarr; Bread</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Carrot</h4><p className="font-serif text-xs text-ink-muted mt-1">5 days | Spring-Autumn | Eat raw</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Hops</h4><p className="font-serif text-xs text-ink-muted mt-1">8 days | Summer-Autumn | Brewing</p></div>
               </div>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">年度种植日历</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Annual Planting Calendar</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div><span className="field-tag vermillion text-[10px]">春</span> 卷心菜 + 小麦</div>
-                <div><span className="field-tag gold text-[10px]">夏</span> 收割小麦，种啤酒花+草药</div>
-                <div><span className="field-tag ink text-[10px]">秋</span> 最后茬胡萝卜，全部收割</div>
-                <div><span className="field-tag ink text-[10px]">冬</span> 无种植，消耗储备</div>
+                <div><span className="field-tag vermillion text-[10px]">Spring</span> Cabbage + Wheat</div>
+                <div><span className="field-tag gold text-[10px]">Summer</span> Harvest wheat, plant hops + herbs</div>
+                <div><span className="field-tag ink text-[10px]">Autumn</span> Final carrots, harvest everything</div>
+                <div><span className="field-tag ink text-[10px]">Winter</span> No planting, consume reserves</div>
               </div>
             </div>
           </aside>

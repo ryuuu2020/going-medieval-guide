@@ -5,24 +5,24 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function BeginnersPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="攻略" />
+      <SiteHeader currentPage="Guides" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">新手入门教程</h1>
+              <h1 className="chapter-heading">Beginner's Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                欢迎来到 Going Medieval！这是一款中世纪殖民地模拟游戏，你将带领一群定居者在荒野中建立定居点。本教程将从零开始，手把手教你度过游戏前 10 天——最关键的开局阶段。按照本指南操作，你将拥有一个功能齐全的初始殖民地。以下数据基于社区经验，仅供参考。
+                Welcome to Going Medieval! This is a medieval colony simulation game where you lead a group of settlers building a settlement in the wilderness. This tutorial will take you from zero and walk you through the first 10 days — the most critical opening phase. Following this guide, you'll have a fully functional starting colony. Data below is based on community experience and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">第 1 天：选址与扎营</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 1: Site Selection & Camp</h2>
               <div className="flex gap-5 items-start mb-4">
                 <span className="step-number">1</span>
                 <div>
                   <p className="font-serif text-sm text-ink-light leading-relaxed">
-                    游戏开始后，首先观察地图。寻找靠近河流、地势较高、附近有树木和岩石的位置。按 Z 键查看地形高度，选择山丘侧面是理想选择——既可以在地面建造，又可以挖掘地下空间。
+                    When the game starts, first survey the map. Look for a spot near a river, on elevated ground, with trees and rocks nearby. Press Z to view terrain height — a hillside is ideal, allowing both above-ground building and underground excavation.
                   </p>
                 </div>
               </div>
@@ -30,7 +30,7 @@ export default function BeginnersPage() {
                 <span className="step-number">2</span>
                 <div>
                   <p className="font-serif text-sm text-ink-light leading-relaxed">
-                    选定位置后，立即下达砍树命令（选中树木按拆除）。同时安排定居者收集地面的树枝和石头。第一批木材用于建造临时住所——4×4 格的木墙围合，加一扇木门，内部放 3 张床。
+                    Once a site is chosen, immediately order tree chopping (select trees and designate for removal). Simultaneously have settlers gather sticks and stones from the ground. The first batch of wood goes toward a temporary shelter — a 4x4 tile wood-walled enclosure with one wooden door and 3 beds inside.
                   </p>
                 </div>
               </div>
@@ -38,74 +38,74 @@ export default function BeginnersPage() {
                 <span className="step-number">3</span>
                 <div>
                   <p className="font-serif text-sm text-ink-light leading-relaxed">
-                    在住所旁边划定储藏区（划定区域并设为储藏），将初始物资搬入。第一天结束时，确保所有定居者有床睡觉，储藏区已建立。
+                    Designate a stockpile zone next to the shelter (create a zone and set it to stockpile) and move initial supplies inside. By the end of Day 1, make sure every settler has a bed to sleep in and the stockpile is established.
                   </p>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">第 2-3 天：农耕与水源</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 2-3: Farming & Water</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                第二天优先开垦农田。在住所附近、靠近水源的位置划定 8×8 格的种植区，选择卷心菜（生长快，6 天可收）。同时划定第二块 6×6 格的小麦田。确保农田有水灌溉——靠近河流即可自动灌溉。
+                Day 2 prioritizes farmland. Near your shelter and close to water, designate an 8x8 planting zone and choose cabbage (fast growing, 6 days to harvest). Also designate a second 6x6 wheat field. Ensure the fields have water for irrigation — being near a river provides automatic irrigation.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                建造灶台（需要石头），开始加工食物。初期可以将卷心菜直接食用，但尽快研究出面包制作后改吃面包——保质期更长且心情加成更高。安排一名定居者专职烹饪。
+                Build a stove (requires stone) and begin processing food. Early on, you can eat cabbage raw, but research bread-making as soon as possible — bread has a longer shelf life and better mood bonuses. Assign one settler as the dedicated cook.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">第 4-5 天：研究台与防御</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 4-5: Research Table & Defense</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                第四天建造研究台（需要木材和石头）。指派智力最高的定居者开始研究，优先解锁农业技术（泥砖墙）和建筑技术（石墙）。研究是长期投资，越早开始越好。
+                On Day 4, build a research table (requires wood and stone). Assign your highest-Intelligence settler to begin researching — prioritize unlocking Agriculture tech (clay brick walls) and Construction tech (stone walls). Research is a long-term investment; the earlier you start, the better.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                同时开始建造外围防御。用木墙围合定居点核心区域（住所+农田+储藏区），至少 2 格高。在城门前方 2 格处布置木刺陷阱。制作 2-3 把弓和足够箭矢，安排战斗技能最高的定居者练习射击。
+                Simultaneously, begin building perimeter defenses. Enclose the core colony area (shelter + fields + stockpile) with wooden walls, at least 2 levels high. Place wooden spike traps 2 tiles in front of the gate. Craft 2-3 bows with sufficient arrows and have your highest-Combat-skill settler practice shooting.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">第 6-8 天：扩展与优化</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 6-8: Expansion & Optimization</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                这个阶段殖民地已初步稳定。开始向地下扩展——在住所下方挖掘储藏区（4×6 格），将食物转入地下保存。建造木工台开始制作家具，提升居住品质。每间卧室添加桌椅。
+                At this stage, the colony is starting to stabilize. Begin expanding underground — excavate a stockpile area (4x6 tiles) below your shelter and move food underground for storage. Build a carpentry table and start crafting furniture to improve living quality. Add a table and chair to each bedroom.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                如果有定居者空闲，安排狩猎获取皮革和肉。皮革用于制作皮甲，肉加工成熏肉。此时如果商人来访，可以用多余的食物换取铁矿石或药材。
+                If any settlers are idle, send them hunting to gather leather and meat. Leather is used for armor; meat gets processed into smoked meat. If a merchant visits, trade surplus food for iron ore or medicine.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">第 9-10 天：迎接第一次挑战</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 9-10: Facing Your First Challenge</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                前 10 天内可能遭遇第一次小规模突袭（2-3 人）。此时你应已有木墙、弓箭和陷阱。突袭发生时：所有定居者撤入城墙内，弓箭手上城墙射击，近战战士守城门。利用陷阱消耗敌人，不要贸然出击。
+                Within the first 10 days, you may face your first small-scale raid (2-3 enemies). By now you should have wooden walls, bows, and traps. When a raid hits: recall all settlers inside the walls, archers take wall positions, melee fighters hold the gate. Use traps to wear enemies down — avoid reckless sorties.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">首个10天目标清单：</strong>
-                  ✓ 木墙住所（3床） ✓ 8×8 农田 ✓ 研究台 ✓ 外围城墙+陷阱
-                  ✓ 弓箭×3 ✓ 地下储藏区 ✓ 灶台 ✓ 木工台 ✓ 300+ 食物储备
+                  <strong className="text-vermillion">First 10 Days Goal Checklist:</strong>
+                  &#10003; Wood-walled shelter (3 beds) &#10003; 8x8 farm field &#10003; Research table &#10003; Perimeter wall + traps
+                  &#10003; Bows x3 &#10003; Underground stockpile &#10003; Stove &#10003; Carpentry table &#10003; 300+ food reserves
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>开局选几个定居者比较好？</summary>
-                  <p>推荐 3-4 人开局。3 人可以覆盖基本工作（建造、农耕、烹饪），4 人可以多一人专职研究或战斗。人太少工作效率低，太多则食物消耗大、管理复杂。等殖民地稳定后再通过招募扩充。</p>
+                  <summary>How many settlers should I start with?</summary>
+                  <p>3-4 settlers is the recommended start. With 3, you can cover basic work (building, farming, cooking). With 4, you have one extra for dedicated research or combat. Too few settlers means low efficiency; too many means high food consumption and complex management. Expand through recruitment once the colony stabilizes.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>第一个研究应该选什么？</summary>
-                  <p>优先研究农业技术解锁泥砖墙。泥砖墙比木墙坚固得多，且建造材料（泥巴）容易获取。其次是建筑技术解锁石墙，进一步升级防御。</p>
+                  <summary>What should I research first?</summary>
+                  <p>Prioritize Agriculture tech to unlock clay brick walls. Clay bricks are much stronger than wood, and the material (mud) is easy to obtain. Next, Construction tech to unlock stone walls for further defense upgrades.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>定居者总是不开心怎么办？</summary>
-                  <p>新手常见问题。三个快速改善方法：1) 确保食物是加工食品（面包/炖菜），生食降低心情；2) 每人安排独立卧室，添加桌椅；3) 尽快种植啤酒花酿酒，啤酒是最佳心情提升物。</p>
+                  <summary>My settlers are always unhappy. What should I do?</summary>
+                  <p>A common beginner issue. Three quick improvements: 1) Ensure food is processed (bread/stew) — raw food lowers mood; 2) Give each settler an individual bedroom with a table and chair; 3) Plant hops and brew beer ASAP — beer is the best mood booster.</p>
                 </details>
               </div>
             </section>
@@ -113,28 +113,28 @@ export default function BeginnersPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">10天里程碑</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">10-Day Milestones</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>✓ 木墙住所 + 3床</li>
-                <li>✓ 8×8 卷心菜田</li>
-                <li>✓ 6×6 小麦田</li>
-                <li>✓ 研究台运转</li>
-                <li>✓ 外围城墙（2格高）</li>
-                <li>✓ 木刺陷阱×5</li>
-                <li>✓ 弓箭×3 + 箭矢</li>
-                <li>✓ 地下储藏区</li>
-                <li>✓ 灶台 + 木工台</li>
-                <li>✓ 300+ 食物</li>
+                <li>&#10003; Wood shelter + 3 beds</li>
+                <li>&#10003; 8x8 cabbage field</li>
+                <li>&#10003; 6x6 wheat field</li>
+                <li>&#10003; Research table active</li>
+                <li>&#10003; Perimeter wall (2 levels high)</li>
+                <li>&#10003; Spike traps x5</li>
+                <li>&#10003; Bows x3 + arrows</li>
+                <li>&#10003; Underground stockpile</li>
+                <li>&#10003; Stove + carpentry table</li>
+                <li>&#10003; 300+ food</li>
               </ul>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">新手避坑</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Beginner Mistakes to Avoid</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>• 不要建太大，够用就好</li>
-                <li>• 食物优先，防御其次</li>
-                <li>• 研究越早开始越好</li>
-                <li>• 地下储藏是关键</li>
-                <li>• 突袭时不要出击</li>
+                <li>&bull; Don't build too big — enough is enough</li>
+                <li>&bull; Food first, defense second</li>
+                <li>&bull; Start researching as early as possible</li>
+                <li>&bull; Underground storage is key</li>
+                <li>&bull; Don't sally out during raids</li>
               </ul>
             </div>
           </aside>

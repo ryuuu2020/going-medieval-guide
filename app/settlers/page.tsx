@@ -5,121 +5,121 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function SettlersPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="定居者" />
+      <SiteHeader currentPage="Settlers" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">定居者管理</h1>
+              <h1 className="chapter-heading">Settler Management</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                定居者是殖民地的核心资产。每位定居者拥有独特的技能、性格和需求，合理分配工作、管理心情、满足生理需求是殖民地高效运转的关键。本指南将详解技能系统、心情管理和需求体系，帮助你打造一支高效协作的定居者团队。以下数据基于社区整理，仅供参考。
+                Settlers are your colony's core asset. Each settler has unique skills, personality traits, and needs. Properly assigning work, managing mood, and meeting basic needs are the keys to running an efficient colony. This guide covers the skill system, mood management, and needs system in detail to help you build a high-performing settler team. Data below is based on community compilation and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">技能系统</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Skill System</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                每位定居者拥有一组技能属性，决定了其在不同工作领域的效率。技能值越高，工作速度越快、产出质量越好。定居者通过持续从事某项工作积累经验，逐步提升对应技能。
+                Each settler has a set of skills that determine their efficiency in different work areas. Higher skill values mean faster work speed and better output quality. Settlers gain experience through continued work in a given area, gradually leveling up the corresponding skill.
               </p>
               <table className="parchment-table">
                 <thead>
                   <tr>
-                    <th>技能</th>
-                    <th>影响工作</th>
-                    <th>关键说明</th>
+                    <th>Skill</th>
+                    <th>Affected Work</th>
+                    <th>Key Notes</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>建造</td><td>建筑、修理</td><td>影响建造速度和建筑质量</td></tr>
-                  <tr><td>农耕</td><td>种植、收割</td><td>影响作物生长速度和产量</td></tr>
-                  <tr><td>烹饪</td><td>食物加工</td><td>影响食物品质和制作速度</td></tr>
-                  <tr><td>制作</td><td>武器、工具、衣物</td><td>影响制作速度和物品品质</td></tr>
-                  <tr><td>研究</td><td>研究台工作</td><td>影响研究点数产出速度</td></tr>
-                  <tr><td>战斗（近战）</td><td>近身格斗</td><td>影响命中率和伤害</td></tr>
-                  <tr><td>战斗（远程）</td><td>弓弩射击</td><td>影响射击精度和伤害</td></tr>
-                  <tr><td>医疗</td><td>治疗伤员</td><td>影响治疗效率和恢复速度</td></tr>
-                  <tr><td>社交</td><td>贸易、招募</td><td>影响交易价格和招募成功率</td></tr>
+                  <tr><td>Construction</td><td>Building, Repairing</td><td>Affects build speed and quality</td></tr>
+                  <tr><td>Farming</td><td>Planting, Harvesting</td><td>Affects crop growth speed and yield</td></tr>
+                  <tr><td>Cooking</td><td>Food Processing</td><td>Affects food quality and prep speed</td></tr>
+                  <tr><td>Crafting</td><td>Weapons, Tools, Clothing</td><td>Affects crafting speed and item quality</td></tr>
+                  <tr><td>Research</td><td>Research Table</td><td>Affects research point generation speed</td></tr>
+                  <tr><td>Combat (Melee)</td><td>Close-quarters combat</td><td>Affects hit chance and damage</td></tr>
+                  <tr><td>Combat (Ranged)</td><td>Bow/Crossbow shooting</td><td>Affects accuracy and damage</td></tr>
+                  <tr><td>Medical</td><td>Treating wounded</td><td>Affects treatment efficiency and recovery speed</td></tr>
+                  <tr><td>Social</td><td>Trading, Recruiting</td><td>Affects trade prices and recruitment success rate</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区整理</p>
+              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">心情管理</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Mood Management</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                心情是衡量定居者精神状态的指标，范围 0-100。心情高于 50 时定居者正常工作，低于 30 时可能触发负面事件——拒绝工作、破坏物品甚至攻击同伴。维持心情是殖民地稳定运行的基础。
+                Mood measures a settler's mental state on a scale of 0-100. Above 50, settlers work normally. Below 30, negative events may trigger — refusing to work, destroying property, even attacking companions. Maintaining mood is fundamental to stable colony operation.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">提升心情的因素</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">独立宽敞的房间（+10）、美味食物（+5）、啤酒供应（+8）、整洁环境（+5）、社交互动（+3）、艺术装饰（+5）、宗教信仰（+5）。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Factors That Boost Mood</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Individual spacious room (+10), quality meals (+5), beer supply (+8), clean environment (+5), social interaction (+3), art decorations (+5), religious faith (+5).</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">降低心情的因素</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">饥饿（-15）、睡眠不足（-10）、受伤（-10）、同伴死亡（-20）、房间脏乱（-8）、生食（-5）、无酒可喝（-3）、雨天外出（-2）。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Factors That Lower Mood</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Hunger (-15), sleep deprivation (-10), injury (-10), companion death (-20), dirty room (-8), raw food (-5), no alcohol (-3), rain exposure (-2).</p>
                 </div>
               </div>
               <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">⚠ 心情危机：</strong>
-                  当定居者心情跌破 20，会进入崩溃状态，可能攻击同伴或自残。立即提供啤酒和美食，安排休息。如果多人同时低心情，可能引发连锁崩溃，导致殖民地覆灭。
+                  <strong className="text-vermillion">&#9888; Mood Crisis:</strong>
+                  When a settler's mood drops below 20, they enter a breakdown state and may attack companions or self-harm. Immediately provide beer and quality food, and order rest. If multiple settlers are low-mood simultaneously, it can trigger a chain breakdown leading to colony collapse.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">需求系统</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Needs System</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                定居者有四项基本需求：饥饿、休息、社交和娱乐。任何一项需求过低都会降低心情和工作效率，需要持续关注。
+                Settlers have four basic needs: Hunger, Rest, Social, and Recreation. Any need falling too low reduces mood and work efficiency, requiring constant attention.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">饥饿</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">定时进食是基本需求。确保厨房有充足食物，定居者会自动取食。生食降低心情，尽量提供加工食物（面包、炖菜）。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Hunger</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Regular meals are essential. Keep the kitchen stocked — settlers will automatically grab food. Raw food lowers mood; prioritize processed foods (bread, stews).</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">休息</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">每位定居者需要每天睡眠 6-8 小时。提供床铺和独立房间。疲劳过度会降低工作效率并影响心情。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Rest</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Each settler needs 6-8 hours of sleep daily. Provide beds and individual rooms. Fatigue reduces work efficiency and hurts mood.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">社交</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">定居者需要与他人交流。安排公共餐厅或活动区域，让定居者在用餐时自然社交。社交需求过低会产生孤独感。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Social</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Settlers need to interact with others. Set up a common dining room or activity area so settlers naturally socialize during meals. Low social needs create loneliness.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">娱乐</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">建造娱乐设施（棋盘、乐器）满足娱乐需求。娱乐不足的定居者工作效率下降，心情降低。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Recreation</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Build recreational facilities (chessboard, musical instruments) to meet entertainment needs. Settlers without recreation work less efficiently and have lower mood.</p>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">工作分配策略</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Work Assignment Strategy</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                合理的工作分配能最大化殖民地效率。原则是"专才专用"——将每项工作优先分配给技能最高的定居者。通过工作面板可以精细控制每位定居者的工作优先级。
+                Smart work assignments maximize colony efficiency. The principle is "specialists for specialties" — assign each task to the settler with the highest relevant skill. Use the work panel to fine-tune each settler's task priorities.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                推荐配置：6 人殖民地中，2 人专职建造/挖掘，1 人专职农耕，1 人专职烹饪/制作，1 人专职研究，1 人兼顾战斗和杂务。战斗技能高的定居者平时可以从事其他工作，突袭时立即转为战斗角色。
+                Recommended setup for a 6-settler colony: 2 dedicated builders/miners, 1 dedicated farmer, 1 dedicated cook/crafter, 1 dedicated researcher, 1 flex settler handling combat and odd jobs. High-combat-skill settlers can do other work during peacetime and switch to combat roles when raids hit.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>定居者不够用怎么办？</summary>
-                  <p>扩充人口的途径有三：1) 招募俘虏——建造监狱关押俘虏，定期提供食物，一段时间后可尝试招募；2) 接纳流浪者——偶尔会有流浪者请求加入，通过社交互动提升好感后可招募；3) 出生——定居者伴侣可能生育后代，但需要较长时间成长。</p>
+                  <summary>What if I don't have enough settlers?</summary>
+                  <p>Three ways to expand population: 1) Recruit prisoners — build a prison, hold captives, provide food regularly, and attempt recruitment after some time; 2) Accept wanderers — occasionally wanderers will ask to join; boost their opinion through social interaction to recruit; 3) Birth — settler couples may have children, but they take a long time to grow up.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>定居者受伤了怎么处理？</summary>
-                  <p>安排医疗技能高的定居者进行治疗。严重受伤需要卧床休息，提供药物可加速恢复。战斗中受伤的定居者应立即撤到安全区域，避免伤势加重。建造医疗室配备病床。</p>
+                  <summary>How do I handle injured settlers?</summary>
+                  <p>Assign settlers with high Medical skill to treat the wounded. Severe injuries require bed rest; medicine accelerates recovery. Pull combat-injured settlers to a safe zone immediately to avoid worsening their condition. Build a medical room with hospital beds.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>如何提升定居者的技能？</summary>
-                  <p>技能通过持续使用提升。让定居者反复从事某项工作即可积累经验。也可以制作训练设施（如靶子提升远程技能）加速技能成长。技能提升速度与定居者的学习属性有关。</p>
+                  <summary>How do I level up settler skills?</summary>
+                  <p>Skills improve through continued use. Have settlers repeatedly perform a task to gain experience. You can also build training facilities (e.g., target dummies to train Ranged skill). Skill gain speed is influenced by the settler's learning attribute.</p>
                 </details>
               </div>
             </section>
@@ -127,22 +127,22 @@ export default function SettlersPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">心情速查</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Mood Quick Ref</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div className="flex justify-between"><span>80-100 极佳</span><span className="text-gold">效率+20%</span></div>
-                <div className="flex justify-between"><span>50-80 正常</span><span className="text-ink-muted">正常</span></div>
-                <div className="flex justify-between"><span>30-50 低落</span><span className="text-vermillion">效率-10%</span></div>
-                <div className="flex justify-between"><span>0-30 危险</span><span className="text-vermillion">可能崩溃</span></div>
+                <div className="flex justify-between"><span>80-100 Excellent</span><span className="text-gold">+20% Efficiency</span></div>
+                <div className="flex justify-between"><span>50-80 Normal</span><span className="text-ink-muted">Normal</span></div>
+                <div className="flex justify-between"><span>30-50 Low</span><span className="text-vermillion">-10% Efficiency</span></div>
+                <div className="flex justify-between"><span>0-30 Danger</span><span className="text-vermillion">Breakdown risk</span></div>
               </div>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">6人分工推荐</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">6-Settler Role Setup</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>• 建造/挖掘 ×2</li>
-                <li>• 农耕 ×1</li>
-                <li>• 烹饪/制作 ×1</li>
-                <li>• 研究 ×1</li>
-                <li>• 战斗/杂务 ×1</li>
+                <li>&bull; Construction/Mining x2</li>
+                <li>&bull; Farming x1</li>
+                <li>&bull; Cooking/Crafting x1</li>
+                <li>&bull; Research x1</li>
+                <li>&bull; Combat/Odd Jobs x1</li>
               </ul>
             </div>
           </aside>

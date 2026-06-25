@@ -5,104 +5,104 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export default function SeasonsPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="季节" />
+      <SiteHeader currentPage="Seasons" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">季节系统与温度管理</h1>
+              <h1 className="chapter-heading">Seasons & Temperature Management</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Going Medieval 的四季系统对殖民地生存提出了严峻挑战。每个季节有不同的温度、天气和资源产出，冬季尤其致命——大雪覆盖、作物停止生长、温度骤降。掌握季节规律和温度管理技巧，是殖民地长期存续的关键。以下数据基于社区测试，仅供参考。
+                Going Medieval's four-season system poses a serious challenge to colony survival. Each season brings different temperatures, weather, and resource yields — winter is especially deadly, with snow covering the ground, crops stopping growth, and temperatures plunging. Mastering seasonal patterns and temperature management is key to long-term colony survival. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">四季概览</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Four Seasons Overview</h2>
               <table className="parchment-table">
                 <thead>
                   <tr>
-                    <th>季节</th>
-                    <th>温度范围</th>
-                    <th>特点</th>
-                    <th>重点事项</th>
+                    <th>Season</th>
+                    <th>Temperature</th>
+                    <th>Characteristics</th>
+                    <th>Priorities</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>春季</td><td>5-18°C</td><td>冰雪融化，作物可种</td><td>立即开耕，修复冬季损坏</td></tr>
-                  <tr><td>夏季</td><td>18-32°C</td><td>生长旺盛，偶有热浪</td><td>大量种植，储备食物</td></tr>
-                  <tr><td>秋季</td><td>5-20°C</td><td>最后收获期</td><td>收割入库，冬季准备</td></tr>
-                  <tr><td>冬季</td><td>-10-5°C</td><td>大雪，无法种植</td><td>消耗储备，保持温暖</td></tr>
+                  <tr><td>Spring</td><td>5-18&deg;C</td><td>Snow melts, crops plantable</td><td>Begin tilling immediately, repair winter damage</td></tr>
+                  <tr><td>Summer</td><td>18-32&deg;C</td><td>Vigorous growth, occasional heat waves</td><td>Mass planting, stockpile food</td></tr>
+                  <tr><td>Autumn</td><td>5-20&deg;C</td><td>Final harvest period</td><td>Reap and store, winter prep</td></tr>
+                  <tr><td>Winter</td><td>-10-5&deg;C</td><td>Heavy snow, no planting</td><td>Consume reserves, keep warm</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区测试估算</p>
+              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">冬季生存指南</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Winter Survival Guide</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                冬季是殖民地最危险的时期。大雪覆盖地面后，所有作物停止生长，狩猎也变得困难。如果食物储备不足，定居者会挨饿甚至死亡。温度骤降还可能导致定居者冻伤，需要在室内活动并保持取暖。
+                Winter is your colony's most dangerous period. Once snow blankets the ground, all crops stop growing and hunting becomes difficult. If food reserves are inadequate, settlers will starve or die. Plunging temperatures can also cause frostbite — settlers need indoor activity and heating.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">食物储备</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">秋季结束时确保储藏区有至少 200 单位食物（按 6 人算）。优先储存面包、熏肉等加工食品，腐烂速度慢。地下储藏区温度更低，保鲜期更长。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Food Reserves</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">By autumn's end, ensure your stockpile holds at least 200 units of food (for 6 settlers). Prioritize storing processed foods like bread and smoked meat, which spoil slower. Underground stockpiles stay colder and extend shelf life further.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">取暖设施</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">在居住区建造壁炉或火炉保持室内温度。定居者在低于 0°C 的环境中会持续降低心情和健康。确保燃料（木材）充足，冬季前砍伐足够木材。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Heating Facilities</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Build fireplaces or braziers in living quarters to maintain indoor temperature. Settlers in environments below 0&deg;C suffer continuous mood and health loss. Ensure adequate fuel (wood) — chop plenty before winter.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">衣物保暖</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">为每位定居者制作保暖衣物（皮甲+布料内衬）。穿衣后可在户外短时间活动，但长时间暴露仍会冻伤。冬季尽量安排室内工作。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Warm Clothing</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Craft warm clothing for every settler (leather armor + cloth lining). Dressed settlers can tolerate brief outdoor activity, but prolonged exposure still causes frostbite. Schedule indoor work during winter as much as possible.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">冬季活动</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">利用冬季进行室内工作：研究、制作、烹饪。也可以挖掘地下扩展空间。避免不必要的户外活动，防止冻伤和心情降低。</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Winter Activities</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Use winter for indoor work: research, crafting, cooking. You can also excavate underground to expand your base. Avoid unnecessary outdoor activities to prevent frostbite and mood loss.</p>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">温度管理</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Temperature Management</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                温度不仅影响定居者的舒适度，还直接影响食物保鲜和作物生长。地下空间的温度常年恒定（约 8-12°C），是理想的储藏区。地面建筑受季节影响大，夏季炎热、冬季寒冷，需要通过壁炉和通风调节。
+                Temperature affects not only settler comfort but also food preservation and crop growth. Underground spaces stay at a constant temperature year-round (approximately 8-12&deg;C), making them ideal stockpiles. Above-ground buildings are heavily affected by seasons — hot in summer, cold in winter — requiring fireplaces and ventilation for regulation.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">⚠ 温度技巧：</strong>
-                  地下 2 层以下的温度常年保持 8-12°C，是天然冷库。将食物储藏区建在此处，腐烂速度可降低 70%。居住区建在地下 1 层，配合壁炉，冬季也能保持 15°C 以上。
+                  <strong className="text-vermillion">&#9888; Temperature Tip:</strong>
+                  Spaces 2+ levels below ground stay at 8-12&deg;C year-round — a natural cold storage. Building food stockpiles here can reduce spoilage by 70%. Build living quarters at 1 level below ground; combined with a fireplace, they can stay above 15&deg;C even in winter.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">季节性事件</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Seasonal Events</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                不同季节会触发不同的事件。春季可能有流浪者寻求加入；夏季是突袭高发期；秋季商人来访频繁；冬季可能遭遇暴风雪导致户外活动完全停滞。了解季节事件规律，提前做好准备。
+                Different seasons trigger different events. Spring may bring wanderers seeking to join; summer is peak raid season; autumn brings frequent merchant visits; winter may cause blizzards that completely halt outdoor activity. Understanding seasonal event patterns helps you prepare in advance.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                特别注意夏季的热浪事件——气温可能飙升至 40°C 以上，定居者可能中暑。确保有阴凉处和充足饮水。冬季暴风雪期间，所有户外工作停止，定居者必须待在室内。
+                Pay special attention to summer heat wave events — temperatures can soar above 40&deg;C, risking heatstroke. Ensure shaded areas and sufficient drinking water. During winter blizzards, all outdoor work stops and settlers must remain indoors.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>冬天定居者总是冻伤怎么办？</summary>
-                  <p>三个措施：1) 确保居住区有壁炉并备足木材；2) 为定居者制作保暖衣物；3) 尽量安排室内工作，减少户外暴露时间。如果已有冻伤，安排休息和治疗。</p>
+                  <summary>My settlers keep getting frostbite in winter. What do I do?</summary>
+                  <p>Three measures: 1) Ensure living quarters have fireplaces with ample firewood; 2) Craft warm clothing for settlers; 3) Schedule indoor work as much as possible to reduce outdoor exposure time. If frostbite has already occurred, order bed rest and treatment.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>一个冬天需要多少食物？</summary>
-                  <p>冬季约持续 10-15 天（游戏内），6 名定居者每天消耗约 12-18 单位食物，共需 120-270 单位。建议储备 300 单位以上以应对突发情况。加工食品保质期更长。</p>
+                  <summary>How much food does a winter require?</summary>
+                  <p>Winter lasts about 10-15 days (in-game). 6 settlers consume roughly 12-18 food units per day, totaling 120-270 units. Plan for 300+ units to handle emergencies. Processed foods last longer.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>夏季太热影响工作吗？</summary>
-                  <p>会。温度超过 30°C 时定居者工作效率下降，超过 35°C 可能中暑。在建筑内设置通风口，确保空气流通。热浪期间暂停户外重体力劳动，安排室内工作。</p>
+                  <summary>Does summer heat affect work efficiency?</summary>
+                  <p>Yes. Above 30&deg;C, settler work efficiency drops. Above 35&deg;C, heatstroke becomes a risk. Install vents in buildings to ensure air flow. During heat waves, pause heavy outdoor labor and assign indoor work.</p>
                 </details>
               </div>
             </section>
@@ -110,24 +110,24 @@ export default function SeasonsPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">冬季准备清单</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Winter Prep Checklist</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>✓ 300+ 单位加工食品</li>
-                <li>✓ 100+ 木材（燃料）</li>
-                <li>✓ 每人保暖衣物</li>
-                <li>✓ 壁炉/火炉已建造</li>
-                <li>✓ 地下储藏区已启用</li>
-                <li>✓ 城墙维修完毕</li>
-                <li>✓ 医疗物资储备</li>
+                <li>&#10003; 300+ units of processed food</li>
+                <li>&#10003; 100+ wood (fuel)</li>
+                <li>&#10003; Warm clothing for everyone</li>
+                <li>&#10003; Fireplaces/braziers built</li>
+                <li>&#10003; Underground stockpile active</li>
+                <li>&#10003; Walls repaired</li>
+                <li>&#10003; Medical supplies stocked</li>
               </ul>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">温度参考</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Temperature Reference</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div className="flex justify-between border-b border-divider pb-1"><span>地下2层</span><span className="text-ink-muted">8-12°C 恒温</span></div>
-                <div className="flex justify-between border-b border-divider pb-1"><span>夏季地面</span><span className="text-ink-muted">18-32°C</span></div>
-                <div className="flex justify-between border-b border-divider pb-1"><span>冬季地面</span><span className="text-ink-muted">-10-5°C</span></div>
-                <div className="flex justify-between"><span>理想室温</span><span className="text-ink-muted">15-22°C</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>Underground L2</span><span className="text-ink-muted">8-12&deg;C constant</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>Summer surface</span><span className="text-ink-muted">18-32&deg;C</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>Winter surface</span><span className="text-ink-muted">-10-5&deg;C</span></div>
+                <div className="flex justify-between"><span>Ideal indoor</span><span className="text-ink-muted">15-22&deg;C</span></div>
               </div>
             </div>
           </aside>
