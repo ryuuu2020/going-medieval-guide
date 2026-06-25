@@ -53,6 +53,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="google4cd6cdf221ea7b0b"
         />
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
