@@ -1,37 +1,219 @@
 @import "tailwindcss";
 
+/* ============================================
+   Template #3: 古卷·温度 (Ancient Scroll · Warmth)
+   3-Colony Design — Parchment + Serif + Asymmetric
+   ============================================ */
+
 :root {
-  --color-bg: #1a1410;
-  --color-bg-card: #241e17;
-  --color-bg-elevated: #2d261d;
-  --color-text: #e8dcc8;
-  --color-text-muted: #a89880;
-  --color-accent: #c9903a;
-  --color-accent-hover: #a0702a;
-  --color-accent-secondary: #7a5c3a;
-  --color-border: #3a3025;
-  --color-danger: #c44b3c;
-  --color-success: #6b8e4e;
+  --color-bg: #f5ecd7;
+  --color-bg-card: #ede1c6;
+  --color-bg-elevated: #faf3e6;
+  --color-text: #3c2a1e;
+  --color-text-muted: #8c6e4e;
+  --color-accent: #8b2500;
+  --color-accent-hover: #6b1c00;
+  --color-accent-gold: #b8860b;
+  --color-accent-secondary: #b8860b;
+  --color-border: #c4a97d;
+  --color-divider: #d4c4a3;
+  --color-danger: #8b2500;
+  --color-success: #4a7c3f;
 }
-body { background-color: var(--color-bg); color: var(--color-text); font-family: 'Inter', system-ui, sans-serif; }
-h1, h2, h3 { font-family: 'MedievalSharp', 'Georgia', serif; color: var(--color-accent); }
-h1 { font-size: 2.5rem; font-weight: 700; }
+
+body {
+  background-color: var(--color-bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--color-text);
+  font-family: 'Lora', 'Source Serif 4', 'Georgia', serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', 'EB Garamond', 'Georgia', serif;
+  color: var(--color-accent);
+}
+h1 { font-size: 3rem; font-weight: 700; line-height: 1.15; }
 h2 { font-size: 2rem; font-weight: 600; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-a { color: var(--color-accent); transition: color 0.2s; }
+h3 { font-size: 1.4rem; font-weight: 600; }
+
+a { color: var(--color-accent); transition: color 0.2s, border-color 0.2s; text-decoration: none; }
 a:hover { color: var(--color-accent-hover); }
+
 .nav-link:hover { color: var(--color-accent) !important; }
+
+/* Drop Cap */
+.drop-cap::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.8;
+  padding-right: 8px;
+  padding-top: 4px;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* FAQ Snippets */
 .faq-snippets { margin: 2rem 0; }
-.faq-snippets details { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; cursor: pointer; }
-.faq-snippets summary { font-weight: 600; color: var(--color-accent); padding: 0.25rem 0; }
-.faq-snippets details p { margin-top: 0.75rem; color: var(--color-text-muted); line-height: 1.6; }
-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-th { background: var(--color-bg-elevated); color: var(--color-accent); padding: 0.75rem 1rem; text-align: left; font-weight: 600; border-bottom: 2px solid var(--color-accent); }
-td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-border); }
-.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1.5rem; transition: border-color 0.2s, transform 0.2s; }
-.card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
-.btn-primary { background: var(--color-accent); color: #1a1410; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: background 0.2s; display: inline-block; text-decoration: none; }
-.btn-primary:hover { background: var(--color-accent-hover); }
-.hero-section { background: linear-gradient(135deg, #1a1410 0%, #2d1f14 50%, #1a1410 100%); padding: 4rem 2rem; text-align: center; border-bottom: 3px solid var(--color-accent); }
-.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
-@media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } h1 { font-size: 1.75rem; } h2 { font-size: 1.5rem; } .hero-section { padding: 2rem 1rem; } }
+.faq-snippets details {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 3px 12px 3px 12px;
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.faq-snippets details:hover {
+  border-color: var(--color-accent-gold);
+  box-shadow: 2px 2px 8px rgba(139, 37, 0, 0.1);
+}
+.faq-snippets summary {
+  font-weight: 600;
+  color: var(--color-accent);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  padding: 0.25rem 0;
+}
+.faq-snippets details p {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+th {
+  background: var(--color-bg-card);
+  color: var(--color-accent);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  border-bottom: 2px solid var(--color-accent-gold);
+}
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+/* Cards — irregular rounded corners, aged edge */
+.card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 4px 14px 4px 14px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 1px 1px 4px rgba(60, 42, 30, 0.06);
+}
+.card:hover {
+  border-color: var(--color-accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 12px rgba(139, 37, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--color-accent);
+  color: #f5ecd7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px 12px 3px 12px;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  transition: background 0.2s, transform 0.1s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  color: #f5ecd7;
+  transform: translateY(-1px);
+}
+
+/* Hero — scroll-like parchment */
+.hero-section {
+  background: linear-gradient(180deg, #faf3e6 0%, #f5ecd7 30%, #ede1c6 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-bottom: 3px double var(--color-accent-gold);
+  position: relative;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 1rem; left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  opacity: 0.3;
+}
+.hero-section::after {
+  content: '── ✧ ──';
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--color-accent-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  opacity: 0.6;
+}
+
+/* Grid Cards */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Newspaper 2-column layout */
+.newspaper-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .newspaper-layout { grid-template-columns: 1fr; }
+  .grid-cards { grid-template-columns: 1fr; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .hero-section { padding: 3rem 1rem; }
+}
+
+/* Hand-drawn border simulation */
+.aged-border {
+  border: 1px solid var(--color-border);
+  border-radius: 3px 16px 3px 16px;
+  box-shadow: 1px 2px 6px rgba(60, 42, 30, 0.05), inset 0 1px 2px rgba(255,255,255,0.3);
+}
+
+/* Sidebar block */
+.sidebar-block {
+  border-left: 2px solid var(--color-accent-gold);
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Tag label — like a wax seal */
+.wax-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px 6px 2px 6px;
+  background: var(--color-accent);
+  color: #f5ecd7;
+}
+.wax-tag.gold {
+  background: var(--color-accent-gold);
+  color: #3c2a1e;
+}

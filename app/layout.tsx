@@ -46,16 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
-        {/* Google Site Verification */}
         <meta
           name="google-site-verification"
           content="google4cd6cdf221ea7b0b"
         />
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
-        {/* Google Fonts */}
+        {/* Google Fonts — 3-Colony Parchment Theme */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -63,7 +60,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
         {/* Google Analytics GA4 */}
@@ -89,15 +86,16 @@ export default function RootLayout({
           minHeight: "100vh",
         }}
       >
-        {/* Header */}
+        {/* Header — Parchment scroll style */}
         <header
           style={{
-            backgroundColor: "var(--color-bg-card)",
-            borderBottom: "2px solid var(--color-accent)",
-            padding: "1rem 2rem",
+            backgroundColor: "var(--color-bg-elevated)",
+            borderBottom: "2px double var(--color-accent-gold)",
+            padding: "1.25rem 2rem",
             position: "sticky",
             top: 0,
             zIndex: 50,
+            boxShadow: "0 1px 8px rgba(60,42,30,0.06)",
           }}
         >
           <div
@@ -109,29 +107,30 @@ export default function RootLayout({
               gap: "0.75rem",
             }}
           >
-            {/* Site Title */}
+            {/* Site Title — Cormorant Garamond */}
             <a
               href="/"
               style={{
-                fontFamily: "'MedievalSharp', 'Georgia', serif",
-                fontSize: "1.75rem",
+                fontFamily: "'Cormorant Garamond', 'Georgia', serif",
+                fontSize: "2rem",
                 fontWeight: 700,
                 color: "var(--color-accent)",
                 textDecoration: "none",
+                letterSpacing: "0.02em",
               }}
             >
               Going Medieval Guide
             </a>
-            {/* Navigation */}
+            {/* Navigation — Bookmark-like tabs */}
             <nav
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                gap: "0.5rem 1.25rem",
-                fontSize: "0.95rem",
+                gap: "0.25rem 1.25rem",
+                fontSize: "0.9rem",
               }}
             >
-              {navLinks.map((link) => (
+              {navLinks.map((link, i) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -140,7 +139,13 @@ export default function RootLayout({
                     color: "var(--color-text-muted)",
                     textDecoration: "none",
                     fontWeight: 500,
-                    transition: "color 0.2s",
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "0.82rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                    transform: `rotate(${(i % 3) - 1}deg)`,
+                    transition: "color 0.2s, transform 0.2s",
+                    padding: "0.2rem 0",
                   }}
                 >
                   {link.label}
@@ -153,28 +158,23 @@ export default function RootLayout({
         {/* Main Content */}
         <main style={{ flex: 1 }}>{children}</main>
 
-        {/* Footer */}
+        {/* Footer — Parchment with aged feel */}
         <footer
           style={{
-            backgroundColor: "var(--color-bg-card)",
-            borderTop: "2px solid var(--color-border)",
+            backgroundColor: "var(--color-bg-elevated)",
+            borderTop: "2px double var(--color-accent-gold)",
             padding: "3rem 2rem 2rem",
             marginTop: "3rem",
           }}
         >
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-            }}
-          >
+          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             {/* More Game Guides */}
             <section style={{ marginBottom: "2rem" }}>
               <h3
                 style={{
-                  fontFamily: "'MedievalSharp', serif",
+                  fontFamily: "'Cormorant Garamond', serif",
                   color: "var(--color-accent)",
-                  fontSize: "1.25rem",
+                  fontSize: "1.3rem",
                   marginBottom: "1rem",
                 }}
               >
@@ -187,33 +187,10 @@ export default function RootLayout({
                   gap: "1rem",
                 }}
               >
-                <a
-                  href="https://menace-guide.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  MENACE Guide
-                </a>
-                <a
-                  href="https://olden-era-guide-tau.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Olden Era Guide
-                </a>
-                <a
-                  href="https://dispatch-guide-sigma.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                  style={{ fontSize: "0.9rem" }}
-                >
-                  Dispatch Guide
-                </a>
+                <a href="https://menace-guide.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>MENACE Guide</a>
+                <a href="https://olden-era-guide-tau.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Olden Era Guide</a>
+                <a href="https://dispatch-guide-sigma.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Dispatch Guide</a>
+                <a href="https://solarpunk-guide-ecru.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Solarpunk Guide</a>
               </div>
             </section>
 
@@ -225,76 +202,18 @@ export default function RootLayout({
                 gap: "1rem 2rem",
                 marginBottom: "1.5rem",
                 paddingTop: "1.5rem",
-                borderTop: "1px solid var(--color-border)",
+                borderTop: "1px solid var(--color-divider)",
               }}
             >
-              <a
-                href="/about"
-                style={{
-                  color: "var(--color-text-muted)",
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                }}
-              >
-                About
-              </a>
-              <a
-                href="/privacy"
-                style={{
-                  color: "var(--color-text-muted)",
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                }}
-              >
-                Privacy
-              </a>
-              <a
-                href="/terms"
-                style={{
-                  color: "var(--color-text-muted)",
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                }}
-              >
-                Terms
-              </a>
-              <a
-                href="/faq"
-                style={{
-                  color: "var(--color-text-muted)",
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                }}
-              >
-                FAQ
-              </a>
-              <a
-                href="https://afdian.com/a/gameguidehub"
-                target="_blank"
-                rel="noopener"
-                style={{
-                  color: "var(--color-accent)",
-                  fontSize: "0.9rem",
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-              >
-                ❤️ Support Us
-              </a>
+              <a href="/about" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>About</a>
+              <a href="/privacy" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Privacy</a>
+              <a href="/terms" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Terms</a>
+              <a href="/faq" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>FAQ</a>
+              <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener" style={{ color: "var(--color-accent)", fontSize: "0.9rem", fontWeight: 600 }}>❤️ Support Us</a>
             </div>
 
-            {/* Disclaimer */}
-            <p
-              style={{
-                color: "var(--color-text-muted)",
-                fontSize: "0.8rem",
-                lineHeight: 1.6,
-              }}
-            >
-              This is a fan-made guide site. Going Medieval is developed by
-              Foxy Voxel. We are not affiliated with, endorsed by, or connected
-              to Foxy Voxel in any official capacity. All game content,
-              trademarks, and copyrights belong to their respective owners.
+            <p style={{ color: "var(--color-text-muted)", fontSize: "0.8rem", lineHeight: 1.6, fontFamily: "'Lora', serif", fontStyle: "italic" }}>
+              This is a fan-made guide site. Going Medieval is developed by Foxy Voxel. We are not affiliated with, endorsed by, or connected to Foxy Voxel in any official capacity. All game content, trademarks, and copyrights belong to their respective owners.
             </p>
           </div>
         </footer>

@@ -1,307 +1,275 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { buildings, crops, animals, research, settlerSkills, biomes, seasons, defenseTips } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Home | Going Medieval Guide",
-  description:
-    "The ultimate Going Medieval colony sim guide. Master buildings, research, settlers, farming, and defense to survive the medieval frontier. Comprehensive wiki for Foxy Voxel's 1.0 release.",
-};
+import { useState, useRef, useEffect } from 'react';
+import { SiteFooter } from '@/components/SiteHeader';
 
-const navCards = [
-  { title: "Buildings", href: "/buildings", desc: "Complete guide to all 18 building types, from wooden walls to stone keeps. Master construction tiers and structural stability.", icon: "🏰" },
-  { title: "Research", href: "/research", desc: "Full research tree breakdown with 16 technologies across 3 tiers. Learn the optimal research path for your colony.", icon: "📜" },
-  { title: "Settlers", href: "/settlers", desc: "Deep dive into all 12 settler skills, the mood system, needs, traits, and how to manage your villagers effectively.", icon: "👥" },
-  { title: "Farming", href: "/farming", desc: "Master all 11 crops, seasonal planting, soil fertility, food preservation, and animal husbandry for year-round food.", icon: "🌾" },
-  { title: "Defense", href: "/defense", desc: "Comprehensive defense strategy: raid mechanics, wall design, traps, killboxes, archer towers, and siege tactics.", icon: "🛡️" },
-  { title: "Beginner's Guide", href: "/beginners-guide", desc: "Step-by-step walkthrough from Day 1 survival to mid-game expansion and the 1.0 endgame. Everything a new player needs.", icon: "📖" },
+const NAV_ITEMS = [
+  { label: '首页', href: '/', tilt: -1 },
+  { label: '建筑', href: '/buildings', tilt: 2 },
+  { label: '农耕', href: '/farming', tilt: -2 },
+  { label: '防御', href: '/defense', tilt: 1 },
+  { label: '研究', href: '/research', tilt: 0 },
+  { label: '定居者', href: '/settlers', tilt: -1 },
+  { label: '攻略', href: '/beginners', tilt: 3 },
+];
+
+const FEATURED_GUIDES = [
+  {
+    title: '建筑结构指南',
+    excerpt: '从木墙到石堡，详解墙体类型、房间需求与结构稳定性。掌握多层建造技巧，打造坚不可摧的中世纪定居点。',
+    tag: '建筑',
+    tagType: 'vermillion' as const,
+    readTime: '12',
+    href: '/buildings',
+  },
+  {
+    title: '农耕系统详解',
+    excerpt: '作物种植、季节轮作、灌溉系统与食物储藏全攻略。学会在严冬来临前储备足够粮食，确保殖民地存续。',
+    tag: '农耕',
+    tagType: 'gold' as const,
+    readTime: '10',
+    href: '/farming',
+  },
+  {
+    title: '防御策略指南',
+    excerpt: '城墙布局、陷阱配置、武器选择与突袭应对方案。多层防御体系详解，让入侵者有来无回。',
+    tag: '防御',
+    tagType: 'vermillion' as const,
+    readTime: '15',
+    href: '/defense',
+  },
+  {
+    title: '地下基地建造',
+    excerpt: '利用地形开掘地下空间，构建温度恒定的储存与居住区。地下基地的通风、支撑与防御要点全解析。',
+    tag: '进阶',
+    tagType: 'ink' as const,
+    readTime: '14',
+    href: '/underground',
+  },
+];
+
+const GETTING_STARTED = [
+  { step: '1', title: '选址技巧', desc: '选择靠近水源、地势较高的位置，兼顾防御与农耕需求。山丘侧面是建造地下基地的理想地点。' },
+  { step: '2', title: '第一座建筑', desc: '优先建造木墙围合的临时住所，确保定居者有遮风避雨之处。同时建造储藏区存放初始物资。' },
+  { step: '3', title: '食物供应', desc: '立即开垦农田种植卷心菜和小麦，同时布置狩猎区。储备足够度过第一个冬天的食物。' },
+  { step: '4', title: '防御准备', desc: '在定居点外围建造木墙和木门，制作弓箭和近战武器。训练至少一名定居者战斗技能。' },
+];
+
+const TIPS = [
+  { tip: '地下储存食物可大幅减缓腐烂速度，挖掘一个地下窖藏是早期最重要的投资之一。', category: '储存' },
+  { tip: '多层城墙比单层厚墙更有效，敌人需要反复破坏才能攻入，为你争取反击时间。', category: '防御' },
+  { tip: '优先研究农耕科技解锁高级作物，食物是殖民地存续的第一要素。', category: '研究' },
+  { tip: '定居者心情低于30会触发负面事件，保持房间整洁、提供酒类和娱乐设施。', category: '管理' },
+  { tip: '冬天来临前务必储备至少200单位食物，大雪覆盖后无法种植和狩猎。', category: '季节' },
+  { tip: '制作弓箭后安排定居者在城墙上射击，居高临下可大幅提升命中率和伤害。', category: '战斗' },
+];
+
+const SIDEBAR_LINKS = [
+  { label: '新手入门教程', href: '/beginners', desc: '从零开始的殖民地建造指南' },
+  { label: '30条高级技巧', href: '/tips', desc: '进阶玩家必知的核心策略' },
+  { label: '季节生存指南', href: '/seasons', desc: '冬夏温差管理与应对方案' },
+  { label: '研究科技树', href: '/research', desc: '最优解锁顺序推荐' },
+  { label: '制作系统', href: '/crafting', desc: '工作台、配方与材料大全' },
+  { label: '贸易系统', href: '/trading', desc: '商人交互与物资交换' },
 ];
 
 export default function HomePage() {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1 style={{ fontSize: "3rem", marginBottom: "1rem", lineHeight: 1.2 }}>
-          Going Medieval Guide
-        </h1>
-        <p style={{
-          fontSize: "1.25rem",
-          color: "var(--color-text-muted)",
-          maxWidth: "700px",
-          margin: "0 auto 1.5rem",
-          lineHeight: 1.7,
-        }}>
-          The comprehensive colony sim strategy guide for Foxy Voxel&apos;s Going Medieval 1.0. 
-          Build your fortress in the wilderness, manage your settlers, research new technologies, 
-          and defend against raiders in a dynamic medieval world. Everything you need to survive 
-          and thrive — from your first wooden hut to a mighty stone castle.
-        </p>
-        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/beginners-guide" className="btn-primary">Start: Beginner&apos;s Guide</Link>
-          <Link href="/buildings" style={{
-            background: "var(--color-bg-elevated)",
-            color: "var(--color-accent)",
-            padding: "0.75rem 1.5rem",
-            borderRadius: "0.5rem",
-            fontWeight: 600,
-            textDecoration: "none",
-            border: "1px solid var(--color-accent)",
-            transition: "background 0.2s",
-          }}>Browse Guides</Link>
-        </div>
-      </section>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
 
-      {/* Navigation Cards */}
-      <section style={{ maxWidth: "1200px", margin: "3rem auto", padding: "0 2rem" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>Explore the Guide</h2>
-        <div className="grid-cards">
-          {navCards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="card"
-              style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "0.75rem" }}
+      {/* ===== Hero 卷轴展开 ===== */}
+      <header className="pt-16 pb-8 px-4 text-center max-w-4xl mx-auto">
+        <h1
+          className="font-display font-bold text-ink leading-none"
+          style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', letterSpacing: '0.05em' }}
+        >
+          GOING MEDIEVAL
+        </h1>
+        <p className="font-display italic text-ink-muted mt-4" style={{ fontSize: 'clamp(1.1rem, 3vw, 1.5rem)' }}>
+          《 殖民地上手指南 》
+        </p>
+        <div className="field-divider mt-8" />
+      </header>
+
+      {/* ===== 书签式导航 ===== */}
+      <nav className="px-4 lg:px-8 max-w-6xl mx-auto pb-2">
+        <div className="flex gap-2 justify-center flex-wrap">
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="nav-pill"
+              style={{ transform: `rotate(${item.tilt}deg)` }}
             >
-              <span style={{ fontSize: "2rem" }}>{card.icon}</span>
-              <h3 style={{ fontSize: "1.35rem", margin: 0 }}>{card.title}</h3>
-              <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0, fontSize: "0.95rem" }}>
-                {card.desc}
-              </p>
-            </Link>
+              {item.label}
+            </a>
           ))}
         </div>
-      </section>
+      </nav>
 
-      {/* Quick Start Section */}
-      <section style={{
-        maxWidth: "1200px",
-        margin: "0 auto 3rem",
-        padding: "2rem",
-        background: "var(--color-bg-card)",
-        border: "1px solid var(--color-border)",
-        borderRadius: "0.75rem",
-      }}>
-        <h2 style={{ marginBottom: "1.5rem" }}>Quick Start Tips</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-            <span style={{
-              background: "var(--color-accent)",
-              color: "var(--color-bg)",
-              width: "28px",
-              height: "28px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              flexShrink: 0,
-              fontSize: "0.9rem",
-            }}>1</span>
-            <div>
-              <strong>Choose Valley biome for your first game.</strong>
-              <p style={{ color: "var(--color-text-muted)", margin: "0.25rem 0 0", lineHeight: 1.6 }}>
-                The Valley offers balanced resources, temperate climate, and plenty of fertile soil. 
-                It&apos;s by far the most forgiving biome for learning core game mechanics.
+      {/* ===== Main Content: 两栏布局 ===== */}
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+          {/* ===== 左栏 (65%) ===== */}
+          <div className="flex-1 lg:max-w-[65%] space-y-14">
+
+            {/* --- 欢迎段落 (首字下沉) --- */}
+            <section>
+              <h2 className="font-display text-3xl lg:text-4xl font-bold text-ink leading-tight text-balance">
+                在中世纪的荒野中建立你的殖民地
+              </h2>
+              <p className="drop-cap font-serif text-lg text-ink-light leading-relaxed mt-6">
+                Going Medieval 是一款中世纪殖民地模拟游戏，于 2026 年 3 月 12 日发布 1.0 正式版。你将带领一群定居者在荒野中从零开始建立定居点——建造房屋、开垦农田、锻造武器、抵御入侵者，并在严酷的冬季中生存下来。本攻略站汇集了社区玩家的实战经验，涵盖建筑、农耕、防御、研究等所有核心系统，帮助你打造一个繁荣的中世纪殖民地。所有数据基于社区估算，仅供参考。
               </p>
-            </div>
+            </section>
+
+            {/* --- Featured Guides --- */}
+            <section>
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-ink">精选攻略</h3>
+                  <p className="font-serif text-sm text-ink-muted mt-1">核心系统深度解析</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {FEATURED_GUIDES.map((guide, i) => (
+                  <a key={i} href={guide.href} className="journal-card block p-6 group">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className={`field-tag ${guide.tagType}`}>{guide.tag}</span>
+                      <span className="font-label text-xs text-ink-muted">{guide.readTime} 分钟阅读</span>
+                    </div>
+                    <h4 className="font-display text-lg font-semibold text-ink group-hover:text-vermillion transition-colors duration-200">
+                      {guide.title}
+                    </h4>
+                    <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
+                      {guide.excerpt}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            {/* --- Getting Started --- */}
+            <section>
+              <h3 className="font-display text-2xl font-semibold text-ink mb-6">新手入门</h3>
+              <div className="space-y-5">
+                {GETTING_STARTED.map((s, i) => (
+                  <div key={i} className="flex gap-5 items-start">
+                    <span className="step-number">{s.step}</span>
+                    <div>
+                      <h4 className="font-display text-lg font-semibold text-ink">{s.title}</h4>
+                      <p className="font-serif text-sm text-ink-light leading-relaxed mt-1">{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* --- Pro Tips --- */}
+            <section>
+              <h3 className="font-display text-2xl font-semibold text-ink mb-6">高手心得</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {TIPS.map((item, i) => (
+                  <div key={i} className="journal-card p-4">
+                    <span className="field-tag ink text-[10px] mb-2 inline-block">{item.category}</span>
+                    <p className="font-serif text-sm text-ink leading-relaxed">{item.tip}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </div>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-            <span style={{
-              background: "var(--color-accent)",
-              color: "var(--color-bg)",
-              width: "28px",
-              height: "28px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              flexShrink: 0,
-              fontSize: "0.9rem",
-            }}>2</span>
-            <div>
-              <strong>Build a roofed shelter and campfire immediately on Day 1.</strong>
-              <p style={{ color: "var(--color-text-muted)", margin: "0.25rem 0 0", lineHeight: 1.6 }}>
-                Settlers need protection from weather and a place to cook. A simple 5x5 room with wooden walls, 
-                a roof, a door, and a campfire is all you need to survive the first night.
+
+          {/* ===== 右栏 (35%) ===== */}
+          <aside className="lg:w-[35%] space-y-10 shrink-0">
+
+            {/* --- 快速导航 --- */}
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">快速导航</h3>
+              <div className="space-y-3">
+                {SIDEBAR_LINKS.map((link, i) => (
+                  <a key={i} href={link.href} className="block group">
+                    <span className="font-display text-base font-semibold text-ink group-hover:text-vermillion transition-colors">
+                      {link.label}
+                    </span>
+                    <span className="block font-serif text-xs text-ink-muted mt-0.5">
+                      {link.desc}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* --- 关键数据卡片 --- */}
+            <div className="journal-card p-6">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">游戏数据</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline border-b border-divider pb-2">
+                  <span className="font-label text-sm text-ink-muted">Steam 评论</span>
+                  <span className="font-display text-xl font-bold text-ink">21,000+</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-divider pb-2">
+                  <span className="font-label text-sm text-ink-muted">好评率</span>
+                  <span className="font-display text-xl font-bold text-vermillion">89%</span>
+                </div>
+                <div className="flex justify-between items-baseline border-b border-divider pb-2">
+                  <span className="font-label text-sm text-ink-muted">正式版</span>
+                  <span className="font-display text-xl font-bold text-gold">1.0</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="font-label text-sm text-ink-muted">发售日</span>
+                  <span className="font-display text-base font-semibold text-ink">2026.03.12</span>
+                </div>
+              </div>
+              <p className="font-serif text-xs text-ink-muted mt-4 italic">数据来源：Steam 社区估算</p>
+            </div>
+
+            {/* --- 社区动态 --- */}
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">社区动态</h3>
+              <div className="space-y-4">
+                <div>
+                  <span className="font-label text-xs text-ink-muted">2026.06</span>
+                  <p className="font-serif text-sm text-ink-light mt-1">1.0 正式版首发评测：内容量大增，新生物群系上线</p>
+                </div>
+                <div>
+                  <span className="font-label text-xs text-ink-muted">2026.05</span>
+                  <p className="font-serif text-sm text-ink-light mt-1">社区 Mod 工具发布，大量自定义内容涌现</p>
+                </div>
+                <div>
+                  <span className="font-label text-xs text-ink-muted">2026.03</span>
+                  <p className="font-serif text-sm text-ink-light mt-1">1.0 正式版发布，新增贸易系统与地下探索</p>
+                </div>
+              </div>
+            </div>
+
+            {/* --- 爱发电支持 --- */}
+            <div className="aged-border p-6" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <h3 className="font-display text-base font-semibold text-ink mb-2">支持本站</h3>
+              <p className="font-serif text-xs text-ink-light leading-relaxed mb-4">
+                本攻略站由社区玩家维护，内容免费开放。如果攻略对你有帮助，欢迎通过爱发电支持我们持续更新。
               </p>
+              <a
+                href="https://afdian.com/a/gameguidehub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 font-label text-sm font-semibold text-parchment transition-colors duration-200"
+                style={{ backgroundColor: 'var(--color-vermillion)', borderRadius: 'var(--radius-scroll)' }}
+              >
+                ❤ 爱发电支持
+              </a>
             </div>
-          </div>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-            <span style={{
-              background: "var(--color-accent)",
-              color: "var(--color-bg)",
-              width: "28px",
-              height: "28px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              flexShrink: 0,
-              fontSize: "0.9rem",
-            }}>3</span>
-            <div>
-              <strong>Start farming before the first week ends.</strong>
-              <p style={{ color: "var(--color-text-muted)", margin: "0.25rem 0 0", lineHeight: 1.6 }}>
-                Plant Cabbage, Beet, and Barley in Spring. These fast-growing crops will sustain your colony. 
-                A single 5x5 field per crop type is enough for 3-4 settlers. Don&apos;t wait until you&apos;re hungry.
-              </p>
-            </div>
-          </div>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-            <span style={{
-              background: "var(--color-accent)",
-              color: "var(--color-bg)",
-              width: "28px",
-              height: "28px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              flexShrink: 0,
-              fontSize: "0.9rem",
-            }}>4</span>
-            <div>
-              <strong>Build a Research Table and assign your smartest settler to it.</strong>
-              <p style={{ color: "var(--color-text-muted)", margin: "0.25rem 0 0", lineHeight: 1.6 }}>
-                Research is your ticket to better buildings, weapons, and food. Prioritize Stonecutting, 
-                Agriculture, and Tailoring in your first tech tier. Your Intellectual settler should do 
-                nothing but research until key technologies are unlocked.
-              </p>
-            </div>
-          </div>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-            <span style={{
-              background: "var(--color-accent)",
-              color: "var(--color-bg)",
-              width: "28px",
-              height: "28px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              flexShrink: 0,
-              fontSize: "0.9rem",
-            }}>5</span>
-            <div>
-              <strong>Build a perimeter wall before your first raid.</strong>
-              <p style={{ color: "var(--color-text-muted)", margin: "0.25rem 0 0", lineHeight: 1.6 }}>
-                Raids arrive as your colony wealth grows. A simple wooden wall with a single entrance 
-                will funnel enemies and give your defenders a massive advantage. Even a basic palisade 
-                can mean the difference between survival and disaster.
-              </p>
-            </div>
-          </div>
+
+          </aside>
+
         </div>
-      </section>
 
-      {/* About Going Medieval Section */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto 3rem", padding: "0 2rem" }}>
-        <h2 style={{ marginBottom: "1.5rem" }}>About Going Medieval</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", lineHeight: 1.8 }}>
-          <p style={{ color: "var(--color-text-muted)" }}>
-            Going Medieval is a colony management simulator developed by Foxy Voxel, set in an
-            alternate medieval period following a devastating plague that wiped out most of the
-            population. You guide a small group of survivors who must build a new life from the
-            ruins of the old world. The game combines deep colony management with multi-layered
-            building mechanics, settler psychology, and tactical combat.
-          </p>
-          <p style={{ color: "var(--color-text-muted)" }}>
-            What sets Going Medieval apart is its emphasis on verticality. Unlike many colony
-            sims that operate on a flat plane, Going Medieval allows you to build up to 16
-            levels high and dig multiple levels underground. This 3D freedom means you can
-            construct towering multi-story castles with archer positions on upper floors, or
-            burrow deep into mountains creating vast underground networks of mines, farms, and
-            storage cellars.
-          </p>
-          <p style={{ color: "var(--color-text-muted)" }}>
-            The 1.0 release expanded the game significantly with new endgame content, improved
-            AI raid behavior, expanded research trees, additional biomes, and refined settler
-            behavior systems. Whether you want to build an impenetrable mountaintop fortress,
-            a sprawling underground dwarven city, or a peaceful farming village on the plains,
-            Going Medieval gives you the tools and freedom to create your own medieval survival
-            story.
-          </p>
-          <p style={{ color: "var(--color-text-muted)" }}>
-            Our guide covers every system in the game. From choosing your starting biome and
-            settlers, to optimizing food production chains, to designing killboxes that stop
-            raids cold. We stay current with the latest game updates and community discoveries
-            to ensure you always have accurate, practical information for your colony.
-          </p>
+        <div className="field-divider mt-16" />
+      </main>
 
-          {/* Key Features Overview */}
-          <div style={{
-            background: "var(--color-bg-elevated)",
-            border: "1px solid var(--color-border)",
-            borderRadius: "0.5rem",
-            padding: "1.5rem",
-            marginTop: "0.5rem",
-          }}>
-            <h3 style={{ marginBottom: "1rem", fontSize: "1.15rem" }}>Key Game Systems We Cover</h3>
-            <ul style={{ color: "var(--color-text-muted)", lineHeight: 2, paddingLeft: "1.25rem", margin: 0 }}>
-              <li><strong style={{ color: "var(--color-text)" }}>Building &amp; Construction</strong> — Over {buildings.length} building types with material tiers, structural mechanics, and room quality system</li>
-              <li><strong style={{ color: "var(--color-text)" }}>Research &amp; Technology</strong> — {research.length} technologies across 3 tiers with branching progression and chronicle mechanics</li>
-              <li><strong style={{ color: "var(--color-text)" }}>Settler Management</strong> — {settlerSkills.length} skills, mood system, needs, traits, relationships, and work priorities</li>
-              <li><strong style={{ color: "var(--color-text)" }}>Farming &amp; Food</strong> — {crops.length} crop types across {seasons.length} seasons, plus animal husbandry and food preservation</li>
-              <li><strong style={{ color: "var(--color-text)" }}>Defense &amp; Combat</strong> — {defenseTips.length} core defense strategies, raid mechanics, and siege warfare</li>
-            </ul>
-          </div>
-
-          <p style={{ color: "var(--color-text-muted)" }}>
-            Use the navigation cards above to jump into any topic, or start with the 
-            Beginner&apos;s Guide if you&apos;re new to the game. Each guide page includes 
-            comprehensive data tables, strategic advice, and answers to the most common 
-            questions. Bookmark this site and check back as we update for each new game patch.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto 3rem", padding: "0 2rem" }}>
-        <h2 style={{ marginBottom: "1.5rem" }}>Frequently Asked Questions</h2>
-        <div className="faq-snippets">
-          <details>
-            <summary>How do I start a successful colony in Going Medieval?</summary>
-            <p>
-              Start on the Valley biome (easiest), pick settlers with balanced skills (prioritize 
-              Construction, Intellectual, and Cooking), and immediately build a roofed shelter with 
-              a campfire. Plant fast-growing crops like Cabbage in your first spring week, build a 
-              Research Table for your smartest settler, and construct a perimeter wall before your 
-              colony wealth triggers raids. Focus on food security first, then research 
-              Stonecutting for better walls, and Tailoring for winter gear. Always prepare a full 
-              season ahead — start winter prep in autumn, and expand in spring.
-            </p>
-          </details>
-          <details>
-            <summary>What is the best research order for new players?</summary>
-            <p>
-              Start with Stonecutting to upgrade walls to stone, then Agriculture for better crop 
-              yields. Follow with Tailoring for winter clothing, then Carpentry for furniture and 
-              beds. In Tier 2, rush Smithing for metal tools and weapons, then Animal Taming for 
-              renewable food. Advanced Cooking comes next for better meals. The optimal order 
-              depends on your biome and playstyle, but food security and basic defense should always 
-              come before luxury technologies. Avoid rushing military tech unless you&apos;re on a 
-              high-difficulty biome.
-            </p>
-          </details>
-          <details>
-            <summary>How do I prepare for my first winter?</summary>
-            <p>
-              Start winter preparation in early autumn. Plant Turnips as your winter-hardy crop and 
-              Hay for livestock feed. Build an underground root cellar at least 3 levels deep for 
-              cold storage — food spoils much slower underground. Craft winter coats at the Tailor 
-              Workshop before temperatures drop. Stockpile firewood or coal for heating and cooking. 
-              Limit outdoor work to essential tasks during winter. If you grow Mushrooms underground, 
-              you can maintain food production through the coldest months. A well-prepared colony 
-              treats winter as a planning season, not a survival crisis.
-            </p>
-          </details>
-        </div>
-      </section>
+      <SiteFooter />
     </div>
   );
 }
