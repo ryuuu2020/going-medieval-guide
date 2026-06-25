@@ -5,141 +5,168 @@ export default function PerksGuidePage() {
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
-            <h1 className="chapter-heading">Perks & Traits Guide</h1>
+            <h1 className="chapter-heading">Settler Traits & Perks Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> Going Medieval settlers possess traits and perks that affect their skills, mood, and work efficiency. However, <strong>specific trait names, exact numerical bonuses, and complete trait lists are community-documented</strong> and may vary between game versions. This guide focuses on general trait categories and evaluation strategies confirmed through the Going Medieval Wiki (goingmedieval.fandom.com) and community observation. Do not assume traits from other colony sims (e.g., RimWorld) exist in Going Medieval — the trait systems are different games with different designs.
+                </p>
+              </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Every settler in Going Medieval arrives with a unique set of perks and traits that define their personality, work style, and behavior. Positive perks can turn an average settler into a powerhouse — negative perks can cripple even high-skilled individuals. Understanding how perks interact, which combinations are strongest, and how to manage negative traits is essential for building an elite colony. This guide covers all settler perks, the best combinations, and a priority system for selecting new settlers. Data below is based on community compilation and is for reference only.
+              Every settler who arrives at your colony comes with a personality defined by their traits. These traits influence how quickly they work, how well they learn, how they respond to hardship, and how other settlers perceive them. A settler's traits are just as important as their skill levels — sometimes more so, because skills can be trained while traits are permanent. Understanding the trait system is essential for building a colony where each settler thrives in their assigned role.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Positive Perks (Top Tier)</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">How Traits Work in Going Medieval</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              These perks provide the strongest bonuses and should be prioritized when selecting new settlers or recruiting prisoners. A settler with one of these perks is almost always worth taking, even if their starting skills are slightly below average.
-            </p>
-            <table className="parchment-table">
-              <thead>
-                <tr>
-                  <th>Perk</th>
-                  <th>Effect</th>
-                  <th>Best For</th>
-                  <th>Priority</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="font-semibold">Industrious</td><td>+20% global work speed</td><td>All roles</td><td className="text-vermillion font-semibold">S-Tier</td></tr>
-                <tr><td className="font-semibold">Fast Learner</td><td>+50% skill XP gain rate</td><td>New settlers, specialists</td><td className="text-vermillion font-semibold">S-Tier</td></tr>
-                <tr><td className="font-semibold">Iron-Willed</td><td>+15 mood threshold, harder to break</td><td>Combat, high-stress roles</td><td className="text-vermillion font-semibold">S-Tier</td></tr>
-                <tr><td className="font-semibold">Strong</td><td>+30% carry capacity, faster hauling</td><td>Miners, builders, haulers</td><td className="text-gold font-semibold">A-Tier</td></tr>
-                <tr><td className="font-semibold">Perfectionist</td><td>+15% quality on crafted items</td><td>Crafters, tailors, cooks</td><td className="text-gold font-semibold">A-Tier</td></tr>
-                <tr><td className="font-semibold">Intellectual</td><td>+25% research speed</td><td>Researchers</td><td className="text-gold font-semibold">A-Tier</td></tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Positive Perks (Mid & Lower Tier)</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              These perks offer situational or moderate bonuses. They are useful but not game-changing. Stack multiple mid-tier perks on a settler and they can still be very effective.
-            </p>
-            <table className="parchment-table">
-              <thead>
-                <tr>
-                  <th>Perk</th>
-                  <th>Effect</th>
-                  <th>Best For</th>
-                  <th>Priority</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="font-semibold">Creative</td><td>+15% crafting and cooking speed</td><td>Cooks, crafters</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Optimistic</td><td>+10 base mood, easier to keep happy</td><td>All roles</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Calm</td><td>Not affected by corpses, less combat stress</td><td>Medics, combat settlers</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Charismatic</td><td>+20% trade prices, +15% recruitment chance</td><td>Traders, recruiters</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Night Owl</td><td>+15% work speed at night, no darkness penalty</td><td>Researchers, cooks</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Tough</td><td>+25% HP, less damage taken</td><td>Combat settlers</td><td>B-Tier</td></tr>
-                <tr><td className="font-semibold">Ascetic</td><td>Lower expectations for room/food quality</td><td>Low-priority settlers</td><td>C-Tier</td></tr>
-                <tr><td className="font-semibold">Green Thumb</td><td>+15% crop harvest yield</td><td>Farmers</td><td>B-Tier</td></tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Negative Perks & Management</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Negative perks cannot be removed, but they can be managed through careful role assignment and colony design. Avoid settlers with multiple severe negative perks unless their positive traits are exceptional.
-            </p>
-            <table className="parchment-table">
-              <thead>
-                <tr>
-                  <th>Negative Perk</th>
-                  <th>Penalty</th>
-                  <th>Severity</th>
-                  <th>Mitigation Strategy</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="font-semibold">Lazy</td><td>-15% global work speed</td><td className="text-vermillion font-semibold">Severe</td><td>Avoid unless paired with Industrious (net +5%). Assign to non-critical tasks.</td></tr>
-                <tr><td className="font-semibold">Slow Learner</td><td>-40% skill XP gain rate</td><td className="text-vermillion font-semibold">Severe</td><td>Only recruit if high starting skills exist. This settler will never reach mastery.</td></tr>
-                <tr><td className="font-semibold">Pyromaniac</td><td>May randomly start fires</td><td className="text-vermillion font-semibold">Severe</td><td>Keep away from wooden structures and stockpiles. Assign to outdoor or stone-area work.</td></tr>
-                <tr><td className="font-semibold">Gourmand</td><td>Eats 2x food per day</td><td className="text-gold font-semibold">Moderate</td><td>Acceptable if you have strong food surplus. Factor into winter food calculations.</td></tr>
-                <tr><td className="font-semibold">Pessimistic</td><td>-10 base mood, harder to please</td><td className="text-gold font-semibold">Moderate</td><td>Give individual bedroom + beer access to offset. Not recommended for high-stress roles.</td></tr>
-                <tr><td className="font-semibold">Weak</td><td>-25% carry capacity</td><td className="text-gold font-semibold">Moderate</td><td>Assign to stationary jobs (research, crafting, cooking) — never make them a hauler or miner.</td></tr>
-                <tr><td className="font-semibold">Ugly</td><td>-10 social opinion from others</td><td>Minor</td><td>Avoid social roles. Other settlers will dislike them, causing minor mood drain.</td></tr>
-                <tr><td className="font-semibold">Sensitive</td><td>Mood penalties are 25% worse</td><td>Minor</td><td>Give extra attention to their needs. Not debilitating if colony conditions are good.</td></tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Best Perk Combinations</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              The most powerful settlers combine perks that create multiplicative synergy. A settler with two complementary top-tier perks can be worth 2-3 normal settlers in productivity. When recruiting, always look for these dream combinations.
+              When settlers generate — whether as your starting group, new arrivals seeking to join, or prisoners you hope to recruit — they are assigned a set of traits. Traits appear in the settler's character panel and affect various aspects of gameplay:
             </p>
             <div className="space-y-3">
               <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Industrious + Fast Learner — "The Prodigy"</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">The absolute best combination. Works 20% faster and learns 50% faster. This settler will rapidly become your most valuable colonist regardless of starting skills. Assign to your most important role and let them grow into a master within a single year.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Work Speed & Efficiency</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Some traits boost or reduce how quickly a settler completes tasks. A positive work-speed trait makes the settler more productive across all activities — mining, building, crafting, cooking, farming, researching. Conversely, a negative work-speed trait means they take longer to complete the same tasks, effectively making them less valuable regardless of their skill levels.</p>
               </div>
               <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Industrious + Strong — "The Workhorse"</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Perfect for mining and construction. Works faster, carries more per trip, and completes heavy labor projects in record time. This settler can single-handedly excavate an entire underground base while carrying the stone to stockpiles without ever running out of stamina.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Skill Learning Rate</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Traits can accelerate or slow how quickly a settler gains XP in their skills. A fast-learning settler will reach high skill levels much sooner than an average settler, making them ideal for roles you want to specialize. A slow learner will lag behind — they may never reach the highest skill tiers even after years of dedicated work.</p>
               </div>
               <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Iron-Willed + Tough — "The Unbreakable"</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">The ultimate combat settler. Higher HP, better damage resistance, and near-immunity to mental breaks even in horrific combat situations. This settler can stand on the front line watching companions fall without ever breaking. Ideal for your primary defender.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Mood & Mental Resilience</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Some traits affect baseline mood, how strongly a settler reacts to negative events, and their resistance to mental breaks. A settler with strong mental resilience can endure corpse-filled battlefields, cramped quarters, and food shortages without breaking. A settler with fragile morale may break from relatively minor setbacks, becoming useless (or dangerous) at critical moments.</p>
               </div>
               <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Perfectionist + Creative — "The Artisan"</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Crafting and cooking powerhouse. Items produced at 15% higher quality and 15% faster speed. This settler will craft masterwork weapons that sell for premium prices and cook meals that significantly boost colony mood. Worth its weight in silver.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Physical Attributes</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Traits can affect carry capacity (how much a settler hauls per trip), movement speed, and combat durability. Haulers and miners benefit enormously from carry-capacity boosts. Combat settlers need durability traits to survive extended fights. Stationary workers (researchers, crafters) are less dependent on physical traits.</p>
               </div>
               <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Intellectual + Fast Learner — "The Genius"</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Research speed monster. 25% faster research combined with 50% faster skill gain means this settler will reach Research 20 faster than anyone else. Your tech tree will fly open. Great secondary role as a medic since Medical also benefits from fast learning.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Social & Specialized Traits</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Social traits affect how other settlers perceive this character, influencing relationship formation and colony-wide mood. Specialized traits may provide bonuses to specific activities — crafting quality, trade prices, crop yields, or research speed. These traits are powerful when matched to the right job but offer no benefit if the settler works in an unrelated role.</p>
               </div>
             </div>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Perk Selection Priority for New Settlers</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trait Categories to Look For</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              When choosing your starting settlers or evaluating new arrivals, use this priority system. A settler with high-priority perks should almost always be accepted, even with mediocre skills. Skills can be trained — perks are permanent.
+              While specific trait names are community-documented and subject to change, the trait system in Going Medieval follows predictable categories. When evaluating a new settler, ask yourself which of these categories their traits fall into — this tells you whether they'll be an asset or a liability.
+            </p>
+            <table className="parchment-table">
+              <thead>
+                <tr>
+                  <th>Trait Category</th>
+                  <th>What It Affects</th>
+                  <th>Ideal Settler Role</th>
+                  <th>Recruitment Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="font-semibold">Work Speed Boost</td><td>Faster completion of all tasks</td><td>Any role — universally valuable</td><td className="text-gold font-semibold">High — always recruit</td></tr>
+                <tr><td className="font-semibold">Fast Learning</td><td>Accelerated skill XP gain</td><td>Specialists you want to train long-term</td><td className="text-gold font-semibold">High — compounding value</td></tr>
+                <tr><td className="font-semibold">Mental Resilience</td><td>Better mood management, fewer breaks</td><td>Combat, medical, high-stress roles</td><td className="text-gold font-semibold">High — prevents catastrophe</td></tr>
+                <tr><td className="font-semibold">Physical Strength</td><td>Carry capacity, hauling efficiency</td><td>Miners, builders, haulers</td><td>Moderate — role-dependent</td></tr>
+                <tr><td className="font-semibold">Crafting Quality</td><td>Higher-quality crafted goods</td><td>Crafters, tailors, cooks, smiths</td><td>Moderate — role-dependent</td></tr>
+                <tr><td className="font-semibold">Social / Trade</td><td>Better prices, faster recruitment</td><td>Merchant traders, recruiters</td><td>Low-Moderate — situational</td></tr>
+                <tr><td className="font-semibold">Specialized Activity</td><td>Bonuses to specific work types</td><td>Match trait to job type exactly</td><td>Variable — check match quality</td></tr>
+              </tbody>
+            </table>
+            <p className="font-serif text-sm text-ink-muted italic mt-2">Categories are inferred from community observation. Actual trait names, exact bonus values, and availability may vary by game version. Always check settler traits in-game before making recruitment decisions.</p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Evaluating a New Settler Before Recruiting</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              When a new settler appears — whether as a wanderer seeking to join, a prisoner you've captured, or a starting character — take time to evaluate them thoroughly before committing. A bad recruit consumes food, occupies a bedroom, and can drag down colony mood for months. A great recruit pays for themselves within a season.
             </p>
             <div className="space-y-3">
               <div className="journal-card p-4" style={{ borderLeft: '4px solid var(--color-accent-gold)' }}>
-                <h4 className="font-display text-base font-semibold text-ink">Priority 1: Accept Always</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Any settler with Industrious OR Fast Learner, regardless of other stats. These two perks alone justify recruitment. If you see both on one settler, drop everything and recruit immediately.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Step 1: Read Every Trait</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Open the settler's character panel and read each trait description. Hover over traits for tooltip details if the game provides them. Note which are positive and which are negative. Count the ratio — a settler with 2 positive and 0 negative traits is a strong candidate. A settler with 1 positive and 2 negative traits needs careful scrutiny before accepting.</p>
               </div>
               <div className="journal-card p-4" style={{ borderLeft: '4px solid var(--color-accent)' }}>
-                <h4 className="font-display text-base font-semibold text-ink">Priority 2: Strongly Consider</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Settlers with Iron-Willed, Strong, or Perfectionist. Accept if their skills fill a need in your colony. Two mid-tier positive perks from the B-tier list is also worth considering.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Step 2: Check Skill Levels Against Traits</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Match their starting skill levels to their traits. A settler with crafting-related traits and high Crafting skill is a ready-made specialist. A settler with combat traits but low combat skills can be trained. A settler with no traits relevant to their high skills is less valuable than they appear — they have the skill but no bonus to make them exceptional.</p>
               </div>
               <div className="journal-card p-4" style={{ borderLeft: '4px solid var(--color-border)' }}>
-                <h4 className="font-display text-base font-semibold text-ink">Priority 3: Conditional</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Settlers with one minor positive perk but no severe negatives. Accept only if you need their specific skills NOW (e.g., you urgently need a cook and this settler has Cooking 8+). Otherwise, wait for better candidates.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Step 3: Assess Your Colony's Needs</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">An average settler who fills an urgent gap (you have no cook and they have Cooking 6+) may be worth recruiting despite mediocre traits. A great settler who duplicates a role you already have filled is a luxury — recruit them if you can support the extra mouth, but don't feel obligated. Match the settler to your colony's current bottleneck.</p>
               </div>
               <div className="journal-card p-4" style={{ borderLeft: '4px solid #8b2500' }}>
-                <h4 className="font-display text-base font-semibold text-ink">Avoid: Reject</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Settlers with Lazy AND Slow Learner simultaneously, or Pyromaniac without compensating top-tier perks. Also reject settlers with 3+ minor negative perks — the cumulative penalties will make them a constant drain on colony resources and mood.</p>
+                <h4 className="font-display text-base font-semibold text-ink">Step 4: Look for Red-Flag Negative Traits</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Watch for negative traits that are difficult to manage. A significant work-speed penalty affects everything the settler does. A severe learning penalty means they'll never improve meaningfully. Traits that cause dangerous behavior (if any exist in the current version) should make you reject the settler outright. One mild negative trait balanced by two strong positives is usually acceptable.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Matching Traits to Job Assignments</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              The most efficient colonies match each settler's traits to their daily work. A settler working a job that aligns with their traits is dramatically more productive than one working against their nature. Use the 14 skills in Going Medieval as a framework for job matching:
+            </p>
+            <table className="parchment-table">
+              <thead>
+                <tr>
+                  <th>Skill / Role</th>
+                  <th>Best Trait Categories</th>
+                  <th>Traits to Avoid</th>
+                  <th>Assignment Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="font-semibold">Construction</td><td>Work speed, physical strength</td><td>Significant work speed penalty</td><td>Match trait to role exactly</td></tr>
+                <tr><td className="font-semibold">Mining</td><td>Work speed, physical strength, carry capacity</td><td>Physical weakness, slow work</td><td>Physical traits matter most</td></tr>
+                <tr><td className="font-semibold">Crafting / Smithing / Tailoring</td><td>Crafting quality, work speed, fast learning</td><td>Crafting penalties, slow learning</td><td>Quality traits are premium</td></tr>
+                <tr><td className="font-semibold">Cooking / Brewing</td><td>Crafting quality, work speed</td><td>Work speed penalties</td><td>Speed matters for volume</td></tr>
+                <tr><td className="font-semibold">Farming / Harvesting</td><td>Work speed, specialized farming bonuses</td><td>Work speed penalties</td><td>Volume workers; traits help but aren't critical</td></tr>
+                <tr><td className="font-semibold">Research</td><td>Research speed, fast learning</td><td>Slow learning (makes research crawl)</td><td>Fast learning is heavily preferred</td></tr>
+                <tr><td className="font-semibold">Combat (Melee/Marksman)</td><td>Mental resilience, physical durability, combat bonuses</td><td>Fragile morale, physical weakness</td><td>Resilience is non-negotiable for frontline</td></tr>
+                <tr><td className="font-semibold">Hauling / Cleaning</td><td>Carry capacity, movement speed</td><td>Physical weakness</td><td>Low-priority role; assign weaker settlers elsewhere</td></tr>
+              </tbody>
+            </table>
+            <p className="font-serif text-sm text-ink-muted italic mt-2">Skill-to-job matching is based on the 14 confirmed skills in Going Medieval. Specific trait interactions with each skill may vary by game version.</p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Managing Settlers with Negative Traits</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              You cannot remove negative traits from a settler. Once a settler joins with a negative trait, it is permanent. Your options are to manage it, work around it, or replace the settler. Here's how to handle each category of negative trait.
+            </p>
+            <div className="space-y-3">
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Work Speed Penalties</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Assign these settlers to low-priority or non-critical tasks. A slow cook causes food shortages; a slow researcher delays your entire tech tree. Instead, make them a secondary farmer, hauler, or cleaner — roles where speed matters less and quantity fills the gap. If the penalty is severe and the settler has no compensating positive traits, consider replacing them at the next recruitment opportunity.</p>
+              </div>
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Slow Learning</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Only recruit slow learners if their starting skills are already high. A slow learner with Construction 12 is still a skilled builder — they just won't improve much. A slow learner with all skills at 2-3 will never become useful. Never assign a slow learner to a role you need to develop from scratch. They work best in maintenance roles where their existing skills are sufficient and no further growth is needed.</p>
+              </div>
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Mood / Morale Penalties</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Give these settlers extra attention to their needs. A private bedroom (even a small one) goes a long way. Ensure they have access to beer, mead, or wine if your colony produces it. Keep them away from corpses, filth, and other mood-draining environments. Do NOT assign them to combat roles — a settler with fragile morale on a battlefield is a mental break waiting to happen at the worst possible moment.</p>
+              </div>
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Physical Weakness</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Assign physically weak settlers exclusively to stationary jobs — research tables, crafting stations, cooking fires, and tailoring benches. Never make them miners (they'll carry too little per trip), builders (slow construction), or haulers (inefficient transport). A physically weak researcher with fast learning is still an excellent researcher because physical traits don't matter at a research table.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Starting Settler Selection Strategy</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Your three starting settlers set the foundation for your entire colony. Reroll them until you have a balanced team with complementary traits. Here's a framework for a strong starting trio:
+            </p>
+            <div className="space-y-3">
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Settler 1: The Builder/Miner</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Prioritize Construction and Mining skills. Look for physical-strength traits and work-speed bonuses. This settler will build your first shelter, dig your first underground rooms, and construct your walls. They're your most active settler in the first 10 days. A work-speed penalty on this settler is particularly painful because early-game construction speed directly determines how fast you get shelter and defenses up.</p>
+              </div>
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Settler 2: The Crafter/Cook</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Prioritize Crafting and Cooking skills. Quality and work-speed traits are ideal. This settler produces your weapons, armor, tools, and meals. Once the initial construction rush ends, this settler becomes your most economically valuable colonist. Fast learning is excellent here because crafting skills scale dramatically — a level 15 crafter produces vastly better equipment than a level 5 crafter.</p>
+              </div>
+              <div className="journal-card p-4">
+                <h4 className="font-display text-base font-semibold text-ink">Settler 3: The Researcher/Support</h4>
+                <p className="font-serif text-sm text-ink-light mt-1">Prioritize Intellectual (research) skill. Fast learning is the best trait for this role because research takes the longest to level up. This settler can also handle farming, hauling, and medical duties early on. Mental resilience is valuable — a researcher who breaks from stress halts your entire tech progression. Consider giving them a secondary role as a backup combat settler since they'll spend most of their time at the research table and will be available for emergencies.</p>
               </div>
             </div>
           </section>
@@ -148,20 +175,32 @@ export default function PerksGuidePage() {
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
             <div className="faq-item">
               <details>
-                <summary>Can negative perks be removed or changed?</summary>
-                <p>No. Perks are permanent traits that cannot be changed through any in-game mechanic. There is no way to remove a negative perk or add a positive one after character creation. The only way to replace a bad settler is to recruit a better one and let the problematic settler leave (or perish). This is why perk selection at recruitment is so critical.</p>
+                <summary>Can negative traits be removed or changed?</summary>
+                <p>No. Traits in Going Medieval are permanent. There is no in-game mechanic to remove a negative trait, add a positive one, or change a settler's traits after they are generated. The only way to replace a bad settler is to recruit a better one and either exile the problematic settler or accept their limitations. This is why trait evaluation at recruitment is so critical — a bad decision now affects your colony for the rest of that save.</p>
               </details>
             </div>
             <div className="faq-item">
               <details>
-                <summary>Are perks more important than skills when choosing settlers?</summary>
-                <p>For new colonies (first 5-7 days): skills matter slightly more because you need immediate productivity. For established colonies: perks matter more because skills can be trained but perks are permanent. A settler with Industrious and level 3 Cooking will eventually outperform a settler with level 10 Cooking and no useful perks — it just takes time.</p>
+                <summary>Are traits more important than skills?</summary>
+                <p>It depends on your colony's stage. For a new colony (first 10 days): skills matter slightly more because you need immediate productivity to survive. For an established colony (after the first winter): traits matter more because skills can be trained but traits are permanent. A settler with great traits and mediocre skills will eventually surpass a settler with great skills and mediocre traits — it just takes time. The ideal recruit has both.</p>
               </details>
             </div>
             <div className="faq-item">
               <details>
-                <summary>What's the single best perk in the game?</summary>
-                <p>Industrious is widely considered the best standalone perk. A flat 20% work speed boost affects everything a settler does — mining, building, crafting, cooking, farming, researching. Over a 5-year colony lifespan, an Industrious settler will accomplish roughly 20% more work than an identical settler without the perk. Fast Learner is a close second due to its compounding effect over time.</p>
+                <summary>How many traits does each settler have?</summary>
+                <p>Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system. Community documentation on the Going Medieval Wiki (goingmedieval.fandom.com) tracks known traits and their effects across versions.</p>
+              </details>
+            </div>
+            <div className="faq-item">
+              <details>
+                <summary>Do traits affect combat performance?</summary>
+                <p>Yes. Physical traits affect durability and damage output. Mental resilience traits affect whether a settler breaks morale during extended combat. A settler with strong combat-related traits is significantly more effective than one without, even at the same skill level. For your primary defenders, prioritize combat-relevant traits alongside high Melee or Marksman skill. A skilled archer with fragile morale is less reliable than an average archer with iron nerves.</p>
+              </details>
+            </div>
+            <div className="faq-item">
+              <details>
+                <summary>Where can I find a complete list of Going Medieval traits?</summary>
+                <p>The Going Medieval Wiki (goingmedieval.fandom.com) maintains a community-documented list of known traits, their effects, and which game versions they appear in. Keep in mind that Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates. For the most current information, check the wiki and cross-reference with what you see in your own game. Steam community guides may also contain up-to-date trait documentation.</p>
               </details>
             </div>
           </section>
@@ -169,32 +208,34 @@ export default function PerksGuidePage() {
 
         <aside className="lg:w-[35%] space-y-8 shrink-0">
           <div className="field-sidebar-block">
-            <h3 className="font-display text-lg font-semibold text-ink mb-4">Perk Tier Summary</h3>
-            <div className="space-y-2 font-serif text-sm text-ink-light">
-              <div className="flex justify-between"><span>Industrious</span><span className="text-vermillion font-semibold">S</span></div>
-              <div className="flex justify-between"><span>Fast Learner</span><span className="text-vermillion font-semibold">S</span></div>
-              <div className="flex justify-between"><span>Iron-Willed</span><span className="text-vermillion font-semibold">S</span></div>
-              <div className="flex justify-between"><span>Strong</span><span className="text-gold font-semibold">A</span></div>
-              <div className="flex justify-between"><span>Perfectionist</span><span className="text-gold font-semibold">A</span></div>
-              <div className="flex justify-between"><span>Intellectual</span><span className="text-gold font-semibold">A</span></div>
-              <div className="flex justify-between"><span>Creative</span><span>B</span></div>
-              <div className="flex justify-between"><span>Optimistic</span><span>B</span></div>
-              <div className="flex justify-between"><span>Charismatic</span><span>B</span></div>
-              <div className="flex justify-between"><span>Tough</span><span>B</span></div>
+            <h3 className="font-display text-lg font-semibold text-ink mb-4">Recruitment Priority</h3>
+            <div className="space-y-3">
+              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Always Recruit</h4><p className="font-serif text-xs text-ink-muted mt-1">Work-speed boost + any other positive trait. Fast learner with relevant skills. Two strong positives, no negatives.</p></div>
+              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Strongly Consider</h4><p className="font-serif text-xs text-ink-muted mt-1">One strong positive trait + fills a colony need. Mental resilience for combat roles. High skills despite average traits.</p></div>
+              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Conditional</h4><p className="font-serif text-xs text-ink-muted mt-1">Fills urgent skill gap. One minor positive, no severe negatives. Late-game luxury recruit.</p></div>
+              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink" style={{"color": "#8b2500"}}>Reject</h4><p className="font-serif text-xs text-ink-muted mt-1">Severe work-speed + slow-learning combo. Dangerous behavioral traits. Multiple severe negatives without compensation.</p></div>
             </div>
           </div>
           <div className="journal-card p-5">
-            <h3 className="font-display text-base font-semibold text-ink mb-3">Red Flag Perks (Reject)</h3>
-            <ul className="space-y-2 font-serif text-sm text-ink-light">
-              <li>&bull; Lazy (-15% work speed)</li>
-              <li>&bull; Slow Learner (-40% XP)</li>
-              <li>&bull; Pyromaniac (fire risk)</li>
-              <li>&bull; Lazy + Slow Learner (never)</li>
-              <li>&bull; 3+ minor negative perks</li>
-            </ul>
+            <h3 className="font-display text-base font-semibold text-ink mb-3">Starting Trio Checklist</h3>
+            <div className="space-y-2 font-serif text-sm text-ink-light">
+              <div>&bull; One strong builder/miner (Construction + physical traits)</div>
+              <div>&bull; One crafter/cook (Crafting + quality traits)</div>
+              <div>&bull; One researcher/support (Intellectual + fast learning)</div>
+              <div>&bull; At least one settler with combat-relevant traits</div>
+              <div>&bull; Cover all 14 skills across the trio</div>
+              <div>&bull; Avoid any settler with severe work-speed + learning penalty combo</div>
+              <div className="mt-2">Reroll until all three settlers have at least one useful positive trait each.</div>
+            </div>
+          </div>
+          <div className="aged-border p-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+            <p className="font-serif text-xs text-ink leading-relaxed">
+              <strong className="text-vermillion">Version Note:</strong> Going Medieval is in Early Access. Trait names, exact numerical effects, and trait availability change between game versions. Traits documented on the Going Medieval Wiki (goingmedieval.fandom.com) reflect community observation and may not match the current live version. Always check settler traits in-game before making decisions. Do not assume traits from other games exist in Going Medieval.
+            </p>
           </div>
         </aside>
       </div>
-    </main>
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
+      </main>
   );
 }

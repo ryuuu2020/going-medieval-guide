@@ -114,7 +114,7 @@ export default function SettlersPage() {
               <div className="faq-item">
                 <details>
                   <summary>How do I level up settler skills?</summary>
-                  <p>Skills improve through continued use. Have settlers repeatedly perform a task to gain experience. You can also build training facilities (e.g., target dummies to train Ranged skill). Skill gain speed is influenced by the settler's learning attribute.</p>
+                  <p>Skills improve through continued use. Have settlers repeatedly perform a task to gain experience. You can also build training facilities (e.g., target dummies to train Marksman skill). Skill gain speed is influenced by the settler's learning attribute.</p>
                 </details>
               </div>
             </section>

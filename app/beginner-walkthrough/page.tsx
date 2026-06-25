@@ -27,7 +27,7 @@ export default function BeginnerWalkthroughPage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 3: Plant First Crops (Hours 4-8)</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Designate a 8x8 field zone on fertile soil near your base. Plant 50% cabbage (fast growth, eat raw) and 50% wheat (longer growth, process into bread). Cabbage will be ready in 6 days — this is your first harvest. Assign your highest Farming-skill settler to prioritize planting. While waiting, harvest any visible berry bushes for immediate food.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Designate a 8x8 field zone on fertile soil near your base. Plant 50% cabbage (fast growth, can eat raw) and 50% barley (confirmed grain crop, useful for brewing/processing). If barley is unavailable, plant carrots as an alternative. Cabbage will be ready quickly — this is your first harvest. Assign your highest Botany skill settler to prioritize planting. While waiting, harvest any visible berry bushes for immediate food.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 4: Dig Underground Stockpile (Hours 8-16)</h4>
@@ -75,7 +75,7 @@ export default function BeginnerWalkthroughPage() {
             <div className="space-y-3">
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 9: Harvest Everything & Stockpile (Day 16-20)</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Harvest all remaining summer crops. Your wheat should be ready around Day 16-18. Process wheat into flour at a mill (build one if you haven't already), then bake flour into bread at a campfire or oven. Bread has 3x the shelf life of raw wheat. You need roughly 200 units of food stockpiled for three settlers — count your reserves carefully.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Harvest all remaining summer crops. Your barley should be ready around Day 16-18. Process barley into brewable goods or store as-is. If you have processing stations available (mill, etc.), convert crops into longer-lasting forms — processed food has roughly 3x the shelf life of raw ingredients. You need roughly 200 units of food stockpiled for three settlers — count your reserves carefully.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 10: Last Planting & Hunting Push (Day 18-24)</h4>
@@ -102,7 +102,7 @@ export default function BeginnerWalkthroughPage() {
             <div className="space-y-3">
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 12: Ration Food & Monitor Stockpiles</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Winter lasts 12-15 days. Check your food stockpile every 3 days. If reserves are depleting faster than expected, immediately reduce consumption by: 1) Slaughter any excess livestock (pigs, chickens); 2) Cancel any food-processing jobs (they consume ingredients); 3) Have settlers eat raw food if necessary — it lowers mood but prevents starvation.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Winter lasts 12-15 days. Check your food stockpile every 3 days. If reserves are depleting faster than expected, immediately reduce consumption by: 1) Slaughter any excess livestock (chickens, goats); 2) Cancel any food-processing jobs (they consume ingredients); 3) Have settlers eat raw food if necessary — it lowers mood but prevents starvation.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 13: Defend Against Winter Raids</h4>
@@ -110,7 +110,7 @@ export default function BeginnerWalkthroughPage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 14: Maintain Mood & Mental Health</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Winter confinement causes mood drain. Countermeasures: ensure individual bedrooms are warm (place torches or campfires nearby), provide variety in meals (alternate bread, smoked meat, pickles), schedule recreation time (build a chessboard if you have spare wood). If any settler drops below 20 mood, order them to rest immediately and consume the best food available — a mental break during winter can be catastrophic.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Winter confinement causes mood drain. Countermeasures: ensure individual bedrooms are warm (place torches or campfires nearby), provide variety in meals (alternate cooked meals, smoked meat, pickled vegetables), schedule recreation time (build entertainment if available). If any settler drops too low on mood, order them to rest immediately and consume the best food available.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Step 15: Prepare for Spring (Day 40-42)</h4>
@@ -177,6 +177,7 @@ export default function BeginnerWalkthroughPage() {
           </div>
         </aside>
       </div>
-    </main>
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
+      </main>
   );
 }

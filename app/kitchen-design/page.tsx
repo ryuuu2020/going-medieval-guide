@@ -39,11 +39,11 @@ export default function KitchenDesignPage() {
               <div className="space-y-3">
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Raw Ingredient Stockpile</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Designate the tiles immediately adjacent to the stove for raw ingredients only: vegetables (cabbage, carrots), raw meat, wheat, barley, and hops. This stockpile should be set to high priority to ensure it's always stocked. Assign a dedicated hauler to keep it filled from main storage.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Designate the tiles immediately adjacent to the stove for raw ingredients only: vegetables (cabbage, carrots), raw meat, barley, and herbs. This stockpile should be set to high priority to ensure it's always stocked. Assign a dedicated hauler to keep it filled from main storage.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Intermediate Stockpile</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">For processed intermediates like flour (milled from wheat) and dough. Placing a millstone or kneading table directly in or adjacent to the kitchen eliminates intermediate hauling. Flour stored next to the stove allows seamless bread production without the cook leaving the room.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">For processed intermediates like flour and dough (if wheat milling is available — wheat is not confirmed as a crop in the current game version). Placing any ingredient-processing station directly in or adjacent to the kitchen eliminates intermediate hauling.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Finished Meal Stockpile</h4>
@@ -55,10 +55,10 @@ export default function KitchenDesignPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Cook Skill & Efficiency</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's Cooking skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food poisoning chance (lower skill increases the risk of spoiled or contaminated meals that cause illness). Assign your highest Cooking skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with Cooking 10+ produces 2-3x the meals of a rotating-duty cook with Cooking 3.
+                A settler's Culinary skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food poisoning chance (lower skill increases the risk of spoiled or contaminated meals that cause illness). Assign your highest Culinary skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with Culinary 10+ produces ~2-3x the meals of a rotating-duty cook with Culinary 3.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Avoid task-switching penalties. A common mistake is assigning the cook to also haul, farm, or construct — every time they switch tasks, they lose productive cooking time moving between zones. Set your dedicated cook's work priorities so that Cooking is #1 and all other tasks are #4 or lower. This keeps them in the kitchen producing meals continuously. Supplement with a dedicated hauler who moves ingredients from main storage to the kitchen stockpile, so the cook never has to fetch supplies from the warehouse.
+                Avoid task-switching penalties. A common mistake is assigning the cook to also haul, farm, or construct — every time they switch tasks, they lose productive cooking time moving between zones. Set your dedicated cook's work priorities so that Culinary is #1 and all other tasks are #4 or lower. This keeps them in the kitchen producing meals continuously. Supplement with a dedicated hauler who moves ingredients from main storage to the kitchen stockpile, so the cook never has to fetch supplies from the warehouse.
               </p>
             </section>
 
@@ -121,8 +121,11 @@ export default function KitchenDesignPage() {
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Campfire</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x3 | Simple meals only | Needs ventilation</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stove</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron x5, Stone x8 | Fine+ meals | Research unlock</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Butcher Table</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x5 | Process carcasses | No fuel needed</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Millstone</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x10 | Wheat→Flour | Slow, assign skilled settler</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Millstone</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x10 | Grain→Flour | Slow, assign skilled settler</p></div>
               </div>
+            </div>
+            <div className="journal-card p-5 mt-4">
+              <p className="font-serif text-xs text-ink-muted italic">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops verified; meal names, recipe requirements, and specific numbers are community estimates.</p>
             </div>
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Kitchen Efficiency Checklist</h3>

@@ -147,6 +147,7 @@ export default function ArmorWeaponsPage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

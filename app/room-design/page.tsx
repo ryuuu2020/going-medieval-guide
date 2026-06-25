@@ -36,7 +36,7 @@ export default function RoomDesignPage() {
                   <tr><td>Library</td><td>Research bench</td><td>5x5 to 6x6</td><td>Research speed</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
+              <p className="font-serif text-xs text-ink-muted italic">Note: "Library" as a distinct room type is NOT confirmed in the verified room type list. Research stations may simply function within Workshop or general rooms. Data source: Community testing estimates</p>
             </section>
 
             <section>
@@ -116,6 +116,7 @@ export default function RoomDesignPage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

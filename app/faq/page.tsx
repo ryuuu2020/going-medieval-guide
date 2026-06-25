@@ -10,7 +10,7 @@ const FAQS = [
   { q: 'Raids are too frequent. What can I do?', a: 'Raid frequency increases with colony wealth. Countermeasures: 1) Build multi-layered walls; 2) Set up trap zones; 3) Train dedicated fighters; 4) Avoid hoarding excessive wealth (lowers raid frequency); 5) Build a prison to recruit prisoners for reinforcements.' },
   { q: 'How do I fix low settler mood?', a: 'Three steps to boost mood: 1) Provide processed foods (bread, stew) instead of raw food; 2) Give each settler an individual bedroom with a table and chair; 3) Supply beer. If any settler drops below 20 mood, immediately order rest and provide quality food.' },
   { q: 'Where do I find iron ore?', a: 'Iron ore is typically found 3+ levels underground, appearing as gray speckled patches. Use the prospecting function to view underground mineral deposits. It\'s recommended to build your colony near mountains to facilitate future mining.' },
-  { q: 'How do I recruit prisoners?', a: 'Build a prison to hold captives and provide food regularly. After some time (typically 3-5 days), you can attempt recruitment through social interaction. Settlers with higher Social skill have better recruitment success rates.' },
+  { q: 'How do I recruit prisoners?', a: 'Build a prison to hold captives and provide food regularly. After some time (typically 3-5 days), you can attempt recruitment through social interaction. Settlers with higher Speechcraft skill have better recruitment success rates.' },
   { q: 'How accurate is this guide site\'s data?', a: 'All data on this site is based on community player testing and estimates, and may change with game updates. We do our best to keep information current but cannot guarantee 100% accuracy. When in doubt, refer to actual in-game values.' },
 ];
 

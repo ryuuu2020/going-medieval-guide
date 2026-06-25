@@ -7,14 +7,14 @@ export default function SettlerSkillsPage() {
           <section>
             <h1 className="chapter-heading">Settler Skills & Specialization Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Your settlers' skills are the engine that powers your entire colony. Every task — from mining stone to baking bread, from researching technology to fending off raiders — scales with the relevant skill level. Understanding the 10 core skills, how they level up, and how to specialize settlers into effective roles is the single most impactful strategic decision you can make. This guide covers every skill in detail, the passion and interest system, dual-specialization strategies, and how to prevent skill decay. Data below is based on community compilation and is for reference only.
+              Your settlers' skills are the engine that powers your entire colony. Every task — from mining stone to baking bread, from researching technology to fending off raiders — scales with the relevant skill level. Understanding the 14 core skills, how they level up, and how to specialize settlers into effective roles is the single most impactful strategic decision you can make. This guide covers every skill in detail, the passion and interest system, dual-specialization strategies, and how to prevent skill decay. Data below is based on community compilation and is for reference only.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">All 10 Skills Explained</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">All 14 Skills Explained</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Going Medieval features 10 distinct skills, each governing a set of related jobs. A settler's skill level directly affects work speed, output quality, and success rate for the associated tasks. Skills range from 0 (incompetent) to 20 (master). Most settlers start with skills between 2-10 depending on their background.
+              Going Medieval features 14 distinct skills, each governing a set of related jobs. A settler's skill level directly affects work speed, output quality, and success rate for the associated tasks. Skills range from 0 (incompetent) to 20 (master). Most settlers start with skills between 2-10 depending on their background.
             </p>
             <table className="parchment-table">
               <thead>
@@ -26,16 +26,20 @@ export default function SettlerSkillsPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="font-semibold">Mining</td><td>Digging tunnels, mining stone/iron/coal, excavating rooms</td><td>Industrious, Strong</td><td className="text-vermillion font-semibold">Critical</td></tr>
-                <tr><td className="font-semibold">Construction</td><td>Building walls, floors, roofs, doors, stairs, furniture</td><td>Industrious, Perfectionist</td><td className="text-vermillion font-semibold">Critical</td></tr>
-                <tr><td className="font-semibold">Cooking</td><td>Preparing meals, baking bread, brewing beer, smoking meat</td><td>Creative, Fast Learner</td><td className="text-gold font-semibold">High</td></tr>
-                <tr><td className="font-semibold">Crafting</td><td>Smithing weapons/armor, tailoring clothing, making tools</td><td>Perfectionist, Creative</td><td className="text-gold font-semibold">High</td></tr>
-                <tr><td className="font-semibold">Tailoring</td><td>Sewing clothing, making armor from leather/cloth, bandages</td><td>Creative, Fast Learner</td><td>Medium</td></tr>
-                <tr><td className="font-semibold">Research</td><td>Operating research table, unlocking technologies</td><td>Intellectual, Fast Learner</td><td className="text-gold font-semibold">High</td></tr>
-                <tr><td className="font-semibold">Farming</td><td>Planting crops, harvesting, tending animals, cutting grass</td><td>Industrious, Strong</td><td className="text-gold font-semibold">High</td></tr>
-                <tr><td className="font-semibold">Medical</td><td>Treating wounds, performing surgery, applying medicine</td><td>Intellectual, Calm</td><td>Medium</td></tr>
-                <tr><td className="font-semibold">Social</td><td>Trading with merchants, recruiting prisoners, converting</td><td>Charismatic, Optimistic</td><td>Medium</td></tr>
-                <tr><td className="font-semibold">Animal Handling</td><td>Taming wild animals, milking, shearing, slaughtering</td><td>Calm, Optimistic</td><td>Low</td></tr>
+                <tr><td className="font-semibold">Mining</td><td>Digging tunnels, mining stone/iron/coal, excavating rooms (Job: Mine)</td><td>Industrious, Strong</td><td className="text-vermillion font-semibold">Critical</td></tr>
+                <tr><td className="font-semibold">Construction</td><td>Building walls, floors, roofs, doors, stairs, furniture, brick-making, stone-cutting (Job: Construct)</td><td>Industrious, Perfectionist</td><td className="text-vermillion font-semibold">Critical</td></tr>
+                <tr><td className="font-semibold">Culinary</td><td>Preparing meals, baking bread, brewing beer, smoking meat, butchering animals (Job: Cooking)</td><td>Creative, Fast Learner</td><td className="text-gold font-semibold">High</td></tr>
+                <tr><td className="font-semibold">Botany</td><td>Planting crops, sowing seeds, growing, harvesting plants, cutting grass (Jobs: Grow, Harvest, Cut plants)</td><td>Industrious, Strong</td><td className="text-gold font-semibold">High</td></tr>
+                <tr><td className="font-semibold">Intellectual</td><td>Operating research table, alchemy, brewing, medicine-making (Jobs: Research, Alchemy)</td><td>Intellectual, Fast Learner</td><td className="text-gold font-semibold">High</td></tr>
+                <tr><td className="font-semibold">Smithing</td><td>Smelting ingots, crafting metal weapons, armor, and tools (Job: Smithing)</td><td>Perfectionist, Creative</td><td className="text-gold font-semibold">High</td></tr>
+                <tr><td className="font-semibold">Tailoring</td><td>Sewing clothing, leather/cloth armor, bandages (Job: Tailoring)</td><td>Creative, Fast Learner</td><td>Medium</td></tr>
+                <tr><td className="font-semibold">Medicine</td><td>Treating wounds, healing settlers, performing surgery (Job: Tend)</td><td>Intellectual, Calm</td><td>Medium</td></tr>
+                <tr><td className="font-semibold">Carpentry</td><td>Crafting wooden items, furniture, bows (Job: Carpentry)</td><td>Creative, Industrious</td><td>Medium</td></tr>
+                <tr><td className="font-semibold">Speechcraft</td><td>Trading/bartering, recruiting prisoners, bard performances, prison warden (Jobs: Bartering, Gaoler, Bard, Prison Warden)</td><td>Charismatic, Optimistic</td><td>Medium</td></tr>
+                <tr><td className="font-semibold">Art</td><td>Creating statues, paintings, tapestries for colony mood (Job: Artist)</td><td>Creative, Perfectionist</td><td>Low</td></tr>
+                <tr><td className="font-semibold">Marksman</td><td>Ranged combat with bows and crossbows, hunting animals (Job: Hunt)</td><td>Calm, Fast Learner</td><td>Low</td></tr>
+                <tr><td className="font-semibold">Melee</td><td>Melee combat: damage %, dodge, crit chance, precision (no specific job, pure combat)</td><td>Strong, Calm</td><td>Low</td></tr>
+                <tr><td className="font-semibold">Animal Handling</td><td>Taming wild animals, feeding, training, fishing (Job: Fish)</td><td>Calm, Optimistic</td><td>Low</td></tr>
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
@@ -53,7 +57,7 @@ export default function SettlerSkillsPage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Levels 5-10: Journeyman</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Moderate leveling speed. Settlers at this range are solid contributors. Work speed is noticeably faster than apprentices. This is the minimum you want for critical roles (cook, crafter).</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Moderate leveling speed. Settlers at this range are solid contributors. Work speed is noticeably faster than apprentices. This is the minimum you want for critical roles (cook, smith).</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Levels 10-15: Expert</h4>
@@ -61,7 +65,7 @@ export default function SettlerSkillsPage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Levels 15-20: Master</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Very slow leveling. Master settlers are exceptional — 4x faster work speed, near-perfect quality output. Only achievable with long-term dedication and favorable traits. A single master crafter can supply an entire colony.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Very slow leveling. Master settlers are exceptional — 4x faster work speed, near-perfect quality output. Only achievable with long-term dedication and favorable traits. A single master smith can supply an entire colony.</p>
               </div>
             </div>
           </section>
@@ -92,10 +96,10 @@ export default function SettlerSkillsPage() {
               </thead>
               <tbody>
                 <tr><td className="font-semibold">Builder-Miner</td><td>Construction</td><td>Mining</td><td>Mine stone, then build walls — no idle time. Natural synergy: the materials you mine become the structures you build.</td></tr>
-                <tr><td className="font-semibold">Farmer-Cook</td><td>Farming</td><td>Cooking</td><td>Grow food then cook it. Farm work is seasonal (intense planting/harvesting), cooking is daily — complementary rhythms.</td></tr>
-                <tr><td className="font-semibold">Crafter-Tailor</td><td>Crafting</td><td>Tailoring</td><td>Both use workstation crafting. Smith weapons when metal is abundant, sew clothing when leather is stocked.</td></tr>
-                <tr><td className="font-semibold">Researcher-Medic</td><td>Research</td><td>Medical</td><td>Both are intellectual indoor jobs. Researcher works the bench during peacetime, switches to triage after battles.</td></tr>
-                <tr><td className="font-semibold">Handler-Trader</td><td>Animal Handling</td><td>Social</td><td>Both involve interaction mechanics. Tame and tend animals between merchant visits, handle trades when caravans arrive.</td></tr>
+                <tr><td className="font-semibold">Botanist-Cook</td><td>Botany</td><td>Culinary</td><td>Grow food then cook it. Farm work is seasonal (intense planting/harvesting), cooking is daily — complementary rhythms.</td></tr>
+                <tr><td className="font-semibold">Carpenter-Smith</td><td>Carpentry</td><td>Smithing</td><td>Both use workstation crafting. Make wooden items and bows when wood is abundant, smith metal gear when ingots are ready.</td></tr>
+                <tr><td className="font-semibold">Researcher-Healer</td><td>Intellectual</td><td>Medicine</td><td>Both are intellectual indoor jobs. Researcher works the bench during peacetime, switches to tending wounded after battles.</td></tr>
+                <tr><td className="font-semibold">Handler-Trader</td><td>Animal Handling</td><td>Speechcraft</td><td>Tame and tend animals between merchant visits, handle trades and prisoner recruitment when caravans arrive.</td></tr>
               </tbody>
             </table>
           </section>
@@ -106,7 +110,7 @@ export default function SettlerSkillsPage() {
               Skills above level 10 will slowly decay if the settler does not practice them regularly. The decay rate is approximately 0.5-1% of XP per day of inactivity. This means a specialized settler who is injured, imprisoned, or reassigned to other work for extended periods will lose hard-earned skill levels. Skill decay only affects levels above 10 — skills at level 10 or below do not decay.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              Prevention strategy: ensure specialists practice their core skill at least once every 2-3 days. For a crafter, this means crafting at least one item every few days even during quiet periods. For a researcher, keep the research table running continuously — even at slow speed, it prevents decay. If a specialist is recovering from injury, have them perform light versions of their skill (craft simple items, research slowly) as soon as they can walk. Never reassign a high-level specialist to entirely different work for more than a few days.
+              Prevention strategy: ensure specialists practice their core skill at least once every 2-3 days. For a smith, this means crafting at least one item every few days even during quiet periods. For a researcher, keep the research table running continuously — even at slow speed, it prevents decay. If a specialist is recovering from injury, have them perform light versions of their skill (craft simple items, research slowly) as soon as they can walk. Never reassign a high-level specialist to entirely different work for more than a few days.
             </p>
           </section>
 
@@ -127,9 +131,17 @@ export default function SettlerSkillsPage() {
             <div className="faq-item">
               <details>
                 <summary>How do I recruit settlers with the specific skills I need?</summary>
-                <p>When wanderers or prisoners become available, inspect their skills before committing. Prioritize candidates who fill gaps in your colony. If you lack a cook, accept a settler with Cooking 5+ even if their other stats are poor. If all skills are well-covered, accept settlers with high potential (multiple passions, good traits) who can grow into specialists over time.</p>
+                <p>When wanderers or prisoners become available, inspect their skills before committing. Prioritize candidates who fill gaps in your colony. If you lack a cook, accept a settler with Culinary 5+ even if their other stats are poor. If all skills are well-covered, accept settlers with high potential (multiple passions, good traits) who can grow into specialists over time.</p>
               </details>
             </div>
+          </section>
+
+          {/* Verification note */}
+          <section>
+            <div className="field-divider mb-4" />
+            <p className="font-serif text-xs text-ink-muted italic">
+              Data verified against Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
+            </p>
           </section>
         </div>
 
@@ -139,24 +151,28 @@ export default function SettlerSkillsPage() {
             <div className="space-y-2 font-serif text-sm text-ink-light">
               <div className="flex justify-between"><span>1. Mining</span><span className="text-vermillion font-semibold">S-Tier</span></div>
               <div className="flex justify-between"><span>2. Construction</span><span className="text-vermillion font-semibold">S-Tier</span></div>
-              <div className="flex justify-between"><span>3. Cooking</span><span className="text-gold font-semibold">A-Tier</span></div>
-              <div className="flex justify-between"><span>4. Farming</span><span className="text-gold font-semibold">A-Tier</span></div>
-              <div className="flex justify-between"><span>5. Research</span><span className="text-gold font-semibold">A-Tier</span></div>
-              <div className="flex justify-between"><span>6. Crafting</span><span className="text-gold font-semibold">A-Tier</span></div>
+              <div className="flex justify-between"><span>3. Culinary</span><span className="text-gold font-semibold">A-Tier</span></div>
+              <div className="flex justify-between"><span>4. Botany</span><span className="text-gold font-semibold">A-Tier</span></div>
+              <div className="flex justify-between"><span>5. Intellectual</span><span className="text-gold font-semibold">A-Tier</span></div>
+              <div className="flex justify-between"><span>6. Smithing</span><span className="text-gold font-semibold">A-Tier</span></div>
               <div className="flex justify-between"><span>7. Tailoring</span><span>B-Tier</span></div>
-              <div className="flex justify-between"><span>8. Medical</span><span>B-Tier</span></div>
-              <div className="flex justify-between"><span>9. Social</span><span>B-Tier</span></div>
-              <div className="flex justify-between"><span>10. Animal Handling</span><span>C-Tier</span></div>
+              <div className="flex justify-between"><span>8. Medicine</span><span>B-Tier</span></div>
+              <div className="flex justify-between"><span>9. Carpentry</span><span>B-Tier</span></div>
+              <div className="flex justify-between"><span>10. Speechcraft</span><span>B-Tier</span></div>
+              <div className="flex justify-between"><span>11. Art</span><span>C-Tier</span></div>
+              <div className="flex justify-between"><span>12. Marksman</span><span>C-Tier</span></div>
+              <div className="flex justify-between"><span>13. Melee</span><span>C-Tier</span></div>
+              <div className="flex justify-between"><span>14. Animal Handling</span><span>C-Tier</span></div>
             </div>
           </div>
           <div className="journal-card p-5">
             <h3 className="font-display text-base font-semibold text-ink mb-3">Ideal 5-Settler Setup</h3>
             <ul className="space-y-2 font-serif text-sm text-ink-light">
               <li>&bull; Builder-Miner (Construction + Mining)</li>
-              <li>&bull; Farmer-Cook (Farming + Cooking)</li>
-              <li>&bull; Crafter-Tailor (Crafting + Tailoring)</li>
-              <li>&bull; Researcher-Medic (Research + Medical)</li>
-              <li>&bull; Handler-Trader (Animal + Social)</li>
+              <li>&bull; Botanist-Cook (Botany + Culinary)</li>
+              <li>&bull; Carpenter-Smith (Carpentry + Smithing)</li>
+              <li>&bull; Researcher-Healer (Intellectual + Medicine)</li>
+              <li>&bull; Handler-Trader (Animal Handling + Speechcraft)</li>
             </ul>
           </div>
         </aside>

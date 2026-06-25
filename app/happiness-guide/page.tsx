@@ -5,9 +5,14 @@ export default function HappinessGuidePage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Settler Happiness & Mood Guide</h1>
-              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Settler happiness is the invisible economy that underlies every other system in Going Medieval. A colony with eight fully content settlers outproduces a colony of twelve miserable colonists by a wide margin — happy settlers work faster, fight harder, and never waste days in mental breakdown spirals. Conversely, an unhappy settler is a liability: they refuse work, start fights, destroy furniture, and in extreme cases abandon the colony entirely, taking their gear with them. This guide maps every mood factor in the game, explains how happiness thresholds trigger different behaviors, and provides a diagnostic framework for identifying and fixing low mood before it spirals. Data below is based on community testing and is for reference only.
+<h1 className="chapter-heading">Settler Happiness & Mood Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> The specific mood modifiers, threshold ranges (0-100 scale), and "mental break" states listed below are <strong>community-estimated and may borrow mechanics from similar games</strong>. Several listed mood factors (e.g., "Ate without table", "Stale air") are characteristic of other colony sims and may not exist in Going Medieval with the exact names or values described. Use this as a general framework — always verify mood effects against the in-game Needs panel.
+                </p>
+              </div>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                Settler happiness is the invisible economy that underlies every other system in Going Medieval. A colony with eight fully content settlers outproduces a colony of twelve miserable colonists by a wide margin — happy settlers work faster and fight harder. An unhappy settler is a liability: they refuse work, start fights, destroy furniture, and in extreme cases may abandon the colony entirely. This guide maps mood factors in the game, explains how low mood triggers different behaviors, and provides a diagnostic framework for maintaining colony morale. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
@@ -179,6 +184,7 @@ export default function HappinessGuidePage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

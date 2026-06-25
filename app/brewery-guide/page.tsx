@@ -5,9 +5,14 @@ export default function BreweryGuidePage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Brewery & Alcohol Production Guide</h1>
-              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Alcohol is more than a leisure commodity in Going Medieval — it's a frontline mood management tool that can mean the difference between a content colony and a spiraling mental health crisis. Beer, mead, and wine each provide unique happiness buffs to settlers who consume them, offsetting the negative mood from raids, deaths, and harsh living conditions. Brewing also creates a valuable trade good that merchant caravans pay premium prices for. This guide covers the complete alcohol production chain: from barley fields and beehives to the brewing station, including detailed comparisons of each drink type and their strategic uses. Data below is based on community testing and is for reference only.
+<h1 className="chapter-heading">Brewery & Alcohol Production Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Beer, mead, and wine are <strong>confirmed</strong> drink types in Going Medieval. However, specific ingredient requirements described below (hops for beer, grapes/vineyards for wine, beehives/honey for mead) are <strong>community estimates and largely unverified</strong>. Barley is a confirmed crop and is used for beer. Grapes, hops, and beehives are NOT in the verified crop/animal lists. Production chains and specific happiness buff values are community estimates.
+                </p>
+              </div>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                Alcohol is a frontline mood management tool in Going Medieval. Beer, mead, and wine each provide happiness buffs to settlers who consume them, offsetting the negative mood from raids, deaths, and harsh living conditions. Brewing also creates a valuable trade good. This guide covers the alcohol production chain with detailed comparisons. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
@@ -33,7 +38,7 @@ export default function BreweryGuidePage() {
                 Beer is the most accessible alcohol type and should be every colony's first brewing objective. The production chain requires barley (grown from spring through summer in a standard field plot) processed at the brewing station. Beer provides a +4 happiness buff for 8 hours after consumption — settlers who drink beer during their evening recreation period carry the buff through the night and into the next morning's work shift, making it the most time-efficient happiness source in the game.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Beer production scales well: one 8x8 barley field produces enough raw material to brew approximately 40-50 servings of beer per harvest cycle, which supports 6-8 settlers drinking beer 2-3 times per week. For maximum efficiency, plant barley in early spring alongside your food crops. Barley has a 10-day growth cycle and can be double-cropped in a single growing season if planted immediately at spring's start. A dedicated brewer with Cooking skill 5+ can manage both food production and beer brewing from a single barley field.
+                Beer production scales well: one 8x8 barley field produces enough raw material to brew approximately 40-50 servings of beer per harvest cycle, which supports 6-8 settlers drinking beer 2-3 times per week. For maximum efficiency, plant barley in early spring alongside your food crops. Barley has a 10-day growth cycle and can be double-cropped in a single growing season if planted immediately at spring's start. A dedicated brewer with Culinary skill 5+ can manage both food production and beer brewing from a single barley field.
               </p>
             </section>
 
@@ -126,6 +131,7 @@ export default function BreweryGuidePage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

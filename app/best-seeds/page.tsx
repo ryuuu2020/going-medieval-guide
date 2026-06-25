@@ -54,8 +54,13 @@ export default function BestSeedsPage() {
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
             <h1 className="chapter-heading">Best Seeds & Map Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> The specific seed codes listed below (valley123, mountain42, lake77, etc.) are <strong>community-sourced and NOT verified against the live game</strong>. Going Medieval's procedural generation is version-dependent and the same seed string may produce different results after game updates. Test any seed in a throwaway game before committing to a long playthrough. Resource availability descriptions are community estimates.
+                </p>
+              </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              The seed you choose at game start determines the map layout, terrain type, resource distribution, and overall difficulty of your colony. A good seed provides the right balance of farming land, mining potential, and natural defenses — a poor seed forces you to fight the terrain as much as the raiders. This guide explains the seed system, recommends the top 5 seeds with detailed pros and cons, compares map types (valley vs mountain vs flat), and analyzes resource availability by seed. Data below is based on community testing and is for reference only.
+              The seed you choose at game start determines the map layout, terrain type, resource distribution, and overall difficulty of your colony. A good seed provides the right balance of farming land, mining potential, and natural defenses — a poor seed forces you to fight the terrain as much as the raiders. This guide explains the seed system, recommends potential seeds with detailed pros and cons, compares map types, and analyzes resource availability. Data below is based on community testing and is for reference only.
             </p>
           </section>
 
@@ -216,6 +221,7 @@ export default function BestSeedsPage() {
           </div>
         </aside>
       </div>
-    </main>
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
+      </main>
   );
 }

@@ -5,94 +5,142 @@ export default function TrebuchetPage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Trebuchet Guide: Build & Counter</h1>
-              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The trebuchet is Going Medieval's ultimate siege weapon—a long-range artillery piece that can demolish walls, towers, and enemy fortifications from a safe distance. Whether you're building your own to break enemy defenses or desperately trying to counter trebuchets targeting your colony, understanding trebuchet mechanics is essential late-game knowledge. This guide covers construction requirements, optimal placement, ammunition types, firing tactics, and proven counter-strategies. Data below is based on community combat testing and is for reference only.
+<h1 className="chapter-heading">How to Defend Against Enemy Trebuchets</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> In Going Medieval, players <strong>cannot build, research, or operate trebuchets</strong>. Trebuchets are siege weapons used exclusively by enemy raiders. There is no trebuchet blueprint, no research unlock, and no construction recipe for them in the base game. This guide focuses entirely on identifying, defending against, and recovering from enemy trebuchet attacks.
+                </p>
+              </div>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                Enemy trebuchets are the single most dangerous threat your settlement will face in Going Medieval. Unlike standard raiders who must breach your gates or climb your walls, trebuchets can destroy your defenses from a distance — methodically tearing down walls, demolishing rooms, and opening gaps for the rest of the raid to pour through. A raid with trebuchets demands an entirely different defensive approach than a standard raid. This guide covers identification, counter-strategies, damage mitigation, and post-battle recovery.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Building Your Own Trebuchet</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">When Trebuchets Appear</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Trebuchets require significant research investment and substantial material resources, but the payoff in offensive capability is enormous. A single trebuchet can clear an entire enemy defensive line without exposing a single settler to return fire. Construction requires a settler with high Construction skill (7+ recommended for reasonable build speed) and access to the trebuchet blueprint unlocked via research.
+                Trebuchets are not present in early-game raids. They begin appearing once your settlement wealth and population reach mid-to-late game thresholds. The exact trigger is tied to your colony's overall value — larger, richer settlements attract better-equipped raiders who bring siege equipment. If you've survived your first winter and have 6+ settlers with substantial buildings, food stockpiles, and crafted goods, expect trebuchet raids to enter the threat rotation.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                Raiders with trebuchets typically arrive alongside a larger force that includes both melee and ranged units. The trebuchet itself will be positioned some distance from your walls — typically 15-25 tiles back — and operated by enemy crew. The rest of the raid force will hang back, waiting for the trebuchet to create a breach before advancing. This gives you a critical window to act before the main assault begins.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Identifying a Trebuchet Raid Early</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The raid notification is your first and best opportunity to prevent disaster. When a raid appears, <strong>pause the game immediately</strong> and assess the raid composition. Trebuchet raids have distinct characteristics that separate them from standard attacks:
+              </p>
+              <div className="space-y-3">
+                <div className="recipe-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Raid Size & Composition</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Trebuchet raids are typically larger than standard raids for your current wealth level. Look for an unusually high enemy count combined with a mix of melee and ranged units. The trebuchet itself appears as a large siege weapon icon on the raid summary, distinct from individual enemy units.</p>
+                </div>
+                <div className="recipe-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Arrival Angle & Positioning</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">The trebuchet deploys at a distance from your walls — typically 15-25 tiles away. Watch where the raid enters the map edge. If enemy units are spreading out with a large structure being assembled at the rear, you are facing a trebuchet raid. The trebuchet will not engage immediately; it requires setup time before it begins firing.</p>
+                </div>
+                <div className="recipe-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Setup Time Window</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">After the raid spawns, the trebuchet crew needs time to assemble and position the siege engine. This gives you a brief window — typically 15-30 in-game seconds at 1x speed — before the first projectile launches. This is your window to execute a sortie strike before any damage is done to your walls.</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Counter-Strategy 1: Sally Out (Recommended)</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The most effective and reliable counter to an enemy trebuchet is to sally out and destroy it before it fires, or as early as possible. This is a high-risk, high-reward tactic that requires speed and coordination — but when executed correctly, it neutralizes the trebuchet before it causes any structural damage.
+              </p>
+              <div className="journal-card p-5 mb-4">
+                <h4 className="font-display text-base font-semibold text-ink mb-2">Sally Out Execution Steps</h4>
+                <ol className="font-serif text-sm text-ink-light space-y-1 list-decimal list-inside">
+                  <li><strong>Pause the game</strong> the moment the raid notification appears and you identify a trebuchet.</li>
+                  <li>Select 3-4 of your best melee settlers with the highest combat skills. Equip them with your best weapons and armor.</li>
+                  <li>Draft them and order them to move directly toward the trebuchet — do not engage other enemies unless they block the path.</li>
+                  <li>Position your archers on walls with clear line of sight to provide covering fire. Target any enemies near the trebuchet or moving to intercept your sortie team.</li>
+                  <li>Destroy the trebuchet. Once destroyed, immediately retreat your sortie team back behind your walls.</li>
+                  <li>Do not chase fleeing enemies — the priority is getting your settlers back alive.</li>
+                </ol>
+              </div>
+              <div className="aged-border p-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; Sortie Risk Warning:</strong> If your sortie team gets bogged down in prolonged combat, they may be overwhelmed by the enemy's main force before they reach the trebuchet. Use high-mobility settlers when possible, and consider equipping them with shields for survivability. If the trebuchet is 25+ tiles from your walls, the sortie risk increases — consider using Strategy 2 instead.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Counter-Strategy 2: Reinforced Roofs & Spread Out</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                If sallying out is not viable — your melee settlers are too few, too weak, or the trebuchet is too far — your next best option is to minimize the damage through structural preparation. This strategy relies on two principles: reinforcing vulnerable roof sections and ensuring no single structure's collapse cripples your colony.
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Build Reinforced Roofs Over Critical Areas</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Trebuchet projectiles come in a high arc and can strike the tops of buildings or land on roofs. Roof collapses can kill settlers standing underneath and destroy interior furnishings. Build stone or limestone block roofs over your great hall, kitchen, hospital, and primary stockpile. Wooden roofs offer no meaningful protection against trebuchet strikes — they will collapse on the first direct hit. Reinforced roofs absorb multiple hits and give you time to respond.</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Spread Out Key Buildings</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Do not cluster all critical rooms in one building. A single trebuchet hitting your only kitchen/great hall/storeroom complex can cripple your entire settlement. Spread food storage, cooking facilities, and workshops across separate buildings. If one building falls, the others remain operational. This also forces the trebuchet to re-aim at different targets, wasting enemy time.</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Build a Secondary Inner Wall</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Construct an inner defensive ring 5-8 tiles behind your outer wall. When the outer wall is breached by trebuchet fire, your archers gain clear line of sight on enemies advancing through the gap, and your settlers can fall back to the inner wall. This transforms a wall breach from a catastrophe into a controlled kill zone. Accept that the outer wall will take damage — that's its job.</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trebuchet Damage vs Wall Types</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Not all walls are equal against trebuchet fire. Understanding how many hits each wall type can absorb lets you predict which sections will fail first and prioritize your defense accordingly. The table below reflects community testing and observable in-game behavior.
               </p>
               <table className="parchment-table">
                 <thead>
                   <tr>
-                    <th>Component</th>
-                    <th>Materials Required</th>
-                    <th>Build Time</th>
-                    <th>Skill Requirement</th>
+                    <th>Wall Type</th>
+                    <th>Approx. Hits to Breach</th>
+                    <th>Survival Window</th>
+                    <th>Repair Cost</th>
+                    <th>Recommendation</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Trebuchet Frame</td><td>Wood x15, Iron Ingot x4</td><td>~4 hours</td><td>Construction 5</td></tr>
-                  <tr><td>Counterweight</td><td>Stone Block x8</td><td>~2 hours</td><td>Construction 5</td></tr>
-                  <tr><td>Sling Assembly</td><td>Rope x3, Leather x2</td><td>~1.5 hours</td><td>Crafting 4</td></tr>
-                  <tr><td>Total (Complete)</td><td>Wood x15, Iron x4, Stone x8, Rope x3, Leather x2</td><td>~7.5 hours</td><td>Construction 7+</td></tr>
+                  <tr><td className="font-semibold">Wooden Wall</td><td>1-2 hits</td><td>Very short — respond immediately</td><td>Wood only (low)</td><td className="text-vermillion">Avoid as outer wall — fails too quickly</td></tr>
+                  <tr><td className="font-semibold">Stone Wall</td><td>3-5 hits</td><td>Moderate — time for a sortie or reposition</td><td>Stone blocks (moderate)</td><td className="text-gold">Minimum standard for outer defensive walls</td></tr>
+                  <tr><td className="font-semibold">Reinforced Door</td><td>2-3 hits</td><td>Short — doors are weaker than solid walls</td><td>Iron + wood (moderate)</td><td className="text-ink-light">Use sparingly; protect doors with Merlons</td></tr>
+                  <tr><td className="font-semibold">Palisade</td><td>1-2 hits</td><td>Very short</td><td>Wood only (low)</td><td>Early-game only; upgrade to stone ASAP</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
+              <p className="font-serif text-sm text-ink-muted italic mt-2">Hit counts are community estimates based on combat testing. Actual hits to breach may vary based on trebuchet type, projectile, and game version.</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                The trebuchet is built in stages like other large structures. Place it on a flat surface with clear line of sight to the target. The firing arc requires open sky above—building under a roof or overhang will prevent operation. Once assembled, assign a settler to operate it; the operator's Construction skill affects reload speed.
+                Stone walls are the minimum viable defense against trebuchets. If your outer wall is still wood or palisade when trebuchet raids begin appearing, prioritize upgrading to stone immediately. A wooden wall can be breached in a single volley, giving you no time to react. Merlons placed atop walls provide cover for your archers but will also take damage from trebuchet strikes — expect to lose merlons during sustained bombardment.
               </p>
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Ammo Types & Damage</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">After-Battle Repair Strategy</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Trebuchets accept different ammunition types, each suited to different tactical situations. Choosing the right ammo for the target dramatically affects efficiency. Standard stone ammunition is your workhorse, while specialized ammo types provide unique advantages.
+                Win or lose, a trebuchet raid leaves damage. Your walls will have holes, merlons may be destroyed, and roofs may have collapsed. The post-battle period is critical — you must repair before the next raid arrives, or the next trebuchet will breach your already-weakened defenses with even fewer shots.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Stone Boulders (Standard)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Damage: 120 vs structures. Materials: Stone Block x1 per shot. Effect: High structural damage, area impact within 2 tiles. Best for wall demolition and general siege work. Stockpile 30+ boulders for a sustained bombardment.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">1. Assess All Damage Immediately</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">After the raid is defeated or retreats, scan your entire perimeter. Look for wall breaches, destroyed merlons, collapsed roof sections, and damaged doors. Every gap in your outer wall is an invitation for the next raid to walk straight in. Pause the game and mark repair orders on all damaged structures before your settlers return to normal tasks.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Flaming Boulders</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Damage: 80 vs structures + fire spread. Materials: Stone Block x1, Oil x1. Effect: Sets target area on fire, damage over time. Best for wooden structures and creating panic. Fire spreads 3-5 tiles from impact point.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">2. Prioritize Outer Wall Repairs</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">The outer wall is priority #1. Even a single missing wall tile turns your entire perimeter into an open path for enemies. If you use the inner wall strategy, repair the outer wall first — you want both layers operational before the next raid. Assign your highest-Construction-skill settlers to wall repair; lower-skill settlers can handle merlon and roof repairs.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Explosive Shells (Late-Game)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Damage: 200 vs structures + 80 splash. Materials: Iron Ingot x1, Gunpowder x1. Effect: Massive area destruction. Best for concentrated enemy formations and critical wall sections. Requires advanced research.</p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Optimal Placement for Offense</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Trebuchet placement determines its effectiveness. The weapon has a minimum range of approximately 15 tiles—targets closer than this cannot be hit. Maximum range extends to roughly 50 tiles, with accuracy falling off after 35 tiles. The sweet spot is 20-30 tiles from the target, where accuracy and safety balance perfectly.
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed">
-                When sieging an enemy settlement, place the trebuchet on elevated terrain when possible—height adds 5-10% accuracy. Protect the trebuchet with a forward defensive line of melee settlers to intercept counter-sorties. Never leave a trebuchet undefended; enemy archers can and will target your operator if they get in range. For maximum efficiency, build 2 trebuchets and stagger their fire—while one reloads, the other fires, maintaining constant pressure.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Countering Enemy Trebuchets</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                When enemy trebuchets appear in a raid, immediate action is required. A trebuchet left unchecked will methodically demolish your walls, bypassing your entire defense setup. There are three proven counter-strategies, listed in order of effectiveness.
-              </p>
-              <div className="space-y-3">
-                <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Strategy 1: Sortie Strike (Recommended)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Send 3-4 melee settlers on a fast attack run directly to the trebuchet. Use wall archers to provide covering fire, targeting any enemies near the siege engine. Destroy the trebuchet first, then retreat your sortie team. Best when the trebuchet is within 20 tiles of your walls.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">3. Restock Ammo & Weapons</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Check your arrow/bolt stockpiles. A trebuchet raid often involves an extended firefight. Replenish ammunition at your defensive positions. Check weapon durability — settlers with damaged weapons will be less effective in the next fight.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Strategy 2: Counter-Trebuchet</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">If you have your own trebuchet, engage in artillery duel. Target the enemy trebuchet directly. Your trebuchet should be positioned behind walls with your operator protected. This is slower but safer than a sortie. Accuracy is moderate—expect to fire 5-8 shots to destroy one enemy trebuchet.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">4. Evaluate Defense Upgrade Needs</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">If the trebuchet breached your wall in 3 hits, that wall needs upgrading. If your merlons were all destroyed, build thicker merlon coverage. If the trebuchet was positioned 15 tiles from your wall and you couldn't reach it in time, consider extending your wall further out or adding a forward defensive position. Every trebuchet raid is a lesson in what your defenses lack.</p>
                 </div>
-                <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Strategy 3: Bait & Tank</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">If sortie and counter-fire aren't options, reinforce the wall sections being targeted. Build a secondary wall 5 tiles behind the outer wall. When the outer wall falls, your archers on the inner wall have clear shots at the trebuchet crew. Accept that you'll lose the outer wall and budget for repairs.</p>
-                </div>
-              </div>
-              <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; Trebuchet Warning:</strong>
-                  Never ignore an enemy trebuchet. Walls take approximately 4-5 direct hits to breach from a trebuchet. Even a stone wall collapses in under 2 minutes of sustained trebuchet fire. The moment you see a trebuchet on the raid notification, it becomes your #1 priority target.
-                </p>
               </div>
             </section>
 
@@ -100,20 +148,26 @@ export default function TrebuchetPage() {
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
               <div className="faq-item">
                 <details>
-                  <summary>Can trebuchets target moving enemies?</summary>
-                  <p>Trebuchets are primarily anti-structure weapons. They can target ground tiles but have very poor accuracy against moving targets. Do not rely on trebuchets to hit individual enemy settlers—they're for demolishing walls, towers, and stationary siege equipment. Archers are your anti-personnel solution.</p>
+                  <summary>Can I build my own trebuchet to fight back?</summary>
+                  <p>No. Going Medieval does not include player-buildable trebuchets. There is no trebuchet research, no construction recipe, and no way for settlers to operate siege weapons. The only trebuchets in the game are enemy siege weapons. Your counter-options are limited to sallying out with melee settlers or mitigating damage through structural defenses. Do not waste time searching for a trebuchet blueprint — it does not exist in the base game.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>How many trebuchets should I build?</summary>
-                  <p>One is sufficient for most colonies. A second trebuchet doubles your bombardment speed but requires double the materials, ammo, and operator manpower. Build a second only if you're frequently facing enemy trebuchets and need faster counter-fire, or if you're actively sieging enemy settlements on the offensive.</p>
+                  <summary>Do moats or drawbridges stop trebuchet fire?</summary>
+                  <p>Moats and drawbridges stop ground units from reaching your walls, but they do NOT stop trebuchet projectiles. Trebuchets fire in a high arc over obstacles, so a moat provides zero protection against bombardment. However, a moat combined with a drawbridge prevents enemy melee units from rushing through a trebuchet-made breach — the moat is still useful, just not against the trebuchet itself.</p>
                 </details>
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>Does rain or weather affect trebuchet accuracy?</summary>
-                  <p>Yes. Rain, fog, and night conditions reduce trebuchet accuracy by 10-20%. Heavy storms can drop accuracy by up to 30%. If you're planning a trebuchet attack, check weather conditions. Clear daytime weather provides optimal firing conditions.</p>
+                  <summary>Can I bait the trebuchet to target a specific wall section?</summary>
+                  <p>Trebuchets appear to target the nearest or largest structure. You cannot directly control what the enemy trebuchet aims at. However, you can influence targeting by building a sacrificial outer wall or tower further out from your main base — the trebuchet may target it first, buying time for your main walls. This is expensive in materials but can be effective if your settlement layout supports it.</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>What happens if I ignore the trebuchet and fight the infantry instead?</summary>
+                  <p>This is almost always a losing strategy. While you fight the infantry, the trebuchet continues firing unopposed. By the time you defeat the ground troops, your outer wall will be breached and possibly your inner buildings damaged. The better approach is to destroy or distract the trebuchet crew first, then deal with the infantry. If you cannot reach the trebuchet, fight the infantry from behind your strongest remaining wall section and be prepared to retreat to inner defenses.</p>
                 </details>
               </div>
             </section>
@@ -121,25 +175,34 @@ export default function TrebuchetPage() {
 
           <aside className="lg:w-[35%] space-y-8 shrink-0">
             <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">Trebuchet Quick Stats</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Trebuchet Defense Priority</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Range</h4><p className="font-serif text-xs text-ink-muted mt-1">15-50 tiles (optimal 20-30)</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Structure Damage</h4><p className="font-serif text-xs text-ink-muted mt-1">120 per hit (stone boulder)</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Reload Time</h4><p className="font-serif text-xs text-ink-muted mt-1">~15-20 seconds</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Total Material Cost</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood 15, Iron 4, Stone 8, Rope 3, Leather 2</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">1. Identify Early</h4><p className="font-serif text-xs text-ink-muted mt-1">Pause on raid alert, check for siege weapon icon and large enemy count</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">2. Sally Out</h4><p className="font-serif text-xs text-ink-muted mt-1">Send 3-4 melee settlers to destroy the trebuchet before it fires</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">3. Covering Fire</h4><p className="font-serif text-xs text-ink-muted mt-1">Archers on walls target enemies near the siege engine</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">4. Fallback Plan</h4><p className="font-serif text-xs text-ink-muted mt-1">Inner wall + reinforced roofs if sortie fails or isn't possible</p></div>
               </div>
             </div>
             <div className="journal-card p-5">
-              <h3 className="font-display text-base font-semibold text-ink mb-3">Ammo Storage Guide</h3>
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Settlement Prep Checklist</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div>&bull; Stone Boulders: Stock 30+ for sustained siege</div>
-                <div>&bull; Flaming Boulders: Stock 10+ for wooden targets</div>
-                <div>&bull; Explosive Shells: Stock 5+ for critical strikes</div>
-                <div className="mt-2">Store ammo in a stockpile near the trebuchet to minimize operator walking time during reloads.</div>
+                <div>&bull; Outer wall: Stone (minimum), upgrade from wood/palisade before late-game</div>
+                <div>&bull; Inner wall: 5-8 tiles behind outer wall as fallback line</div>
+                <div>&bull; Roofs: Stone/limestone over great hall, kitchen, hospital, stockpiles</div>
+                <div>&bull; Merlons: Built atop walls for archer cover (will need replacement after hits)</div>
+                <div>&bull; Sortie team: 3-4 trained melee settlers with best weapons ready at all times</div>
+                <div>&bull; Spreading: Separate buildings instead of one mega-structure</div>
+                <div className="mt-2">A trebuchet-ready settlement survives. An unprepared one is demolished.</div>
               </div>
+            </div>
+            <div className="aged-border p-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <p className="font-serif text-xs text-ink leading-relaxed">
+                <strong className="text-vermillion">Key Fact:</strong> Players cannot build trebuchets. No blueprint exists. No research unlocks them. This is not a bug or an undiscovered feature — it is how the game is designed. Trebuchets are enemy-only siege weapons. All counter-strategies must use what settlers can actually do: melee sorties, reinforced construction, and smart base layout.
+              </p>
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

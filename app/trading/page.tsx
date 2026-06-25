@@ -37,7 +37,7 @@ export default function TradingPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Mechanics</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Trade can use silver coins or barter. Silver is the universal currency, earned by selling goods. Barter means directly exchanging your goods for the merchant's wares — the deal goes through when both sides' items are of equal value. Settlers with high Social skill get better trade prices.
+                Trade can use silver coins or barter. Silver is the universal currency, earned by selling goods. Barter means directly exchanging your goods for the merchant's wares — the deal goes through when both sides' items are of equal value. Settlers with high Speechcraft skill get better trade prices.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
@@ -99,7 +99,7 @@ export default function TradingPage() {
               <div className="faq-item">
                 <details>
                   <summary>How do I get better trade prices?</summary>
-                  <p>Assign the settler with the highest Social skill to handle trading — higher skill means better discounts. Keeping the merchant happy (offering food and drink) can also slightly improve prices. Bulk trading often yields better unit prices.</p>
+                  <p>Assign the settler with the highest Speechcraft skill to handle trading — higher skill means better discounts. Keeping the merchant happy (offering food and drink) can also slightly improve prices. Bulk trading often yields better unit prices.</p>
                 </details>
               </div>
             </section>
@@ -119,7 +119,7 @@ export default function TradingPage() {
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Trade Tips</h3>
               <ul className="space-y-2 font-serif text-sm text-ink-light">
-                <li>&bull; Social skill affects prices</li>
+                <li>&bull; Speechcraft skill affects prices</li>
                 <li>&bull; Prioritize buying scarce goods</li>
                 <li>&bull; Concentrate trading in autumn</li>
                 <li>&bull; Build a trade post to increase visits</li>

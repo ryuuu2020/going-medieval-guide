@@ -6,8 +6,13 @@ export default function FoodPreservationPage() {
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
             <h1 className="chapter-heading">Food Preservation & Storage Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Pickled food and smoked meat are <strong>confirmed</strong> preservation methods. However, bread/baking (requires wheat — NOT a confirmed crop), cheese (requires milk), and dried fish are <strong>unverified preservation chains</strong>. Hops is NOT a confirmed crop. Wheat, baking ovens, cheese presses, and drying racks may not exist as described. Only pickling and smoking are verified in reference data.
+                </p>
+              </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly, leaving your colony to starve through winter. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking, drying), and building an efficient root cellar. This guide explains every preservation method, optimal storage temperatures, and exactly how much food you need per settler to survive the winter. Data below is based on community testing and is for reference only.
+              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking), and building an efficient root cellar. This guide explains preservation methods, optimal storage temperatures, and food requirements per settler for winter survival. Data below is based on community testing and is for reference only.
             </p>
           </section>
 
@@ -164,6 +169,7 @@ export default function FoodPreservationPage() {
           </div>
         </aside>
       </div>
-    </main>
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
+      </main>
   );
 }

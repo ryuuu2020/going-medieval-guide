@@ -10,9 +10,14 @@ export default function WorkPrioritiesPage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Work Priority & Schedule Guide</h1>
-              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The work priority and scheduling system is the invisible engine that powers your Going Medieval colony. A well-configured priority setup means settlers automatically handle tasks in the right order without constant micromanagement. A poorly configured one means crops rot in the field while your farmer hauls rocks. This guide explains the priority system in depth, teaches optimal shift scheduling, covers seasonal adjustments, and provides emergency override techniques for when things go wrong. Data below is based on community experience and is for reference only.
+<h1 className="chapter-heading">Work Priority & Schedule Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Going Medieval has a numbered work priority system (1-5), but the hour-by-hour "schedule" system with sleep/rec/work blocks described below <strong>may not exist in Going Medieval exactly as described</strong>. "Firefighting" as a separate work type and the drafting mechanic descriptions may reflect other colony sims. Verify priority and scheduling mechanics against in-game UI.
+                </p>
+              </div>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                The work priority system powers your Going Medieval colony. A well-configured priority setup means settlers automatically handle tasks in the right order without constant micromanagement. A poorly configured one means crops rot in the field while your farmer hauls rocks. This guide explains the priority and scheduling systems in depth. Data below is based on community experience and is for reference only.
               </p>
             </section>
 
@@ -155,6 +160,7 @@ export default function WorkPrioritiesPage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
       <SiteFooter />
     </div>

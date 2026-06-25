@@ -5,9 +5,14 @@ export default function UndergroundBasePage() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Underground Base Building Guide</h1>
-              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Digging into the earth is one of the most rewarding strategies in Going Medieval. An underground base leverages the natural insulation of stone, protects against surface raiders, and creates a temperature-stable environment that preserves food longer and keeps settlers comfortable year-round. However, underground living introduces unique challenges: ventilation, lighting, food production, and the constant threat of structural collapse if you dig too greedily. This guide covers every aspect of subterranean colony design, from your first mining pickaxe strike to a thriving underground city. Data below is based on community testing and is for reference only.
+<h1 className="chapter-heading">Underground Base Building Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Some mechanics described below (ventilation systems, stale air penalty, mushroom farms, cabin fever) <strong>may reflect mechanics from other colony sims rather than Going Medieval</strong>. Underground bases are viable in Going Medieval, but the specific ventilation, air quality, and mushroom farming mechanics have not been verified against the current game version. Always cross-reference with in-game behavior.
+                </p>
+              </div>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                Digging into the earth is one of the most rewarding strategies in Going Medieval. An underground base leverages the natural insulation of stone, protects against surface raiders, and creates a temperature-stable environment that preserves food longer and keeps settlers comfortable year-round. However, underground living introduces unique challenges in lighting, food production, and structural stability management. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
@@ -114,6 +119,7 @@ export default function UndergroundBasePage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

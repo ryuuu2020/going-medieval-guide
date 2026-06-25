@@ -39,12 +39,12 @@ export default function WinterSurvivalPage() {
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates. Winter typically lasts 30-90 days depending on biome.</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                Strategy: Always stockpile 30% more than the calculated minimum. Spoilage, unexpected settler additions, and extended winters can all drain reserves faster than planned. Processed food (bread, stew, smoked meat) spoils slower and provides more nutrition per unit—invest in food processing facilities before winter as a stockpile multiplier. Store winter food in underground cellars (level -2 or deeper) where temperatures stay 5-10&deg;C year-round, dramatically reducing spoilage.
+                Strategy: Always stockpile ~30% more than the calculated minimum. Spoilage, unexpected settler additions, and extended winters can all drain reserves faster than planned. Processed food (pickled food, smoked meat) spoils slower — invest in food processing facilities before winter as a stockpile multiplier. Store winter food in underground cellars where temperatures stay low year-round, dramatically reducing spoilage.
               </p>
               <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Winter Food Crisis:</strong>
-                  If food runs out mid-winter, options are limited: 1) Slaughter livestock immediately (each animal yields 8-15 meat units), 2) Hunt underground cave creatures (bats, rats—low yield but better than nothing), 3) Buy food from winter merchant caravans (expensive, unreliable), 4) Emergency rationing—reduce food consumption by setting meal restrictions, but expect severe mood penalties.
+                  If food runs out mid-winter, options are limited: 1) Slaughter livestock immediately, 2) Hunt any available wild animals (rats, hares, water voles near the surface — low yield but better than nothing), 3) Buy food from winter merchant caravans (expensive, unreliable), 4) Emergency rationing — reduce food consumption but expect mood penalties.
                 </p>
               </div>
             </section>
@@ -122,7 +122,7 @@ export default function WinterSurvivalPage() {
               <div className="faq-item">
                 <details>
                   <summary>How long does winter last in Going Medieval?</summary>
-                  <p>Winter duration varies by biome. Temperate biomes: 30-45 days. Cold biomes: 60-90 days. Mountain biomes: 45-75 days. The shortest winters occur in valley and river biomes. Check your biome type when starting a new game—it's displayed during map selection and determines how aggressively you need to prepare.</p>
+                  <p>Winter duration varies by biome and game settings. <strong>Note: winter length estimates differ between community sources (some report ~12-15 days, others 30-90 days).</strong> Temperate biomes typically have shorter winters; colder biomes may have longer ones. Check your biome type when starting a new game — it is displayed during map selection and determines how aggressively you need to prepare.</p>
                 </details>
               </div>
               <div className="faq-item">
@@ -163,6 +163,7 @@ export default function WinterSurvivalPage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
       <SiteFooter />
     </div>

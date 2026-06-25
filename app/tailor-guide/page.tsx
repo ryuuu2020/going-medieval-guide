@@ -105,7 +105,7 @@ export default function TailorGuidePage() {
               <div className="faq-item">
                 <details>
                   <summary>How do I get more leather for crafting?</summary>
-                  <p>Hunting wildlife (deer, boar) and slaughtering domesticated livestock (pigs, cattle, sheep) both produce raw hides. Process raw hides at a tanning rack into leather. Each large animal yields 3-5 leather. Maintain a herd of 4-6 pigs for sustained leather production.</p>
+                  <p>Hunting wildlife (deer, boar) and slaughtering domesticated livestock (cattle, sheep, goats) both produce raw hides. Process raw hides at a tanning rack into leather. Each large animal yields 3-5 leather. Maintain a herd of 4-6 cattle or sheep for sustained leather production.</p>
                 </details>
               </div>
             </section>
@@ -134,6 +134,7 @@ export default function TailorGuidePage() {
             </div>
           </aside>
         </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
       </main>
   );
 }

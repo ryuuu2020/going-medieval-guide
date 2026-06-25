@@ -6,8 +6,13 @@ export default function MerchantTradingPage() {
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
             <h1 className="chapter-heading">Merchant Trading Guide</h1>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Specific merchant type names, "trade beacon" mechanics, silver economy details, and item prices below are <strong>community estimates and NOT verified against official sources</strong>. The "trade beacon" concept is characteristic of other colony sims and may function differently (or not exist) in Going Medieval. Merchant caravan behavior and visit frequency have not been verified.
+                </p>
+              </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Merchant trading is the primary method for acquiring resources your colony cannot produce — rare ores, exotic goods, advanced weapons, and specialty items. Understanding merchant types, trade mechanics, the silver economy, and optimal trade beacon placement can transform your colony from self-sufficient to prosperous. This guide covers everything from caravan frequency to the most profitable items to sell, along with advanced strategies for maximizing trade efficiency. Data below is based on community compilation and is for reference only.
+              Merchant trading is the primary method for acquiring resources your colony cannot produce — rare ores, exotic goods, advanced weapons, and specialty items. Understanding merchant types, trade mechanics, and how to maximize trade efficiency can transform your colony from self-sufficient to prosperous. This guide covers caravan frequency, the most profitable items to sell, and advanced trade strategies. Data below is based on community compilation and is for reference only.
             </p>
           </section>
 
@@ -43,7 +48,7 @@ export default function MerchantTradingPage() {
               Trade operates on a value-based system. Every item has a base value in silver. When buying, merchants charge roughly 130-150% of base value. When selling, merchants pay roughly 60-70% of base value. This spread means you lose roughly 50% of value on every round-trip trade — making self-sufficiency always more cost-effective than relying on trade for basic goods.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Silver coins serve as the universal currency. You earn silver by selling goods to merchants. You can also use barter mode to directly exchange your goods for the merchant's wares without silver — the trade completes when both sides' values are approximately equal. Barter is useful when you lack silver but have surplus goods. Assign a settler with high Social skill to handle all trades for better prices.
+              Silver coins serve as the universal currency. You earn silver by selling goods to merchants. You can also use barter mode to directly exchange your goods for the merchant's wares without silver — the trade completes when both sides' values are approximately equal. Barter is useful when you lack silver but have surplus goods. Assign a settler with high Speechcraft skill to handle all trades for better prices.
             </p>
             <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
               <p className="font-serif text-sm text-ink leading-relaxed">
@@ -104,7 +109,7 @@ export default function MerchantTradingPage() {
           <section>
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">Caravan Frequency & Timing</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Merchant caravans visit on a semi-random schedule. Base frequency is roughly every 10-14 in-game days, but this is modified by several factors. Building a trade post increases visit frequency by roughly 30%. The Social skill of your colony (collective) also affects how often merchants choose to stop. Caravans are more frequent in autumn than other seasons, making autumn the best time to prepare trade goods.
+              Merchant caravans visit on a semi-random schedule. Base frequency is roughly every 10-14 in-game days, but this is modified by several factors. Building a trade post increases visit frequency by roughly 30%. The Speechcraft skill of your colony (collective) also affects how often merchants choose to stop. Caravans are more frequent in autumn than other seasons, making autumn the best time to prepare trade goods.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed">
               Strategic timing: use the gaps between merchant visits to produce trade goods. After a trade completes, immediately queue up the next batch of production. A well-oiled trade cycle looks like: Spring — plant hops and flax; Summer — harvest and brew beer, weave cloth; Autumn — craft clothing, finalize beer batches, sell everything; Winter — use silver to buy scarce goods, prepare for spring. This annual rhythm ensures you always have something valuable when merchants arrive.
@@ -157,6 +162,7 @@ export default function MerchantTradingPage() {
           </div>
         </aside>
       </div>
-    </main>
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 pb-8"><p className="font-serif text-xs text-ink-muted italic text-center">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops/animals verified; specific numbers are community estimates. Some mechanics may differ from described — always cross-reference with in-game behavior.</p></div>
+      </main>
   );
 }

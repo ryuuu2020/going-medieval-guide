@@ -67,7 +67,7 @@ export default function TierListPage() {
             <section>
               <h1 className="chapter-heading">Going Medieval Tier List</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Every decision in Going Medieval carries weight — assign the wrong settler to a critical task, plant the wrong crop before winter, or skimp on your walls, and your colony could collapse in a single season. This tier list ranks settler skills, crops, livestock, and defensive structures from S-tier (indispensable) down to D-tier (almost never worth it), so you can focus your limited time and resources on what actually matters. All rankings are based on community consensus gathered since the 1.0 launch and reflect established meta strategies — data is for reference only.
+                Every decision in Going Medieval carries weight — assign the wrong settler to a critical task, plant the wrong crop before winter, or skimp on your walls, and your colony could collapse in a single season. This tier list ranks settler skills, crops, livestock, and defensive structures from S-tier (indispensable) down to C-tier (niche or situational), so you can focus your limited time and resources on what actually matters. All rankings are based on community consensus and reflect established meta strategies — data is for reference only.
               </p>
             </section>
 
@@ -80,7 +80,7 @@ export default function TierListPage() {
                 Skills define what your settlers can do and how fast they do it. A settler with 20 Mining will strip out an entire room in the time it takes a novice to dig a 3x3 pit. When choosing starting settlers or recruiting prisoners, skill values are the single most important metric — more than traits, more than background, more than age. Construction and Mining are the two skills you absolutely cannot compromise on, because literally everything in your colony starts with digging and building. Without a competent builder, your walls will take days to go up; without a miner, you'll be stuck scratching at rock while your food reserves rot in the open.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Botany and Cooking form the second tier of critical skills. A skilled botanist doesn't just plant faster — they harvest more per tile, which compounds over multiple growing seasons into a massive food surplus. A skilled cook turns that raw produce into meals that don't spoil after two days and actually boost settler mood. Smithing rounds out the A-tier because weapons and armor are the only thing standing between your colony and a raider's axe. You can limp by with wooden clubs for a while, but by mid-game you need iron gear, and that requires a smith who won't take all day to craft a single sword.
+                Botany and Culinary form the second tier of critical skills. A skilled botanist doesn't just plant faster — they harvest more per tile, which compounds over multiple growing seasons into a massive food surplus. A skilled cook turns that raw produce into meals that don't spoil after two days and actually boost settler mood. Smithing rounds out the A-tier because weapons and armor are the only thing standing between your colony and a raider's axe. You can limp by with wooden clubs for a while, but by mid-game you need iron gear, and that requires a smith who won't take all day to craft a single sword.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -95,13 +95,17 @@ export default function TierListPage() {
                   <TR tier="S" name="Mining" col2="Core resource gathering; literally everything requires mined stone, iron, and coal. A high-skill miner also digs tunnels and rooms 3-4x faster." col3="Early-game expansion, underground bases, resource stockpiling" />
                   <TR tier="S" name="Construction" col2="Walls, floors, roofs, doors, workstations — every structure. Build speed and quality scale directly with skill. Low-skill builders waste days." col3="All phases of the game, especially before winter and after raids" />
                   <TR tier="A" name="Botany" col2="Planting speed and harvest yield both scale with skill. A skilled botanist effectively multiplies your farmland output without needing more fields." col3="Farming, food security, herbal medicine production" />
-                  <TR tier="A" name="Cooking" col2="Processed meals spoil slower and boost settler mood. High Cooking means more meals from the same raw ingredients and faster prep time." col3="Winter food stockpiles, mood management, colony morale" />
+                  <TR tier="A" name="Culinary" col2="Processed meals spoil slower and boost settler mood. High Culinary means more meals from the same raw ingredients and faster prep time." col3="Winter food stockpiles, mood management, colony morale" />
                   <TR tier="A" name="Smithing" col2="Weapons, armor, tools, and metal components all require Smithing. Mid-game combat viability depends entirely on having iron gear." col3="Combat preparation, tool crafting, mid-to-late game defense" />
                   <TR tier="B" name="Tailoring" col2="Clothing and armor from leather/cloth. Important for winter survival and basic protection, but can be outsourced to traders." col3="Winter clothing, light armor, trading goods" />
                   <TR tier="B" name="Medicine" col2="Faster wound treatment and better recovery outcomes. Critical after raids, but most of the time sits idle if you manage defense well." col3="Post-raid recovery, disease treatment, keeping wounded settlers alive" />
-                  <TR tier="B" name="Intellectual" col2="Research speed. Unlocking the tech tree matters, but research is passive — you just need one competent researcher, not several." col3="Tech tree progression, unlocking advanced workbenches and recipes" />
-                  <TR tier="C" name="Art" col2="Purely for mood-boosting decorations. Aesthetic, not essential. Settlers don't starve because there's no statue in the dining hall." col3="Late-game colony beautification, squeezing out extra mood bonuses" />
-                  <TR tier="D" name="Speech" col2="Influences trade prices and prisoner recruitment. Both are situational — traders don't visit often, and you can recruit through brute force." col3="Niche diplomacy, occasional trade discount, prisoner conversion" />
+                  <TR tier="B" name="Intellectual" col2="Research speed, alchemy, brewing, medicine-making. Unlocking the tech tree matters, but research is passive — you just need one competent researcher." col3="Tech tree progression, unlocking advanced workbenches and recipes" />
+                  <TR tier="B" name="Carpentry" col2="Crafting wooden items, furniture, and bows. Essential for early-game ranged weapons and mid-game infrastructure. Your carpenter is also your bowyer." col3="Early-game weapon crafting, bow production for marksmen, wooden furniture" />
+                  <TR tier="C" name="Speechcraft" col2="Influences trade prices, prisoner recruitment, bard performances, and prison management. Situational — traders visit periodically and prisoners can be recruited by other means." col3="Trading discounts, prisoner conversion, bard entertainment, prison warden duties" />
+                  <TR tier="C" name="Art" col2="Purely for mood-boosting decorations via statues, paintings, and tapestries. Aesthetic, not essential. Settlers don't starve because there's no statue in the dining hall." col3="Late-game colony beautification, squeezing out extra mood bonuses" />
+                  <TR tier="C" name="Marksman" col2="Ranged combat skill for bows and crossbows. Directly affects accuracy and damage. Important for defense and hunting, but serves no economic function." col3="Hunting animals, defending walls during raids, ranged combat" />
+                  <TR tier="C" name="Melee" col2="Melee combat skill affecting damage %, dodge, crit chance, and precision. Pure combat with no associated job. Useful for last-line defenders." col3="Emergency defense, melee chokepoint fighting, protecting ranged settlers" />
+                  <TR tier="C" name="Animal Handling" col2="Taming wild animals, feeding/training livestock, and fishing. Valuable once you have domesticated animals, but early colonies can survive without it." col3="Animal taming, livestock management, fishing for food variety" />
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Rankings reflect overall impact on colony survival and efficiency across all game stages.</p>
@@ -113,10 +117,10 @@ export default function TierListPage() {
                 2. Crop Tier List
               </h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Not all crops are created equal. The difference between a field of Barley and a field of Roses is the difference between a well-fed colony and mass starvation. Crop rankings consider three factors: yield per tile per growth cycle, versatility of use, and how well the crop integrates into a sustainable food economy. Barley earns its S-tier crown because it feeds into both the food chain (brewing beer, baking bread) and the animal chain (hay substitute for livestock). Redcurrant bushes are uniquely powerful because they're perennial — plant them once and they produce berries every year without replanting, providing a reliable baseline food source that requires zero ongoing labor.
+                Not all crops are created equal. The difference between a field of Barley and a field of Carrots is the difference between a thriving colony and a struggling settlement. Crop rankings consider three factors: yield per tile per growth cycle, versatility of use, and how well the crop integrates into a sustainable food economy. Barley earns its S-tier crown because it feeds into both the food chain (brewing beer, baking bread) and the animal chain (livestock feed). Redcurrant bushes are uniquely powerful because they're perennial — plant them once and they produce berries every year without replanting, providing a reliable baseline food source that requires zero ongoing labor.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Cabbage and Herbs fill the A-tier for entirely different reasons. Cabbage grows fast, yields high, and can be eaten raw in an emergency — it's the ultimate early-game survival crop and remains useful throughout. Herbs are the only source of medicine, and without medicine your wounded settlers recover slowly or not at all. The B-tier crops are situationally excellent but not universally mandatory: Beet is a decent backup food source, Hay is essential for winter livestock feeding, Flax provides cloth for winter clothing, and Pumpkins offer variety. Mushrooms at C-tier are too slow and yield too little to justify the growing space except in underground farms. Roses at D-tier are purely decorative — they look nice, give minor mood bonuses, but don't feed anyone.
+                Cabbage and Herbs fill the A-tier for entirely different reasons. Cabbage grows fast, yields high, and can be eaten raw in an emergency — it's the ultimate early-game survival crop and remains useful throughout. Herbs are the only source of medicine, and without medicine your wounded settlers recover slowly or not at all. The B-tier crops are solid contributors: Beet and Carrots are reliable food staples with decent shelf life, Hay is essential for winter livestock feeding, and Flax provides cloth for winter clothing and bandages. Every crop here has a clear role in keeping your colony fed, clothed, and healthy.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -133,11 +137,9 @@ export default function TierListPage() {
                   <TR tier="A" name="Cabbage" col2="Very high, 6-day cycle" col3="Fastest-growing food crop. Can be eaten raw. Plant in spring for an immediate food buffer before your long-cycle crops mature." />
                   <TR tier="A" name="Herbs" col2="Low-medium" col3="The only source of medicine. No herbs means wounded settlers die from infections. Plant at least a small plot by mid-spring." />
                   <TR tier="B" name="Beet" col2="Medium, 7-day cycle" col3="Decent backup food with moderate shelf life. Not exciting but reliable — plant when you want diversity, not as your staple." />
+                  <TR tier="B" name="Carrots" col2="Medium, 7-day cycle" col3="Reliable root vegetable with decent shelf life and good meal variety contribution. Stores well through winter alongside beet." />
                   <TR tier="B" name="Hay" col2="High volume" col3="Essential winter livestock feed. If you're raising animals, hay is non-negotiable. Without it, your animals starve when snow falls." />
                   <TR tier="B" name="Flax" col2="Low-medium" col3="Produces cloth for winter clothing and bandages. Important once cold seasons start killing unprepared settlers." />
-                  <TR tier="B" name="Pumpkins" col2="Medium" col3="Alternative food variety. Slow growth but decent yield. Useful for diversifying meals, which slightly boosts settler mood." />
-                  <TR tier="C" name="Mushrooms" col2="Low, 10+ day cycle" col3="Can grow underground without light, which is their only advantage. Too slow and too low-yield for surface farming. Niche use only." />
-                  <TR tier="D" name="Roses" col2="Zero food yield" col3="Purely decorative. Minor mood buff from nearby beauty, but a starving settler doesn't care how pretty the garden is." />
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Rankings weighted toward food security, labor efficiency, and contribution to colony survival over aesthetics.</p>
@@ -149,10 +151,10 @@ export default function TierListPage() {
                 3. Animal Tier List
               </h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Livestock transforms a subsistence colony into a thriving settlement. Animals provide renewable resources — milk, wool, eggs, and meat — that don't require replanting or mining. The Cow stands alone at S-tier because it's the most efficient resource producer in the game: a single cow generates a steady supply of milk (drinkable, cookable, tradable), and when slaughtered yields a massive amount of meat and leather. One cow effectively covers the protein needs of 3-4 settlers indefinitely. Goats and Sheep share A-tier for similar reasons — goats produce milk reliably with lower food consumption than cows, while sheep generate wool for clothing, which becomes critically important during harsh winters.
+                Livestock transforms a subsistence colony into a thriving settlement. Animals provide renewable resources — milk, wool, eggs, and meat — that don't require replanting or mining. The Cow and Ass/Donkey share S-tier for fundamentally different reasons. A single cow generates a steady supply of milk (drinkable, cookable, tradable), and when slaughtered yields a massive amount of meat and leather — one cow effectively covers the protein needs of 3-4 settlers indefinitely. The donkey is the only pack animal in the game, making caravan trade and bulk supply hauling possible. Without a donkey, your trading operations are limited to what settlers can carry on their backs.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Pigs and Chickens sit at B-tier as solid but not transformative livestock. Pigs breed fast and provide good meat, but they eat significantly more than goats or sheep for comparable output. Chickens lay eggs daily, which is nice, but they're fragile and die easily to predators or cold snaps. Cats at C-tier serve a singular purpose — hunting vermin in food stockpiles to reduce spoilage — but a well-built underground cellar makes them nearly redundant. Dogs deserve a special mention: they have no productive output, but for defensive combat, a trained war dog is S-tier, capable of pinning raiders and buying your archers critical seconds. If you're prioritizing defense over resource production, a dog is worth more than any cow.
+                Goats and Sheep share A-tier for similar reasons — goats produce milk reliably with lower food consumption than cows, while sheep generate wool for clothing, which becomes critically important during harsh winters. Boars and Chickens sit at B-tier as solid but not transformative livestock. Boars provide good meat from hunting or farming and breed decently fast, but are better tamed from the wild than bought. Chickens lay eggs daily, which is nice, but they're fragile and die easily to predators or cold snaps. Cats at C-tier serve a singular purpose — hunting vermin in food stockpiles to reduce spoilage — but a well-built underground cellar makes them nearly redundant. Dogs deserve a special mention: tamed from wolves, they have no productive output, but for defensive combat a trained war dog is S-tier, capable of pinning raiders and buying your archers critical seconds.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -165,12 +167,13 @@ export default function TierListPage() {
                 </thead>
                 <tbody>
                   <TR tier="S" name="Cow" col2="Milk, Beef, Leather" col3="Best value-per-food-investment in the game. Milk daily, massive butchering payout. The cornerstone of any livestock operation." />
+                  <TR tier="S" name="Ass / Donkey" col2="Pack animal, Meat, Leather" col3="The only pack animal for caravans. Essential for trading large quantities and hauling supplies between settlements. Far more valuable alive than slaughtered." />
                   <TR tier="A" name="Goat" col2="Milk, Meat, Leather" col3="More efficient than cows in cold biomes. Lower food consumption, breeds faster. Excellent starter livestock before scaling to cows." />
                   <TR tier="A" name="Sheep" col2="Wool, Meat, Leather" col3="Wool is essential for winter clothing at scale. A small flock of 3-4 sheep can outfit an entire colony for freezing temperatures." />
-                  <TR tier="B" name="Pig" col2="Meat, Leather" col3="Fast breeder, good meat yield, but high food consumption offsets the benefit. Best raised in large numbers if you have surplus crops." />
+                  <TR tier="B" name="Boar" col2="Meat, Leather" col3="Tame from the wild rather than buy from traders. Decent meat yield and breeds at a reasonable pace. Hunt wild boars for food before domesticating." />
                   <TR tier="B" name="Chicken" col2="Eggs, Meat" col3="Eggs are a reliable daily food source. Chickens require almost no space. Downside: extremely fragile, one fox can wipe out a flock." />
                   <TR tier="C" name="Cat" col2="Pest control" col3="Reduces food spoilage from vermin. Useful if your food storage isn't fully underground. Otherwise, a luxury pet with minimal impact." />
-                  <TR tier="S*" name="Dog" col2="Combat support" col3="Special tier: S for defense, D for resources. War dogs fight alongside settlers, distract raiders, and can turn losing battles. Zero economic output." />
+                  <TR tier="S*" name="Dog" col2="Combat support" col3="Special tier: S for defense, D for resources. Tamed from wolves. War dogs fight alongside settlers, distract raiders, and can turn losing battles. Zero economic output." />
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Dog ranked S* for combat utility; baseline economic tier would be D. Choose based on whether your colony needs fighters or farmers.</p>
@@ -208,6 +211,14 @@ export default function TierListPage() {
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Rankings consider cost-to-durability ratio, tactical versatility, and how well each defense scales into late-game scenarios.</p>
+            </section>
+
+            {/* ── Verification note ── */}
+            <section>
+              <div className="field-divider mb-4" />
+              <p className="font-serif text-xs text-ink-muted italic">
+                Data verified against Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
+              </p>
             </section>
 
             {/* ── Back to Home ── */}
@@ -267,7 +278,7 @@ export default function TierListPage() {
                 </div>
                 <div>
                   <h4 className="font-display text-sm font-semibold text-gold">Animals</h4>
-                  <p className="font-serif text-xs text-ink-muted mt-0.5">1. Cow &nbsp; 2. Goat &nbsp; 3. Sheep</p>
+                  <p className="font-serif text-xs text-ink-muted mt-0.5">1. Cow &nbsp; 2. Donkey &nbsp; 3. Goat</p>
                 </div>
                 <div>
                   <h4 className="font-display text-sm font-semibold text-gold">Defense</h4>
@@ -303,7 +314,7 @@ export default function TierListPage() {
             <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
               <h3 className="font-display text-base font-semibold text-ink mb-2">How We Rank</h3>
               <p className="font-serif text-xs text-ink-light leading-relaxed">
-                Tiers are based on overall contribution to colony survival across all game stages — early, mid, and late game. We weigh versatility, resource efficiency, and how badly missing something hurts you. An S-tier item is something you feel the absence of immediately and constantly. A D-tier item is something you can play hundreds of hours and never need. Rankings reflect the 1.0 release meta and community consensus.
+                Tiers are based on overall contribution to colony survival across all game stages — early, mid, and late game. We weigh versatility, resource efficiency, and how badly missing something hurts you. An S-tier item is something you feel the absence of immediately and constantly. A C-tier item is something you can happily skip in most playthroughs. Rankings reflect community consensus and current meta strategies.
               </p>
             </div>
 
