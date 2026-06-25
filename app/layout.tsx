@@ -277,7 +277,7 @@ export default function RootLayout({
                   fontWeight: 600,
                 }}
               >
-                ❤️ 支持我们
+                ❤️ Support Us
               </a>
             </div>
 
