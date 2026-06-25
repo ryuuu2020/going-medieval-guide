@@ -1,252 +1,147 @@
-import type { Metadata } from "next";
-import { buildings } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Buildings | Going Medieval Guide",
-  description:
-    "Complete guide to all 18 buildings in Going Medieval. Learn construction tiers (wood, stone, reinforced), structural stability mechanics, support beams, and optimal building strategies for your medieval colony.",
-};
-
-const buildingCategories = ["Structures", "Floors", "Roofs", "Doors", "Production", "Recreation", "Defense"];
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function BuildingsPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Buildings Guide</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Master the construction system in Going Medieval. From your first wooden hut to
-        a mighty stone castle, learn every building type, material tier, and the structural
-        mechanics that determine whether your walls stand or collapse.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="建筑" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">建筑系统详解</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                建筑是 Going Medieval 的核心系统之一。从最初的木棚到宏伟的石堡，建筑水平直接决定了殖民地的生存能力和防御强度。本指南将详细解析墙体类型、房间需求、结构稳定性以及多层建造技巧，帮助你打造一个坚不可摧的中世纪定居点。所有数据基于社区估算，可能随版本更新变化。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>What&apos;s the best building material in Going Medieval?</summary>
-          <p>
-            Stone is the best all-around material for defensive structures — it&apos;s fireproof, has
-            high hit points, and resists siege damage. Wood is cheap and fast to build but burns
-            easily and has low durability. Reinforced walls (unlocked via Masonry research) are the
-            ultimate defensive upgrade, offering the highest structural integrity. Use wood for
-            interior walls and furniture, stone for outer walls and defensive structures, and
-            reinforced walls at critical chokepoints and your keep.
-          </p>
-        </details>
-        <details>
-          <summary>How do support beams and structural stability work?</summary>
-          <p>
-            Every tile has a stability value that decreases as you build higher or span wider gaps.
-            Walls provide vertical support — each wall tile supports up to 4 tiles of roof or floor
-            directly above it. Support beams can extend this range horizontally. Without proper
-            support, structures will collapse. For multi-story buildings, stack walls vertically
-            and add support beams every 4-5 tiles. Underground rooms need support pillars every
-            4 tiles to prevent ceiling collapse.
-          </p>
-        </details>
-        <details>
-          <summary>What should I build first in Going Medieval?</summary>
-          <p>
-            Build a 5x5 wooden shelter with a thatched roof, a wooden door, a campfire, and
-            sleeping spots (upgrade to beds later) on Day 1. This gives your settlers protection
-            from weather, a place to cook, and a rest area. Next, build a Research Table, then
-            a Butcher Table for processing hunted animals. Transition to stone walls and proper
-            floors once you unlock Stonecutting. Your first construction priority is always
-            shelter and food preparation, not fortifications.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">墙体类型对比</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Going Medieval 提供多种建筑材料，从最基础的木墙到坚固的石墙，每种材料的耐久度、建造成本和隔热性能各不相同。早期游戏受限于资源，通常以木材为主；随着研究推进，逐步升级为砖石结构是提升防御力的关键。
+              </p>
+              <table className="parchment-table">
+                <thead>
+                  <tr>
+                    <th>墙体类型</th>
+                    <th>耐久度</th>
+                    <th>建造材料</th>
+                    <th>隔热值</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>木墙</td><td>150</td><td>木材 ×4</td><td>低</td></tr>
+                  <tr><td>木栅栏</td><td>50</td><td>木材 ×2</td><td>无</td></tr>
+                  <tr><td>泥砖墙</td><td>250</td><td>泥砖 ×4</td><td>中</td></tr>
+                  <tr><td>石灰岩墙</td><td>500</td><td>石灰岩 ×4</td><td>高</td></tr>
+                  <tr><td>砖墙</td><td>400</td><td>砖块 ×4</td><td>高</td></tr>
+                  <tr><td>铁墙</td><td>800</td><td>铁锭 ×3</td><td>极高</td></tr>
+                </tbody>
+              </table>
+              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区测试估算</p>
+            </section>
 
-      {/* Building Tiers */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Building Material Tiers</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Going Medieval features three distinct building material tiers that determine 
-        structural integrity, fire resistance, and combat durability. Upgrading your walls 
-        and floors is one of the most impactful progression paths in the game.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">房间需求与功能</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                每个房间需要满足特定条件才能发挥功能。房间由墙体和门围合而成，内部空间需要足够面积放置家具和工作台。定居者会根据房间质量产生心情变化——整洁、宽敞、有装饰的房间能显著提升心情。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">居住区</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">最少 3×3 格空间，需要床和门。每人独立房间可获得心情加成。添加桌椅和地毯可进一步提升舒适度。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">储藏区</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">用于存放物资。地下储藏区温度更低，食物腐烂速度大幅减缓。建议建造在山体内部，搭配木架提升容量。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">厨房/工作间</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">需要足够空间放置灶台、工作台等设施。建议与储藏区相邻，减少定居者搬运物资的行走时间。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">监狱</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">关押俘虏的专用房间，需要坚固的门和围墙。俘虏可以被招募为定居者，是扩充人口的重要途径。</p>
+                </div>
+              </div>
+            </section>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card" style={{ borderLeft: "4px solid var(--color-success)" }}>
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.15rem" }}>
-            Tier 1: Wood <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 400 }}>— Default</span>
-          </h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Wood is your starting material. It&apos;s cheap (5 wood per wall), fast to build, and 
-            available everywhere. However, wood walls have low hit points and are highly flammable. 
-            Enemy raiders can break through wooden walls quickly, and fire spreads through wood 
-            structures. Use wood for your first shelter, then upgrade to stone as soon as 
-            Stonecutting is researched. Wood floors provide modest movement bonuses but should 
-            be replaced with stone floors for better room quality.
-          </p>
-        </div>
-        <div className="card" style={{ borderLeft: "4px solid var(--color-accent)" }}>
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.15rem" }}>
-            Tier 2: Stone <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 400 }}>— Requires Stonecutting</span>
-          </h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Stone walls are the workhorse of Going Medieval construction. They&apos;re completely 
-            fireproof, have substantially more hit points than wood, and resist siege weapon damage. 
-            Stone blocks require mining stone and crafting at a Stonecutter workshop, adding a 
-            production step. Build all external walls, defensive structures, and critical buildings 
-            from stone. The investment in mining and crafting is repaid many times over when raiders 
-            fail to breach your walls. Stone floors also improve room quality and movement speed.
-          </p>
-        </div>
-        <div className="card" style={{ borderLeft: "4px solid var(--color-danger)" }}>
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.15rem" }}>
-            Tier 3: Reinforced <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", fontWeight: 400 }}>— Requires Masonry</span>
-          </h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Reinforced walls represent the pinnacle of defensive construction. Unlocked through the 
-            Masonry research (Tier 2), reinforced walls add metal reinforcement to stone construction 
-            for maximum hit points and structural integrity. They&apos;re expensive — requiring both 
-            stone blocks and metal scrap — so reserve them for critical defensive positions like 
-            your keep, main gate walls, and the walls facing the expected enemy approach direction. 
-            A fully reinforced keep is nearly impenetrable even against end-game trebuchet attacks.
-          </p>
-        </div>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">结构稳定性</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Going Medieval 的建筑系统引入了结构稳定性机制。墙体和地板需要有效的支撑，否则会坍塌。地下挖掘同样需要注意顶部支撑——挖掘大面积空间时，必须保留柱子或建造支撑梁。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                关键规则：每面墙最多水平延伸 6 格而无需额外支撑；超过后必须建造柱子或相邻墙体。地下空间的顶部自然岩石可以支撑约 4×4 的面积，更大的空间需要保留岩柱。多层建筑的地板需要下方有墙体支撑，悬空超过 2 格的地板会坍塌。
+              </p>
+              <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">⚠ 建造提示：</strong>
+                  挖掘地下基地时，建议采用网格布局，每隔 4 格保留 1 格宽的岩柱。这样既能最大化利用空间，又能确保结构稳定。如果发生坍塌，下方的定居者会受到严重伤害甚至死亡。
+                </p>
+              </div>
+            </section>
 
-      {/* Full Building Table */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Complete Building List</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        There are {buildings.length} building types across {buildingCategories.length} categories. 
-        Each building serves a specific purpose in your colony&apos;s development — from basic shelter 
-        to advanced production and recreation.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">多层建造技巧</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                多层建造是中后期扩展殖民地的主要方式。利用楼梯和坡道连接不同楼层，可以打造功能分区的立体定居点。常见布局：地面层设为防御和农耕区，地下一层设为储藏区，地下二层设为居住区——利用地层的恒温特性保持室内舒适。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                建造多层建筑时，从下往上逐层建造。每层的墙体必须对齐下方墙体或柱子。屋顶是必须的——没有屋顶的房间会被视为户外，定居者会受天气影响产生负面心情。平顶和尖顶各有优劣：平顶便于在上方继续建造，尖顶隔热性能更好。
+              </p>
+            </section>
 
-      <div style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>Building</th>
-              <th>Category</th>
-              <th>Materials</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {buildings.map((b) => (
-              <tr key={b.name}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{b.name}</td>
-                <td style={{ whiteSpace: "nowrap" }}>{b.category}</td>
-                <td style={{ fontSize: "0.9rem", whiteSpace: "nowrap" }}>{b.materials}</td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>{b.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>木墙和石墙哪个更值得建造？</summary>
+                  <p>前期资源有限时木墙是唯一选择，但中后期务必升级为石墙。石墙耐久度是木墙的 3 倍以上，隔热性能也更好。建议优先升级面向外界的墙体，内部隔墙可以暂时保留木墙。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>地下基地怎么挖才不会塌？</summary>
+                  <p>挖掘时采用网格布局，每隔 4 格保留 1 格宽的岩柱作为支撑。避免一次性挖掘大面积空间。如果需要开凿大厅，先挖外围再挖内部，边挖边观察是否有裂缝出现。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>定居者总是抱怨房间太小怎么办？</summary>
+                  <p>将居住区扩大到至少 4×4 格，添加床、桌椅和装饰物。每人独立房间效果最好，如果资源紧张可以安排 2 人一间但空间要相应扩大。保持房间清洁也能提升心情。</p>
+                </details>
+              </div>
+            </section>
+          </div>
 
-      {/* Structural Stability */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Structural Stability Mechanics</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Structural stability is the hidden mechanic that determines whether your buildings 
-        stand or collapse. Understanding stability lets you build taller castles, wider 
-        rooms, and deeper underground networks without risking catastrophic failure.
-      </p>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Vertical Support</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Every wall tile provides vertical support that extends up to 4 tiles above it. 
-            This means a ground-floor wall supports up to 3 additional floors (4 total levels). 
-            To build taller than 4 levels, you need to widen your base — outer walls at lower 
-            levels provide support to upper levels. The maximum build height is 16 levels 
-            above ground, achievable by stacking support structures in a pyramid shape.
-          </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">建筑速查</h3>
+              <div className="space-y-3">
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">木墙</h4><p className="font-serif text-xs text-ink-muted mt-1">木材 ×4 | 耐久 150</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">木门</h4><p className="font-serif text-xs text-ink-muted mt-1">木材 ×6 | 耐久 120</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">木楼梯</h4><p className="font-serif text-xs text-ink-muted mt-1">木材 ×8 | 连接楼层</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">石墙</h4><p className="font-serif text-xs text-ink-muted mt-1">石灰岩 ×4 | 耐久 500</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">木架</h4><p className="font-serif text-xs text-ink-muted mt-1">木材 ×3 | 储存量 +50%</p></div>
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">建造优先级</h3>
+              <ol className="space-y-2 font-serif text-sm text-ink-light">
+                <li>1. 临时住所（木墙+门+床）</li>
+                <li>2. 储藏区（尽快转入地下）</li>
+                <li>3. 外围城墙（木墙先围一圈）</li>
+                <li>4. 厨房与工作间</li>
+                <li>5. 升级石墙（优先外围）</li>
+                <li>6. 装饰与优化</li>
+              </ol>
+            </div>
+          </aside>
         </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Horizontal Spans</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Floors and roofs can span up to 4 tiles between support points (walls or beams). 
-            To create a 5-tile or wider room, you need intermediate support pillars or support 
-            beams. Support beams are crafted from wood and can extend support range by 1-2 
-            tiles depending on placement. A good rule of thumb: place a support pillar or 
-            beam every 4 tiles when building large interior spaces.
-          </p>
-        </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Underground Stability</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Underground rooms follow the same rules but reversed — instead of supporting 
-            floors above, you need to prevent ceiling collapse. Any underground room wider 
-            than 4 tiles in any direction needs support pillars. Without pillars, the ceiling 
-            collapses, destroying everything below and potentially damaging structures above. 
-            Plan underground layouts with support pillars spaced every 4 tiles for safe mining 
-            and room construction.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Stability Tips</h3>
-          <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-            <li>Check tile stability by hovering over it — a red indicator means collapse risk</li>
-            <li>Build walls directly above each other for maximum vertical stability</li>
-            <li>Use stone pillars as decorative support beams in Great Halls and large rooms</li>
-            <li>Add a roof over wall walkways to protect archers during combat</li>
-            <li>Underground structures are immune to siege damage but require careful support planning</li>
-            <li>Remove supporting walls from bottom to top — never demolish the ground floor of a multi-story structure first</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Room Quality */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Room Quality System</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Room quality affects settler mood, research speed, and building functionality. 
-        Quality is determined by floor type, wall material, room size, furniture, 
-        cleanliness, and temperature. A Library needs high-quality surroundings to 
-        provide its full research bonus. A Great Hall requires tables, chairs, decorations, 
-        and sufficient space. Improved floors (stone over wood, fine floors over stone) 
-        and decorated walls significantly boost room quality. Keep rooms clean by 
-        assigning settlers to cleaning tasks and building floors that prevent dirt accumulation.
-      </p>
-
-      {/* Building Priority */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Building Priority Order</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-          <span style={{ background: "var(--color-accent)", color: "var(--color-bg)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem", fontWeight: 700, flexShrink: 0, fontSize: "0.9rem" }}>Day 1</span>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, lineHeight: 1.6 }}>
-            Wooden Wall, Thatched Roof, Wooden Door, Campfire, Wooden Floor — basic shelter and cooking.
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-          <span style={{ background: "var(--color-accent)", color: "var(--color-bg)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem", fontWeight: 700, flexShrink: 0, fontSize: "0.9rem" }}>Week 1</span>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, lineHeight: 1.6 }}>
-            Research Table, Butcher Table, Carpenter Bench — production and progression begins.
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-          <span style={{ background: "var(--color-accent)", color: "var(--color-bg)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem", fontWeight: 700, flexShrink: 0, fontSize: "0.9rem" }}>Month 1</span>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, lineHeight: 1.6 }}>
-            Stone Wall, Stone Floor, Tailor Workshop, Cooking Station — upgrade from wood to stone, start crafting.
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-          <span style={{ background: "var(--color-accent)", color: "var(--color-bg)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem", fontWeight: 700, flexShrink: 0, fontSize: "0.9rem" }}>Mid-Game</span>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, lineHeight: 1.6 }}>
-            Smithy, Armorer, Brewing Station, Library, Great Hall — advanced production, recreation, morale.
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-          <span style={{ background: "var(--color-accent)", color: "var(--color-bg)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem", fontWeight: 700, flexShrink: 0, fontSize: "0.9rem" }}>End-Game</span>
-          <p style={{ color: "var(--color-text-muted)", margin: 0, lineHeight: 1.6 }}>
-            Stone Keep, Alchemy Lab, Reinforced Walls — fortifications and specialized production.
-          </p>
-        </div>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        Going Medieval rewards thoughtful construction planning. A well-designed colony 
-        with proper material choices, adequate support structures, and optimized room 
-        layouts will weather raids, survive harsh seasons, and keep settlers happy. 
-        Always plan your building layout before placing walls — rebuilding is expensive 
-        in both materials and time. Leave room for expansion, keep production buildings 
-        near stockpiles, and position defensive structures where they provide the best 
-        field of fire against approaching enemies.
-      </p>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

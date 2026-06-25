@@ -1,277 +1,154 @@
-import type { Metadata } from "next";
-import { settlerSkills } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Settlers | Going Medieval Guide",
-  description:
-    "Complete guide to settlers and villagers in Going Medieval. Master all 12 skills, the mood system, needs (food, sleep, comfort, safety), traits, relationships, and work assignment strategies.",
-};
-
-const skillCategories = ["Crafting", "Labor", "Research", "Support", "Combat", "Social"];
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function SettlersPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Settlers &amp; Villagers Guide</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Your settlers are the heart of your colony. Learn how to manage their 12 skills,
-        keep them happy through the mood system, fulfill their needs, handle traits and
-        relationships, and optimize work assignments for a thriving medieval community.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="定居者" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">定居者管理</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                定居者是殖民地的核心资产。每位定居者拥有独特的技能、性格和需求，合理分配工作、管理心情、满足生理需求是殖民地高效运转的关键。本指南将详解技能系统、心情管理和需求体系，帮助你打造一支高效协作的定居者团队。以下数据基于社区整理，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>How do I keep my settlers happy in Going Medieval?</summary>
-          <p>
-            Settler happiness is governed by the mood system. Fulfill their basic needs first:
-            provide regular meals (cooked meals give better mood than raw food), comfortable beds
-            in private rooms, a warm and safe shelter, and recreation time. The Great Hall provides
-            massive mood bonuses when properly furnished. Avoid overworking settlers — give them
-            designated recreation hours. Settlers with positive moods work faster, get into fewer
-            fights, and are less likely to have mental breaks. A single unhappy settler can drag
-            down the whole colony through social fights and work slowdowns.
-          </p>
-        </details>
-        <details>
-          <summary>What settlers should I choose when starting a new game?</summary>
-          <p>
-            Prioritize settlers with high Intellectual skill (for fast research), Construction
-            (for fast building), and Cooking (for good meals). A balanced starting trio should
-            cover these roles: one researcher/crafter (high Intellectual, Smithing, or Tailoring),
-            one builder/laborer (high Construction, Mining), and one cook/farmer (high Cooking,
-            Farming). Avoid settlers with negative traits like Pyromaniac or Bloodlust on higher
-            difficulties. Check each settler&apos;s backstory — some provide hidden bonuses like
-            faster movement or higher carrying capacity.
-          </p>
-        </details>
-        <details>
-          <summary>How does the settler mood system work exactly?</summary>
-          <p>
-            Mood is calculated from positive and negative modifiers that accumulate throughout 
-            the day. Major positive sources: eating a good meal (+5 to +15), sleeping in a 
-            comfortable bed (+5), recreation in a Great Hall (+10), and having a bond with a pet
-            (+5). Major negative sources: eating raw food (-10), sleeping on the ground (-8), 
-            being cold (-5 to -15), seeing a corpse (-10), and being injured (-5 to -20). Mood 
-            below 25% triggers mental breaks (berserk, dazed, or fleeing). Keep mood above 70% 
-            for optimal performance. The mood threshold for breaks is visible in the settler UI.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">技能系统</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                每位定居者拥有一组技能属性，决定了其在不同工作领域的效率。技能值越高，工作速度越快、产出质量越好。定居者通过持续从事某项工作积累经验，逐步提升对应技能。
+              </p>
+              <table className="parchment-table">
+                <thead>
+                  <tr>
+                    <th>技能</th>
+                    <th>影响工作</th>
+                    <th>关键说明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>建造</td><td>建筑、修理</td><td>影响建造速度和建筑质量</td></tr>
+                  <tr><td>农耕</td><td>种植、收割</td><td>影响作物生长速度和产量</td></tr>
+                  <tr><td>烹饪</td><td>食物加工</td><td>影响食物品质和制作速度</td></tr>
+                  <tr><td>制作</td><td>武器、工具、衣物</td><td>影响制作速度和物品品质</td></tr>
+                  <tr><td>研究</td><td>研究台工作</td><td>影响研究点数产出速度</td></tr>
+                  <tr><td>战斗（近战）</td><td>近身格斗</td><td>影响命中率和伤害</td></tr>
+                  <tr><td>战斗（远程）</td><td>弓弩射击</td><td>影响射击精度和伤害</td></tr>
+                  <tr><td>医疗</td><td>治疗伤员</td><td>影响治疗效率和恢复速度</td></tr>
+                  <tr><td>社交</td><td>贸易、招募</td><td>影响交易价格和招募成功率</td></tr>
+                </tbody>
+              </table>
+              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区整理</p>
+            </section>
 
-      {/* Skills Table */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>All {settlerSkills.length} Settler Skills</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Settlers have skills across {skillCategories.length} categories. Each skill affects 
-        specific activities — assign settlers to tasks matching their highest skills for 
-        maximum efficiency. Skills improve through use, so a settler who cooks regularly 
-        will see their Cooking skill increase over time.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">心情管理</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                心情是衡量定居者精神状态的指标，范围 0-100。心情高于 50 时定居者正常工作，低于 30 时可能触发负面事件——拒绝工作、破坏物品甚至攻击同伴。维持心情是殖民地稳定运行的基础。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">提升心情的因素</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">独立宽敞的房间（+10）、美味食物（+5）、啤酒供应（+8）、整洁环境（+5）、社交互动（+3）、艺术装饰（+5）、宗教信仰（+5）。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">降低心情的因素</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">饥饿（-15）、睡眠不足（-10）、受伤（-10）、同伴死亡（-20）、房间脏乱（-8）、生食（-5）、无酒可喝（-3）、雨天外出（-2）。</p>
+                </div>
+              </div>
+              <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">⚠ 心情危机：</strong>
+                  当定居者心情跌破 20，会进入崩溃状态，可能攻击同伴或自残。立即提供啤酒和美食，安排休息。如果多人同时低心情，可能引发连锁崩溃，导致殖民地覆灭。
+                </p>
+              </div>
+            </section>
 
-      <div style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Category</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {settlerSkills.map((s) => (
-              <tr key={s.name}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{s.name}</td>
-                <td style={{ whiteSpace: "nowrap" }}>
-                  <span style={{
-                    padding: "0.2rem 0.6rem",
-                    borderRadius: "0.25rem",
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    background:
-                      s.category === "Combat" ? "rgba(196, 75, 60, 0.2)" :
-                      s.category === "Crafting" ? "rgba(201, 144, 58, 0.2)" :
-                      s.category === "Labor" ? "rgba(107, 142, 78, 0.2)" :
-                      s.category === "Research" ? "rgba(122, 92, 58, 0.3)" :
-                      s.category === "Support" ? "rgba(107, 142, 78, 0.2)" :
-                      "rgba(168, 152, 128, 0.2)",
-                    color:
-                      s.category === "Combat" ? "var(--color-danger)" :
-                      s.category === "Crafting" ? "var(--color-accent)" :
-                      s.category === "Labor" ? "var(--color-success)" :
-                      s.category === "Research" ? "var(--color-accent-secondary)" :
-                      s.category === "Support" ? "var(--color-success)" :
-                      "var(--color-text-muted)",
-                  }}>
-                    {s.category}
-                  </span>
-                </td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", lineHeight: 1.5 }}>{s.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">需求系统</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                定居者有四项基本需求：饥饿、休息、社交和娱乐。任何一项需求过低都会降低心情和工作效率，需要持续关注。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">饥饿</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">定时进食是基本需求。确保厨房有充足食物，定居者会自动取食。生食降低心情，尽量提供加工食物（面包、炖菜）。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">休息</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">每位定居者需要每天睡眠 6-8 小时。提供床铺和独立房间。疲劳过度会降低工作效率并影响心情。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">社交</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">定居者需要与他人交流。安排公共餐厅或活动区域，让定居者在用餐时自然社交。社交需求过低会产生孤独感。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">娱乐</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">建造娱乐设施（棋盘、乐器）满足娱乐需求。娱乐不足的定居者工作效率下降，心情降低。</p>
+                </div>
+              </div>
+            </section>
 
-      {/* Mood System */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Understanding the Mood System</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        The mood system is the core mechanic governing settler behavior. Mood ranges from 
-        0% (miserable) to 100% (ecstatic) and determines work efficiency, social behavior, 
-        and the likelihood of mental breakdowns. Managing mood is as important as managing 
-        food or defense.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">工作分配策略</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                合理的工作分配能最大化殖民地效率。原则是"专才专用"——将每项工作优先分配给技能最高的定居者。通过工作面板可以精细控制每位定居者的工作优先级。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                推荐配置：6 人殖民地中，2 人专职建造/挖掘，1 人专职农耕，1 人专职烹饪/制作，1 人专职研究，1 人兼顾战斗和杂务。战斗技能高的定居者平时可以从事其他工作，突袭时立即转为战斗角色。
+              </p>
+            </section>
 
-      <h3 style={{ fontSize: "1.15rem", marginBottom: "0.75rem" }}>Core Needs</h3>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.05rem" }}>Food</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Settlers need to eat roughly once per day. Raw food provides minimal nutrition 
-            and a mood penalty. Cooked meals at a Campfire give a small mood bonus. Advanced 
-            meals from a Cooking Station provide significant mood bonuses and better nutrition. 
-            Food variety also matters — settlers eating the same meal type repeatedly get 
-            diminishing mood returns. Build food stockpiles near your kitchen and dining area, 
-            and ensure at least 3 days of food reserve for emergencies. Starvation rapidly 
-            decreases mood and can kill settlers within 2-3 days without food.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.05rem" }}>Sleep</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Settlers need 6-8 hours of sleep per day. Sleeping on the ground (no bed) causes 
-            a severe mood penalty and back pain. Basic beds provide neutral comfort. Improved 
-            beds (crafted at the Carpenter Bench) give comfort bonuses. Private bedrooms with 
-            doors provide additional mood benefits over dormitory-style sleeping arrangements. 
-            Assign sleeping schedules in the Settlers tab — night owls can work while others 
-            sleep, keeping production running around the clock. A well-rested settler works 
-            faster and is less prone to social conflicts.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.05rem" }}>Comfort &amp; Temperature</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Settlers are affected by ambient temperature. Too hot or too cold causes mood 
-            penalties and can lead to heatstroke or hypothermia. Winter clothing (crafted at 
-            the Tailor Workshop) provides cold protection. Campfires, braziers, and indoor 
-            spaces retain heat. During heat waves in summer, keep settlers indoors or in 
-            shaded areas. Dress settlers appropriately for each season — swap winter coats 
-            for lighter clothing during summer months. A temperature between 15°C and 25°C 
-            is the comfort sweet spot.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ margin: "0 0 0.5rem", fontSize: "1.05rem" }}>Safety</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Settlers feel unsafe when exposed to danger — being near enemies, seeing corpses, 
-            or being outside during a raid all generate safety-related mood penalties. Corpses 
-            must be buried or cremated quickly; a corpse left in a common area can tank colony 
-            mood for days. The Stone Keep and reinforced walls provide safety mood bonuses 
-            during raids. Settlers with the Brave trait are less affected by danger, while 
-            those with Cowardly trait suffer amplified fear penalties.
-          </p>
-        </div>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>定居者不够用怎么办？</summary>
+                  <p>扩充人口的途径有三：1) 招募俘虏——建造监狱关押俘虏，定期提供食物，一段时间后可尝试招募；2) 接纳流浪者——偶尔会有流浪者请求加入，通过社交互动提升好感后可招募；3) 出生——定居者伴侣可能生育后代，但需要较长时间成长。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>定居者受伤了怎么处理？</summary>
+                  <p>安排医疗技能高的定居者进行治疗。严重受伤需要卧床休息，提供药物可加速恢复。战斗中受伤的定居者应立即撤到安全区域，避免伤势加重。建造医疗室配备病床。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>如何提升定居者的技能？</summary>
+                  <p>技能通过持续使用提升。让定居者反复从事某项工作即可积累经验。也可以制作训练设施（如靶子提升远程技能）加速技能成长。技能提升速度与定居者的学习属性有关。</p>
+                </details>
+              </div>
+            </section>
+          </div>
 
-      {/* Traits and Relationships */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Traits &amp; Relationships</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Every settler has traits that modify their behavior, skills, and mood responses. 
-        Traits are assigned at character creation and cannot be changed. Settlers also 
-        form relationships with each other over time — positive relationships boost mood 
-        when settlers are near each other, while negative relationships can lead to fights.
-      </p>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Positive Traits</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            <strong style={{ color: "var(--color-success)" }}>Hard Worker</strong> — Increased work speed. 
-            <strong style={{ color: "var(--color-success)" }}> Fast Learner</strong> — Skills level up faster. 
-            <strong style={{ color: "var(--color-success)" }}> Iron-Willed</strong> — Resistant to mental breaks. 
-            <strong style={{ color: "var(--color-success)" }}> Night Owl</strong> — Works well at night, no darkness penalty. 
-            <strong style={{ color: "var(--color-success)" }}> Beautiful</strong> — Positive social interactions with other settlers.
-          </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">心情速查</h3>
+              <div className="space-y-2 font-serif text-sm text-ink-light">
+                <div className="flex justify-between"><span>80-100 极佳</span><span className="text-gold">效率+20%</span></div>
+                <div className="flex justify-between"><span>50-80 正常</span><span className="text-ink-muted">正常</span></div>
+                <div className="flex justify-between"><span>30-50 低落</span><span className="text-vermillion">效率-10%</span></div>
+                <div className="flex justify-between"><span>0-30 危险</span><span className="text-vermillion">可能崩溃</span></div>
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">6人分工推荐</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>• 建造/挖掘 ×2</li>
+                <li>• 农耕 ×1</li>
+                <li>• 烹饪/制作 ×1</li>
+                <li>• 研究 ×1</li>
+                <li>• 战斗/杂务 ×1</li>
+              </ul>
+            </div>
+          </aside>
         </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Negative Traits</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            <strong style={{ color: "var(--color-danger)" }}>Pyromaniac</strong> — May start fires when unhappy. 
-            <strong style={{ color: "var(--color-danger)" }}> Bloodlust</strong> — Gets mood boosts from violence, but may attack others. 
-            <strong style={{ color: "var(--color-danger)" }}> Gourmand</strong> — Eats more food than normal settlers. 
-            <strong style={{ color: "var(--color-danger)" }}> Nervous</strong> — More easily frightened, lower mental break threshold. 
-            <strong style={{ color: "var(--color-danger)" }}> Abrasive</strong> — Causes negative social interactions with others.
-          </p>
-        </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Relationships</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Settlers who work together, share meals, or spend recreation time together build 
-            relationships. Positive relationships (friends, lovers, spouses) provide mood 
-            boosts when settlers are near each other. Negative relationships (rivals, enemies) 
-            can trigger fights that cause injuries and further mood penalties. Assign 
-            incompatible settlers to different work zones and sleep areas to minimize conflict. 
-            A settler whose spouse dies suffers a massive long-term mood penalty that can 
-            take a full season to recover from.
-          </p>
-        </div>
-      </div>
-
-      {/* Managing Assignments */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Managing Settler Work Assignments</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        The work tab lets you assign settlers to specific tasks and set their daily schedule. 
-        Proper assignment management is the difference between a smooth-running colony and 
-        one where nothing gets done on time.
-      </p>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Role Specialization</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Don&apos;t make every settler do everything. Assign 1-2 primary roles per settler 
-            based on their highest skills. Your researcher should do nothing but research until 
-            key techs are unlocked. Your cook should focus on cooking and butchering. Dedicated 
-            farmers keep food production steady. Specialization means each settler spends more 
-            time doing what they&apos;re best at, resulting in faster work and higher quality output. 
-            As your colony grows past 5-6 settlers, you can afford to dedicate one settler 
-            exclusively to hauling and cleaning.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Schedule Management</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Set work hours, recreation hours, and sleep hours for each settler in the schedule 
-            tab. A typical healthy schedule: 8 hours sleep, 2 hours recreation, 14 hours work. 
-            When mood is low, increase recreation time. During harvest season or post-raid 
-            cleanup, temporarily extend work hours. Night-shift workers (settlers with Night Owl 
-            trait) can keep production running while others sleep, effectively doubling your 
-            colony&apos;s productive hours. Be careful not to overwork settlers — extended work 
-            hours without adequate recreation will tank mood.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Work Priorities</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Use the priority system (1-4) in the work tab to control which tasks settlers do 
-            first. Priority 1 tasks are handled before anything else. Set firefighting, patient 
-            treatment, and basic needs to Priority 1 for all settlers. Set specialized tasks to 
-            Priority 1 only for the settler assigned to that role. Construction and hauling can 
-            be Priority 2-3. Crafting for trade goods can be Priority 4. Revisit priorities 
-            when your colony&apos;s needs change — during a raid, everyone should have combat tasks 
-            at high priority.
-          </p>
-        </div>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        A happy, well-managed settler is the most valuable resource in Going Medieval. 
-        Invest time in understanding each settler&apos;s strengths and weaknesses. Assign 
-        compatible roommates, respect their needs, and give them purpose through meaningful 
-        work. A colony of 6 content settlers will outproduce a colony of 10 miserable ones 
-        every time. Remember that settler deaths have lasting consequences — protect your 
-        best settlers in combat and prioritize medical care for the wounded.
-      </p>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

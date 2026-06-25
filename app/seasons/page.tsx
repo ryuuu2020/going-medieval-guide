@@ -1,275 +1,139 @@
-import type { Metadata } from "next";
-import { seasons } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Seasons Guide | Going Medieval Guide",
-  description:
-    "Complete guide to all 4 seasons in Going Medieval. Master Spring planting, Summer growth, Autumn harvest, and Winter survival. Learn temperature management, crop rotation, and food storage strategies for year-round colony success.",
-};
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function SeasonsPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Seasons Guide</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Seasons are the heartbeat of Going Medieval. Each of the four seasons brings distinct
-        challenges and opportunities — from the planting frenzy of Spring to the desperate
-        survival of Winter. Understanding and preparing for seasonal shifts is the difference
-        between a thriving colony and a frozen grave.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="季节" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">季节系统与温度管理</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                Going Medieval 的四季系统对殖民地生存提出了严峻挑战。每个季节有不同的温度、天气和资源产出，冬季尤其致命——大雪覆盖、作物停止生长、温度骤降。掌握季节规律和温度管理技巧，是殖民地长期存续的关键。以下数据基于社区测试，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>How long is each season in Going Medieval?</summary>
-          <p>
-            Each season lasts 12 days by default (configurable in game settings). This gives you
-            roughly 48 days per in-game year. The days per season can be adjusted when starting a
-            new game — longer seasons give you more time to prepare but also extend the duration
-            of harsh conditions like Winter. New players should stick with the default 12-day
-            seasons until they&apos;re comfortable with the seasonal rhythm.
-          </p>
-        </details>
-        <details>
-          <summary>How do I prepare for Winter in Going Medieval?</summary>
-          <p>
-            Winter preparation starts in Autumn. Harvest all crops before the first frost, build
-            underground root cellars for food storage, stockpile at least 100 meals per settler,
-            craft winter coats and warm hats at the Tailor Workshop, plant Turnips (the only
-            outdoor winter crop), and set up an underground mushroom farm. Ensure you have enough
-            firewood or coal stockpiled for campfires and cooking throughout the season.
-          </p>
-        </details>
-        <details>
-          <summary>What crops grow in each season?</summary>
-          <p>
-            Spring supports the widest variety: Cabbage, Beet, Barley, Herbs, Redcurrant, Flax,
-            and Carrot. Summer narrows to Beet, Barley, Herbs, and Carrot. Autumn brings Cabbage,
-            Herbs, Hay, Mushrooms (underground), Turnips, and Carrot. Winter limits outdoor
-            planting to Turnips only, with Mushrooms growing exclusively in underground cellars.
-            Plan your fields so you always have something growing — stagger planting times for
-            continuous harvests.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">四季概览</h2>
+              <table className="parchment-table">
+                <thead>
+                  <tr>
+                    <th>季节</th>
+                    <th>温度范围</th>
+                    <th>特点</th>
+                    <th>重点事项</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>春季</td><td>5-18°C</td><td>冰雪融化，作物可种</td><td>立即开耕，修复冬季损坏</td></tr>
+                  <tr><td>夏季</td><td>18-32°C</td><td>生长旺盛，偶有热浪</td><td>大量种植，储备食物</td></tr>
+                  <tr><td>秋季</td><td>5-20°C</td><td>最后收获期</td><td>收割入库，冬季准备</td></tr>
+                  <tr><td>冬季</td><td>-10-5°C</td><td>大雪，无法种植</td><td>消耗储备，保持温暖</td></tr>
+                </tbody>
+              </table>
+              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区测试估算</p>
+            </section>
 
-      {/* Spring */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Spring — The Season of New Beginnings</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Spring is the most critical season for establishing your colony&apos;s food supply. With
-        temperatures ranging from 5°C to 18°C, conditions are mild enough for settlers to work
-        comfortably outdoors but not so hot that crops wilt from heat stress. This is your
-        planting window — the decisions you make in Spring will determine whether your colony
-        eats well through Autumn or starves in Winter.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">冬季生存指南</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                冬季是殖民地最危险的时期。大雪覆盖地面后，所有作物停止生长，狩猎也变得困难。如果食物储备不足，定居者会挨饿甚至死亡。温度骤降还可能导致定居者冻伤，需要在室内活动并保持取暖。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">食物储备</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">秋季结束时确保储藏区有至少 200 单位食物（按 6 人算）。优先储存面包、熏肉等加工食品，腐烂速度慢。地下储藏区温度更低，保鲜期更长。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">取暖设施</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">在居住区建造壁炉或火炉保持室内温度。定居者在低于 0°C 的环境中会持续降低心情和健康。确保燃料（木材）充足，冬季前砍伐足够木材。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">衣物保暖</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">为每位定居者制作保暖衣物（皮甲+布料内衬）。穿衣后可在户外短时间活动，但长时间暴露仍会冻伤。冬季尽量安排室内工作。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">冬季活动</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">利用冬季进行室内工作：研究、制作、烹饪。也可以挖掘地下扩展空间。避免不必要的户外活动，防止冻伤和心情降低。</p>
+                </div>
+              </div>
+            </section>
 
-      <div className="card" style={{ borderLeft: "4px solid var(--color-success)", marginBottom: "1.5rem" }}>
-        <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Spring Priorities</h3>
-        <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-          <li><strong style={{ color: "var(--color-accent)" }}>Plant immediately:</strong> Designate crop fields on Day 1 of Spring. Cabbage and Carrot are fast-growing staples. Barley is essential for long-term food sustainability and brewing.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Gather wild resources:</strong> Wild berries, herbs, and mushrooms spawn in Spring. Send gatherers out early before these resources despawn or get eaten by wildlife.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Expand your colony:</strong> Spring&apos;s mild weather makes it ideal for construction projects. Expand your sleeping quarters, build new production buildings, and lay out new crop fields while the weather cooperates.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Plant Flax and Redcurrant:</strong> These Spring-only crops have specific uses. Flax becomes cloth for clothing, and Redcurrant provides mood-boosting fruits and brewing ingredients. Miss the Spring window and you wait a full year.</li>
-        </ul>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">温度管理</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                温度不仅影响定居者的舒适度，还直接影响食物保鲜和作物生长。地下空间的温度常年恒定（约 8-12°C），是理想的储藏区。地面建筑受季节影响大，夏季炎热、冬季寒冷，需要通过壁炉和通风调节。
+              </p>
+              <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">⚠ 温度技巧：</strong>
+                  地下 2 层以下的温度常年保持 8-12°C，是天然冷库。将食物储藏区建在此处，腐烂速度可降低 70%。居住区建在地下 1 层，配合壁炉，冬季也能保持 15°C 以上。
+                </p>
+              </div>
+            </section>
 
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Spring also brings threats in the form of rain storms and occasional flooding. Build
-        roofs over your stockpiles and ensure your food storage areas have proper drainage.
-        Settlers working in the rain without adequate roof coverage will suffer mood penalties
-        and are more susceptible to illness. Spring is also when wild animals emerge from their
-        Winter dormancy — take the opportunity to hunt deer and rabbits for early-game meat and leather.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">季节性事件</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                不同季节会触发不同的事件。春季可能有流浪者寻求加入；夏季是突袭高发期；秋季商人来访频繁；冬季可能遭遇暴风雪导致户外活动完全停滞。了解季节事件规律，提前做好准备。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                特别注意夏季的热浪事件——气温可能飙升至 40°C 以上，定居者可能中暑。确保有阴凉处和充足饮水。冬季暴风雪期间，所有户外工作停止，定居者必须待在室内。
+              </p>
+            </section>
 
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Research during Spring should focus on Agriculture for improved crop yields and Herbalism
-        to unlock medicinal herb farming. These two technologies pay dividends throughout the
-        year and should be your first research priorities if you haven&apos;t already unlocked them.
-        If you&apos;re starting a new colony in Spring, build a Research Table as your second
-        structure after basic shelter — the sooner you start researching, the faster you unlock
-        critical technologies.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>冬天定居者总是冻伤怎么办？</summary>
+                  <p>三个措施：1) 确保居住区有壁炉并备足木材；2) 为定居者制作保暖衣物；3) 尽量安排室内工作，减少户外暴露时间。如果已有冻伤，安排休息和治疗。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>一个冬天需要多少食物？</summary>
+                  <p>冬季约持续 10-15 天（游戏内），6 名定居者每天消耗约 12-18 单位食物，共需 120-270 单位。建议储备 300 单位以上以应对突发情况。加工食品保质期更长。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>夏季太热影响工作吗？</summary>
+                  <p>会。温度超过 30°C 时定居者工作效率下降，超过 35°C 可能中暑。在建筑内设置通风口，确保空气流通。热浪期间暂停户外重体力劳动，安排室内工作。</p>
+                </details>
+              </div>
+            </section>
+          </div>
 
-      {/* Summer */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Summer — Growth and Heat Management</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Summer brings hot temperatures of 18°C to 32°C that accelerate crop growth but introduce
-        new challenges through heat waves, crop withering, and increased raider activity. Summer
-        is prime growing season — Beet, Barley, Herbs, and Carrot all thrive in the heat, and
-        your Spring-planted crops should be reaching harvest maturity by early Summer. However,
-        extreme heat waves can cause crops to wither if they aren&apos;t harvested in time, so
-        monitor your fields closely.
-      </p>
-
-      <div className="card" style={{ borderLeft: "4px solid var(--color-accent)", marginBottom: "1.5rem" }}>
-        <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Summer Heat Management</h3>
-        <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-          <li><strong style={{ color: "var(--color-accent)" }}>Provide shade:</strong> Build roofed areas where settlers can work — outdoor workstations under open sky cause heat stress. Covered production areas let settlers work through heat waves.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Stockpile water:</strong> Dehydration risk increases dramatically in Summer. Ensure water barrels are filled and placed near work areas and defensive positions.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Harvest aggressively:</strong> Crops mature faster in Summer heat but also wither faster if left unharvested. Set harvest jobs as high priority and assign extra settlers to farming during heat waves.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Prepare for raiders:</strong> Summer is peak raiding season. Enemy forces are larger and more aggressive. Reinforce walls, train settlers in combat skills, and stockpile weapons and armor before the temperature peaks.</li>
-        </ul>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Summer is also the best time for construction projects involving stone and heavy labor.
-        Settlers work faster in good weather, and the long daylight hours mean more working time
-        per day. If you&apos;re expanding your defensive walls or building a Stone Keep, Summer is
-        the ideal season — but keep defenders on alert since raiders take advantage of the
-        favorable weather too. Position archers on elevated platforms and ensure your trap
-        corridors are maintained and fully armed.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Food stockpile management becomes crucial in Summer. Your Spring harvest should fill your
-        pantries, but Summer heat accelerates food spoilage for items stored above ground. Build
-        underground cold storage cellars now if you haven&apos;t already — the temperature difference
-        between above-ground and underground storage can mean the difference between fresh food
-        and rotten waste. Prioritize the Advanced Cooking research so you can start preserving
-        food into long-lasting stews and preserved meals before Autumn.
-      </p>
-
-      {/* Autumn */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Autumn — Harvest and Preparation</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Autumn is the season of reckoning. Temperatures begin cooling from Summer highs down to
-        5-18°C, and the looming threat of Winter creates urgency across every aspect of colony
-        management. This is your final opportunity to harvest, stockpile, and fortify before the
-        freeze sets in. Every decision in Autumn should be measured by one question: does this
-        help my colony survive Winter?
-      </p>
-
-      <div className="card" style={{ borderLeft: "4px solid var(--color-warning, #c9903a)", marginBottom: "1.5rem" }}>
-        <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>The Autumn Checklist</h3>
-        <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-          <li><strong style={{ color: "var(--color-accent)" }}>Harvest everything:</strong> Any crop still in the field when the first frost hits is lost. Harvest Cabbage, Herbs, Hay, Carrots, and Turnips before temperatures drop below freezing. Hay is especially important — it feeds your tamed animals through Winter.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Plant Winter crops:</strong> Turnips are the only crop that can survive and grow in Winter outdoor temperatures. Plant Turnip fields in early-to-mid Autumn so they have time to mature before the deepest freeze.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Build underground cellars:</strong> If you haven&apos;t already, dig root cellars at least 3 levels underground. Transfer all harvested food into cold storage. Use double doors or airlocks at cellar entrances to maintain low temperatures.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Craft Winter clothing:</strong> Use the Tailor Workshop to produce winter coats, wool hats, and warm boots for every settler. Settlers without proper winter gear suffer hypothermia and frostbite — conditions that can be fatal without medical treatment.</li>
-        </ul>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Autumn is also the season for Mushroom farming. Set up underground farming rooms where
-        Mushrooms can grow year-round, independent of surface weather. Mushrooms thrive in
-        underground environments and provide a critical food source when surface crops are
-        dormant. Combine Mushroom farms with root cellars for a self-contained subterranean
-        food system that operates through the harshest Winter.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Cold snaps and early frost are the primary Autumn threats. A sudden temperature drop can
-        kill unharvested crops overnight. Watch the temperature gauge carefully and don&apos;t gamble
-        on getting &quot;one more day&quot; before harvesting — frost doesn&apos;t wait. Keep settlers working
-        through the night if necessary to bring in the last crops before temperature readings
-        approach zero. Stockpile Hay for livestock — tamed animals that run out of feed in Winter
-        will starve or need to be slaughtered for emergency meat.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Raider activity doesn&apos;t stop in Autumn, and the stakes are higher — losing defensive
-        settlers to injuries before Winter means reduced labor during the survival season.
-        Inspect and repair outer walls, refill trap corridors with fresh spike traps, and
-        ensure your field hospital has adequate medicine and beds. A raid that breaches your
-        defenses in late Autumn can be catastrophic when you need every settler healthy and
-        working to finish Winter preparations.
-      </p>
-
-      {/* Winter */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Winter Survival — The Ultimate Test</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Winter is unforgiving. Temperatures plummet to -15°C with extreme lows possible during
-        blizzards, and the world outside your walls becomes a frozen wasteland. Outdoor crops
-        stop growing entirely except Turnips. Hypothermia, starvation, and food spoilage dominate
-        your concerns. Winter separates the prepared from the dead — colonies that stockpiled food,
-        crafted warm clothing, and built proper shelters will emerge stronger in Spring.
-        Colonies that didn&apos;t prepare will lose settlers.
-      </p>
-
-      <div className="card" style={{ borderLeft: "4px solid var(--color-danger)", marginBottom: "1.5rem" }}>
-        <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Winter Survival Essentials</h3>
-        <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-          <li><strong style={{ color: "var(--color-accent)" }}>Winter clothing is mandatory:</strong> Every settler needs a winter coat, warm hat, and warm footwear. Tailor these before Winter starts. Settlers without proper clothing will develop hypothermia within hours of outdoor exposure. Check the clothing tab on each settler to see their cold protection rating.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Heat sources everywhere:</strong> Place campfires or braziers in sleeping quarters, workrooms, dining areas, and defensive positions. Settlers will gravitate toward heat when cold. A warm settler is a productive settler.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Underground farms are life-saving:</strong> Mushroom farms in underground cellars produce food through Winter without regard for surface temperatures. This is your only reliable source of fresh food during deep Winter.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Limit outdoor work:</strong> Prioritize indoor tasks — crafting, cooking, research, brewing. Only send settlers outside for essential tasks like harvesting Turnips or repairing blizzard-damaged structures.</li>
-          <li><strong style={{ color: "var(--color-accent)" }}>Monitor food stocks daily:</strong> Food spoilage slows in Winter cold but doesn&apos;t stop completely. Keep a buffer of at least 7 days of food per settler at all times. Preserved meals from the Cooking Station last longest.</li>
-        </ul>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Food storage during Winter requires careful attention. While cold temperatures slow
-        spoilage, they don&apos;t eliminate it. The most effective food storage strategy combines
-        three elements: underground root cellars (natural cold insulation), preserved meals
-        (significantly extended shelf life from the Cooking Station), and strategic consumption
-        (eat perishable foods first, save preserved foods for late Winter when fresh options
-        are exhausted). A well-managed food stockpile can see a colony through even the longest
-        Winter without a single starvation event.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Winter also brings blizzards — severe weather events that drastically reduce visibility,
-        increase hypothermia risk, and can damage wooden structures. Settlers caught outdoors
-        during a blizzard take rapid cold damage and can die within minutes if they can&apos;t reach
-        shelter. When a blizzard warning appears, immediately draft all outdoor settlers and
-        move them to heated indoor spaces. Blizzards typically last 1-3 days; use that time for
-        indoor crafting and research that might have been neglected during busier seasons.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Despite the harsh conditions, Winter has strategic advantages. Raider attacks are less
-        frequent because travel is difficult for enemy forces in extreme cold. This makes Winter
-        an excellent time for indoor expansion — dig deeper cellars, expand underground farming
-        rooms, or add new crafting stations that don&apos;t require outdoor access. Use coal for
-        heating if you&apos;ve stockpiled it; coal burns longer and hotter than wood and is more
-        efficient for maintaining building temperatures through the long Winter nights.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        As Winter draws to a close, start planning your Spring planting strategy. Review your
-        seed stockpiles — did you save enough seeds from the Autumn harvest? Do you have Barley
-        and Flax seeds for Spring planting? Seeds stored in underground cellars survive Winter
-        better than seeds left in above-ground storage. A colony that conserved its seeds and
-        planned its Spring fields during the Winter downtime will hit the ground running when
-        the snow finally melts and the first green shoots appear.
-      </p>
-
-      {/* Seasonal Overview Table */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Seasonal Overview</h2>
-      <div style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>Season</th>
-              <th>Temperature</th>
-              <th>Crops</th>
-              <th>Threats</th>
-              <th>Key Tips</th>
-            </tr>
-          </thead>
-          <tbody>
-            {seasons.map((s) => (
-              <tr key={s.name}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{s.name}</td>
-                <td style={{ fontSize: "0.9rem" }}>{s.temperature}</td>
-                <td style={{ fontSize: "0.9rem" }}>{s.crops}</td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-danger)" }}>{s.threats}</td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>{s.tips}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        Mastering the seasonal rhythm of Going Medieval transforms the game from a desperate
-        struggle into a satisfying cycle of growth, harvest, and survival. Plan one season
-        ahead at all times — what you do in Spring determines your Summer strength, Summer
-        preparation dictates Autumn harvests, and Autumn stockpiling decides whether you
-        celebrate or mourn come Winter&apos;s end. Respect the seasons, and your colony will
-        flourish through year after year in the medieval world.
-      </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">冬季准备清单</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>✓ 300+ 单位加工食品</li>
+                <li>✓ 100+ 木材（燃料）</li>
+                <li>✓ 每人保暖衣物</li>
+                <li>✓ 壁炉/火炉已建造</li>
+                <li>✓ 地下储藏区已启用</li>
+                <li>✓ 城墙维修完毕</li>
+                <li>✓ 医疗物资储备</li>
+              </ul>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">温度参考</h3>
+              <div className="space-y-2 font-serif text-sm text-ink-light">
+                <div className="flex justify-between border-b border-divider pb-1"><span>地下2层</span><span className="text-ink-muted">8-12°C 恒温</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>夏季地面</span><span className="text-ink-muted">18-32°C</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>冬季地面</span><span className="text-ink-muted">-10-5°C</span></div>
+                <div className="flex justify-between"><span>理想室温</span><span className="text-ink-muted">15-22°C</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

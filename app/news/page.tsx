@@ -1,150 +1,113 @@
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "News and Updates | Going Medieval Guide",
-  description:
-    "Latest Going Medieval news and updates. Coverage of the 1.0 launch in March 2026, post-launch patches, community spotlights, upcoming content, and future development plans for Foxy Voxel's medieval colony sim.",
-};
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
+
+const NEWS = [
+  {
+    date: '2026-06-15',
+    title: 'Going Medieval 1.0 正式版评测：内容量大增，新生物群系上线',
+    excerpt: '1.0 正式版相比早期版本内容量大幅提升，新增草原和沙漠生物群系、贸易系统、地下探索等内容。游戏完成度显著提高，Steam 好评率达 89%（社区估算）。本站攻略已全面更新至 1.0 版本。',
+    tag: '评测',
+  },
+  {
+    date: '2026-05-20',
+    title: '社区 Mod 工具发布，大量自定义内容涌现',
+    excerpt: '官方发布了 Mod 制作工具，社区迅速涌现大量自定义内容——新建筑、新作物、新武器、新生物群系。推荐关注 Steam 创意工坊获取高质量 Mod。注意 Mod 可能影响游戏平衡性。',
+    tag: '社区',
+  },
+  {
+    date: '2026-03-12',
+    title: 'Going Medieval 1.0 正式版发布',
+    excerpt: '经过数年抢先体验，Going Medieval 终于发布 1.0 正式版。新增内容包含：贸易系统、地下洞穴探索、新生物群系、新武器护甲、优化定居者 AI、改进 UI 界面。感谢所有抢先体验玩家的支持。',
+    tag: '更新',
+  },
+  {
+    date: '2026-02-28',
+    title: '1.0 发布前最后预告：新功能一览',
+    excerpt: '开发商发布了 1.0 正式版最后预告，展示了即将上线的新功能：商人 NPC 系统、地下生态系统、季节性天气事件、新建筑材料。同时确认游戏将支持简体中文。',
+    tag: '预告',
+  },
+  {
+    date: '2026-01-15',
+    title: '开发日志：1.0 进度更新与发售窗口',
+    excerpt: '开发团队公布 1.0 正式版开发进度——核心功能已完成 90%，正在进行最后的 Bug 修复和性能优化。预计 2026 年第一季度发售。抢先体验玩家将免费升级至正式版。',
+    tag: '开发',
+  },
+];
 
 export default function NewsPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Going Medieval News and Updates</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Stay up to date with the latest Going Medieval developments, patch notes, community
-        highlights, and what&apos;s coming next from Foxy Voxel. We track all major updates and
-        community news for the Going Medieval community.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="攻略" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">新闻动态</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                关注 Going Medieval 的最新资讯——版本更新、社区动态、开发日志和评测。本站将持续跟踪游戏发展，第一时间带来最新消息。以下内容基于社区整理，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>When did Going Medieval reach version 1.0?</summary>
-          <p>
-            Going Medieval officially launched out of Early Access as version 1.0 in March 2026,
-            after several years of development and community feedback during Early Access. The 1.0
-            launch marked a major milestone, bringing the full vision of the game to completion
-            with all planned features, content, and polish. The launch was celebrated by the
-            community and received positive reception from both long-time Early Access players
-            and newcomers discovering the game for the first time.
-          </p>
-        </details>
-        <details>
-          <summary>Is Going Medieval still being updated after 1.0?</summary>
-          <p>
-            Yes, Foxy Voxel continues to support Going Medieval with post-launch patches and
-            updates. The first post-launch patches have focused on bug fixes, balance adjustments,
-            and quality-of-life improvements based on community feedback. While the pace of major
-            content updates has slowed compared to Early Access development, the team remains
-            committed to maintaining and improving the game. Community feedback channels remain
-            open for bug reports and suggestions.
-          </p>
-        </details>
-        <details>
-          <summary>Where can I find official Going Medieval news?</summary>
-          <p>
-            Official Going Medieval news is published through the game&apos;s Steam page (patch notes,
-            developer announcements, and community hub), the Foxy Voxel developer blog, and
-            the Going Medieval Discord server where developers frequently interact with the
-            community. We consolidate and summarize official news here on this page, but always
-            recommend checking the official channels for the most authoritative information.
-          </p>
-        </details>
-      </div>
+            <section>
+              <div className="space-y-5">
+                {NEWS.map((item, i) => (
+                  <article key={i} className="journal-card p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="font-label text-xs text-ink-muted">{item.date}</span>
+                      <span className="field-tag vermillion text-[10px]">{item.tag}</span>
+                    </div>
+                    <h2 className="font-display text-xl font-semibold text-ink mb-2">{item.title}</h2>
+                    <p className="font-serif text-sm text-ink-light leading-relaxed">{item.excerpt}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
 
-      {/* News Items */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Recent News</h2>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", marginBottom: "2rem" }}>
-        <div className="card" style={{ borderLeft: "4px solid var(--color-accent)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-            <h3 style={{ fontSize: "1.15rem", margin: 0 }}>Going Medieval 1.0 Launch — March 2026</h3>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", background: "var(--color-bg-elevated)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem" }}>March 2026</span>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>1.0 正式版和抢先体验版有什么区别？</summary>
+                  <p>1.0 正式版新增了大量内容：贸易系统、地下探索、新生物群系、新武器护甲等。同时优化了 AI 和 UI，修复了大量 Bug。抢先体验玩家可免费升级。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>后续还会有更新吗？</summary>
+                  <p>开发商表示 1.0 发布后会持续维护，根据社区反馈进行优化和修复。大型内容更新计划尚未公布，但 Mod 工具的发布为内容扩展提供了社区支持。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>怎么获取最新消息？</summary>
+                  <p>关注本站新闻页面获取中文资讯。也可以关注 Steam 商店页面、开发团队社交媒体和官方 Discord 获取第一手英文消息。</p>
+                </details>
+              </div>
+            </section>
           </div>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            After a successful Early Access period, Going Medieval officially launched version 1.0
-            in March 2026. This milestone release marked the culmination of years of development
-            by Foxy Voxel, bringing the medieval colony sim to its full envisioned state. The 1.0
-            launch included all planned features: the complete research tree spanning 3 tiers,
-            all biome types with full environmental simulation, the finished settler skill and
-            mood system, complete building and fortification mechanics, and the full seasonal
-            cycle with associated survival challenges. The launch was met with strong community
-            response, with both veteran Early Access players praising the final polish and new
-            players discovering the game&apos;s deep colony management systems. Foxy Voxel expressed
-            gratitude to the community whose feedback shaped the game throughout Early Access
-            development.
-          </p>
-        </div>
 
-        <div className="card" style={{ borderLeft: "4px solid var(--color-success)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-            <h3 style={{ fontSize: "1.15rem", margin: 0 }}>First Post-Launch Patches Arrive</h3>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", background: "var(--color-bg-elevated)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem" }}>April-May 2026</span>
-          </div>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Following the 1.0 launch, Foxy Voxel released a series of post-launch patches addressing
-            community-reported issues and refining game balance. The patches focused on bug fixes
-            identified during the surge of new players at launch, balance adjustments to raider
-            difficulty scaling and resource availability across biomes, and quality-of-life
-            improvements including UI enhancements, settler AI pathfinding improvements, and
-            better information display for game mechanics like room quality and structural
-            stability. The development team confirmed their commitment to ongoing support and
-            indicated that while major content additions may be less frequent post-1.0, they
-            will continue to maintain and improve the game based on community feedback.
-          </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">新闻分类</h3>
+              <div className="flex flex-wrap gap-2">
+                {['评测', '社区', '更新', '预告', '开发'].map(tag => (
+                  <span key={tag} className="field-tag gold text-[10px]">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">版本时间线</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>2026.03 — 1.0 正式版</li>
+                <li>2026.05 — Mod 工具发布</li>
+                <li>2026.06 — 首批 Mod 上线</li>
+              </ul>
+            </div>
+          </aside>
         </div>
-
-        <div className="card" style={{ borderLeft: "4px solid var(--color-accent)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-            <h3 style={{ fontSize: "1.15rem", margin: 0 }}>Community Spotlight — Base Building Showcase</h3>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", background: "var(--color-bg-elevated)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem" }}>June 2026</span>
-          </div>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            The Going Medieval community continues to produce impressive colony builds that showcase
-            the game&apos;s creative potential. Recent community highlights include elaborate multi-level
-            stone castles with full Great Halls and Libraries, sprawling underground networks with
-            automated resource processing, and beautifully designed settlements that balance
-            aesthetics with defensive functionality. The community&apos;s creativity demonstrates the
-            depth of the building system and the variety of approaches players take to solving
-            the game&apos;s challenges. Community members share their builds on the official Discord
-            server and Steam community hub, inspiring new players and veterans alike. If you have
-            a colony you&apos;re proud of, share it with the community — your design choices might
-            become the next trend in colony construction.
-          </p>
-        </div>
-
-        <div className="card" style={{ borderLeft: "4px solid var(--color-text-muted)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-            <h3 style={{ fontSize: "1.15rem", margin: 0 }}>Looking Ahead — Future Content Possibilities</h3>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", background: "var(--color-bg-elevated)", padding: "0.25rem 0.75rem", borderRadius: "0.25rem" }}>Ongoing</span>
-          </div>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            While Foxy Voxel has not announced specific upcoming content expansions post-1.0,
-            the community continues to discuss and hope for potential additions including new
-            biome types, additional research tiers, expanded animal variety, and new building
-            aesthetics. The developers have historically been responsive to community feedback,
-            and many features that shipped in the 1.0 launch originated from Early Access
-            community suggestions. Any official announcements about future content will be shared
-            through the game&apos;s Steam page and Discord server. We&apos;ll update this page as new
-            information becomes available.
-          </p>
-        </div>
-      </div>
-
-      {/* Check Back Message */}
-      <div className="card" style={{ borderLeft: "4px solid var(--color-accent)", marginTop: "2rem" }}>
-        <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Check Back for Updates</h3>
-        <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-          This news page is regularly updated as new Going Medieval developments occur. Check
-          back frequently for patch notes, community highlights, and coverage of any future
-          content announcements. You can also follow official Going Medieval channels on Steam
-          and Discord for real-time updates directly from Foxy Voxel. Whether you&apos;re a new
-          player just discovering the game or a veteran colony manager, staying informed about
-          the latest changes helps you get the most out of your Going Medieval experience.
-          We&apos;re committed to keeping this resource current and useful for the entire community.
-        </p>
-      </div>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

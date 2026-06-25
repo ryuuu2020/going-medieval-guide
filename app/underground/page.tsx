@@ -1,224 +1,124 @@
-import type { Metadata } from "next";
-import { undergroundData } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Underground Building Guide | Going Medieval Guide",
-  description:
-    "Master underground building in Going Medieval. Learn root cellar food preservation, iron and coal mining, subterranean base design, underground farming with mushrooms, and the pros and cons of living beneath the surface.",
-};
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function UndergroundPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Underground Building Guide</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        The ground beneath your colony holds untold riches — cold storage for your harvest,
-        veins of iron and coal for your forges, and the safety of stone walls that no raider
-        can breach. Mastering underground construction is essential for long-term colony survival.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="地下" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">地下基地建造</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                地下基地是 Going Medieval 中最高效的建造方式之一。利用山体内部空间，你可以获得天然恒温的储藏区、坚固防御的居住区和隐蔽安全的工作区。本指南将详解地下挖掘技巧、结构支撑、通风照明和功能分区规划。以下数据基于社区实战经验，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>How do root cellars preserve food in Going Medieval?</summary>
-          <p>
-            Underground cellars maintain a naturally cool and constant temperature that dramatically
-            slows food spoilage. The deeper you dig, the colder it gets — at 4+ levels underground,
-            temperatures stay near freezing year-round regardless of surface season. Food stored
-            in a proper root cellar lasts 3-5 times longer than food stored in above-ground
-            stockpiles. Build cellars with stone or clay floors for better insulation, create an
-            airlock with double doors at the entrance to prevent temperature leakage, and keep
-            cellars away from heat sources like campfires and forges.
-          </p>
-        </details>
-        <details>
-          <summary>Where do I find iron and coal in Going Medieval?</summary>
-          <p>
-            Iron ore and coal are found underground, typically 3-7 levels below the surface. Iron
-            appears as reddish-brown veins in the rock, while coal appears as black deposits.
-            Both resources are more abundant in Mountain and Hillside biomes and scarcer in Valley
-            and Marsh. Assign settlers with high Mining skill to extract more resources per tile.
-            Iron is essential for smithing weapons and tools; coal is the most efficient forge
-            fuel. Always mine exploratory tunnels horizontally at depth to locate veins rather
-            than digging straight down randomly.
-          </p>
-        </details>
-        <details>
-          <summary>Can I build my entire colony underground?</summary>
-          <p>
-            Yes, an entirely subterranean colony is possible but comes with significant trade-offs.
-            Underground colonies have perfect natural temperature regulation, immunity to siege
-            weapons and weather, and inherent defensive advantages (raiders cannot dig). However,
-            they suffer from limited farming options (only Mushrooms grow underground), settler
-            mood penalties from lack of sunlight exposure, and complex structural stability
-            requirements. Hybrid designs that combine underground storage and production with
-            above-ground living quarters typically work better than fully underground cities.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">地下挖掘基础</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                地下空间通过定居者挖掘自然岩石获得。挖掘是一个耗时过程，建议安排建造技能高的定居者专职挖掘。挖掘产生的碎石可以用于建筑或铺路。地下空间按深度分层，越深温度越恒定。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                挖掘时要注意结构稳定性。自然岩石最多支撑 4×4 格的空间，超过这个范围必须保留岩柱。推荐网格布局：每挖 4 格保留 1 格宽的岩柱，形成棋盘格状的空间。这种布局既安全又规整，便于后续功能分区。
+              </p>
+              <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">⚠ 坍塌警告：</strong>
+                  如果挖掘时出现裂缝纹理，说明该区域即将坍塌。立即撤出下方定居者，建造支撑柱或回填部分空间。坍塌会伤害甚至杀死下方的定居者，并摧毁该区域内的物品。
+                </p>
+              </div>
+            </section>
 
-      {/* Underground Data Table */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Underground Systems Overview</h2>
-      <div style={{ overflowX: "auto" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>Topic</th>
-              <th>Category</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {undergroundData.map((u) => (
-              <tr key={u.topic}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{u.topic}</td>
-                <td style={{ fontSize: "0.9rem", whiteSpace: "nowrap" }}>{u.category}</td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>{u.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">功能分区规划</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                理想的地下基地分为多层，每层承担不同功能。从上到下温度逐渐降低，利用这一特性进行科学分区。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">地下 1 层（-1F）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">居住区和公共区。温度约 12-15°C，配合壁炉可达 18°C 以上。靠近地面便于出入，同时有岩石隔热。安排卧室、餐厅、厨房。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">地下 2 层（-2F）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">储藏区和工作间。温度约 8-12°C，是食物储藏的理想温度。安排粮仓、武器库、制作工坊。工作间靠近储藏区减少搬运时间。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">地下 3 层（-3F）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">深层矿区和紧急避难所。温度约 5-8°C。铁矿和宝石通常分布在此层。也是突袭时的最后坚守点，设置暗门和储备物资。</p>
+                </div>
+              </div>
+            </section>
 
-      {/* Food Preservation */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Food Preservation — Root Cellars and Cold Storage</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        The root cellar is the single most important underground structure in Going Medieval —
-        it&apos;s the difference between your Autumn harvest rotting in two weeks and lasting through
-        the entire Winter. Underground cellars work through passive temperature regulation: the
-        earth insulates against surface temperature swings, keeping the cellar interior cool and
-        stable regardless of the season above.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">结构支撑与安全</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                地下空间的安全取决于结构支撑。除了保留自然岩柱外，还可以建造人工支撑柱。支撑柱使用木材或石块制作，每个支撑柱可支撑周围 3×3 格的空间。在大厅中央和长走廊每隔 4 格设置支撑柱。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                通风同样重要。地下空间如果没有通风口，空气质量会下降，影响定居者健康。每 5×5 格的空间至少需要一个通向地面的通风井。通风井同时兼采光功能，但也是防御弱点，需要加装铁栅栏。
+              </p>
+            </section>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "1.5rem" }}>
-        <div className="card" style={{ borderLeft: "4px solid var(--color-success)" }}>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Cellar Design Principles</h3>
-          <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-            <li><strong style={{ color: "var(--color-accent)" }}>Depth matters:</strong> Dig at least 3 levels underground. Each additional level of depth provides colder temperatures. At 5+ levels underground, temperatures approach freezing even in Summer.</li>
-            <li><strong style={{ color: "var(--color-accent)" }}>Airlock entrances:</strong> Never put a single door on your cellar — the temperature equalizes with the outside every time it opens. Build a 2-tile airlock (door, empty tile, door) so cold air stays trapped inside.</li>
-            <li><strong style={{ color: "var(--color-accent)" }}>Insulated materials:</strong> Clay and stone floors provide better thermal insulation than dirt or wood. Upgrade cellar floors from raw dirt to clay or stone as soon as resources allow.</li>
-            <li><strong style={{ color: "var(--color-accent)" }}>Keep heat sources away:</strong> Never place campfires, cooking stations, or forges adjacent to your cellar. Heat radiates through walls and floors, warming your cold storage. Maintain at least a 5-tile buffer between heat sources and cellar walls.</li>
-            <li><strong style={{ color: "var(--color-accent)" }}>Size for surplus:</strong> Build your cellar 50% larger than you think you need. A crowded storage room spoils faster because items stack and generate localized heat. Spread stored food across multiple shelves and floor tiles.</li>
-          </ul>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">地下防御优势</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                地下基地拥有天然防御优势。入侵者只能通过有限的入口进入，在狭窄通道中设置陷阱和路障可以轻松防守。将主入口设计为只容一人通过的走廊，配合两侧射击孔，形成"瓮城"效果。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                设置多个暗门和紧急出口，确保定居者在被围困时有撤退路线。紧急出口通向远离主入口的位置，平时用墙堵住，紧急时拆除。在深层设置最后坚守点，储备食物、水和武器，供极端情况下使用。
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>地下基地怎么照明？</summary>
+                  <p>地下空间需要人工照明。最基础的是火把（木材+油脂），照明范围有限。研究解锁后可以建造油灯和蜡烛，照明效果更好。通风井也能提供自然光。黑暗环境会降低定居者心情和工作效率。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>挖掘速度太慢怎么办？</summary>
+                  <p>三招提升挖掘速度：1) 安排建造技能最高的定居者专职挖掘；2) 制作铁镐（比石镐快 50%）；3) 多人同时挖掘不同区域。挖掘是体力活，确保工人体力充足。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>地下基地会有什么危险？</summary>
+                  <p>主要危险有三个：1) 坍塌——注意结构支撑；2) 地下生物——洞穴中可能有蝙蝠等生物，偶尔会攻击定居者；3) 通风不良——没有通风口会导致空气质量下降。做好预防措施即可安全使用。</p>
+                </details>
+              </div>
+            </section>
+          </div>
+
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">分层规划</h3>
+              <div className="space-y-3">
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">-1F 居住区</h4><p className="font-serif text-xs text-ink-muted mt-1">12-15°C | 卧室餐厅</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">-2F 储藏区</h4><p className="font-serif text-xs text-ink-muted mt-1">8-12°C | 粮仓工坊</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">-3F 矿区</h4><p className="font-serif text-xs text-ink-muted mt-1">5-8°C | 采矿避难</p></div>
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">挖掘安全守则</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>• 每4格留1格岩柱</li>
+                <li>• 注意裂缝预兆</li>
+                <li>• 每5×5格设通风井</li>
+                <li>• 走廊每4格设支撑柱</li>
+                <li>• 保持多条逃生路线</li>
+              </ul>
+            </div>
+          </aside>
         </div>
-      </div>
-
-      <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Spoilage Mechanics</h3>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Food spoilage rate is determined by ambient temperature: hotter environments accelerate
-        spoilage, cold environments slow it. At surface temperatures in Summer (25-32°C), raw
-        food spoils in 2-3 days. In a proper underground cellar at 4+ levels deep (near 0-5°C),
-        the same food lasts 12-15 days. Preserved meals from the Cooking Station last even longer
-        — combine preserved food with cold storage for maximum shelf life. Food that reaches the
-        &quot;rotting&quot; state can still be used for a short time but causes mood penalties and health
-        risks if eaten. Process rotting food into animal feed rather than feeding it to settlers.
-      </p>
-
-      {/* Mining */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Mining — Iron, Coal, and Stone</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Mining is your colony&apos;s industrial engine. Every metal tool, weapon, armor piece, and
-        stone block passes through the hands of your miners before reaching your crafters.
-        Efficient mining operations ensure your colony never runs short of the materials needed
-        for construction, crafting, and fuel.
-      </p>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "1.5rem" }}>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Iron Mining Strategy</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Iron ore is found in veins 3-7 levels underground. The color of iron ore is distinctly
-            reddish-brown against the grey stone background, making it visible even before mining
-            begins. Use settlers with Mining skill of 5+ for efficient extraction — higher Mining
-            skill means more ore per tile and faster extraction speed. Dig exploratory horizontal
-            tunnels (2 tiles wide) at each depth level to locate veins efficiently. When you find
-            iron, mine out the entire vein — partial mining is wasteful since veins don&apos;t respawn.
-            For continuous iron supply in late game, establish multiple mining levels and rotate
-            miners between them as veins are exhausted. Mountain and Hillside biomes have the
-            richest iron deposits; Valley and Marsh may require trade to supplement limited
-            underground supplies.
-          </p>
-        </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Coal Mining and Fuel Management</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Coal deposits appear alongside iron at similar depths (3-7 levels underground). Coal
-            is the superior fuel source: it burns twice as long as wood in forges and campfires,
-            produces more consistent heat, and doesn&apos;t require harvesting finite surface trees.
-            Stockpile coal for Winter when wood is scarce and for sustained Smithing operations.
-            A single coal tile mined by a skilled miner can yield enough fuel to run your Smithy
-            for an entire day of continuous production. Coal is particularly valuable in biomes
-            with limited wood — Mountain colonies should prioritize coal mining immediately after
-            establishing basic food security.
-          </p>
-        </div>
-        <div>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.5rem" }}>Stone Quarrying</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Stone is the most common underground resource and the foundation of all stone-based
-            construction. Every tile of mined stone yields stone chunks that can be crafted into
-            stone blocks at a Stonecutter workshop. For large construction projects, designate a
-            dedicated quarry area where miners continuously extract stone. Place the quarry
-            adjacent to your construction zone to minimize material hauling distance. Underground
-            stone extraction has an additional benefit: it creates the space you need for cellars,
-            underground farms, and subterranean rooms. Every mining operation serves double duty —
-            extracting resources while expanding your usable underground space.
-          </p>
-        </div>
-      </div>
-
-      {/* Underground Base Design */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Underground Base Design — Pros and Cons</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        Building underground isn&apos;t just about resource extraction — it&apos;s a legitimate architectural
-        strategy with unique advantages and serious drawbacks. Successful underground colonies
-        lean into the strengths while mitigating the weaknesses.
-      </p>
-
-      <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
-        <div className="card" style={{ flex: "1 1 300px", borderLeft: "4px solid var(--color-success)" }}>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.75rem" }}>Pros of Underground Living</h3>
-          <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-            <li>Natural temperature regulation year-round — no heating or cooling needed</li>
-            <li>Immune to siege weapons — trebuchets and catapults can&apos;t damage underground rooms</li>
-            <li>Perfect defense — enemies cannot dig and must use your controlled entrances</li>
-            <li>Weather immunity — blizzards, heat waves, and rain don&apos;t affect underground settlers</li>
-            <li>Integrated mining — living where you mine eliminates resource hauling distances</li>
-            <li>Space efficiency — build vertically and horizontally without surface footprint concerns</li>
-          </ul>
-        </div>
-        <div className="card" style={{ flex: "1 1 300px", borderLeft: "4px solid var(--color-danger)" }}>
-          <h3 style={{ fontSize: "1.15rem", margin: "0 0 0.75rem" }}>Cons of Underground Living</h3>
-          <ul style={{ color: "var(--color-text-muted)", lineHeight: 1.8, margin: 0, paddingLeft: "1.25rem" }}>
-            <li>Limited farming — only Mushrooms grow without sunlight; surface farms still needed</li>
-            <li>Settler mood penalties from lack of sunlight exposure and enclosed spaces</li>
-            <li>Structural stability requires support pillars every 4 tiles — limits room sizes</li>
-            <li>Expansion is slow — mining new rooms takes far longer than building walls above ground</li>
-            <li>No skylight or outdoor recreation — settlers need occasional surface access for mood</li>
-            <li>Harder to visually monitor colony — underground rooms are hidden from the default camera</li>
-          </ul>
-        </div>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
-        The most effective approach for most colonies is a hybrid design: underground production,
-        storage, and mining combined with above-ground living quarters, farming, and recreation.
-        Keep your root cellars, mushroom farms, stockpiles, and industrial buildings (Smithy,
-        Brewing Station) underground where temperature and security are optimal. Build living
-        quarters, Great Halls, Libraries, and defensive walls above ground where settlers get
-        sunlight exposure for mood benefits and where you can visually monitor the surface for
-        approaching threats. This balanced approach gives you the safety and efficiency of
-        underground spaces while maintaining the settler happiness and visibility of surface
-        living.
-      </p>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        Underground building is a deep and rewarding system in Going Medieval — literally and
-        figuratively. From your first root cellar to a sprawling network of subterranean farms,
-        forges, and stockpiles, the earth beneath your colony is your greatest asset. Dig deep,
-        build smart, and let the stone walls protect what your settlers have built.
-      </p>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

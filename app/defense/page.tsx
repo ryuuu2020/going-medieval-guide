@@ -1,298 +1,147 @@
-import type { Metadata } from "next";
-import { defenseTips } from "@/lib/data";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Defense | Going Medieval Guide",
-  description:
-    "Complete defense and combat guide for Going Medieval. Master raid mechanics, wall design, traps, killboxes, archer towers, weapons and armor, and siege defense strategies to protect your medieval colony.",
-};
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function DefensePage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Defense &amp; Combat Guide</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Protect your colony from raiders, wild animals, and siege attacks. Going Medieval&apos;s
-        combat system rewards smart base design, layered defenses, and tactical positioning.
-        Learn every defensive strategy from basic walls to advanced killbox engineering.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="防御" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">防御策略指南</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                在 Going Medieval 的世界中，入侵者随时可能来袭。从零星的流寇到有组织的劫掠队伍，你的殖民地必须随时做好战斗准备。本指南将系统讲解城墙布局、陷阱配置、武器选择和突袭应对方案，帮助你构建多层防御体系，让入侵者有来无回。以下数据基于社区实战经验，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>When do raids start in Going Medieval?</summary>
-          <p>
-            Raids are triggered by your colony&apos;s wealth value, which increases as you build 
-            structures, craft items, and accumulate resources. Your first raid typically arrives 
-            within 5-10 days on standard difficulty. Early raids consist of 2-3 lightly armed 
-            raiders with wooden weapons. As your wealth grows, raid size, frequency, and equipment 
-            quality increase. By mid-game, you&apos;ll face 6-8 raiders with metal weapons and armor. 
-            End-game raids can include 12+ raiders with siege weapons like trebuchets. The key 
-            is building defenses before your wealth triggers a raid you can&apos;t handle.
-          </p>
-        </details>
-        <details>
-          <summary>What is the best early-game defense strategy?</summary>
-          <p>
-            Build a single-layer wooden perimeter wall with one door as the only entrance. Raiders 
-            will path to the nearest entrance rather than breaking walls (unless they have siege 
-            weapons). Place a 2-tile-wide corridor inside the entrance and line it with spike traps. 
-            Position 2-3 archers on platforms behind the wall. Early raiders with no armor will die 
-            to traps or be picked off by archers before they reach your settlers. Upgrade to stone 
-            walls as soon as Stonecutting is researched — wood walls eventually collapse under 
-            sustained attack. This basic setup handles the first 3-4 raids reliably.
-          </p>
-        </details>
-        <details>
-          <summary>How do I deal with sieges and siege weapons?</summary>
-          <p>
-            Siege weapons (catapults, trebuchets) appear in mid-to-late game raids. They attack 
-            from range and can destroy walls without entering your base. Counter them with your 
-            own siege weapons (ballistae, catapults unlocked via Engineering research). Position 
-            your siege weapons on elevated platforms for range advantage. Alternatively, send a 
-            fast settler to flank and melee-attack the siege crew — siege weapons are defenseless 
-            without their operators. Reinforced walls (Masonry research) resist siege damage much 
-            better than regular stone. Build a second defensive line behind your outer wall so 
-            you can fall back if the outer wall is breached.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">城墙布局策略</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                城墙是第一道防线。合理的城墙布局不仅能阻挡敌人，还能为你争取反击时间。推荐采用多层城墙策略——内外两道城墙之间留出 3-4 格的缓冲带，在其中布置陷阱和远程火力点。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                城墙高度同样重要。建造 2 层高的城墙可以防止敌人攀爬，同时在墙顶安排弓箭手进行射击。城墙上的弓箭手拥有高度优势，命中率和伤害都有显著加成。每个城墙段落都要设置至少一个城门或暗门，确保定居者进出和撤退路线畅通。
+              </p>
+              <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">⚠ 多层防御原则：</strong>
+                  永远不要只依赖一道防线。推荐三道防线：外层城墙→陷阱区→内层城墙。即使外层被突破，陷阱区会消耗敌人，内层城墙提供最后坚守点。
+                </p>
+              </div>
+            </section>
 
-      {/* Raid Mechanics */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Raid Mechanics Explained</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Understanding how raids work is the first step to building effective defenses. Raids 
-        scale with your colony&apos;s wealth, use AI pathfinding to reach your settlers, and 
-        become more sophisticated as the game progresses.
-      </p>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">陷阱配置</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                陷阱是性价比极高的防御手段。在城墙缺口、城门前方和缓冲带中布置陷阱，可以在不暴露定居者的情况下杀伤敌人。
+              </p>
+              <table className="parchment-table">
+                <thead>
+                  <tr>
+                    <th>陷阱类型</th>
+                    <th>伤害</th>
+                    <th>建造材料</th>
+                    <th>触发次数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>木刺陷阱</td><td>40</td><td>木材 ×3</td><td>3次</td></tr>
+                  <tr><td>铁刺陷阱</td><td>80</td><td>铁锭 ×2, 木材 ×1</td><td>5次</td></tr>
+                  <tr><td>陷坑</td><td>30</td><td>无（挖掘）</td><td>永久</td></tr>
+                </tbody>
+              </table>
+              <p className="font-serif text-sm text-ink-muted italic">数据来源：社区测试估算</p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
+                陷阱布置技巧：在城门前方 2 格处密集布置木刺陷阱，入侵者破坏城门时会持续踩踏陷阱。陷坑适合布置在城墙外侧，减缓敌人接近速度。注意定居者也会触发陷阱，布置时要规划安全通行路线。
+              </p>
+            </section>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Wealth-Based Scaling</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Your colony has a hidden wealth score calculated from all buildings, items in 
-            stockpiles, equipped gear, and research progress. When wealth crosses certain 
-            thresholds, the game escalates raids. This means building a massive stone castle 
-            before you have weapons and armor is actually dangerous — it triggers harder raids 
-            you may not be ready for. Balance expansion with military preparation. A smart 
-            strategy is to research defense technologies (Fortifications, Armor Crafting) 
-            before significantly increasing your colony&apos;s visible wealth through large 
-            construction projects or high-value item crafting.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Raid Frequency &amp; Types</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Early game: 1 raid every 8-15 days, 2-4 raiders with wooden weapons. Mid game: 1 raid 
-            every 6-10 days, 4-8 raiders with iron weapons and light armor. Late game: 1 raid 
-            every 4-7 days, 8-15 raiders with steel weapons, plate armor, and siege equipment. 
-            Raid types include standard attacks (melee + ranged raiders), siege attacks (with 
-            catapults or trebuchets), and sapper raids (raiders who tunnel under walls). Some 
-            biomes have unique raid types — Mountain biome gets more heavily armored raiders, 
-            while Marsh biome gets more ranged attackers.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Enemy Pathfinding</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Raiders use pathfinding to reach your settlers. They prefer open paths and doors over 
-            breaking walls. A wall with an open door funnels all enemies through that entrance, 
-            letting you concentrate defenses at a single point. This is the foundation of trap 
-            corridors and killbox designs. Raiders will break walls if no open path exists, but 
-            only after searching extensively for an entrance. A maze-like entrance corridor 
-            significantly delays enemies, giving your archers more time to fire. Raiders ignore 
-            walls that are more than 2 tiles away from their path — build thick walls (2+ tiles) 
-            at your chokepoint.
-          </p>
-        </div>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">武器与装备</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                选择合适的武器对战斗效率至关重要。远程武器适合城墙防守，近战武器适合出击和巷战。每位定居者应配备一把主武器和一把备用武器。
+              </p>
+              <div className="space-y-3">
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">弓（远程）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">射程远、伤害中等，适合城墙上的弓箭手。需要木材和绳索制作。弓箭手在城墙上射击有高度加成。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">十字弩（远程）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">伤害高、射程远，但装填慢。需要研究解锁。适合精锐射手，一箭可击杀轻甲敌人。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">长矛（近战）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">攻击距离远（近战中可先手攻击），伤害高。适合堵门口防御。需要木材和铁锭。</p>
+                </div>
+                <div className="journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">剑与盾（近战）</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">攻防均衡，盾牌可以格挡远程攻击。适合主动出击的战士。需要铁锭和皮革。</p>
+                </div>
+              </div>
+            </section>
 
-      {/* Defense Strategies Table */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Core Defense Strategies — All {defenseTips.length} Tips</h2>
-      <div style={{ overflowX: "auto", marginBottom: "2rem" }}>
-        <table>
-          <thead>
-            <tr>
-              <th>Strategy</th>
-              <th>Category</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {defenseTips.map((tip) => (
-              <tr key={tip.title}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{tip.title}</td>
-                <td style={{ whiteSpace: "nowrap" }}>
-                  <span style={{
-                    padding: "0.2rem 0.6rem",
-                    borderRadius: "0.25rem",
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    background: tip.category === "Advanced" ? "rgba(196, 75, 60, 0.2)" :
-                      tip.category === "Tactics" ? "rgba(201, 144, 58, 0.2)" :
-                      "rgba(107, 142, 78, 0.2)",
-                    color: tip.category === "Advanced" ? "var(--color-danger)" :
-                      tip.category === "Tactics" ? "var(--color-accent)" :
-                      "var(--color-success)",
-                  }}>{tip.category}</span>
-                </td>
-                <td style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", lineHeight: 1.5 }}>{tip.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">突袭应对方案</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                突袭发生时，保持冷静并迅速执行防御预案。第一时间将所有定居者召回内城，弓箭手上城墙，近战战士守住城门。利用高度优势和陷阱消耗敌人，避免贸然出击。
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                如果城墙被突破，退守建筑内部。将定居者集中在最坚固的建筑中，用家具堵住门口形成临时路障。受伤的定居者立即撤到后方接受治疗。战斗结束后优先修理城墙和补充陷阱，防止二次袭击。
+              </p>
+            </section>
 
-      {/* Wall Design */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Wall Design Principles</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Single vs Double Layer Walls</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Single-layer walls: Cheap and fast to build, enough for early game. Raiders with 
-            wooden weapons take time to break through, but iron weapons breach single walls 
-            quickly. Double-layer walls: The gold standard for mid-game defense. Two parallel 
-            stone walls with a 2-3 tile gap between them create a protected walkway where 
-            your defenders can move and fire from cover. If the outer wall is breached, the 
-            inner wall serves as a fallback position. The gap between walls can be trapped 
-            to punish enemies who breach the outer layer. Triple-layer walls are overkill 
-            and waste resources unless you&apos;re on the highest difficulty.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Entrance Design</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Your entrance is the most important defensive feature. Keep it narrow (1-2 tiles wide) 
-            and create a zigzag corridor inside. The zigzag pattern forces enemies to turn 
-            corners, slowing their advance and preventing them from shooting through the entrance. 
-            Each turn in the corridor is a trap placement opportunity. Build a fortified gate 
-            (Fortifications research) that takes longer to destroy than a standard door. Place 
-            archer positions on elevated platforms overlooking the entrance corridor — enemies 
-            funneled through a narrow passage are easy targets for ranged fire. Add a roof over 
-            the corridor entrance so enemies can&apos;t shoot your defenders from outside.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Corner Towers</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Towers at wall corners provide flanking fire along two wall sections simultaneously. 
-            A tower at each corner of a rectangular base covers all four approach directions. 
-            Build towers 2-3 levels high with merlons (Fortifications research) for cover. 
-            Each tower should hold 2 archers minimum. Towers also serve as early warning — 
-            settlers in towers spot approaching enemies sooner, giving you time to position 
-            defenders. Connect towers with roofed wall walkways so defenders can reposition 
-            without being exposed to enemy fire.
-          </p>
-        </div>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">常见问题</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>突袭频率和难度会随时间增加吗？</summary>
+                  <p>是的。随着殖民地财富增加和人口增长，突袭的规模和频率都会提升。前期可能只有 2-3 人的流寇，后期可能面对 10 人以上的有组织劫掠队。务必持续升级防御设施。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>定居者战斗力怎么提升？</summary>
+                  <p>定居者通过战斗积累经验提升战斗技能。可以安排定期训练（制作靶子练习射击）。同时装备更好的武器和护甲也能显著提升战斗力。优先将战斗技能高的定居者编入卫队。</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>俘虏怎么处理？</summary>
+                  <p>将俘虏关押在监狱中，定期提供食物。经过一段时间后可以尝试招募，招募成功的俘虏会成为新定居者。如果不需要新增人口，也可以选择释放或处决（处决会降低心情）。</p>
+                </details>
+              </div>
+            </section>
+          </div>
 
-      {/* Traps and Killboxes */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Traps, Killboxes &amp; Advanced Defense</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Trap Types</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Spike traps: Basic damage, cheap (wood + metal scrap). Place in entrance corridors. 
-            Deadfall traps: Higher damage, triggered when enemies step under them (place on 
-            ceilings of corridors). Mechanical traps (Engineering research): Advanced, re-armable 
-            traps that deal heavy damage. Traps are most effective in confined spaces — a 1-tile 
-            wide corridor forces every enemy to step on every trap. Traps deal damage based on 
-            the crafting skill of the settler who built them, so have your best crafter construct 
-            your traps. Re-arm traps after each raid so they&apos;re ready for the next one.
-          </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">武器速查</h3>
+              <div className="space-y-3">
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">弓</h4><p className="font-serif text-xs text-ink-muted mt-1">木材×3 绳索×1 | 远程</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">十字弩</h4><p className="font-serif text-xs text-ink-muted mt-1">木材×2 铁锭×2 | 远程</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">长矛</h4><p className="font-serif text-xs text-ink-muted mt-1">木材×2 铁锭×1 | 近战</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">铁剑</h4><p className="font-serif text-xs text-ink-muted mt-1">铁锭×2 皮革×1 | 近战</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">皮甲</h4><p className="font-serif text-xs text-ink-muted mt-1">皮革×3 | 防具</p></div>
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">防御优先级</h3>
+              <ol className="space-y-2 font-serif text-sm text-ink-light">
+                <li>1. 木墙围合（至少2格高）</li>
+                <li>2. 木刺陷阱（城门前）</li>
+                <li>3. 弓箭手上城墙</li>
+                <li>4. 升级石墙</li>
+                <li>5. 多层城墙+缓冲带</li>
+                <li>6. 十字弩精锐射手</li>
+              </ol>
+            </div>
+          </aside>
         </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Killbox Design</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            A killbox is an open area behind your entrance where enemies emerge from the corridor 
-            into a killing field surrounded by archer positions. Design elements: The corridor 
-            entrance opens into a wide room (at least 8x8 tiles). Archer platforms ring the room 
-            on all sides at elevated heights (2-3 levels up). Stone pillars in the center provide 
-            cover for your melee fighters if enemies push in. Clear lines of sight from every 
-            archer position to the entrance point. Place a fallback door at the back of the 
-            killbox in case it&apos;s overrun. A well-designed killbox can defeat 10+ raiders 
-            with minimal settler casualties.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Underground Safe Room</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            An underground bunker serves as a last-resort retreat. Dig 3+ levels down and build 
-            a room with beds, food stockpile, medicine, and spare weapons. Access it via a long 
-            1-tile-wide corridor that you can trap. If your defenses are overrun, order all 
-            settlers to retreat underground. Raiders rarely follow into trapped underground 
-            corridors. The safe room buys you time to heal, re-arm, and either wait out the 
-            raid or launch a counter-attack. It&apos;s also useful if a fire sweeps through your 
-            surface structures — underground rooms are fireproof.
-          </p>
-        </div>
-      </div>
-
-      {/* Weapons and Armor */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Weapons &amp; Armor Overview</h2>
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-        Equipping your settlers properly is as important as wall placement. A settlers with 
-        good gear can hold a chokepoint against multiple inferior enemies.
-      </p>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Melee Weapons</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Swords (balanced damage and speed), Axes (higher damage, slower), Maces (armor-piercing 
-            damage good against plate armor), and Spears (longer reach, can attack from behind 
-            allies). Iron weapons are roughly 2x damage of wooden equivalents. Steel weapons 
-            (end-game) deal 3x. Equip your melee fighters with the best available — a sword 
-            crafted by a smith with 15+ skill can have &quot;Excellent&quot; quality for bonus damage. 
-            Melee settlers need high Melee skill to parry and block effectively.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Ranged Weapons</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Shortbow (basic, low damage), Longbow (increased range and damage), Crossbow (higher 
-            damage, slower fire rate, armor-piercing), Ballista (siege weapon, massive damage 
-            but slow). Archers should always have height advantage — each level of elevation 
-            above the target provides a damage and accuracy bonus. Marksman skill determines 
-            accuracy — a low-skill archer misses frequently. Equip archers with the best bows 
-            you can craft and station them in positions where they have clear sightlines.
-          </p>
-        </div>
-        <div className="card">
-          <h3 style={{ fontSize: "1.05rem", margin: "0 0 0.5rem" }}>Armor Types</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.6, margin: 0 }}>
-            Leather armor (Tailoring): Basic protection, light, doesn&apos;t slow movement. Good for 
-            archers. Chainmail (Smithing): Medium protection, heavier. Good all-around armor. 
-            Plate armor (Armor Crafting): Maximum protection, heavy, slows movement. Best for 
-            frontline melee fighters. Helmets protect against headshots which deal extra damage. 
-            Shields block incoming ranged attacks and provide a chance to deflect melee strikes. 
-            Armor quality depends on crafter skill — &quot;Masterwork&quot; plate armor can make a settler 
-            nearly immune to basic wooden weapons.
-          </p>
-        </div>
-      </div>
-
-      {/* Combat Tactics */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1rem" }}>Combat Tactics &amp; Positioning</h2>
-      <div className="card" style={{ marginBottom: "2rem" }}>
-        <ul style={{ color: "var(--color-text-muted)", lineHeight: 2, margin: 0, paddingLeft: "1.25rem" }}>
-          <li><strong style={{ color: "var(--color-text)" }}>Melee front, ranged back.</strong> Place melee fighters at chokepoints and archers behind them on elevated positions. This creates a killing field where enemies must fight through your melee line while under constant ranged fire.</li>
-          <li><strong style={{ color: "var(--color-text)" }}>Focus fire.</strong> Have all archers target the same enemy. Eliminating one raider reduces incoming damage more than wounding several.</li>
-          <li><strong style={{ color: "var(--color-text)" }}>Flanking.</strong> If enemies bunch up at your entrance, send a melee settler through a side door to attack from behind. Flanked enemies take extra damage and have reduced defense.</li>
-          <li><strong style={{ color: "var(--color-text)" }}>Retreat and heal.</strong> A wounded settler fights poorly and can die in one hit. Pull them back, have your medic heal them, then send them back. Rotate wounded fighters to keep your defensive line fresh.</li>
-          <li><strong style={{ color: "var(--color-text)" }}>Night attacks.</strong> Raiders have reduced vision at night. If you&apos;re outnumbered, wait until dark and use ranged attacks from maximum distance. Enemies struggle to find your settlers in darkness.</li>
-          <li><strong style={{ color: "var(--color-text)" }}>Weather advantage.</strong> Rain and fog reduce visibility and ranged accuracy. Use melee-focused defense during bad weather. Snow slows enemy movement, giving your archers more time to fire.</li>
-        </ul>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        Defense in Going Medieval is a continuous process. Each raid teaches you something new — 
-        a weak point in your wall, a blind spot in your archer coverage, a trap placement that 
-        could be better. Iterate on your defenses after every fight. Reinforce where enemies 
-        broke through. Add traps where they bunched up. Expand your killbox as raid sizes grow. 
-        A colony that learns from each attack becomes an unbreakable fortress by end-game.
-      </p>
+      </main>
+      <SiteFooter />
     </div>
   );
 }

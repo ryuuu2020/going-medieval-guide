@@ -1,218 +1,82 @@
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Going Medieval Guide",
-  description:
-    "Frequently asked questions about Going Medieval. Get answers about game basics, difficulty settings, beginner tips, best biome and settlers, winter survival, raid defense, 1.0 features, game length, and mod support.",
-};
+import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
-export default function FaqPage() {
+const FAQS = [
+  { q: 'Going Medieval 是什么游戏？', a: 'Going Medieval 是一款中世纪殖民地模拟游戏，由 Foxy Voxel 开发。玩家需要带领定居者在荒野中建立定居点，管理资源、建造房屋、开垦农田、抵御入侵者，并在严酷的冬季中生存。1.0 正式版于 2026 年 3 月 12 日发售。' },
+  { q: '游戏支持中文吗？', a: '是的，Going Medieval 1.0 正式版支持简体中文。在 Steam 属性面板中可以将语言设置为简体中文，游戏内文本、菜单和提示均已本地化。' },
+  { q: '游戏多少钱？在哪买？', a: '游戏在 Steam 平台发售，基础版定价约 98 元人民币（社区估算，实际价格以 Steam 商店为准）。偶尔会有折扣活动，建议关注 Steam 促销。' },
+  { q: '需要什么电脑配置？', a: '最低配置：Windows 10、8GB 内存、GTX 760 显卡。推荐配置：16GB 内存、GTX 1060 显卡。游戏对硬件要求不高，中端电脑即可流畅运行。' },
+  { q: '游戏有联机/多人模式吗？', a: '目前 Going Medieval 是纯单机游戏，不支持联机或多人模式。开发商暂未公布多人模式计划。所有玩法都是围绕单人殖民地管理设计的。' },
+  { q: '定居者最多可以有多少人？', a: '游戏没有硬性上限，但人口越多管理难度越大。社区推荐 6-12 人为最佳规模，既能分工明确，又不会过于复杂。人口过多会影响游戏性能。' },
+  { q: '冬天太难了怎么生存？', a: '关键在于提前准备：1) 秋季结束前储备 300+ 食物；2) 建造地下储藏区保鲜；3) 准备充足木材取暖；4) 制作保暖衣物；5) 冬季安排室内工作（研究、制作）。' },
+  { q: '突袭太频繁怎么办？', a: '突袭频率随殖民地财富增加。应对方法：1) 建造多层城墙；2) 布置陷阱区；3) 培养专职战士；4) 不要囤积过多财富（降低突袭频率）；5) 建造监狱招募俘虏补充兵力。' },
+  { q: '定居者心情低落怎么解决？', a: '三步提升心情：1) 提供加工食品（面包、炖菜）而非生食；2) 每人独立卧室配桌椅；3) 供应啤酒。如有定居者心情低于 20，立即安排休息并提供美食。' },
+  { q: '铁矿石在哪里找？', a: '铁矿石通常分布在地下 3 层以下，呈灰色斑点状。使用"探测"功能可以查看地下矿脉分布。建议在山体附近建造殖民地，方便后续采矿。' },
+  { q: '怎么招募俘虏？', a: '建造监狱关押俘虏，定期提供食物。经过一段时间后（通常 3-5 天），可以通过社交互动尝试招募。社交技能高的定居者招募成功率更高。' },
+  { q: '本攻略站的数据准确吗？', a: '本站所有数据基于社区玩家测试和估算，可能随游戏版本更新而变化。我们尽力保持数据更新，但无法保证 100% 准确。如有疑问请以游戏内实际情况为准。' },
+];
+
+export default function FAQPage() {
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-      <h1 style={{ marginBottom: "0.5rem" }}>Frequently Asked Questions</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-        Common questions about Going Medieval, answered by experienced colony managers. Whether
-        you&apos;re just starting your first settlement or looking to master advanced mechanics,
-        this FAQ covers the questions we hear most often from the community.
-      </p>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
+      <SiteHeader currentPage="攻略" />
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">常见问题解答</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                以下是 Going Medieval 玩家最常提出的问题，涵盖游戏基础、系统机制、生存策略等方面。无论你是刚入手的新手还是遇到瓶颈的老玩家，都能在这里找到答案。以下信息基于社区整理，仅供参考。
+              </p>
+            </section>
 
-      {/* FAQ */}
-      <h2 style={{ marginBottom: "1rem" }}>Quick Answers</h2>
-      <div className="faq-snippets">
-        <details>
-          <summary>Is Going Medieval like RimWorld?</summary>
-          <p>
-            Going Medieval shares DNA with RimWorld — both are colony management simulators with
-            settler skill systems, mood mechanics, raid-based combat, and base building — but
-            Going Medieval carves its own identity through its medieval setting, 3D voxel-based
-            construction, vertical building mechanics, and seasonal survival focus. If you enjoy
-            RimWorld, you&apos;ll likely enjoy Going Medieval, but expect different challenges:
-            structural stability physics, underground construction, and seasonal food management
-            replace RimWorld&apos;s sci-fi technology progression and storyteller-driven events.
-          </p>
-        </details>
-        <details>
-          <summary>What difficulty should I start on?</summary>
-          <p>
-            Start on the default difficulty with Valley biome for your first colony. Going
-            Medieval has a learning curve, and the default settings give you room to learn
-            mechanics without being punished excessively for mistakes. Once you&apos;ve survived a
-            full year (all four seasons), graduated to stone construction, and successfully
-            defended against multiple raids, you can increase difficulty or try harder biomes.
-            Difficulty affects raider frequency, enemy strength, resource scarcity, and settler
-            mood thresholds. Don&apos;t be afraid to lower difficulty if you&apos;re struggling — the goal
-            is to learn and have fun.
-          </p>
-        </details>
-        <details>
-          <summary>How long does a typical game last?</summary>
-          <p>
-            Going Medieval is an open-ended colony sim with no fixed endpoint. A typical
-            playthrough to &quot;established colony&quot; status (stone fortifications, tier 2 research
-            completed, stable food supply through all seasons) takes 2-3 in-game years, which
-            translates to roughly 15-25 hours of gameplay depending on game speed and difficulty.
-            However, the game doesn&apos;t end when your colony is stable — many players continue for
-            multiple in-game years, expanding their settlements, researching tier 3 technologies,
-            and facing escalating raid challenges. Some dedicated players have colonies running
-            for 10+ in-game years.
-          </p>
-        </details>
-      </div>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-6">问题列表</h2>
+              <div className="space-y-3">
+                {FAQS.map((item, i) => (
+                  <div key={i} className="faq-item">
+                    <details>
+                      <summary>{item.q}</summary>
+                      <p>{item.a}</p>
+                    </details>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-      {/* Full FAQ */}
-      <h2 style={{ marginTop: "3rem", marginBottom: "1.5rem" }}>All Frequently Asked Questions</h2>
+            <section>
+              <p className="font-serif text-sm text-ink-muted italic">
+                以上信息基于社区整理，可能随游戏版本更新而变化。如有其他问题，欢迎通过社区渠道反馈。
+              </p>
+            </section>
+          </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>1. What is Going Medieval about?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Going Medieval is a colony management simulator set in an alternate medieval history
-            where society is rebuilding after a devastating plague. You guide a group of settlers
-            as they build a settlement from nothing — constructing buildings, farming crops,
-            researching technology, defending against raiders, and surviving harsh seasonal
-            weather. The game features a 3D voxel-based building system that allows multi-story
-            construction and underground excavation, a detailed settler skill and mood system,
-            and a research tree that progresses your colony from wooden huts to stone castles
-            with advanced production and siege warfare.
-          </p>
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">快速导航</h3>
+              <div className="space-y-2">
+                <a href="/beginners" className="block font-serif text-sm text-ink hover:text-vermillion transition-colors">→ 新手入门教程</a>
+                <a href="/tips" className="block font-serif text-sm text-ink hover:text-vermillion transition-colors">→ 30条高级技巧</a>
+                <a href="/buildings" className="block font-serif text-sm text-ink hover:text-vermillion transition-colors">→ 建筑系统</a>
+                <a href="/farming" className="block font-serif text-sm text-ink hover:text-vermillion transition-colors">→ 农耕系统</a>
+                <a href="/defense" className="block font-serif text-sm text-ink hover:text-vermillion transition-colors">→ 防御策略</a>
+              </div>
+            </div>
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">游戏基本信息</h3>
+              <div className="space-y-2 font-serif text-sm text-ink-light">
+                <div className="flex justify-between border-b border-divider pb-1"><span>类型</span><span>殖民地模拟</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>开发商</span><span>Foxy Voxel</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>正式版</span><span>1.0</span></div>
+                <div className="flex justify-between border-b border-divider pb-1"><span>平台</span><span>Steam (PC)</span></div>
+                <div className="flex justify-between"><span>语言</span><span>支持中文</span></div>
+              </div>
+            </div>
+          </aside>
         </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>2. What difficulty settings are available?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Going Medieval offers multiple difficulty levels that affect raider frequency and
-            strength, settler mood thresholds, resource availability, and environmental hazards.
-            You can also customize individual settings: raider difficulty, resource scarcity,
-            season length, and starting conditions. The game supports both story-focused peaceful
-            modes with minimal combat and hardcore survival modes where every decision matters.
-            Custom difficulty settings let you tailor the experience to your preferred balance
-            of challenge and relaxation.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>3. What are the best tips for beginners?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Start in Valley biome on default difficulty. On Day 1, build a 5x5 wooden shelter
-            with a roof, door, campfire, and sleeping spots. Build a Research Table as your
-            second structure. Hunt deer for meat and leather. Plant Cabbage and Carrot in Spring
-            for fast food. Research Stonecutting first to upgrade from wood to stone walls.
-            Build underground root cellars for food storage before Autumn. Craft winter clothing
-            before Winter arrives. Always keep at least a week&apos;s worth of food in storage. Never
-            send settlers outside alone when predators are nearby. The full Beginner&apos;s Guide on
-            this site covers these topics in detail with step-by-step instructions.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>4. Which biome should I choose?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Valley is the best biome for beginners — balanced resources, temperate climate, and
-            manageable threats. Hillside is the next step up, offering abundant wood and clay
-            but requiring more careful metal management. Marsh challenges experienced players
-            with scarce stone and iron, rewarding creative trading and resource conservation.
-            Mountain is the hardest biome, with year-round cold, limited farmland, and dangerous
-            predators — recommended only for veterans who have mastered all game systems. See
-            our complete Biomes and Map Seeds Guide for detailed comparisons of all four biomes.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>5. What are the best starting settlers?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Prioritize settlers with high Intellectual skill (for research speed), high
-            Construction (for building), and high Cooking (for food preparation and better meals).
-            A balanced starting trio might include: one Intellectual specialist (also decent at
-            Medicine or Speechcraft), one Construction and Mining specialist (your builder and
-            resource gatherer), and one Cooking and Farming specialist (your food production
-            engine). Avoid settlers with negative traits that severely impact work speed or
-            cause frequent mental breaks — a settler with 10 skill but a crippling mood penalty
-            is worse than a 5-skill settler who works consistently.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>6. How do I survive Winter?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Winter survival requires preparation across all three preceding seasons. In Spring,
-            plant crops to build food reserves. In Summer, expand storage and research preserved
-            food at the Cooking Station. In Autumn, harvest everything, build underground root
-            cellars, craft winter clothing for every settler, stockpile hay for livestock, and
-            plant Turnips (the only outdoor Winter crop). During Winter itself: keep settlers
-            indoors near heat sources whenever possible, maintain underground Mushroom farms
-            for fresh food, and conserve stored food by eating perishables first. Our Seasons
-            Guide provides a complete Winter survival strategy with detailed checklists.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>7. How do I defend against raids?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Defense starts with good base design. Build stone perimeter walls with a controlled
-            entrance, place archer towers at corners and along long wall sections, create trap
-            corridors at choke points, and maintain weapon and armor stockpiles near defensive
-            positions. Train settlers in Marksman and Melee skills before raids occur — assign
-            them hunting duties for Marksman practice and equip them with weapons early. During
-            raids, position archers on elevated platforms behind merlon cover, funnel enemies
-            through trapped corridors, and keep melee fighters behind chokepoints to engage
-            enemies one at a time. The Defense Guide covers all defensive strategies in detail.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>8. What new features came with the 1.0 launch?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            The 1.0 launch in March 2026 brought Going Medieval out of Early Access with all
-            planned features complete. This included the full 3-tier research tree (20
-            technologies), all 4 biomes with complete environmental simulation, the complete
-            settler skill and mood system, finished construction mechanics including reinforced
-            walls and siege weapons, the full seasonal cycle with all weather effects, and
-            comprehensive trading with 6 merchant types. The launch version represents the
-            complete vision of the game as designed by Foxy Voxel, polished and balanced based
-            on years of Early Access community feedback.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>9. Does Going Medieval have an ending?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Going Medieval is an open-ended sandbox game without a scripted ending or victory
-            condition. Your colony continues indefinitely as long as at least one settler
-            survives. The game&apos;s &quot;ending&quot; is whatever goal you set for yourself: complete all
-            research tiers, build a stone castle with a functioning Great Hall and Library,
-            survive 10 in-game years, reach a population of 15 settlers, or simply build the
-            most impressive medieval settlement you can imagine. The open-ended design encourages
-            long-term play and creative colony building without the pressure of a final objective.
-            Some players consider their colony &quot;won&quot; when they&apos;ve researched all technologies
-            and built a self-sustaining settlement that can survive any threat.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: "1.1rem", margin: "0 0 0.5rem" }}>10. Does Going Medieval support mods?</h3>
-          <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            Going Medieval has a growing modding community with community-created mods available
-            through the Steam Workshop. Mods range from quality-of-life improvements and UI
-            enhancements to new content including additional building types, crop varieties,
-            and gameplay tweaks. Foxy Voxel has expressed support for the modding community and
-            designed the game with modding accessibility in mind. However, official modding
-            tools and full workshop integration are community-driven rather than officially
-            supported. Check the Going Medieval Steam Workshop for available mods, and always
-            read mod descriptions carefully — mods created for earlier versions of the game
-            may not be compatible with the 1.0 release. Verify mod compatibility before
-            applying them to your save files.
-          </p>
-        </div>
-      </div>
-
-      <p style={{ color: "var(--color-text-muted)", lineHeight: 1.7 }}>
-        Didn&apos;t find your question? Check our detailed guides on specific game systems —
-        Buildings, Research, Settlers, Farming, Defense, Trade, Biomes, Seasons, and Underground
-        construction are all covered in depth on this site. For questions about specific
-        mechanics not addressed here, the Going Medieval community on Discord and Steam forums
-        is active and helpful. And remember: every colony manager started where you are now.
-        Keep building, keep learning, and your settlement will thrive.
-      </p>
+      </main>
+      <SiteFooter />
     </div>
   );
 }
