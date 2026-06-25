@@ -1,11 +1,6 @@
-'use client';
-
-import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function SettlersPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="Settlers" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
@@ -148,7 +143,5 @@ export default function SettlersPage() {
           </aside>
         </div>
       </main>
-      <SiteFooter />
-    </div>
   );
 }

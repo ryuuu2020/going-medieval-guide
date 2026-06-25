@@ -1,11 +1,6 @@
-'use client';
-
-import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader />
       <main className="max-w-4xl mx-auto px-4 lg:px-8 py-8">
         <div className="space-y-6">
           <h1 className="chapter-heading">Privacy Policy</h1>
@@ -38,7 +33,5 @@ export default function PrivacyPage() {
           </section>
         </div>
       </main>
-      <SiteFooter />
-    </div>
   );
 }

@@ -1,7 +1,4 @@
-'use client';
-
-import { useState, useRef, useEffect } from 'react';
-import { SiteFooter } from '@/components/SiteHeader';
+import Link from 'next/link';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/', tilt: -1 },
@@ -64,19 +61,9 @@ const TIPS = [
   { tip: 'After crafting bows, station settlers on walls to shoot from above. High ground significantly boosts accuracy and damage.', category: 'Combat' },
 ];
 
-const SIDEBAR_LINKS = [
-  { label: 'Beginner\'s Guide', href: '/beginners', desc: 'Build your colony from scratch' },
-  { label: '30 Pro Tips', href: '/tips', desc: 'Essential strategies for advanced players' },
-  { label: 'Seasons Survival Guide', href: '/seasons', desc: 'Managing temperature extremes year-round' },
-  { label: 'Research Tech Tree', href: '/research', desc: 'Optimal unlock order recommendations' },
-  { label: 'Crafting System', href: '/crafting', desc: 'Workbenches, recipes, and materials' },
-  { label: 'Trading System', href: '/trading', desc: 'Merchant interactions and resource exchange' },
-];
-
 export default function HomePage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-
+    <>
       {/* ===== Hero Parchment Unfurl ===== */}
       <header className="pt-16 pb-8 px-4 text-center max-w-4xl mx-auto">
         <img
@@ -112,169 +99,80 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* ===== Main Content: Two-column layout ===== */}
+      {/* ===== Main Content ===== */}
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="space-y-14">
 
-          {/* ===== Left Column (65%) ===== */}
-          <div className="flex-1 lg:max-w-[65%] space-y-14">
+          {/* --- Welcome paragraph (drop cap) --- */}
+          <section>
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-ink leading-tight text-balance">
+              Build Your Colony in the Medieval Wilderness
+            </h2>
+            <p className="drop-cap font-serif text-lg text-ink-light leading-relaxed mt-6">
+              Going Medieval is a medieval colony simulation game that launched its 1.0 full release on March 12, 2026. You lead a group of settlers building a settlement from scratch in the wilderness — constructing homes, cultivating farmland, forging weapons, fending off raiders, and surviving brutal winters. This guide site collects battle-tested community knowledge, covering all core systems: buildings, farming, defense, research, and more, to help you build a thriving medieval colony. All data is based on community estimates and provided for reference only.
+            </p>
+          </section>
 
-            {/* --- Welcome paragraph (drop cap) --- */}
-            <section>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-ink leading-tight text-balance">
-                Build Your Colony in the Medieval Wilderness
-              </h2>
-              <p className="drop-cap font-serif text-lg text-ink-light leading-relaxed mt-6">
-                Going Medieval is a medieval colony simulation game that launched its 1.0 full release on March 12, 2026. You lead a group of settlers building a settlement from scratch in the wilderness — constructing homes, cultivating farmland, forging weapons, fending off raiders, and surviving brutal winters. This guide site collects battle-tested community knowledge, covering all core systems: buildings, farming, defense, research, and more, to help you build a thriving medieval colony. All data is based on community estimates and provided for reference only.
-              </p>
-            </section>
-
-            {/* --- Featured Guides --- */}
-            <section>
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-ink">Featured Guides</h3>
-                  <p className="font-serif text-sm text-ink-muted mt-1">In-depth breakdowns of core systems</p>
-                </div>
+          {/* --- Featured Guides --- */}
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="font-display text-2xl font-semibold text-ink">Featured Guides</h3>
+                <p className="font-serif text-sm text-ink-muted mt-1">In-depth breakdowns of core systems</p>
               </div>
+            </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {FEATURED_GUIDES.map((guide, i) => (
-                  <a key={i} href={guide.href} className="journal-card block p-6 group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`field-tag ${guide.tagType}`}>{guide.tag}</span>
-                      <span className="font-label text-xs text-ink-muted">{guide.readTime} min read</span>
-                    </div>
-                    <h4 className="font-display text-lg font-semibold text-ink group-hover:text-vermillion transition-colors duration-200">
-                      {guide.title}
-                    </h4>
-                    <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-                      {guide.excerpt}
-                    </p>
-                  </a>
-                ))}
-              </div>
-            </section>
-
-            {/* --- Getting Started --- */}
-            <section>
-              <h3 className="font-display text-2xl font-semibold text-ink mb-6">Getting Started</h3>
-              <div className="space-y-5">
-                {GETTING_STARTED.map((s, i) => (
-                  <div key={i} className="flex gap-5 items-start">
-                    <span className="step-number">{s.step}</span>
-                    <div>
-                      <h4 className="font-display text-lg font-semibold text-ink">{s.title}</h4>
-                      <p className="font-serif text-sm text-ink-light leading-relaxed mt-1">{s.desc}</p>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {FEATURED_GUIDES.map((guide, i) => (
+                <a key={i} href={guide.href} className="journal-card block p-6 group">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`field-tag ${guide.tagType}`}>{guide.tag}</span>
+                    <span className="font-label text-xs text-ink-muted">{guide.readTime} min read</span>
                   </div>
-                ))}
-              </div>
-            </section>
+                  <h4 className="font-display text-lg font-semibold text-ink group-hover:text-vermillion transition-colors duration-200">
+                    {guide.title}
+                  </h4>
+                  <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
+                    {guide.excerpt}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </section>
 
-            {/* --- Pro Tips --- */}
-            <section>
-              <h3 className="font-display text-2xl font-semibold text-ink mb-6">Pro Tips</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {TIPS.map((item, i) => (
-                  <div key={i} className="journal-card p-4">
-                    <span className="field-tag ink text-[10px] mb-2 inline-block">{item.category}</span>
-                    <p className="font-serif text-sm text-ink leading-relaxed">{item.tip}</p>
+          {/* --- Getting Started --- */}
+          <section>
+            <h3 className="font-display text-2xl font-semibold text-ink mb-6">Getting Started</h3>
+            <div className="space-y-5">
+              {GETTING_STARTED.map((s, i) => (
+                <div key={i} className="flex gap-5 items-start">
+                  <span className="step-number">{s.step}</span>
+                  <div>
+                    <h4 className="font-display text-lg font-semibold text-ink">{s.title}</h4>
+                    <p className="font-serif text-sm text-ink-light leading-relaxed mt-1">{s.desc}</p>
                   </div>
-                ))}
-              </div>
-            </section>
-
-          </div>
-
-          {/* ===== Right Column (35%) ===== */}
-          <aside className="lg:w-[35%] space-y-10 shrink-0">
-
-            {/* --- Quick Navigation --- */}
-            <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">Quick Navigation</h3>
-              <div className="space-y-3">
-                {SIDEBAR_LINKS.map((link, i) => (
-                  <a key={i} href={link.href} className="block group">
-                    <span className="font-display text-base font-semibold text-ink group-hover:text-vermillion transition-colors">
-                      {link.label}
-                    </span>
-                    <span className="block font-serif text-xs text-ink-muted mt-0.5">
-                      {link.desc}
-                    </span>
-                  </a>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+          </section>
 
-            {/* --- Key Stats Card --- */}
-            <div className="journal-card p-6">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">Game Stats</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-baseline border-b border-divider pb-2">
-                  <span className="font-label text-sm text-ink-muted">Steam Reviews</span>
-                  <span className="font-display text-xl font-bold text-ink">21,000+</span>
+          {/* --- Pro Tips --- */}
+          <section>
+            <h3 className="font-display text-2xl font-semibold text-ink mb-6">Pro Tips</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {TIPS.map((item, i) => (
+                <div key={i} className="journal-card p-4">
+                  <span className="field-tag ink text-[10px] mb-2 inline-block">{item.category}</span>
+                  <p className="font-serif text-sm text-ink leading-relaxed">{item.tip}</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-divider pb-2">
-                  <span className="font-label text-sm text-ink-muted">Positive Rating</span>
-                  <span className="font-display text-xl font-bold text-vermillion">89%</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-divider pb-2">
-                  <span className="font-label text-sm text-ink-muted">Version</span>
-                  <span className="font-display text-xl font-bold text-gold">1.0</span>
-                </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="font-label text-sm text-ink-muted">Release Date</span>
-                  <span className="font-display text-base font-semibold text-ink">2026.03.12</span>
-                </div>
-              </div>
-              <p className="font-serif text-xs text-ink-muted mt-4 italic">Data source: Steam community estimates</p>
+              ))}
             </div>
-
-            {/* --- Community News --- */}
-            <div className="field-sidebar-block">
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">Community News</h3>
-              <div className="space-y-4">
-                <div>
-                  <span className="font-label text-xs text-ink-muted">2026.06</span>
-                  <p className="font-serif text-sm text-ink-light mt-1">1.0 launch review: massive content expansion, new biomes arrive</p>
-                </div>
-                <div>
-                  <span className="font-label text-xs text-ink-muted">2026.05</span>
-                  <p className="font-serif text-sm text-ink-light mt-1">Community Mod tools released, custom content surges</p>
-                </div>
-                <div>
-                  <span className="font-label text-xs text-ink-muted">2026.03</span>
-                  <p className="font-serif text-sm text-ink-light mt-1">1.0 full release launches with new trading system and underground exploration</p>
-                </div>
-              </div>
-            </div>
-
-            {/* --- Support Us --- */}
-            <div className="aged-border p-6" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-base font-semibold text-ink mb-2">Support This Site</h3>
-              <p className="font-serif text-xs text-ink-light leading-relaxed mb-4">
-                This guide site is maintained by community players and all content is free. If our guides helped you, consider supporting us via Afdian to help us keep updating.
-              </p>
-              <a
-                href="https://afdian.com/a/gameguidehub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 font-label text-sm font-semibold text-parchment transition-colors duration-200"
-                style={{ backgroundColor: 'var(--color-vermillion)', borderRadius: 'var(--radius-scroll)' }}
-              >
-                &#10084; Support on Afdian
-              </a>
-            </div>
-
-          </aside>
+          </section>
 
         </div>
 
         <div className="field-divider mt-16" />
       </main>
-
-      <SiteFooter />
-    </div>
+    </>
   );
 }

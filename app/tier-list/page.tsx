@@ -1,6 +1,3 @@
-'use client';
-
-import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 /* ── Tier badge style helpers ── */
 const tierBadge = (tier: string) => {
@@ -59,8 +56,6 @@ const TR = ({
 
 export default function TierListPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="Tier List" />
 
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
@@ -316,7 +311,5 @@ export default function TierListPage() {
         </div>
       </main>
 
-      <SiteFooter />
-    </div>
   );
 }

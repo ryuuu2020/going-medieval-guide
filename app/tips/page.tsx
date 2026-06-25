@@ -1,6 +1,3 @@
-'use client';
-
-import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 const TIPS = [
   { cat: 'Storage', tip: 'Temperatures 2 levels underground stay 8-12&deg;C year-round, reducing food spoilage by 70%. Excavate an underground stockpile early.' },
@@ -37,8 +34,6 @@ const TIPS = [
 
 export default function TipsPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="Guides" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
@@ -109,7 +104,5 @@ export default function TipsPage() {
           </aside>
         </div>
       </main>
-      <SiteFooter />
-    </div>
   );
 }

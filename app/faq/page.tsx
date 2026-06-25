@@ -1,6 +1,3 @@
-'use client';
-
-import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 const FAQS = [
   { q: 'What kind of game is Going Medieval?', a: 'Going Medieval is a medieval colony simulation game developed by Foxy Voxel. Players lead a group of settlers building a settlement in the wilderness, managing resources, constructing buildings, cultivating farmland, defending against raiders, and surviving brutal winters. The 1.0 full release launched on March 12, 2026.' },
@@ -19,8 +16,6 @@ const FAQS = [
 
 export default function FAQPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <SiteHeader currentPage="Guides" />
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
@@ -76,7 +71,5 @@ export default function FAQPage() {
           </aside>
         </div>
       </main>
-      <SiteFooter />
-    </div>
   );
 }
