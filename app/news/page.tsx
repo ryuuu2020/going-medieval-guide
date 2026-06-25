@@ -4,6 +4,18 @@ import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 
 const NEWS = [
   {
+    date: '2026-06-25',
+    title: 'Underground Mining 101: How to Build Your First Iron Mine Without Collapsing Everything',
+    excerpt: "One of the most common mistakes new Going Medieval players make is digging too aggressively underground and triggering a catastrophic collapse that destroys hours of work. Our new Underground Mining guide walks you through the safe way to extract iron, coal, and gold. Key rules: never dig a 7×7 or larger room without support beams (wood beams every 4 tiles), always leave at least 2 tiles of overhead rock above your mining chamber, and build support pillars in a grid pattern before expanding. The guide includes a step-by-step walkthrough for your first iron mine — from picking the right hill to smelting your first bars — with annotated screenshots. Bonus section covers advanced topics: multi-level mine shaft design, temperature management in deep mines (critical for summer survival), and how to use the new trading system to supplement iron income while your mine ramps up. For players struggling with the research unlock order: Carpentry → Architecture → Smithing gets you from settlement to iron tools in the shortest number of research cycles.",
+    tag: 'Guide',
+  },
+  {
+    date: '2026-06-25',
+    title: 'Patch 1.0.105: Load Time Optimization for Massive Settlements, Crash Fixes Live',
+    excerpt: 'Foxy Voxel released patch 1.0.105 on June 24, targeting quality-of-life and stability improvements. The headline change: significantly reduced enter/exit duration when loading secondary maps on saves with massive settlements — a long-requested fix for late-game colony builders with hundreds of structures. Several crash occurrences have been resolved, including a fix for the tutorial resource shortage bug that could soft-lock new players under certain conditions. Visual glitches have also been patched. The developers note that experimental and main branches are currently divergent — avoid loading experimental saves on the main branch to prevent corruption. A new Dev logging system has been added to the experimental branch to gather detailed crash reports from the community.',
+    tag: 'Update',
+  },
+  {
     date: '2026-06-15',
     title: 'Going Medieval 1.0 Full Release Review: Massive Content Expansion, New Biomes Arrive',
     excerpt: 'The 1.0 full release delivers a massive content expansion over earlier versions, adding Grasslands and Desert biomes, a trading system, underground exploration, and more. The game\'s level of completion has significantly improved, with an 89% positive Steam rating (community estimate). This guide site has been fully updated for 1.0.',
