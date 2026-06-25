@@ -7,14 +7,14 @@ export default function FarmingPage() {
             <section>
               <h1 className="chapter-heading">Farming System In-Depth</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full. Data below is based on community testing and is for reference only.
+                Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. There are 9 confirmed crops: Barley, Cabbage, Carrots, Beet, Flax, Herbs, Redcurrant, Hay, and Mushrooms. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Crop Types & Characteristics</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Going Medieval offers multiple crop types, each with different growth cycles, yields, and uses. Choosing the right crops for the current season and terrain is key to efficient farming.
+                Going Medieval offers 9 confirmed crop types, each with different growth cycles, yields, and uses. Choosing the right crops for the current season and terrain is key to efficient farming.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -27,15 +27,23 @@ export default function FarmingPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Cabbage</td><td>6 days</td><td>High</td><td>Eat raw</td><td>Spring-Summer</td></tr>
-                  <tr><td>Wheat</td><td>10 days</td><td>Medium</td><td>Flour &rarr; Bread</td><td>Spring-Summer</td></tr>
-                  <tr><td>Carrot</td><td>5 days</td><td>Medium</td><td>Eat raw</td><td>Spring-Autumn</td></tr>
-                  <tr><td>Hops</td><td>8 days</td><td>Low</td><td>Brewing beer</td><td>Summer-Autumn</td></tr>
-                  <tr><td>Flax</td><td>9 days</td><td>Low</td><td>Weaving cloth</td><td>Spring-Summer</td></tr>
-                  <tr><td>Herbs</td><td>7 days</td><td>Low</td><td>Making medicine</td><td>Summer-Autumn</td></tr>
+                  <tr><td>Cabbage</td><td>~6 days (est.)</td><td>High</td><td>Eat raw, stews</td><td>Spring-Summer</td></tr>
+                  <tr><td>Barley</td><td>~10 days (est.)</td><td>Medium</td><td>Flour &rarr; Bread, Ale, Beer</td><td>Spring-Summer</td></tr>
+                  <tr><td>Carrots</td><td>~5 days (est.)</td><td>Medium</td><td>Eat raw</td><td>Spring-Autumn</td></tr>
+                  <tr><td>Beet</td><td>~7 days (est.)</td><td>Medium</td><td>Eat raw, stews</td><td>Spring-Autumn</td></tr>
+                  <tr><td>Flax</td><td>~9 days (est.)</td><td>Low</td><td>Linen Cloth</td><td>Spring-Summer</td></tr>
+                  <tr><td>Herbs</td><td>~7 days (est.)</td><td>Low</td><td>Medicine (Healing Kits)</td><td>Summer-Autumn</td></tr>
+                  <tr><td>Redcurrant</td><td>~8 days (est.)</td><td>Low-Medium</td><td>Eat raw, Redcurrant Pie</td><td>Spring-Summer</td></tr>
+                  <tr><td>Hay</td><td>~5 days (est.)</td><td>High</td><td>Animal feed</td><td>Spring-Autumn</td></tr>
+                  <tr><td>Mushrooms</td><td>~6 days (est.)</td><td>Low</td><td>Eat raw, stews</td><td>Year-round (caves)</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
+              <p className="font-serif text-sm text-ink-muted italic">Crop names confirmed via Wiki. Growth cycles are community estimates.</p>
+              <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+                <p className="font-serif text-sm text-ink leading-relaxed">
+                  <strong className="text-vermillion">Blight Warning:</strong> Blight (crop disease) affects flax, barley, cabbage, carrots, and beets. This has been confirmed from official Update #3 patch notes. If you see crops withering, destroy the affected plants immediately to prevent spread.
+                </p>
+              </div>
             </section>
 
             <section>
@@ -44,7 +52,7 @@ export default function FarmingPage() {
                 Going Medieval's season system directly impacts farming efficiency. Spring and summer are the main growing seasons, autumn can support cold-tolerant crops, and winter halts all plant growth. Smart planting schedules must ensure enough food is harvested before winter hits.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Recommended strategy: In spring, plant both cabbage and wheat simultaneously — cabbage grows fast for early food, while wheat harvested in summer gets processed into bread for winter reserves. In summer, plant hops and herbs. In autumn, plant a final round of carrots. Replant immediately after each harvest to maximize land use. Before winter, ensure your stockpile holds at least 200 units of food.
+                Recommended strategy: In spring, plant cabbage and barley simultaneously — cabbage grows fast for early food, while barley harvested in summer gets milled into flour for bread and brewed into ale or beer for winter. In summer, plant herbs and redcurrant. In autumn, plant a final round of carrots and beets. Hay should be planted continuously to maintain animal feed supplies. Replant immediately after each harvest to maximize land use. Before winter, ensure your stockpile holds at least 200 units of food.
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
@@ -72,15 +80,15 @@ export default function FarmingPage() {
               <div className="space-y-3">
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Cellar Storage</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Build stockpiles 2+ levels underground, paired with wooden shelves to increase capacity. Temperature stays 5-10&deg;C year-round, maximizing food preservation.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Build stockpiles 2+ levels underground, paired with wooden shelves to increase capacity. Temperature stays 5-10&deg;C year-round, maximizing food preservation. Ice Blocks can further extend cold storage.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Processed Preservation</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Processing wheat into flour then bread, or pickling cabbage, dramatically extends shelf life. Processed food spoils at only 1/3 the rate of raw food.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Mill barley into flour then bake into bread, pickle vegetables with vinegar, or make cheese from milk — all dramatically extend shelf life. Processed food spoils at only 1/3 the rate of raw food.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Smoking & Drying</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Hunted meat can be smoked to extend shelf life. Build a smokehouse (requires research unlock), and process raw meat into smoked meat — shelf life extends from 3 days to 15 days.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Smoking & Salting</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Hunted meat can be smoked or salted to extend shelf life. Build a smokehouse (requires research unlock) for smoked meat, or use Salt to preserve meat. Shelf life extends from ~3 days to 15-25 days.</p>
                 </div>
               </div>
             </section>
@@ -101,8 +109,8 @@ export default function FarmingPage() {
               </div>
               <div className="faq-item">
                 <details>
-                  <summary>What's beer used for — is it worth growing hops?</summary>
-                  <p>Beer is an important settler mood booster. Settlers with mood below 30 can trigger negative events. A regular beer supply effectively maintains morale. Plant hops once you have sufficient food reserves.</p>
+                  <summary>What's beer used for — is it worth growing barley for it?</summary>
+                  <p>Ale and Beer are important settler mood boosters. They are brewed from Barley — the confirmed grain crop. Settlers with mood below 30 can trigger negative events. A regular beer supply effectively maintains morale. Plant barley for brewing once you have sufficient food reserves.</p>
                 </details>
               </div>
             </section>
@@ -112,18 +120,23 @@ export default function FarmingPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Crop Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">6 days | Spring-Summer | Eat raw</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Wheat</h4><p className="font-serif text-xs text-ink-muted mt-1">10 days | Spring-Summer | Flour &rarr; Bread</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Carrot</h4><p className="font-serif text-xs text-ink-muted mt-1">5 days | Spring-Autumn | Eat raw</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Hops</h4><p className="font-serif text-xs text-ink-muted mt-1">8 days | Summer-Autumn | Brewing</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">~6 days | Spring-Summer | Eat raw</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Barley</h4><p className="font-serif text-xs text-ink-muted mt-1">~10 days | Spring-Summer | Flour, Ale, Beer</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Carrots</h4><p className="font-serif text-xs text-ink-muted mt-1">~5 days | Spring-Autumn | Eat raw</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Beet</h4><p className="font-serif text-xs text-ink-muted mt-1">~7 days | Spring-Autumn | Eat raw, stews</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Flax</h4><p className="font-serif text-xs text-ink-muted mt-1">~9 days | Spring-Summer | Linen Cloth</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Herbs</h4><p className="font-serif text-xs text-ink-muted mt-1">~7 days | Summer-Autumn | Healing Kits</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Redcurrant</h4><p className="font-serif text-xs text-ink-muted mt-1">~8 days | Spring-Summer | Pie, eat raw</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Hay</h4><p className="font-serif text-xs text-ink-muted mt-1">~5 days | Spring-Autumn | Animal feed</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Mushrooms</h4><p className="font-serif text-xs text-ink-muted mt-1">~6 days | Year-round (caves) | Eat raw, stews</p></div>
               </div>
             </div>
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Annual Planting Calendar</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div><span className="field-tag vermillion text-[10px]">Spring</span> Cabbage + Wheat</div>
-                <div><span className="field-tag gold text-[10px]">Summer</span> Harvest wheat, plant hops + herbs</div>
-                <div><span className="field-tag ink text-[10px]">Autumn</span> Final carrots, harvest everything</div>
+                <div><span className="field-tag vermillion text-[10px]">Spring</span> Cabbage + Barley + Redcurrant</div>
+                <div><span className="field-tag gold text-[10px]">Summer</span> Harvest barley, plant herbs</div>
+                <div><span className="field-tag ink text-[10px]">Autumn</span> Final carrots + beets, harvest all</div>
                 <div><span className="field-tag ink text-[10px]">Winter</span> No planting, consume reserves</div>
               </div>
             </div>

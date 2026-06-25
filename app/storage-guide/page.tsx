@@ -108,7 +108,7 @@ export default function StorageGuidePage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Workshop Material Cache (Surface, 4x4 per station)</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">For each workstation (brewery, smithy, tailor, carpenter), place a 2x2 Critical-priority stockpile on the tile immediately adjacent, accepting only that station's inputs. Brewery: hops stockpile. Smithy: iron ore/ingots stockpile. Tailor: flax/wool stockpile. Carpenter: wood stockpile. This eliminates 100% of input-hauling time for your crafters — they never leave their station.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">For each workstation (brewery, smithy, tailor, carpenter), place a 2x2 Critical-priority stockpile on the tile immediately adjacent, accepting only that station's inputs. Brewery: barley stockpile. Smithy: iron ore/ingots stockpile. Tailor: flax/wool stockpile. Carpenter: wood stockpile. This eliminates 100% of input-hauling time for your crafters — they never leave their station.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Bulk Construction Materials (Surface, 6x6 covered zone)</h4>

@@ -55,7 +55,7 @@ export default function TradingPage() {
               <div className="space-y-3">
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Beer</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Hops cost little to grow, and beer sells for a high price — one of the most profitable commodities. Plant hops heavily in summer, brew in autumn, and sell in winter.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Barley is easy to grow, and beer/ale sold for a high price — one of the most profitable commodities. Plant barley heavily in spring, brew in autumn, and sell in winter.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Smoked Meat</h4>

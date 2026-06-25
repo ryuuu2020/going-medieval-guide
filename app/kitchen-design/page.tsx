@@ -7,7 +7,7 @@ export default function KitchenDesignPage() {
             <section>
               <h1 className="chapter-heading">Kitchen Design & Food Production Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The kitchen is your colony's engine of survival — without efficient food production, even the most well-defended fortress will collapse from within. Kitchen design in Going Medieval is about more than plunking down a campfire; it requires careful planning of stove placement, ingredient stockpile proximity, cook movement paths, and meal quality optimization. A well-designed kitchen doubles your cook's output per day, drastically reduces food spoilage, and elevates meal quality from basic survival rations to fine meals that generate active mood bonuses. Data below is based on community testing and is for reference only.
+                The kitchen is your colony's engine of survival — without efficient food production, even the most well-defended fortress will collapse from within. Kitchen design in Going Medieval is about more than plunking down a campfire; it requires careful planning of stove placement, ingredient stockpile proximity, cook movement paths, and meal quality optimization. A well-designed kitchen doubles your cook's output per day, drastically reduces food spoilage, and elevates meal quality from basic survival rations to lavish meals and specialty dishes that generate active mood bonuses. Data below is based on community testing and is for reference only.
               </p>
             </section>
 
@@ -43,7 +43,7 @@ export default function KitchenDesignPage() {
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Intermediate Stockpile</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">For processed intermediates like flour and dough (if wheat milling is available — wheat is not confirmed as a crop in the current game version). Placing any ingredient-processing station directly in or adjacent to the kitchen eliminates intermediate hauling.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">For processed intermediates like flour and dough (from milling barley). Placing any ingredient-processing station directly in or adjacent to the kitchen eliminates intermediate hauling. Barley is the confirmed grain crop used for bread and ale/beer production.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Finished Meal Stockpile</h4>
@@ -79,15 +79,16 @@ export default function KitchenDesignPage() {
                 </thead>
                 <tbody>
                   <tr><td>Raw food</td><td>None</td><td>No</td><td>~-3 Ate raw food (est.)</td><td>Any edible raw</td></tr>
-                  <tr><td>Simple Meal</td><td>0</td><td>No (campfire)</td><td>No bonus</td><td>Vegetable or meat x1</td></tr>
-                  <tr><td>Fine Meal</td><td>~3 (est.)</td><td>Yes</td><td>~+4 mood (est.)</td><td>Meat x1 + vegetable x1</td></tr>
+                  <tr><td>Roasted Meat</td><td>0</td><td>No (campfire)</td><td>No bonus</td><td>Raw Meat x1</td></tr>
+                  <tr><td>Packaged Meal</td><td>0</td><td>No (campfire)</td><td>No bonus</td><td>Any ingredient x1</td></tr>
+                  <tr><td>Stew</td><td>~3 (est.)</td><td>Yes</td><td>~+4 mood (est.)</td><td>Meat x1 + vegetable x1</td></tr>
                   <tr><td>Lavish Meal</td><td>~7 (est.)</td><td>Yes</td><td>~+6 mood (est.)</td><td>Meat x1 + vegetable x2</td></tr>
-                  <tr><td>Gourmet Meal</td><td>~12 (est.)</td><td>Yes</td><td>~+8 mood (est.)</td><td>Various premium ingredients</td></tr>
+                  <tr><td>Specialty Dishes</td><td>~12 (est.)</td><td>Yes</td><td>~+8 mood (est.)</td><td>Apple Pie, Honey Crispels, Redcurrant Pie, etc.</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                The jump from Simple to Fine Meals is the most impactful upgrade in food production — it provides a reliable +4 mood buff to every settler who eats. Since settlers eat twice daily, this is the equivalent of a permanent +4 mood buff, which often makes the difference between a settler hovering at neutral versus positive mood. Target Fine Meals as soon as you research and build your first stove.
+                The jump from basic meals to Stew is the most impactful upgrade in food production — it provides a reliable +4 mood buff to every settler who eats. Since settlers eat twice daily, this is the equivalent of a permanent +4 mood buff, which often makes the difference between a settler hovering at neutral versus positive mood. Target Stew as soon as you research and build your first stove.
               </p>
             </section>
 
@@ -96,7 +97,7 @@ export default function KitchenDesignPage() {
               <div className="faq-item">
                 <details>
                   <summary>How many stoves do I need for my colony?</summary>
-                  <p>One stove per 6 settlers for basic meal production. If you're cooking Fine or Lavish meals (which have longer cook times), plan for one stove per 4-5 settlers. Two stoves with a dedicated cook can feed a colony of 10-12 settlers comfortably.</p>
+                  <p>One stove per 6 settlers for basic meal production. If you're cooking Stew or Lavish meals (which have longer cook times), plan for one stove per 4-5 settlers. Two stoves with a dedicated cook can feed a colony of 10-12 settlers comfortably.</p>
                 </details>
               </div>
               <div className="faq-item">
@@ -118,8 +119,8 @@ export default function KitchenDesignPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Cooking Station Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Campfire</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x3 | Simple meals only | Needs ventilation</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stove</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron x5, Stone x8 | Fine+ meals | Research unlock</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Campfire</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x3 | Basic meals only | Needs ventilation</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stove</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron x5, Stone x8 | Stew + Lavish meals | Research unlock</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Butcher Table</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x5 | Process carcasses | No fuel needed</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Millstone</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x10 | Grain→Flour | Slow, assign skilled settler</p></div>
               </div>

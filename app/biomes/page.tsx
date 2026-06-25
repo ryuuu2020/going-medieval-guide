@@ -113,7 +113,7 @@ export default function BiomesPage() {
               <div className="faq-item">
                 <details>
                   <summary>How do I build a farm on Mountain terrain?</summary>
-                  <p>Create farmland on flat areas at the mountain's base, or plant on terraced platforms along the slope. If flat land is truly insufficient, prioritize high-value crops (hops, herbs) and trade for low-value crops (cabbage).</p>
+                  <p>Create farmland on flat areas at the mountain's base, or plant on terraced platforms along the slope. If flat land is truly insufficient, prioritize high-value crops (barley, herbs, redcurrant) and trade for low-value crops (cabbage).</p>
                 </details>
               </div>
               <div className="faq-item">

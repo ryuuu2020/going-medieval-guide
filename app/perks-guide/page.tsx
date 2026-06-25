@@ -141,7 +141,7 @@ export default function PerksGuidePage() {
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Mood / Morale Penalties</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Give these settlers extra attention to their needs. A private bedroom (even a small one) goes a long way. Ensure they have access to beer, mead, or wine if your colony produces it. Keep them away from corpses, filth, and other mood-draining environments. Do NOT assign them to combat roles — a settler with fragile morale on a battlefield is a mental break waiting to happen at the worst possible moment.</p>
+                <p className="font-serif text-sm text-ink-light mt-1">Give these settlers extra attention to their needs. A private bedroom (even a small one) goes a long way. Ensure they have access to beer, mead, or Rough Wine if your colony produces it. Keep them away from corpses, filth, and other mood-draining environments. Do NOT assign them to combat roles — a settler with fragile morale on a battlefield is a mental break waiting to happen at the worst possible moment.</p>
               </div>
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Physical Weakness</h4>

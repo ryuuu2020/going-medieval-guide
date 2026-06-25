@@ -60,9 +60,9 @@ export default function HappinessGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Ate fine meal</td><td>~+4</td><td>~4 hours</td><td>Cook fine meal (stove, requires skill)</td></tr>
+                  <tr><td>Ate stew</td><td>~+4</td><td>~4 hours</td><td>Cook stew (stove, requires skill)</td></tr>
                   <tr><td>Ate lavish meal</td><td>~+6</td><td>~6 hours</td><td>Cook lavish meal (stove, higher skill)</td></tr>
-                  <tr><td>Drank alcohol</td><td>~+4 to +8</td><td>~6-10 hours</td><td>Beer/Mead/Wine consumption</td></tr>
+                  <tr><td>Drank alcohol</td><td>~+4 to +8</td><td>~6-10 hours</td><td>Ale/Beer/Mead/Rough Wine consumption</td></tr>
                   <tr><td>Impressive Great Hall</td><td>~+2 to +6</td><td>While eating there</td><td>Build decorated Great Hall</td></tr>
                   <tr><td>Comfortable bedroom</td><td>~+2 to +5</td><td>On waking, lasts hours</td><td>Quality bedroom with furniture</td></tr>
                   <tr><td>Recreation fulfilled</td><td>~+3 to +8</td><td>Varies by activity</td><td>Recreation buildings, instruments</td></tr>
@@ -119,10 +119,10 @@ export default function HappinessGuidePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Food Variety & Dietary Happiness</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Beyond meal quality tiers, the game tracks food variety — settlers who eat the same meal type repeatedly develop food boredom, reducing the happiness value of each subsequent identical meal. Rotating between 2-3 different meal types (e.g., fine meal one day, lavish meal the next, stew on the third day) prevents the boredom penalty. This requires a well-organized kitchen with diverse ingredient stockpiles and a cook who can produce multiple recipe types.
+                Beyond meal quality tiers, the game tracks food variety — settlers who eat the same meal type repeatedly develop food boredom, reducing the happiness value of each subsequent identical meal. Rotating between 2-3 different meal types (e.g., stew one day, lavish meal the next, roasted meat on the third day) prevents the boredom penalty. This requires a well-organized kitchen with diverse ingredient stockpiles and a cook who can produce multiple recipe types.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Raw food variety matters too: settlers who subsist entirely on cabbage develop nutritional deficiencies in addition to the raw food penalty. Maintain at least three crop types (wheat for bread, cabbage for stews, carrots for raw snacking) and supplement with hunted meat for protein. A varied diet combined with cooked meals is the difference between a settler hovering at happiness 40 and one cruising at happiness 70+ without any alcohol or recreation boosts.
+                Raw food variety matters too: settlers who subsist entirely on cabbage develop nutritional deficiencies in addition to the raw food penalty. Maintain at least three crop types (barley for bread, cabbage for stews, carrots for raw snacking) and supplement with hunted meat for protein. A varied diet combined with cooked meals is the difference between a settler hovering at happiness 40 and one cruising at happiness 70+ without any alcohol or recreation boosts.
               </p>
             </section>
 
@@ -153,7 +153,7 @@ export default function HappinessGuidePage() {
               <div className="faq-item">
                 <details>
                   <summary>What's the fastest way to boost happiness in a crisis?</summary>
-                  <p>Wine (+8 happiness, 10 hours) followed by assigning the settler to 2 hours of recreation in a high-quality Great Hall (+5-8 happiness). Together these can push a settler from misery (20) to contentment (60+) within a single day. Keep emergency wine barrels in your Great Hall for this exact scenario.</p>
+                  <p>Rough Wine (+8 happiness, 10 hours) followed by assigning the settler to 2 hours of recreation in a high-quality Great Hall (+5-8 happiness). Together these can push a settler from misery (20) to contentment (60+) within a single day. Keep emergency Rough Wine barrels in your Great Hall for this exact scenario.</p>
                 </details>
               </div>
             </section>
@@ -165,7 +165,7 @@ export default function HappinessGuidePage() {
               <div className="space-y-3">
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">1. Basic Needs</h4><p className="font-serif text-xs text-ink-muted mt-1">Food + Bed + Temperature | Fix first, always</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">2. Comfort</h4><p className="font-serif text-xs text-ink-muted mt-1">Quality bedroom + Great Hall | Stable passive mood</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">3. Consumables</h4><p className="font-serif text-xs text-ink-muted mt-1">Fine meals + Alcohol | Active mood boosts</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">3. Consumables</h4><p className="font-serif text-xs text-ink-muted mt-1">Stew/Lavish meals + Alcohol | Active mood boosts</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">4. Lifestyle</h4><p className="font-serif text-xs text-ink-muted mt-1">Recreation + Temple (unverified room type) + Social | Sustained buffs</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">5. Luxury</h4><p className="font-serif text-xs text-ink-muted mt-1">Noble quarters + Art + Romance | Endgame ceiling</p></div>
               </div>
@@ -173,9 +173,9 @@ export default function HappinessGuidePage() {
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Emergency Mood Rescue</h3>
               <ol className="space-y-2 font-serif text-sm text-ink-light">
-                <li>1. Serve wine (~+8 community est., immediate)</li>
+                <li>1. Serve Rough Wine (~+8 community est., immediate)</li>
                 <li>2. Assign 2hr recreation in Great Hall (~+5-8)</li>
-                <li>3. Cook fine meal for next eating window (~+4)</li>
+                <li>3. Cook stew/lavish meal for next eating window (~+4-6)</li>
                 <li>4. Check bedroom: heat, light, cleanliness</li>
                 <li>5. Separate from incompatible settlers</li>
                 <li>6. Reduce work hours temporarily</li>

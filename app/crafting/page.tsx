@@ -63,7 +63,7 @@ export default function CraftingPage() {
                   <div className="space-y-2 font-serif text-sm text-ink-light">
                     <div className="flex justify-between border-b border-divider pb-1"><span>Bread</span><span className="text-ink-muted">Flour x1, Water x1</span></div>
                     <div className="flex justify-between border-b border-divider pb-1"><span>Stew</span><span className="text-ink-muted">Meat x1, Vegetable x1</span></div>
-                    <div className="flex justify-between border-b border-divider pb-1"><span>Beer</span><span className="text-ink-muted">Hops x2, Water x1</span></div>
+                    <div className="flex justify-between border-b border-divider pb-1"><span>Beer</span><span className="text-ink-muted">Barley x2, Water x1</span></div>
                     <div className="flex justify-between"><span>Smoked Meat</span><span className="text-ink-muted">Raw Meat x1, Wood x1</span></div>
                   </div>
                 </div>

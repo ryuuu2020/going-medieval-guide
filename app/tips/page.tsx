@@ -9,11 +9,11 @@ const TIPS = [
   { cat: 'Building', tip: 'Use a grid layout for underground excavation — leave 1 rock pillar every 4 tiles. It\'s safe and space-efficient.' },
   { cat: 'Farming', tip: 'Replant immediately after every harvest. An idle field is a missed day of production — maximize rotation efficiency.' },
   { cat: 'Crafting', tip: 'Iron items require a full chain: Mining &rarr; Smelting &rarr; Forging. Build your smelter near iron deposits to reduce hauling.' },
-  { cat: 'Trading', tip: 'Beer is the best value-for-money commodity. Grow hops in summer, brew in autumn, and sell in winter for scarce resources.' },
+  { cat: 'Trading', tip: 'Beer is the best value-for-money commodity. Grow barley in spring, brew in autumn, and sell in winter for scarce resources.' },
   { cat: 'Settlers', tip: 'Specialists for specialties. Assign each task to the settler with the highest relevant skill for a major efficiency boost.' },
   { cat: 'Defense', tip: 'Densely pack wooden spike traps 2 tiles in front of your gates. Raiders take continuous damage while breaking the gate.' },
   { cat: 'Building', tip: 'Roofs are mandatory. Rooms without roofs count as outdoor — settlers suffer negative mood from weather exposure.' },
-  { cat: 'Storage', tip: 'Processed food lasts 3x longer than raw food. Turn wheat into bread, meat into smoked meat, and vegetables into pickles.' },
+  { cat: 'Storage', tip: 'Processed food lasts 3x longer than raw food. Turn barley into bread, meat into smoked meat, and vegetables into pickles.' },
   { cat: 'Seasons', tip: 'During summer heat waves, pause heavy outdoor labor and assign indoor work to prevent heatstroke.' },
   { cat: 'Combat', tip: 'Prisoners can be recruited as settlers. Build a prison, hold captives, provide food regularly, then attempt recruitment.' },
   { cat: 'Management', tip: 'Individual bedrooms grant +10 mood. 4x4 tiles with a table and chair works best.' },
@@ -28,7 +28,7 @@ const TIPS = [
   { cat: 'Management', tip: 'A companion\'s death drops mood by 20 points for all settlers. Try to avoid casualties in combat.' },
   { cat: 'Research', tip: 'Keep researchers\' mood at 50+ and stamina full. Fatigue and hunger interrupt research progress.' },
   { cat: 'Defense', tip: 'Crossbows deal very high damage but reload slowly — best for elite marksmen. Bows fire faster and are great for volley fire.' },
-  { cat: 'Farming', tip: 'Herbs and hops are high-value crops. Once food is plentiful, switch to cash crops to boost trade income.' },
+  { cat: 'Farming', tip: 'Herbs and barley are high-value crops. Once food is plentiful, switch to cash crops to boost trade income.' },
   { cat: 'Building', tip: 'A hillside is the ideal site — level ground for farming above, mountain for an underground base below. Best of both worlds.' },
 ];
 

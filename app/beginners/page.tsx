@@ -42,10 +42,10 @@ export default function BeginnersPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Day 2-3: Farming & Water</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Day 2 prioritizes farmland. Near your shelter and close to water, designate an 8x8 planting zone and choose cabbage (fast growing, 6 days to harvest). Also designate a second 6x6 wheat field. Ensure the fields have water for irrigation — being near a river provides automatic irrigation.
+                Day 2 prioritizes farmland. Near your shelter and close to water, designate an 8x8 planting zone and choose cabbage (fast growing, 6 days to harvest). Also designate a second 6x6 barley field. Ensure the fields have water for irrigation — being near a river provides automatic irrigation.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Build a stove (requires stone) and begin processing food. Early on, you can eat cabbage raw, but research bread-making as soon as possible — bread has a longer shelf life and better mood bonuses. Assign one settler as the dedicated cook.
+                Build a stove (requires stone) and begin processing food. Early on, you can eat cabbage raw, but research bread-making as soon as possible — bread from barley has a longer shelf life and better mood bonuses. Assign one settler as the dedicated cook.
               </p>
             </section>
 
@@ -100,7 +100,7 @@ export default function BeginnersPage() {
               <div className="faq-item">
                 <details>
                   <summary>My settlers are always unhappy. What should I do?</summary>
-                  <p>A common beginner issue. Three quick improvements: 1) Ensure food is processed (bread/stew) — raw food lowers mood; 2) Give each settler an individual bedroom with a table and chair; 3) Plant hops and brew beer ASAP — beer is the best mood booster.</p>
+                  <p>A common beginner issue. Three quick improvements: 1) Ensure food is processed (bread/stew) — raw food lowers mood; 2) Give each settler an individual bedroom with a table and chair; 3) Plant barley and brew beer ASAP — beer is the best mood booster.</p>
                 </details>
               </div>
             </section>
@@ -112,7 +112,7 @@ export default function BeginnersPage() {
               <ul className="space-y-2 font-serif text-sm text-ink-light">
                 <li>&#10003; Wood shelter + 3 beds</li>
                 <li>&#10003; 8x8 cabbage field</li>
-                <li>&#10003; 6x6 wheat field</li>
+                <li>&#10003; 6x6 barley field</li>
                 <li>&#10003; Research table active</li>
                 <li>&#10003; Perimeter wall (2 levels high)</li>
                 <li>&#10003; Spike traps x5</li>

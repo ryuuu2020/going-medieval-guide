@@ -8,7 +8,7 @@ export default function FoodPreservationPage() {
             <h1 className="chapter-heading">Food Preservation & Storage Guide</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Pickled food and smoked meat are <strong>confirmed</strong> preservation methods. However, bread/baking (requires wheat — NOT a confirmed crop), cheese (requires milk), and dried fish are <strong>unverified preservation chains</strong>. Hops is NOT a confirmed crop. Wheat, baking ovens, cheese presses, and drying racks may not exist as described. Only pickling and smoking are verified in reference data.
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Pickled Vegetables, Smoked Meat, and Cheese (from Milk) are <strong>all confirmed</strong> preservation methods in Going Medieval. Vinegar is used for pickling vegetables. Salt and Ice Block are confirmed preservation items — Ice Block validates cold storage mechanics. Bread is a confirmed meal type but the baking chain from grain to flour to bread uses Barley (the confirmed grain crop), NOT wheat. Hops and wheat are NOT confirmed crops and do not exist in the game. Drying racks and dried meat/fish are <strong>unverified</strong>. Specific shelf life and temperature values below are community estimates.
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
@@ -66,7 +66,7 @@ export default function FoodPreservationPage() {
           <section>
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">Preservation Processing Chains</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Processing raw food through preservation stations dramatically extends shelf life. Each method has different input requirements, processing time, and output shelf life. The best strategy is to chain multiple methods — for example, harvest wheat, mill into flour, bake into bread, store in a -2F cellar for maximum preservation.
+              Processing raw food through preservation stations dramatically extends shelf life. Each method has different input requirements, processing time, and output shelf life. The best strategy is to chain multiple methods — for example, plant barley, mill into flour, bake into bread, store in a -2F cellar for maximum preservation. Pickle vegetables with vinegar, smoke meat, and make cheese from milk for a diversified food stockpile.
             </p>
             <table className="parchment-table">
               <thead>
@@ -81,11 +81,11 @@ export default function FoodPreservationPage() {
               </thead>
               <tbody>
                   <tr><td className="font-semibold">Smoking</td><td>Raw Meat</td><td>Smoked Meat</td><td>~3 days</td><td>~15 days</td><td>Smokehouse</td></tr>
-                  <tr><td className="font-semibold">Pickling</td><td>Cabbage</td><td>Pickled Cabbage</td><td>~5 days</td><td>~25 days</td><td>Pickling Barrel</td></tr>
-                  <tr><td className="font-semibold">Baking</td><td>Wheat Flour</td><td>Bread</td><td>~3 days (flour)</td><td>~12 days</td><td>Oven</td></tr>
-                  <tr><td className="font-semibold">Drying</td><td>Meat, Fish</td><td>Dried Meat</td><td>~3 days</td><td>~20 days</td><td>Drying Rack</td></tr>
-                  <tr><td className="font-semibold">Cheese</td><td>Milk</td><td>Cheese</td><td>~2 days (milk)</td><td>~30 days</td><td>Cheese Press</td></tr>
-                  <tr><td className="font-semibold">Brewing</td><td>Hops</td><td>Beer</td><td>~5 days (hops)</td><td>~60 days</td><td>Brewery</td></tr>
+                  <tr><td className="font-semibold">Pickling</td><td>Vegetables + Vinegar</td><td>Pickled Vegetables</td><td>~5 days</td><td>~25 days</td><td>Pickling Barrel</td></tr>
+                  <tr><td className="font-semibold">Cheese Making</td><td>Milk</td><td>Cheese</td><td>~2 days (milk)</td><td>~30 days</td><td>Cheese Press</td></tr>
+                  <tr><td className="font-semibold">Salting</td><td>Raw Meat/Fish + Salt</td><td>Salted Meat</td><td>~3 days</td><td>~25 days</td><td>Salt Barrel</td></tr>
+                  <tr><td className="font-semibold">Cold Storage</td><td>Any food + Ice Block</td><td>Preserved goods</td><td>Varies</td><td>2x normal shelf life</td><td>Underground cellar</td></tr>
+                  <tr><td className="font-semibold">Vinegar Production</td><td>Fermented fruit/grain</td><td>Vinegar</td><td>~5 days (input)</td><td>~60+ days</td><td>Fermenting Station</td></tr>
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -126,7 +126,7 @@ export default function FoodPreservationPage() {
             <div className="faq-item">
               <details>
                 <summary>What's the best preservation method overall?</summary>
-                <p>The optimal chain is baking bread + smoking meat + pickling vegetables. Bread from wheat is the most efficient calorie source (high yield per tile, long shelf life). Smoked meat preserves your hunting surplus. Pickling turns excess cabbage into a long-lasting winter food. Combine all three for a diversified food stockpile that covers all nutritional needs.</p>
+                <p>The optimal chain combines smoked meat + pickled vegetables + cheese + bread. Barley is the confirmed grain — mill it into flour and bake into bread for a long-lasting carbohydrate source. Smoked meat preserves hunting surplus. Pickled vegetables use vinegar to turn excess vegetables into winter food. Cheese from milk provides the longest shelf life. Combine all methods for a diversified stockpile that covers all nutritional needs.</p>
               </details>
             </div>
             <div className="faq-item">
@@ -152,7 +152,7 @@ export default function FoodPreservationPage() {
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~2-3 days | Cellar: ~8-10 days</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Bread</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~5 days | Cellar: ~15-20 days</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Smoked Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~8 days | Cellar: ~25-30 days</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Pickled Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~12 days | Cellar: ~35-40 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Pickled Vegetables</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~12 days | Cellar: ~35-40 days</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cheese</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~15 days | Cellar: ~45-50 days</p></div>
             </div>
           </div>
@@ -161,10 +161,11 @@ export default function FoodPreservationPage() {
             <ul className="space-y-2 font-serif text-sm text-ink-light">
               <li>1. Build -2F root cellar ASAP</li>
               <li>2. Process raw meat into smoked meat</li>
-              <li>3. Mill wheat into flour, bake bread</li>
-              <li>4. Pickle excess cabbage</li>
+              <li>3. Mill barley into flour, bake bread</li>
+              <li>4. Pickle vegetables with vinegar</li>
               <li>5. Make cheese from milk</li>
-              <li>6. Install wooden shelves in cellar</li>
+              <li>6. Craft Ice Blocks for extended cold storage</li>
+              <li>7. Install wooden shelves in cellar</li>
             </ul>
           </div>
         </aside>

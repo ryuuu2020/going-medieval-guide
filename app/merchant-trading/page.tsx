@@ -78,8 +78,8 @@ export default function MerchantTradingPage() {
                 <tr><td className="font-semibold">Iron Sword</td><td>Iron ore (mined)</td><td>~80-120 silver</td><td className="text-gold">High</td><td>High base value but requires smelting and forging chain. Needs skilled smith (Crafting 10+).</td></tr>
                 <tr><td className="font-semibold">Smoked Meat</td><td>Raw meat (hunting)</td><td>~15-20 silver</td><td className="text-gold">High</td><td>Doubles meat value through processing. Hunters provide infinite raw input. Excellent early-game income.</td></tr>
                 <tr><td className="font-semibold">Cloth Tunic</td><td>Flax cloth (farmed)</td><td>~20-30 silver</td><td className="text-gold">High</td><td>Flax is easy to grow in bulk. Clothing multiplies cloth value 2-3x. Good for tailors.</td></tr>
-                <tr><td className="font-semibold">Bread</td><td>Wheat (farmed)</td><td>~10-15 silver</td><td>Medium</td><td>Mediocre profit but staple food. Sell surplus only — prioritize feeding settlers.</td></tr>
-                <tr><td className="font-semibold">Pickled Cabbage</td><td>Cabbage (farmed)</td><td>~8-12 silver</td><td>Medium</td><td>Long shelf life makes it easy to stockpile for bulk sales. Low individual value but high volume.</td></tr>
+                <tr><td className="font-semibold">Bread</td><td>Barley (farmed)</td><td>~10-15 silver</td><td>Medium</td><td>Mediocre profit but staple food. Sell surplus only — prioritize feeding settlers.</td></tr>
+                <tr><td className="font-semibold">Pickled Vegetables</td><td>Cabbage/Veg (farmed)</td><td>~8-12 silver</td><td>Medium</td><td>Long shelf life makes it easy to stockpile for bulk sales. Low individual value but high volume.</td></tr>
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -112,7 +112,7 @@ export default function MerchantTradingPage() {
               Merchant caravans visit on a semi-random schedule. Base frequency is roughly every 10-14 in-game days, but this is modified by several factors. Building a trade post increases visit frequency by roughly 30%. The Speechcraft skill of your colony (collective) also affects how often merchants choose to stop. Caravans are more frequent in autumn than other seasons, making autumn the best time to prepare trade goods.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              Strategic timing: use the gaps between merchant visits to produce trade goods. After a trade completes, immediately queue up the next batch of production. A well-oiled trade cycle looks like: Spring — plant hops and flax; Summer — harvest and brew beer, weave cloth; Autumn — craft clothing, finalize beer batches, sell everything; Winter — use silver to buy scarce goods, prepare for spring. This annual rhythm ensures you always have something valuable when merchants arrive.
+              Strategic timing: use the gaps between merchant visits to produce trade goods. After a trade completes, immediately queue up the next batch of production. A well-oiled trade cycle looks like: Spring — plant barley and flax; Summer — harvest and brew beer/ale, weave cloth; Autumn — craft clothing, finalize beer batches, sell everything; Winter — use silver to buy scarce goods, prepare for spring. This annual rhythm ensures you always have something valuable when merchants arrive.
             </p>
           </section>
 

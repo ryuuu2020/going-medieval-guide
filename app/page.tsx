@@ -48,7 +48,7 @@ const FEATURED_GUIDES = [
 const GETTING_STARTED = [
   { step: '1', title: 'Choosing a Site', desc: 'Pick a spot near water on elevated ground, balancing defense and farming needs. A hillside is ideal for building an underground base.' },
   { step: '2', title: 'Your First Building', desc: 'Prioritize building a wooden-walled temporary shelter so your settlers have protection from the elements. Also build a stockpile zone for initial supplies.' },
-  { step: '3', title: 'Food Supply', desc: 'Immediately plant cabbage and wheat fields, while setting up hunting zones. Stockpile enough food to survive your first winter.' },
+  { step: '3', title: 'Food Supply', desc: 'Immediately plant cabbage and barley fields, while setting up hunting zones. Stockpile enough food to survive your first winter.' },
   { step: '4', title: 'Defense Prep', desc: 'Build wooden walls and gates around the settlement perimeter. Craft bows and melee weapons. Train at least one settler in combat skills.' },
 ];
 
