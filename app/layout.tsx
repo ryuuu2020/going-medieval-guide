@@ -266,6 +266,19 @@ export default function RootLayout({
               >
                 FAQ
               </a>
+              <a
+                href="https://afdian.com/a/gameguidehub"
+                target="_blank"
+                rel="noopener"
+                style={{
+                  color: "var(--color-accent)",
+                  fontSize: "0.9rem",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+              >
+                ❤️ 支持我们
+              </a>
             </div>
 
             {/* Disclaimer */}
