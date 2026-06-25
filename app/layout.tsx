@@ -192,7 +192,7 @@ export default function RootLayout({
                 <a href="https://menace-guide.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>MENACE Guide</a>
                 <a href="https://olden-era-guide-tau.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Olden Era Guide</a>
                 <a href="https://dispatch-guide-sigma.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Dispatch Guide</a>
-                <a href="https://solarpunk-guide-ecru.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Solarpunk Guide</a>
+                <a href="https://solarpunk-game-wiki.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: "0.9rem" }}>Solarpunk Guide</a>
               </div>
             </section>
 
