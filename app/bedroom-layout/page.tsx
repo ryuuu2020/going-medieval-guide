@@ -42,12 +42,12 @@ export default function BedroomLayoutPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>2x2</td><td>Cramped</td><td>-2 mood</td><td>Emergency only — avoid</td></tr>
-                  <tr><td>3x3</td><td>Tight</td><td>+0</td><td>Bare minimum, ascetic settlers</td></tr>
-                  <tr><td>4x4</td><td>Adequate</td><td>+1</td><td>Standard settler bedroom</td></tr>
-                  <tr><td>5x5</td><td>Comfortable</td><td>+3</td><td>Good standard, most common build</td></tr>
-                  <tr><td>6x6</td><td>Spacious</td><td>+4</td><td>Skilled workers and artisans</td></tr>
-                  <tr><td>7x7</td><td>Luxurious</td><td>+5</td><td>Noble bedroom minimum</td></tr>
+                  <tr><td>2x2</td><td>Cramped</td><td>~-2 mood (est.)</td><td>Emergency only — avoid</td></tr>
+                  <tr><td>3x3</td><td>Tight</td><td>~+0 (est.)</td><td>Bare minimum, ascetic settlers</td></tr>
+                  <tr><td>4x4</td><td>Adequate</td><td>~+1 (est.)</td><td>Standard settler bedroom</td></tr>
+                  <tr><td>5x5</td><td>Comfortable</td><td>~+3 (est.)</td><td>Good standard, most common build</td></tr>
+                  <tr><td>6x6</td><td>Spacious</td><td>~+4 (est.)</td><td>Skilled workers and artisans</td></tr>
+                  <tr><td>7x7</td><td>Luxurious</td><td>~+5 (est.)</td><td>Noble bedroom minimum (unverified if nobles exist)</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -64,19 +64,19 @@ export default function BedroomLayoutPage() {
               <div className="space-y-3">
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Sleeping Spot (Tier 1, No Bonus)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">A bedroll on the floor. Zero comfort contribution. Generates "slept on the ground" penalty (-3 mood). Only use as an emergency measure or in prisons. Always replace with a constructed bed within the first week.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">A bedroll on the floor. Zero comfort contribution. May generate "slept on the ground" penalty. Only use as an emergency measure or in prisons. Always replace with a constructed bed within the first week.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Wooden Bed (Tier 2, +2 Comfort)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">The standard early-game bed. Crafted from wood. Provides adequate comfort for regular settlers. Pair with a torch for full lighting and a bedside table for the "well-furnished" bonus.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Wooden Bed (Tier 2, Basic Comfort)</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">The standard early-game bed. Crafted from wood. Provides adequate comfort for regular settlers. Pair with a torch for full lighting and a bedside table for improved comfort.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Single Bed (Tier 3, +3 Comfort)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Improved bed with mattress, requiring wood and cloth. Significant comfort upgrade over the wooden bed. Ideal for skilled workers whose mood matters more.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Single Bed (Tier 3, Improved Comfort)</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Improved bed with mattress. Significant comfort upgrade over the wooden bed. Ideal for skilled workers whose mood matters more.</p>
                 </div>
                 <div className="journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Canopy Bed (Tier 4, +5 Comfort)</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Premium bed requiring wood, cloth, and decorative elements. Generates the highest sleep comfort of any bed type. Essential for noble bedrooms — nobles receive a -8 mood penalty if they don't have a canopy bed.</p>
+                  <h4 className="font-display text-base font-semibold text-ink">Canopy Bed (Tier 4, Premium Comfort)</h4>
+                  <p className="font-serif text-sm text-ink-light mt-1">Premium bed requiring advanced materials and research. Generates the highest sleep comfort of any bed type. Essential for noble bedrooms if nobles exist in your game version — nobles may receive a significant mood penalty without premium beds.</p>
                 </div>
               </div>
             </section>
@@ -128,11 +128,11 @@ export default function BedroomLayoutPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Bed Type Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Sleeping Spot</h4><p className="font-serif text-xs text-ink-muted mt-1">Free | No comfort | -3 mood penalty</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Wooden Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x5 | +2 comfort | Basic</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Single Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x5, Cloth x3 | +3 comfort | Standard</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Canopy Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x8, Cloth x5, Iron x2 | +5 comfort | Noble requirement</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Double Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x10, Cloth x6 | +4 comfort | Couples only</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Sleeping Spot</h4><p className="font-serif text-xs text-ink-muted mt-1">Free | No comfort | May cause mood penalty</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Wooden Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">~Wood x5 | Basic comfort | Standard</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Single Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">~Wood x5, Cloth x3 | Improved comfort</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Canopy Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">~Wood x8, Cloth x5, Iron x2 | Premium comfort | Noble req.</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Double Bed</h4><p className="font-serif text-xs text-ink-muted mt-1">~Wood x10, Cloth x6 | Couples only</p></div>
               </div>
             </div>
             <div className="journal-card p-5">

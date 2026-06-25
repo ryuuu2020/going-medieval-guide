@@ -24,10 +24,10 @@ export default function KitchenDesignPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Stove vs Campfire: When to Upgrade</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The campfire is your starting cooking station — it requires only wood for fuel and stone for construction, making it available from day one. However, campfires are inefficient: they produce only basic meals (stew, grilled meat), cook 30% slower than stoves, consume more fuel per meal, and generate smoke that can cause breathing problems in enclosed kitchens. The campfire should be placed outdoors or in a well-ventilated room with at least one open wall or a chimney shaft, otherwise settlers suffer the "filled room with smoke" mood penalty.
+                The campfire is your starting cooking station — it requires only wood for fuel and stone for construction, making it available from day one. However, campfires are less efficient than stoves: they produce only basic meals, cook slower than stoves, consume more fuel per meal, and may generate smoke issues in enclosed kitchens. The campfire should be placed outdoors or in a well-ventilated room with at least one open wall or a chimney shaft.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                The stove is a research-unlocked upgrade that represents a major leap in food production capability. Stoves cook 30% faster, consume fuel more efficiently (2 wood per 3 meals vs 1 wood per meal for campfires), and crucially unlock advanced meal recipes: fine meals (+4 mood when eaten), lavish meals (+6 mood), and specialty dishes. A stove requires iron ingots and stone to construct, so it's an early-mid game investment. Transition to a stove as soon as your colony reaches 5+ settlers — the efficiency gains pay back the iron cost within a single season.
+                The stove is a research-unlocked upgrade that represents a major leap in food production capability. Stoves cook significantly faster, consume fuel more efficiently, and crucially unlock advanced meal recipes that provide positive mood buffs. A stove requires iron ingots and stone to construct, so it's an early-mid game investment. Transition to a stove as soon as your colony reaches 5+ settlers — the efficiency gains are substantial. Exact speed/fuel ratios are community estimates.
               </p>
             </section>
 
@@ -55,7 +55,7 @@ export default function KitchenDesignPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Cook Skill & Efficiency</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's Culinary skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food poisoning chance (lower skill increases the risk of spoiled or contaminated meals that cause illness). Assign your highest Culinary skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with Culinary 10+ produces ~2-3x the meals of a rotating-duty cook with Culinary 3.
+                A settler's Culinary skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food safety (lower skill may increase the risk of food-related illness). Assign your highest Culinary skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with high Culinary skill produces significantly more meals than a rotating-duty cook with low skill. Exact output multipliers are community estimates.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Avoid task-switching penalties. A common mistake is assigning the cook to also haul, farm, or construct — every time they switch tasks, they lose productive cooking time moving between zones. Set your dedicated cook's work priorities so that Culinary is #1 and all other tasks are #4 or lower. This keeps them in the kitchen producing meals continuously. Supplement with a dedicated hauler who moves ingredients from main storage to the kitchen stockpile, so the cook never has to fetch supplies from the warehouse.
@@ -78,11 +78,11 @@ export default function KitchenDesignPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Raw food</td><td>None</td><td>No</td><td>-3 Ate raw food</td><td>Any edible raw</td></tr>
+                  <tr><td>Raw food</td><td>None</td><td>No</td><td>~-3 Ate raw food (est.)</td><td>Any edible raw</td></tr>
                   <tr><td>Simple Meal</td><td>0</td><td>No (campfire)</td><td>No bonus</td><td>Vegetable or meat x1</td></tr>
-                  <tr><td>Fine Meal</td><td>3</td><td>Yes</td><td>+4 mood</td><td>Meat x1 + vegetable x1</td></tr>
-                  <tr><td>Lavish Meal</td><td>7</td><td>Yes</td><td>+6 mood</td><td>Meat x1 + vegetable x2</td></tr>
-                  <tr><td>Gourmet Meal</td><td>12</td><td>Yes</td><td>+8 mood</td><td>Various premium ingredients</td></tr>
+                  <tr><td>Fine Meal</td><td>~3 (est.)</td><td>Yes</td><td>~+4 mood (est.)</td><td>Meat x1 + vegetable x1</td></tr>
+                  <tr><td>Lavish Meal</td><td>~7 (est.)</td><td>Yes</td><td>~+6 mood (est.)</td><td>Meat x1 + vegetable x2</td></tr>
+                  <tr><td>Gourmet Meal</td><td>~12 (est.)</td><td>Yes</td><td>~+8 mood (est.)</td><td>Various premium ingredients</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>

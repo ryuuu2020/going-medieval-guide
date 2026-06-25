@@ -28,10 +28,10 @@ export default function ArmorWeaponsPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Leather Armor</td><td>25%</td><td>100</td><td>Leather x9</td><td>None</td><td>Early-game, archers</td></tr>
-                  <tr><td>Gambeson</td><td>40%</td><td>180</td><td>Cloth x6, Leather x4</td><td>None</td><td>Mid-game, skirmishers</td></tr>
-                  <tr><td>Plate Armor</td><td>65%</td><td>350</td><td>Iron Ingot x12, Leather x6</td><td>-15% speed</td><td>Late-game, melee tanks</td></tr>
-                  <tr><td>Steel Armor</td><td>80%</td><td>600</td><td>Steel Ingot x15, Leather x8</td><td>-20% speed</td><td>Endgame, elite defenders</td></tr>
+                  <tr><td>Leather Armor</td><td>~25%</td><td>~100</td><td>~Leather x9</td><td>Minimal</td><td>Early-game, archers</td></tr>
+                  <tr><td>Gambeson</td><td>~40%</td><td>~180</td><td>~Cloth x6, Leather x4</td><td>Minimal</td><td>Mid-game, skirmishers</td></tr>
+                  <tr><td>Plate Armor</td><td>~65%</td><td>~350</td><td>~Iron Ingot x12, Leather x6</td><td>Moderate speed reduction</td><td>Late-game, melee tanks</td></tr>
+                  <tr><td>Steel Armor</td><td>~80%</td><td>~600</td><td>~Steel Ingot x15, Leather x8</td><td>Significant speed reduction</td><td>Endgame, elite defenders</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -58,12 +58,12 @@ export default function ArmorWeaponsPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Longbow</td><td>Ranged</td><td>18-22</td><td>15%</td><td>Fast</td><td>Wood x3, Rope x1</td><td>Wall archer</td></tr>
-                  <tr><td>Crossbow</td><td>Ranged</td><td>30-38</td><td>45%</td><td>Slow</td><td>Wood x2, Iron x2</td><td>Armor-piercing sniper</td></tr>
-                  <tr><td>Iron Sword</td><td>Melee</td><td>22-28</td><td>20%</td><td>Medium</td><td>Iron x2, Leather x1</td><td>Balanced melee</td></tr>
-                  <tr><td>Mace</td><td>Melee</td><td>25-32</td><td>35%</td><td>Slow</td><td>Iron x3, Wood x1</td><td>Armor-cracking melee</td></tr>
-                  <tr><td>Spear</td><td>Melee</td><td>20-26</td><td>25%</td><td>Fast</td><td>Wood x2, Iron x1</td><td>Reach advantage, gate defense</td></tr>
-                  <tr><td>Steel Sword</td><td>Melee</td><td>32-40</td><td>40%</td><td>Medium</td><td>Steel x3, Leather x2</td><td>Endgame elite melee</td></tr>
+                  <tr><td>Longbow</td><td>Ranged</td><td>~18-22</td><td>~15%</td><td>Fast</td><td>~Wood x3, Rope x1</td><td>Wall archer</td></tr>
+                  <tr><td>Crossbow</td><td>Ranged</td><td>~30-38</td><td>~45%</td><td>Slow</td><td>~Wood x2, Iron x2</td><td>Armor-piercing sniper</td></tr>
+                  <tr><td>Iron Sword</td><td>Melee</td><td>~22-28</td><td>~20%</td><td>Medium</td><td>~Iron x2, Leather x1</td><td>Balanced melee</td></tr>
+                  <tr><td>Mace</td><td>Melee</td><td>~25-32</td><td>~35%</td><td>Slow</td><td>~Iron x3, Wood x1</td><td>Armor-cracking melee</td></tr>
+                  <tr><td>Spear</td><td>Melee</td><td>~20-26</td><td>~25%</td><td>Fast</td><td>~Wood x2, Iron x1</td><td>Reach advantage, gate defense</td></tr>
+                  <tr><td>Steel Sword</td><td>Melee</td><td>~32-40</td><td>~40%</td><td>Medium</td><td>~Steel x3, Leather x2</td><td>Endgame elite melee</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -130,8 +130,8 @@ export default function ArmorWeaponsPage() {
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Longbow</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x3, Rope x1 | Ranged Fast</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Crossbow</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x2, Iron x2 | Ranged Slow AP</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Iron Sword</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron x2, Leather x1 | Balanced</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Plate Armor Set</h4><p className="font-serif text-xs text-ink-muted mt-1">Iron x12, Leather x6 | 65% DR</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Steel Armor Set</h4><p className="font-serif text-xs text-ink-muted mt-1">Steel x15, Leather x8 | 80% DR</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Plate Armor Set</h4><p className="font-serif text-xs text-ink-muted mt-1">~Iron x12, Leather x6 | ~65% DR (est.)</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Steel Armor Set</h4><p className="font-serif text-xs text-ink-muted mt-1">~Steel x15, Leather x8 | ~80% DR (est.)</p></div>
               </div>
             </div>
             <div className="journal-card p-5">

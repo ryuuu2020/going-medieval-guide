@@ -30,9 +30,9 @@ export default function RoomDesignPage() {
                   <tr><td>Great Hall</td><td>Table + chairs</td><td>8x8 to 12x12</td><td>Recreation, social, mood when eating</td></tr>
                   <tr><td>Kitchen</td><td>Stove or campfire</td><td>5x5 to 6x6</td><td>Cook speed, meal quality</td></tr>
                   <tr><td>Workshop</td><td>Crafting stations</td><td>6x6 to 8x8</td><td>Craft speed boost</td></tr>
-                  <tr><td>Temple</td><td>Altar</td><td>6x6 to 8x8</td><td>Spiritual fulfillment, mood</td></tr>
-                  <tr><td>Prison</td><td>Sleeping spot + restraints</td><td>3x3 per prisoner</td><td>Recruitment chance</td></tr>
-                  <tr><td>Hospital</td><td>Medical bed</td><td>5x5 to 6x6</td><td>Healing speed, infection resistance</td></tr>
+                  <tr><td>Temple</td><td>Altar</td><td>6x6 to 8x8</td><td>Spiritual fulfillment, mood</td><td className="text-vermillion">[待验证] Room type unconfirmed</td></tr>
+                  <tr><td>Prison</td><td>Sleeping spot + restraints</td><td>3x3 per prisoner</td><td>Recruitment chance</td><td className="text-vermillion">[待验证] Room type unconfirmed</td></tr>
+                  <tr><td>Hospital</td><td>Medical bed</td><td>5x5 to 6x6</td><td>Healing speed, infection resistance</td><td className="text-vermillion">[待验证] Room type unconfirmed</td></tr>
                   <tr><td>Library</td><td>Research bench</td><td>5x5 to 6x6</td><td>Research speed</td></tr>
                 </tbody>
               </table>
@@ -62,10 +62,10 @@ export default function RoomDesignPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Temple and Prison: Special Purpose Rooms</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Temples provide spiritual fulfillment — one of the hardest positive mood sources to obtain in the game. A temple requires an altar (crafted from stone blocks) and benefits from decorations like banners, rugs, and candles. Settlers with high piety visit the temple daily, gaining a stacking "spiritual peace" mood buff that can reach +8. Temples should be quiet, well-lit, and kept clean — dirty temples generate negative mood instead of positive. A 6x6 temple with an altar, two banners, two candles, and a rug serves 6 settlers comfortably.
+                Temples provide spiritual fulfillment — one of the hardest positive mood sources to obtain in the game. <strong className="text-vermillion">&#9888; Temples as a distinct room type are NOT confirmed in the verified reference data.</strong> If they exist in your game version, a temple may require an altar and benefit from decorations like banners, rugs, and candles. The specific bonuses and mechanics below are unverified community reports.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Prisons serve dual purposes: holding captured raiders and converting them into settlers. A prison room is created by placing sleeping spots (not constructed beds) and wall restraints (shackles) inside an enclosed room with a lockable door. Each prisoner needs a 3x3 sub-area with a sleeping spot and access to a restraint. Prison quality influences recruitment chance — a clean, lit, warm prison with a table and stools increases recruitment by up to 30%. Never leave prisoners in the dark or cold; an unhappy prisoner will resist recruitment attempts even if you provide food and medicine.
+                Prisons serve dual purposes: holding captured raiders and converting them into settlers. <strong className="text-vermillion">&#9888; Prisons as a distinct room type are NOT confirmed in the verified reference data.</strong> If they exist in your game version, a prison room may be created by placing sleeping spots and wall restraints inside an enclosed room. The recruitment mechanics below are unverified community reports.
               </p>
             </section>
 

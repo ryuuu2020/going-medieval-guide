@@ -79,17 +79,17 @@ export default function ClayBrickPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Durability (HP)</td><td>250</td><td>500</td><td>150</td></tr>
+                  <tr><td>Durability (HP)</td><td>~250 (community est.)</td><td>~500 (community est.)</td><td>~150 (community est.)</td></tr>
                   <tr><td>Insulation</td><td>Medium</td><td>High</td><td>Low</td></tr>
                   <tr><td>Fire Resistance</td><td>Good</td><td>Excellent</td><td>Poor</td></tr>
-                  <tr><td>Materials (per wall)</td><td>Clay Brick x4</td><td>Stone Block x4</td><td>Wood x4</td></tr>
+                  <tr><td>Materials (per wall)</td><td>Clay Brick x~4</td><td>Stone Block x~4</td><td>Wood x~4</td></tr>
                   <tr><td>Production Time</td><td>Medium (kiln)</td><td>Fast (stonecutter)</td><td>Instant</td></tr>
                   <tr><td>Availability</td><td>Widespread near water</td><td>Biome dependent</td><td>Universal</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                Verdict: Clay brick is the superior mid-game choice for colonies on maps with abundant clay (river, marsh biomes). It provides 66% more durability than wood at a production cost that's manageable with one dedicated kiln operator. Stone walls are the long-term upgrade target, but clay brick walls serve as an excellent intermediate step that can carry your colony through the mid-game while you build up stone production infrastructure.
+                Verdict: Clay brick is the superior mid-game choice for colonies on maps with abundant clay (river, marsh biomes). It provides significantly more durability than wood at a manageable production cost. Stone walls are the long-term upgrade target, but clay brick walls serve as an excellent intermediate step that can carry your colony through the mid-game while you build up stone production infrastructure. Exact HP values are community estimates and may vary by game version.
               </p>
             </section>
 
@@ -114,7 +114,7 @@ export default function ClayBrickPage() {
               <div className="faq-item">
                 <details>
                   <summary>Can I skip brick and go straight to stone walls?</summary>
-                  <p>Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls at 250 HP are vastly better than wood at 150 HP and will survive raids that would instantly demolish wood walls.</p>
+                  <p>Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are community estimates).</p>
                 </details>
               </div>
               <div className="faq-item">
@@ -137,7 +137,7 @@ export default function ClayBrickPage() {
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Brick Production Quick Ref</h3>
               <div className="space-y-3">
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Clay → Brick</h4><p className="font-serif text-xs text-ink-muted mt-1">3 clay + 1 fuel = 1 brick</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Clay Brick Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">4 bricks per wall | 250 HP</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Clay Brick Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">~4 bricks per wall | HP: community estimate</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Kiln Construction</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x4, Wood x6 | Skill 4+</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Daily Output (1 worker)</h4><p className="font-serif text-xs text-ink-muted mt-1">15-20 bricks/day</p></div>
               </div>

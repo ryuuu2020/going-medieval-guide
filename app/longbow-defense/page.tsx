@@ -78,7 +78,7 @@ export default function LongbowDefensePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Marksmanship Skill Impact</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's Marksmanship skill directly governs longbow performance. The skill affects three separate combat parameters: base accuracy, critical hit chance, and reload speed. Each point of Marksmanship above 5 adds roughly 3-4% accuracy and 2% critical hit chance. At skill level 10, a longbow archer is approximately 60% more lethal than a skill level 5 archer firing from the same position.
+                A settler's Marksmanship skill directly governs longbow performance. The skill affects three separate combat parameters: base accuracy, critical hit chance, and reload speed. Exact skill-to-stat mappings are community estimates — the game's internal calculations have not been verified against official data. In general, higher Marksmanship means significantly better performance.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Priority rule: always assign your highest-Marksmanship settlers to longbow positions. A skill 10 archer on a low wall outperforms a skill 5 archer on a high tower. Train marksmanship through regular combat encounters and archery targets. Do not waste high-Marksmanship settlers on melee roles—their skill is too valuable on the walls. For a 6-archer defense line, aim to have at least 2 settlers with Marksmanship 8+, with the remaining 4 at 5+.
@@ -112,9 +112,9 @@ export default function LongbowDefensePage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Longbow Quick Stats</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Max Range</h4><p className="font-serif text-xs text-ink-muted mt-1">~25 tiles (effective ~15 tiles)</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Base Damage</h4><p className="font-serif text-xs text-ink-muted mt-1">18-22 per hit (unarmored)</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Fire Rate</h4><p className="font-serif text-xs text-ink-muted mt-1">~3 seconds per shot</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Max Range</h4><p className="font-serif text-xs text-ink-muted mt-1">~25 tiles (effective ~15 tiles, community est.)</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Base Damage</h4><p className="font-serif text-xs text-ink-muted mt-1">~18-22 per hit (unarmored, community est.)</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Fire Rate</h4><p className="font-serif text-xs text-ink-muted mt-1">~3 seconds per shot (community est.)</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Crafting Cost</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x3, Rope x1</p></div>
               </div>
             </div>

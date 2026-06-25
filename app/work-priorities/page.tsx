@@ -80,7 +80,7 @@ export default function WorkPrioritiesPage() {
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Schedule Warning:</strong>
-                  Do not set work blocks longer than 8 consecutive hours. Settlers need to eat, rest, and recreate. Working past fatigue thresholds causes severe efficiency penalties—a tired settler at hour 10 of work operates at 40% speed. Eight-hour work blocks with breaks between them produce more total output than 12-hour marathon shifts.
+                  Avoid setting excessively long work blocks. Settlers need to eat, rest, and recreate. Working past fatigue thresholds may cause severe efficiency penalties — a tired settler at hour 10 of work may operate at significantly reduced speed. Shorter work blocks with breaks between them can produce more total output than marathon shifts. Exact fatigue mechanics are unverified against official game data.
                 </p>
               </div>
             </section>
@@ -127,7 +127,7 @@ export default function WorkPrioritiesPage() {
               <div className="faq-item">
                 <details>
                   <summary>How do I handle settlers with no useful skills?</summary>
-                  <p>Even settlers with poor skills can serve as dedicated haulers and cleaners. Set Hauling and Cleaning to priority 1 for low-skill settlers. This frees up your skilled workers from these time-consuming but low-skill tasks, allowing them to focus on their specialties. A dedicated hauler can increase overall colony efficiency by 20-30% just by offloading hauling from skilled workers.</p>
+                  <p>Even settlers with poor skills can serve as dedicated haulers and cleaners. Set Hauling and Cleaning to priority 1 for low-skill settlers. This frees up your skilled workers from these time-consuming but low-skill tasks, allowing them to focus on their specialties. A dedicated hauler can significantly increase overall colony efficiency just by offloading hauling from skilled workers.</p>
                 </details>
               </div>
               <div className="faq-item">

@@ -74,21 +74,21 @@ export default function MerchantTradingPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="font-semibold">Beer</td><td>Hops (renewable crop)</td><td>~40-50 silver</td><td className="text-gold">★★★★★</td><td>Highest profit per input. Grow hops in summer, brew in autumn, sell in winter. Mass-produce for a silver empire.</td></tr>
-                <tr><td className="font-semibold">Iron Sword</td><td>Iron ore (mined)</td><td>~80-120 silver</td><td className="text-gold">★★★★☆</td><td>High base value but requires smelting and forging chain. Needs skilled smith (Crafting 10+).</td></tr>
-                <tr><td className="font-semibold">Smoked Meat</td><td>Raw meat (hunting)</td><td>~15-20 silver</td><td className="text-gold">★★★★☆</td><td>Doubles meat value through processing. Hunters provide infinite raw input. Excellent early-game income.</td></tr>
-                <tr><td className="font-semibold">Cloth Tunic</td><td>Flax cloth (farmed)</td><td>~20-30 silver</td><td className="text-gold">★★★★☆</td><td>Flax is easy to grow in bulk. Clothing multiplies cloth value 2-3x. Good for tailors.</td></tr>
-                <tr><td className="font-semibold">Bread</td><td>Wheat (farmed)</td><td>~10-15 silver</td><td>★★★☆☆</td><td>Mediocre profit but staple food. Sell surplus only — prioritize feeding settlers.</td></tr>
-                <tr><td className="font-semibold">Pickled Cabbage</td><td>Cabbage (farmed)</td><td>~8-12 silver</td><td>★★★☆☆</td><td>Long shelf life makes it easy to stockpile for bulk sales. Low individual value but high volume.</td></tr>
+                <tr><td className="font-semibold">Beer</td><td>Barley (confirmed crop)</td><td>~40-50 silver</td><td className="text-gold">High</td><td>Highest profit per input. Grow barley in summer, brew in autumn, sell in winter. Mass-produce for a silver empire.</td></tr>
+                <tr><td className="font-semibold">Iron Sword</td><td>Iron ore (mined)</td><td>~80-120 silver</td><td className="text-gold">High</td><td>High base value but requires smelting and forging chain. Needs skilled smith (Crafting 10+).</td></tr>
+                <tr><td className="font-semibold">Smoked Meat</td><td>Raw meat (hunting)</td><td>~15-20 silver</td><td className="text-gold">High</td><td>Doubles meat value through processing. Hunters provide infinite raw input. Excellent early-game income.</td></tr>
+                <tr><td className="font-semibold">Cloth Tunic</td><td>Flax cloth (farmed)</td><td>~20-30 silver</td><td className="text-gold">High</td><td>Flax is easy to grow in bulk. Clothing multiplies cloth value 2-3x. Good for tailors.</td></tr>
+                <tr><td className="font-semibold">Bread</td><td>Wheat (farmed)</td><td>~10-15 silver</td><td>Medium</td><td>Mediocre profit but staple food. Sell surplus only — prioritize feeding settlers.</td></tr>
+                <tr><td className="font-semibold">Pickled Cabbage</td><td>Cabbage (farmed)</td><td>~8-12 silver</td><td>Medium</td><td>Long shelf life makes it easy to stockpile for bulk sales. Low individual value but high volume.</td></tr>
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Beacon Placement</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              The trade beacon (available after researching Trade technology) determines where merchants arrive and set up their trading post. Optimal beacon placement significantly reduces hauling time and protects your colony during trade interactions. Poor placement can lead to merchants blocking your defenses or settlers taking dangerous routes.
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Beacon Placement</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                <strong className="text-vermillion">&#9888; NOTE:</strong> The "trade beacon" mechanic described below is characteristic of other colony sims and may function differently (or not exist as a distinct structure) in Going Medieval. Merchant arrival mechanics have not been verified against official sources. The guidance below is based on community reports about merchant interaction behavior.
             </p>
             <div className="space-y-3">
               <div className="journal-card p-4">
@@ -143,19 +143,19 @@ export default function MerchantTradingPage() {
           <div className="field-sidebar-block">
             <h3 className="font-display text-lg font-semibold text-ink mb-4">Trade Profit Rankings</h3>
             <div className="space-y-2 font-serif text-sm text-ink-light">
-              <div className="flex justify-between"><span>1. Beer</span><span className="text-gold">★★★★★</span></div>
-              <div className="flex justify-between"><span>2. Iron Sword</span><span className="text-gold">★★★★☆</span></div>
-              <div className="flex justify-between"><span>3. Smoked Meat</span><span className="text-gold">★★★★☆</span></div>
-              <div className="flex justify-between"><span>4. Cloth Tunic</span><span className="text-gold">★★★★☆</span></div>
-              <div className="flex justify-between"><span>5. Cheese</span><span>★★★☆☆</span></div>
-              <div className="flex justify-between"><span>6. Pickled Cabbage</span><span>★★★☆☆</span></div>
+              <div className="flex justify-between"><span>1. Beer</span><span className="text-gold">High</span></div>
+              <div className="flex justify-between"><span>2. Iron Sword</span><span className="text-gold">High</span></div>
+              <div className="flex justify-between"><span>3. Smoked Meat</span><span className="text-gold">High</span></div>
+              <div className="flex justify-between"><span>4. Cloth Tunic</span><span className="text-gold">High</span></div>
+              <div className="flex justify-between"><span>5. Cheese</span><span>Medium</span></div>
+              <div className="flex justify-between"><span>6. Pickled Cabbage</span><span>Medium</span></div>
             </div>
           </div>
           <div className="journal-card p-5">
             <h3 className="font-display text-base font-semibold text-ink mb-3">Annual Trade Calendar</h3>
             <div className="space-y-2 font-serif text-sm text-ink-light">
-              <div><span className="field-tag vermillion text-[10px]">Spring</span> Plant hops + flax</div>
-              <div><span className="field-tag gold text-[10px]">Summer</span> Harvest, brew beer, weave cloth</div>
+                <div><span className="field-tag vermillion text-[10px]">Spring</span> Plant barley + flax</div>
+                <div><span className="field-tag gold text-[10px]">Summer</span> Harvest, brew beer, weave cloth</div>
               <div><span className="field-tag ink text-[10px]">Autumn</span> Finalize goods, major trade season</div>
               <div><span className="field-tag ink text-[10px]">Winter</span> Spend silver on scarce goods</div>
             </div>

@@ -38,14 +38,14 @@ export default function BreweryGuidePage() {
                 Beer is the most accessible alcohol type and should be every colony's first brewing objective. The production chain requires barley (grown from spring through summer in a standard field plot) processed at the brewing station. Beer provides a +4 happiness buff for 8 hours after consumption — settlers who drink beer during their evening recreation period carry the buff through the night and into the next morning's work shift, making it the most time-efficient happiness source in the game.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Beer production scales well: one 8x8 barley field produces enough raw material to brew approximately 40-50 servings of beer per harvest cycle, which supports 6-8 settlers drinking beer 2-3 times per week. For maximum efficiency, plant barley in early spring alongside your food crops. Barley has a 10-day growth cycle and can be double-cropped in a single growing season if planted immediately at spring's start. A dedicated brewer with Culinary skill 5+ can manage both food production and beer brewing from a single barley field.
+                Beer production is reasonably scalable: one field produces barley, which can be brewed into beer. For maximum efficiency, plant barley in early spring alongside your food crops. Barley has a growth cycle that allows it to be harvested within a single growing season if planted immediately at spring's start. A dedicated brewer with Culinary skill can manage both food and beer production. Exact yield numbers below are community estimates.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Mead: The Honey Alternative</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Mead is produced from honey, which is harvested from beehives rather than grown in field plots. Beehives are a constructed structure (requiring wood and research unlock) that produce honey passively over time without any settler labor input — this makes mead the lowest-labor alcohol to produce. The trade-off is production volume: a single beehive produces 8-12 honey per season, and each batch of mead requires 3 honey, so each hive supports roughly 3-4 servings of mead per season. To sustain a colony on mead, you need 4-6 beehives.
+                Mead is produced from honey, which community reports suggest is harvested from beehives rather than grown in field plots. Beehives are a constructed structure that may produce honey passively over time — however, <strong>beehives, honey, and mead production are not confirmed in the verified reference data</strong>. If beehives exist in your game version, they require research unlock and construction materials. The specific production numbers below are <strong>unverified community estimates</strong>.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Mead provides a +5 happiness buff for 6 hours, slightly stronger but shorter-lasting than beer. This makes mead ideal as a spot-happiness boost rather than a staple — serve mead after a raid or a settler death to immediately counteract the associated mood penalties, then fall back to beer for daily consumption. Beehives also provide a secondary benefit: they increase the growth rate of nearby crops by 5-10% through pollination. Place beehives adjacent to your most important food fields for the dual benefit of honey and improved crop yields.
@@ -55,7 +55,7 @@ export default function BreweryGuidePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Wine: The Premium Luxury Drink</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Wine is the endgame alcohol — it produces the strongest happiness buff (+8 for 10 hours) but requires the most complex production chain. Grapes must be grown in a vineyard (field plot planted with grape vines), which requires a research unlock. Grape vines take 15 days to mature and produce fruit for the first time, making wine production a long-term investment. Once established, a 6x6 vineyard produces enough grapes for 20-25 servings of wine per harvest, with vines continuing to produce for multiple seasons without replanting.
+                Wine is the endgame alcohol — it may produce the strongest happiness buff but requires the most complex production chain. Grapes must be grown in a vineyard (field plot planted with grape vines), which may require a research unlock — <strong>grape vines/vineyards are not confirmed in the verified reference data</strong>. The specific production numbers below are community estimates. Wine may command the highest trade price of any crafted good, making surplus wine production a potential economic strategy if available in your game version.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Wine's +8 happiness buff is the single largest positive mood modifier available from a consumable item, and it lasts a full 10 hours. This makes wine the ultimate crisis management tool — serving wine after a devastating raid, a settler death, or during a prolonged winter starvation period can prevent your entire colony from mental breaking simultaneously. Wine also commands the highest trade price of any crafted good in the game, making surplus wine production a viable economic strategy. A single barrel of wine can trade for enough silver to buy an entire season's worth of food from a merchant caravan.
@@ -76,9 +76,9 @@ export default function BreweryGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Beer</td><td>Barley</td><td>+4</td><td>8 hours</td><td>Medium</td><td>Daily staple</td></tr>
-                  <tr><td>Mead</td><td>Honey</td><td>+5</td><td>6 hours</td><td>Low</td><td>Spot mood boost</td></tr>
-                  <tr><td>Wine</td><td>Grapes</td><td>+8</td><td>10 hours</td><td>High</td><td>Crisis management, trade</td></tr>
+                  <tr><td>Beer</td><td>Barley</td><td>~+4 (est.)</td><td>~8 hours (est.)</td><td>Medium</td><td>Daily staple</td></tr>
+                  <tr><td>Mead</td><td>Honey (unconfirmed)</td><td>~+5 (est.)</td><td>~6 hours (est.)</td><td>Low</td><td>Spot mood boost</td></tr>
+                  <tr><td>Wine</td><td>Grapes (unconfirmed)</td><td>~+8 (est.)</td><td>~10 hours (est.)</td><td>High</td><td>Crisis management, trade</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -111,10 +111,10 @@ export default function BreweryGuidePage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Ingredient Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Barley</h4><p className="font-serif text-xs text-ink-muted mt-1">10-day growth | Spring-Summer | Field crop</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Hops</h4><p className="font-serif text-xs text-ink-muted mt-1">8-day growth | Summer-Autumn | Beer component</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Honey</h4><p className="font-serif text-xs text-ink-muted mt-1">Passive harvest | Seasonal | From beehives</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Grapes</h4><p className="font-serif text-xs text-ink-muted mt-1">15-day maturity | Perennial vines | Vineyard</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Barley</h4><p className="font-serif text-xs text-ink-muted mt-1">Spring-Summer field crop (confirmed crop)</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Hops</h4><p className="font-serif text-xs text-ink-muted mt-1">UNVERIFIED crop — may not exist in game</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Honey</h4><p className="font-serif text-xs text-ink-muted mt-1">UNVERIFIED — beehives may not exist</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Grapes</h4><p className="font-serif text-xs text-ink-muted mt-1">UNVERIFIED — vineyards may not exist</p></div>
               </div>
             </div>
             <div className="journal-card p-5">

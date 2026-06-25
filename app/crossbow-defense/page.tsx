@@ -26,8 +26,8 @@ export default function CrossbowDefensePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Base Damage</td><td>18-22</td><td>30-38</td><td>Crossbow</td></tr>
-                  <tr><td>Armor Penetration</td><td>15%</td><td>45%</td><td>Crossbow</td></tr>
+                  <tr><td>Base Damage</td><td>~18-22</td><td>~30-38</td><td>Crossbow</td></tr>
+                  <tr><td>Armor Penetration</td><td>~15%</td><td>~45%</td><td>Crossbow</td></tr>
                   <tr><td>Fire Rate</td><td>~3 sec/shot</td><td>~6 sec/shot</td><td>Longbow</td></tr>
                   <tr><td>Max Range</td><td>~25 tiles</td><td>~22 tiles</td><td>Longbow</td></tr>
                   <tr><td>Accuracy</td><td>Good</td><td>Very Good</td><td>Crossbow</td></tr>
@@ -82,7 +82,7 @@ export default function CrossbowDefensePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Best Settler Assignments</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Crossbow assignment strategy differs from longbow assignment. Because crossbows fire slower but hit harder, you want your high-Marksmanship settlers using them—the accuracy bonus ensures those precious bolts don't miss. A missed crossbow shot is a much bigger DPS loss than a missed longbow arrow.
+                Crossbow assignment strategy differs from longbow assignment. Because crossbows fire slower but hit harder, you want your higher-Marksmanship settlers using them — the accuracy bonus ensures those precious bolts don't miss. A missed crossbow shot is a much bigger DPS loss than a missed longbow arrow. Exact skill thresholds are community guidance.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Priority assignment: Settlers with Marksmanship 8+ get crossbows first. Settlers with Marksmanship 5-7 use longbows. Settlers below 5 should use whatever is available or focus on melee. For a colony with 2 crossbows available, assign them to your two best marksmen and station them on the wall towers with the best sightlines. Never give a crossbow to a low-skill settler—the slow fire rate combined with poor accuracy wastes the weapon's potential entirely. Crossbow users should also have a melee sidearm; when enemies close to point-blank, switch to melee rather than trying to reload under pressure.

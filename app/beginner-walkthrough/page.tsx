@@ -68,9 +68,9 @@ export default function BeginnerWalkthroughPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Phase 3: Autumn Prepare (Days 16-27)</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Autumn is a race against time. Winter is approaching, and everything you do now determines whether your colony survives it. This phase has one overriding objective: accumulate enough food to last 15 days of winter with zero production. Everything else is secondary.
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Phase 3: Autumn Prepare (Days 16-27)</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Autumn is a race against time. Winter is approaching, and everything you do now determines whether your colony survives it. This phase has one overriding objective: accumulate enough food to last through winter with zero production. Everything else is secondary. The timings below are community estimates — winter duration varies significantly between biomes.
             </p>
             <div className="space-y-3">
               <div className="journal-card p-4">

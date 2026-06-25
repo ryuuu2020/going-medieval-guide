@@ -12,17 +12,17 @@ export default function FoodPreservationPage() {
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking), and building an efficient root cellar. This guide explains preservation methods, optimal storage temperatures, and food requirements per settler for winter survival. Data below is based on community testing and is for reference only.
+              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking), and building an efficient root cellar. This guide explains preservation methods, optimal storage temperatures, and food requirements per settler for winter survival. All specific shelf life and temperature values below are community estimates and are for reference only.
             </p>
           </section>
 
           <section>
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">Food Spoilage Mechanics</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Every food item in Going Medieval has a base shelf life (in days) that is modified by two factors: temperature and processing state. Warmer temperatures accelerate spoilage; cooler temperatures slow it. Processed foods (bread, smoked meat, pickles) spoil at 1/3 the rate of their raw counterparts. The optimal storage temperature for all food is 1-5°C, achievable by building stockpiles 2+ levels underground.
+              Every food item in Going Medieval has a base shelf life (in days) that is modified by two factors: temperature and processing state. Warmer temperatures accelerate spoilage; cooler temperatures slow it. Processed foods (bread, smoked meat, pickles) spoil at a significantly reduced rate compared to their raw counterparts. The optimal storage temperature for all food is as cold as possible, achievable by building stockpiles underground where temperatures are naturally lower. Specific temperature values and spoilage rates below are community estimates.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              Spoilage rate is calculated per-item per-day. At outdoor summer temperatures (25-35°C), raw vegetables spoil in 3-4 days. In a proper underground cellar (2-8°C), the same vegetables last 12-15 days. Processed and stored underground, they can last 30+ days — easily spanning an entire winter. Understanding this chain is the difference between starvation and abundance.
+              Spoilage rate is calculated per-item per-day. At outdoor summer temperatures, raw vegetables may spoil within a few days. In a proper underground cellar, the same vegetables can last multiple times longer. Processed and stored underground, they can last long enough to span an entire winter. Understanding this chain is the difference between starvation and abundance. The shelf life examples below are community estimates based on player testing.
             </p>
           </section>
 
@@ -49,11 +49,11 @@ export default function FoodPreservationPage() {
 
           <section>
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">Temperature Mechanics for Storage</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Temperature in Going Medieval is influenced by several environmental factors. Outdoor temperature follows seasonal patterns: Spring 10-20°C, Summer 20-35°C (heat waves up to 40°C), Autumn 10-20°C, Winter -5 to 5°C. Underground temperature is significantly more stable, dropping roughly 5-8°C per level below the surface. Rooms with roofs and walls provide minor insulation (2-3°C reduction from outdoor), but underground is the only reliable method for consistent cold storage.
+            <p className="font-serif text-base text-ink-light leading-relaxed">
+              Temperature in Going Medieval is influenced by several environmental factors. Outdoor temperature follows seasonal patterns (warmer in summer, colder in winter). Underground temperature is significantly more stable, dropping substantially per level below the surface. Rooms with roofs and walls provide minor insulation, but underground is the only reliable method for consistent cold storage. Exact seasonal temperature ranges are biome-dependent and not verified against official data.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Critical rule: never place food stockpiles above ground or near heat sources (campfires, kitchens, smelters). A stockpile next to a campfire can be 5-10°C warmer, cutting shelf life by half. Kitchens should be on the ground floor with a stairway leading directly down to the root cellar for efficient hauling without temperature contamination.
+              Critical rule: never place food stockpiles above ground or near heat sources (campfires, kitchens, smelters). A stockpile near a heat source will be significantly warmer, cutting shelf life substantially. Kitchens should be on the ground floor with a stairway leading directly down to the root cellar for efficient hauling without temperature contamination.
             </p>
             <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
               <p className="font-serif text-sm text-ink leading-relaxed">
@@ -80,21 +80,21 @@ export default function FoodPreservationPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="font-semibold">Smoking</td><td>Raw Meat</td><td>Smoked Meat</td><td>3 days</td><td>15 days</td><td>Smokehouse</td></tr>
-                <tr><td className="font-semibold">Pickling</td><td>Cabbage</td><td>Pickled Cabbage</td><td>5 days</td><td>25 days</td><td>Pickling Barrel</td></tr>
-                <tr><td className="font-semibold">Baking</td><td>Wheat Flour</td><td>Bread</td><td>3 days (flour)</td><td>12 days</td><td>Oven</td></tr>
-                <tr><td className="font-semibold">Drying</td><td>Meat, Fish</td><td>Dried Meat</td><td>3 days</td><td>20 days</td><td>Drying Rack</td></tr>
-                <tr><td className="font-semibold">Cheese</td><td>Milk</td><td>Cheese</td><td>2 days (milk)</td><td>30 days</td><td>Cheese Press</td></tr>
-                <tr><td className="font-semibold">Brewing</td><td>Hops</td><td>Beer</td><td>5 days (hops)</td><td>60 days</td><td>Brewery</td></tr>
+                  <tr><td className="font-semibold">Smoking</td><td>Raw Meat</td><td>Smoked Meat</td><td>~3 days</td><td>~15 days</td><td>Smokehouse</td></tr>
+                  <tr><td className="font-semibold">Pickling</td><td>Cabbage</td><td>Pickled Cabbage</td><td>~5 days</td><td>~25 days</td><td>Pickling Barrel</td></tr>
+                  <tr><td className="font-semibold">Baking</td><td>Wheat Flour</td><td>Bread</td><td>~3 days (flour)</td><td>~12 days</td><td>Oven</td></tr>
+                  <tr><td className="font-semibold">Drying</td><td>Meat, Fish</td><td>Dried Meat</td><td>~3 days</td><td>~20 days</td><td>Drying Rack</td></tr>
+                  <tr><td className="font-semibold">Cheese</td><td>Milk</td><td>Cheese</td><td>~2 days (milk)</td><td>~30 days</td><td>Cheese Press</td></tr>
+                  <tr><td className="font-semibold">Brewing</td><td>Hops</td><td>Beer</td><td>~5 days (hops)</td><td>~60 days</td><td>Brewery</td></tr>
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Winter Food Calculation</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              The most critical calculation in Going Medieval: how much food do you need to survive winter? Each settler consumes approximately 2 units of food per day. Winter lasts roughly 12-15 days depending on the biome. Therefore, a colony of N settlers needs a minimum of N x 2 x 15 = 30N units of food stockpiled before winter.
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Winter Food Calculation</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The most critical calculation in Going Medieval: how much food do you need to survive winter? Community estimates suggest each settler consumes approximately 2 units of food per day. Winter lasts roughly 12-15 days depending on the biome (varies significantly — some community sources report longer durations in cold biomes). Therefore, a colony of N settlers needs roughly N x 2 x 15 = 30N units of food stockpiled before winter as a minimum. All numbers below are community estimates.
             </p>
             <table className="parchment-table">
               <thead>
@@ -148,12 +148,12 @@ export default function FoodPreservationPage() {
           <div className="field-sidebar-block">
             <h3 className="font-display text-lg font-semibold text-ink mb-4">Shelf Life Comparison</h3>
             <div className="space-y-3">
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Vegetables</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 3-4 days | Cellar: 12-15 days</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 2-3 days | Cellar: 8-10 days</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Bread</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 5 days | Cellar: 15-20 days</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Smoked Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 8 days | Cellar: 25-30 days</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Pickled Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 12 days | Cellar: 35-40 days</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cheese</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: 15 days | Cellar: 45-50 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Vegetables</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~3-4 days | Cellar: ~12-15 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~2-3 days | Cellar: ~8-10 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Bread</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~5 days | Cellar: ~15-20 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Smoked Meat</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~8 days | Cellar: ~25-30 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Pickled Cabbage</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~12 days | Cellar: ~35-40 days</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cheese</h4><p className="font-serif text-xs text-ink-muted mt-1">Above ground: ~15 days | Cellar: ~45-50 days</p></div>
             </div>
           </div>
           <div className="journal-card p-5">

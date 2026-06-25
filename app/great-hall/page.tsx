@@ -14,7 +14,7 @@ export default function GreatHallPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Optimal Dimensions and Room Size</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The Great Hall's size directly determines its quality tier. The game calculates room quality based on a combination of size, cleanliness, furniture count, and decoration value. The minimum functional size is 5x5 interior tiles, which accommodates a table, four chairs, and a torch — this produces the "basic" Great Hall bonus (+2 mood when eating). Stepping up to 7x7 triggers the "impressive" tier (+4 mood), letting you add a brazier, banners, and more seating. The ideal size for a late-game Great Hall is 9x9 to 12x12, which triggers the "magnificent" tier (+6 mood) and provides space for a large table cluster, multiple braziers, wall decorations, musical instruments, and a dedicated sideboard area for meal pickup.
+                The Great Hall's size directly determines its quality tier. The game calculates room quality based on a combination of size, cleanliness, furniture count, and decoration value. The minimum functional size is roughly 5x5 interior tiles, which accommodates a table, four chairs, and a torch — community reports suggest this may produce a "basic" Great Hall bonus. Larger sizes produce progressively better quality tiers. The ideal size for a late-game Great Hall is spacious enough for a large table cluster, multiple braziers, wall decorations, musical instruments, and a dedicated sideboard area for meal pickup. Exact size thresholds and mood bonuses are community estimates.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
                 Wall material and flooring both contribute to Great Hall quality. Stone walls provide a base quality bonus over wood walls. The floor should be upgraded progressively: dirt floor → stone floor → wood plank floor → tile floor, with each upgrade contributing significantly to room quality calculations. A carpeted Great Hall (research unlock) with tile walls is the ceiling-tier build that generates the maximum possible room happiness bonus. Pillar placement matters in larger halls — for anything wider than 7 tiles, place a row of decorative stone pillars down the center, which doubles as torch-mounting infrastructure.
@@ -90,7 +90,7 @@ export default function GreatHallPage() {
               <div className="faq-item">
                 <details>
                   <summary>Can I have multiple Great Halls?</summary>
-                  <p>No. The game only recognizes one Great Hall per colony. If you build a second room with tables and chairs, it registers as a "dining room" instead and produces reduced mood bonuses. Focus all decoration and furniture investment into a single Great Hall.</p>
+                  <p>No. The game only recognizes one Great Hall per colony. If you build a second room with tables and chairs, it registers as a "dining room" instead and may produce reduced mood bonuses. Focus all decoration and furniture investment into a single Great Hall. This behavior is based on community observation and may vary by game version.</p>
                 </details>
               </div>
               <div className="faq-item">
@@ -106,9 +106,9 @@ export default function GreatHallPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Great Hall Size Reference</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Basic (5x5)</h4><p className="font-serif text-xs text-ink-muted mt-1">Table + 4 chairs + 1 torch | +2 mood</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Impressive (7x7)</h4><p className="font-serif text-xs text-ink-muted mt-1">2 tables + 8 chairs + brazier + banners | +4 mood</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Magnificent (9x9+)</h4><p className="font-serif text-xs text-ink-muted mt-1">Full furniture + tile floor + instruments | +6 mood</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Basic (5x5)</h4><p className="font-serif text-xs text-ink-muted mt-1">Table + 4 chairs + 1 torch | Community est. mood bonus</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Impressive (7x7)</h4><p className="font-serif text-xs text-ink-muted mt-1">2 tables + 8 chairs + brazier + banners | Est. higher bonus</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Magnificent (9x9+)</h4><p className="font-serif text-xs text-ink-muted mt-1">Full furniture + tile floor + instruments | Est. highest bonus</p></div>
               </div>
             </div>
             <div className="journal-card p-5">

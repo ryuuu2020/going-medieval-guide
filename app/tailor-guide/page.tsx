@@ -34,15 +34,15 @@ export default function TailorGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Cloth Tunic</td><td>Cloth x3</td><td>Middle (skin)</td><td>+5&deg;C warmth</td><td>5%</td></tr>
-                  <tr><td>Cloth Pants</td><td>Cloth x2</td><td>Middle (skin)</td><td>+4&deg;C warmth</td><td>3%</td></tr>
-                  <tr><td>Leather Tunic</td><td>Leather x3</td><td>Middle (skin)</td><td>+8&deg;C warmth</td><td>15%</td></tr>
-                  <tr><td>Leather Helmet</td><td>Leather x2</td><td>Head</td><td>+2&deg;C warmth</td><td>10%</td></tr>
-                  <tr><td>Winter Coat</td><td>Leather/Cloth x5</td><td>Outer</td><td>+20&deg;C warmth</td><td>12%</td></tr>
-                  <tr><td>Plate Armor</td><td>Iron Ingot x8</td><td>Outer</td><td>-5&deg;C cooling</td><td>40%</td></tr>
-                  <tr><td>Chainmail</td><td>Iron Ingot x5</td><td>Middle (over skin)</td><td>-2&deg;C cooling</td><td>28%</td></tr>
-                  <tr><td>Boots</td><td>Leather x2</td><td>Feet</td><td>+3&deg;C warmth</td><td>8%</td></tr>
-                  <tr><td>Noble Robes</td><td>Cloth x5, Gold Thread x1</td><td>Outer</td><td>+10&deg;C warmth</td><td>0%</td></tr>
+                  <tr><td>Cloth Tunic</td><td>~Cloth x3</td><td>Middle (skin)</td><td>~+5°C warmth</td><td>~5%</td></tr>
+                  <tr><td>Cloth Pants</td><td>~Cloth x2</td><td>Middle (skin)</td><td>~+4°C warmth</td><td>~3%</td></tr>
+                  <tr><td>Leather Tunic</td><td>~Leather x3</td><td>Middle (skin)</td><td>~+8°C warmth</td><td>~15%</td></tr>
+                  <tr><td>Leather Helmet</td><td>~Leather x2</td><td>Head</td><td>~+2°C warmth</td><td>~10%</td></tr>
+                  <tr><td>Winter Coat</td><td>~Leather/Cloth x5</td><td>Outer</td><td>~+20°C warmth</td><td>~12%</td></tr>
+                  <tr><td>Plate Armor</td><td>~Iron Ingot x8</td><td>Outer</td><td>~-5°C cooling</td><td>~40%</td></tr>
+                  <tr><td>Chainmail</td><td>~Iron Ingot x5</td><td>Middle (over skin)</td><td>~-2°C cooling</td><td>~28%</td></tr>
+                  <tr><td>Boots</td><td>~Leather x2</td><td>Feet</td><td>~+3°C warmth</td><td>~8%</td></tr>
+                  <tr><td>Noble Robes</td><td>~Cloth x5, Gold Thread x1</td><td>Outer</td><td>~+10°C warmth</td><td>~0%</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -81,10 +81,10 @@ export default function TailorGuidePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Tailor Skill & Crafting Quality</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The Tailoring skill level of your dedicated crafter directly impacts three aspects of every garment produced: crafting speed, material efficiency, and item quality tier. Garments crafted by a Tailoring 15+ settler receive bonuses including additional durability (+25-40% longer lifespan before wearing out), improved temperature modifiers (+2-3&deg;C extra warmth/cooling), and slightly increased armor values on protective items. A high-skill tailor can stretch limited leather and cloth supplies significantly further than a low-skill crafter churning out basic-quality items.
+                The Tailoring skill level of your dedicated crafter directly impacts three aspects of every garment produced: crafting speed, material efficiency, and item quality tier. Garments crafted by a high-skill tailor may receive bonuses including additional durability, improved temperature modifiers, and slightly increased armor values. A high-skill tailor can stretch limited leather and cloth supplies further than a low-skill crafter. Exact skill multipliers are community estimates.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Train your tailor deliberately: assign them to produce large quantities of simple items (cloth tunics, cloth pants) early on to build skill, then transition to crafting high-value items (leather armor, winter coats, noble robes) once their skill exceeds 10. A Tailoring 10 settler produces enough clothing for a 10-settler colony working alone; beyond that, consider a second tailor or accept lower-quality backup clothing from crafting-bill automation. Never assign your highest-Tailoring settler to multiple labor types — keep them at the bench producing constantly.
+                Train your tailor deliberately: assign them to produce large quantities of simple items (cloth tunics, cloth pants) early on to build skill, then transition to crafting high-value items (leather armor, winter coats) once their skill improves. A dedicated tailor can produce enough clothing for a colony working alone; beyond that, consider a second tailor. Never assign your highest-Tailoring settler to multiple labor types — keep them at the bench producing constantly.
               </p>
             </section>
 

@@ -19,7 +19,7 @@ export default function HappinessGuidePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Happiness Thresholds & Mental States</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's happiness score ranges from 0 to 100, with 50 representing a neutral baseline. Different threshold ranges trigger distinct behavioral states, and the transitions between them are where dangerous mental breaks occur:
+                Happiness in Going Medieval operates on a 0-100 scale (community estimate — exact range and thresholds not officially confirmed). The values below represent community-observed patterns and may not match the game's internal calculations precisely:
               </p>
               <table className="parchment-table">
                 <thead>
@@ -31,12 +31,12 @@ export default function HappinessGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>80-100</td><td>Joyful</td><td>+20% work speed, +10% move speed</td><td>None — ideal state</td></tr>
-                  <tr><td>60-79</td><td>Content</td><td>+10% work speed, standard behavior</td><td>None — healthy baseline</td></tr>
-                  <tr><td>40-59</td><td>Neutral</td><td>Standard work speed and behavior</td><td>Low — monitor for downward trend</td></tr>
-                  <tr><td>25-39</td><td>Unhappy</td><td>-15% work speed, occasional complaining</td><td>Moderate — intervene soon</td></tr>
-                  <tr><td>10-24</td><td>Miserable</td><td>-30% work speed, fights, property damage</td><td>High — mental break imminent</td></tr>
-                  <tr><td>0-9</td><td>Broken</td><td>Complete mental break: berserk, catatonic, or desertion</td><td>Critical — may abandon colony</td></tr>
+                  <tr><td>~80-100</td><td>Joyful</td><td>Work/move speed bonus (est.)</td><td>None — ideal state</td></tr>
+                  <tr><td>~60-79</td><td>Content</td><td>Mild work speed bonus (est.)</td><td>None — healthy baseline</td></tr>
+                  <tr><td>~40-59</td><td>Neutral</td><td>Standard behavior</td><td>Low — monitor for downward trend</td></tr>
+                  <tr><td>~25-39</td><td>Unhappy</td><td>Work speed penalty (est.)</td><td>Moderate — intervene soon</td></tr>
+                  <tr><td>~10-24</td><td>Miserable</td><td>Severe penalty, possible negative behaviors</td><td>High — mental break imminent</td></tr>
+                  <tr><td>~0-9</td><td>Broken</td><td>Mental break: berserk, catatonic, or desertion</td><td>Critical — may abandon colony</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -60,16 +60,16 @@ export default function HappinessGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Ate fine meal</td><td>+4</td><td>4 hours</td><td>Cook fine meal (stove, skill 3+)</td></tr>
-                  <tr><td>Ate lavish meal</td><td>+6</td><td>6 hours</td><td>Cook lavish meal (stove, skill 7+)</td></tr>
-                  <tr><td>Drank alcohol</td><td>+4 to +8</td><td>6-10 hours</td><td>Beer/Mead/Wine consumption</td></tr>
-                  <tr><td>Impressive Great Hall</td><td>+2 to +6</td><td>Permanent while eating there</td><td>Build decorated Great Hall</td></tr>
-                  <tr><td>Comfortable bedroom</td><td>+2 to +5</td><td>On waking, lasts hours</td><td>Quality bedroom with furniture</td></tr>
-                  <tr><td>Recreation fulfilled</td><td>+3 to +8</td><td>Varies by activity</td><td>Recreation buildings, instruments</td></tr>
-                  <tr><td>Spiritual fulfillment</td><td>+2 to +6</td><td>Varies by piety level</td><td>Temple with altar, worship time</td></tr>
-                  <tr><td>Social interaction</td><td>+2 to +4</td><td>After chatting</td><td>Settlers gathering in Great Hall</td></tr>
-                  <tr><td>Beautiful environment</td><td>+1 to +4</td><td>While in area</td><td>Decorations, banners, flower gardens</td></tr>
-                  <tr><td>Romance</td><td>+5</td><td>Days</td><td>Settlers forming romantic relationships</td></tr>
+                  <tr><td>Ate fine meal</td><td>~+4</td><td>~4 hours</td><td>Cook fine meal (stove, requires skill)</td></tr>
+                  <tr><td>Ate lavish meal</td><td>~+6</td><td>~6 hours</td><td>Cook lavish meal (stove, higher skill)</td></tr>
+                  <tr><td>Drank alcohol</td><td>~+4 to +8</td><td>~6-10 hours</td><td>Beer/Mead/Wine consumption</td></tr>
+                  <tr><td>Impressive Great Hall</td><td>~+2 to +6</td><td>While eating there</td><td>Build decorated Great Hall</td></tr>
+                  <tr><td>Comfortable bedroom</td><td>~+2 to +5</td><td>On waking, lasts hours</td><td>Quality bedroom with furniture</td></tr>
+                  <tr><td>Recreation fulfilled</td><td>~+3 to +8</td><td>Varies by activity</td><td>Recreation buildings, instruments</td></tr>
+                  <tr><td>Spiritual fulfillment</td><td>~+2 to +6</td><td>Varies by piety level</td><td>Temple (unverified if exists) with altar</td></tr>
+                  <tr><td>Social interaction</td><td>~+2 to +4</td><td>After chatting</td><td>Settlers gathering in Great Hall</td></tr>
+                  <tr><td>Beautiful environment</td><td>~+1 to +4</td><td>While in area</td><td>Decorations, banners, flower gardens</td></tr>
+                  <tr><td>Romance</td><td>~+5</td><td>Days</td><td>Settlers forming romantic relationships</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -90,17 +90,17 @@ export default function HappinessGuidePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Hunger (starving)</td><td>-4 to -12</td><td>No food available or inaccessible</td><td>Ensure adequate food stockpile</td></tr>
-                  <tr><td>Ate without table</td><td>-3</td><td>No chair+table in eating area</td><td>Build Great Hall with seating</td></tr>
-                  <tr><td>Ate raw food</td><td>-3</td><td>Eating uncooked ingredients</td><td>Assign dedicated cook, stove</td></tr>
-                  <tr><td>Slept on ground</td><td>-3</td><td>No bed/sleeping spot</td><td>Build beds for all settlers</td></tr>
-                  <tr><td>Slept in cold/heat</td><td>-3</td><td>Bedroom outside comfort temp range</td><td>Brazier for heat, ventilation for cool</td></tr>
-                  <tr><td>Darkness</td><td>-2 to -5</td><td>Standing or working in dark tiles</td><td>Place torches/braziers in all rooms</td></tr>
-                  <tr><td>Stale air</td><td>-2 to -4</td><td>Underground without ventilation</td><td>Build ventilation shafts</td></tr>
-                  <tr><td>Naked</td><td>-4</td><td>No clothing worn</td><td>Craft cloth tunics for everyone</td></tr>
-                  <tr><td>Witnessed death</td><td>-5</td><td>Seeing ally die in combat</td><td>Time heals; alcohol softens</td></tr>
-                  <tr><td>Grieving (friend died)</td><td>-8</td><td>Close relationship loss</td><td>Time heals; recreation helps</td></tr>
-                  <tr><td>Insulted</td><td>-3</td><td>Negative social interaction</td><td>Separate incompatible settlers</td></tr>
+                  <tr><td>Hunger (starving)</td><td>~-4 to -12</td><td>No food available or inaccessible</td><td>Ensure adequate food stockpile</td></tr>
+                  <tr><td>Ate without table</td><td>~-3</td><td>No chair+table in eating area</td><td>Build Great Hall with seating</td></tr>
+                  <tr><td>Ate raw food</td><td>~-3</td><td>Eating uncooked ingredients</td><td>Assign dedicated cook, stove</td></tr>
+                  <tr><td>Slept on ground</td><td>~-3</td><td>No bed/sleeping spot</td><td>Build beds for all settlers</td></tr>
+                  <tr><td>Slept in cold/heat</td><td>~-3</td><td>Bedroom outside comfort temp range</td><td>Brazier for heat, ventilation for cool</td></tr>
+                  <tr><td>Darkness</td><td>~-2 to -5</td><td>Standing or working in dark tiles</td><td>Place torches/braziers in all rooms</td></tr>
+                  <tr><td>Stale air</td><td>~-2 to -4</td><td>Underground without ventilation (community observation — may not exist as named mechanic)</td><td>Build ventilation shafts</td></tr>
+                  <tr><td>Naked</td><td>~-4</td><td>No clothing worn</td><td>Craft cloth tunics for everyone</td></tr>
+                  <tr><td>Witnessed death</td><td>~-5</td><td>Seeing ally die in combat</td><td>Time heals; alcohol softens</td></tr>
+                  <tr><td>Grieving (friend died)</td><td>~-8</td><td>Close relationship loss</td><td>Time heals; recreation helps</td></tr>
+                  <tr><td>Insulted</td><td>~-3</td><td>Negative social interaction</td><td>Separate incompatible settlers</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -166,16 +166,16 @@ export default function HappinessGuidePage() {
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">1. Basic Needs</h4><p className="font-serif text-xs text-ink-muted mt-1">Food + Bed + Temperature | Fix first, always</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">2. Comfort</h4><p className="font-serif text-xs text-ink-muted mt-1">Quality bedroom + Great Hall | Stable passive mood</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">3. Consumables</h4><p className="font-serif text-xs text-ink-muted mt-1">Fine meals + Alcohol | Active mood boosts</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">4. Lifestyle</h4><p className="font-serif text-xs text-ink-muted mt-1">Recreation + Temple + Social | Sustained buffs</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">4. Lifestyle</h4><p className="font-serif text-xs text-ink-muted mt-1">Recreation + Temple (unverified room type) + Social | Sustained buffs</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">5. Luxury</h4><p className="font-serif text-xs text-ink-muted mt-1">Noble quarters + Art + Romance | Endgame ceiling</p></div>
               </div>
             </div>
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Emergency Mood Rescue</h3>
               <ol className="space-y-2 font-serif text-sm text-ink-light">
-                <li>1. Serve wine (+8, immediate)</li>
-                <li>2. Assign 2hr recreation in Great Hall (+5-8)</li>
-                <li>3. Cook fine meal for next eating window (+4)</li>
+                <li>1. Serve wine (~+8 community est., immediate)</li>
+                <li>2. Assign 2hr recreation in Great Hall (~+5-8)</li>
+                <li>3. Cook fine meal for next eating window (~+4)</li>
                 <li>4. Check bedroom: heat, light, cleanliness</li>
                 <li>5. Separate from incompatible settlers</li>
                 <li>6. Reduce work hours temporarily</li>

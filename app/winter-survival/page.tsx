@@ -31,10 +31,10 @@ export default function WinterSurvivalPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>3 settlers</td><td>6 units/day</td><td>4 units/day</td><td>360-540 units</td></tr>
-                  <tr><td>5 settlers</td><td>10 units/day</td><td>7 units/day</td><td>630-900 units</td></tr>
-                  <tr><td>8 settlers</td><td>16 units/day</td><td>11 units/day</td><td>990-1,440 units</td></tr>
-                  <tr><td>10+ settlers</td><td>20+ units/day</td><td>14+ units/day</td><td>1,260-1,800+ units</td></tr>
+                  <tr><td>3 settlers</td><td>~6 units/day</td><td>~4 units/day</td><td>~360-540 units (seasonal estimate)</td></tr>
+                  <tr><td>5 settlers</td><td>~10 units/day</td><td>~7 units/day</td><td>~630-900 units (seasonal estimate)</td></tr>
+                  <tr><td>8 settlers</td><td>~16 units/day</td><td>~11 units/day</td><td>~990-1,440 units (seasonal estimate)</td></tr>
+                  <tr><td>10+ settlers</td><td>~20+ units/day</td><td>~14+ units/day</td><td>~1,260-1,800+ units (seasonal estimate)</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates. Winter typically lasts 30-90 days depending on biome.</p>
@@ -52,12 +52,12 @@ export default function WinterSurvivalPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Heating Systems & Temperature Control</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Winter temperatures in Going Medieval can drop to -20&deg;C or lower, especially in northern biomes. Settlers without adequate heating suffer hypothermia, frostbite, and severe mood penalties. Building an effective heating system requires understanding heat sources, insulation values, and room temperature mechanics.
+                Winter temperatures in Going Medieval can drop significantly below freezing, especially in northern biomes. Settlers without adequate heating suffer hypothermia, frostbite, and severe mood penalties. Building an effective heating system requires understanding heat sources, insulation values, and room temperature mechanics. Exact temperature values and heating outputs are community estimates.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Heat Sources</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Campfire (wood fuel, heats ~15 tile radius, +10&deg;C). Brazier (coal fuel, heats ~10 tile radius, +12&deg;C, requires research). Fireplace (wood/coal, heats ~20 tile radius, +15&deg;C, requires stone construction). Place heat sources centrally in rooms—heat radiates in a circular pattern and diminishes with distance. One fireplace can heat a 5x5 room to comfortable levels.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Campfire (wood fuel, heats moderate area, basic warmth). Brazier (coal fuel, heats moderate area, better warmth, may require research). Fireplace (wood/coal, heats larger area, higher warmth, requires stone construction). Place heat sources centrally in rooms — heat radiates and diminishes with distance. One fireplace can typically heat a 5x5 room to comfortable levels. These values are community estimates.</p>
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Insulation & Room Design</h4>
@@ -65,7 +65,7 @@ export default function WinterSurvivalPage() {
                 </div>
                 <div className="journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">Fuel Stockpile for Winter</h4>
-                  <p className="font-serif text-sm text-ink-light mt-1">Each heating source consumes fuel continuously while lit. A fireplace consumes roughly 8-10 wood per day. Multiply by your number of heat sources and winter days: 3 fireplaces × 70 winter days × 8 wood/day = 1,680 wood minimum. Stockpile fuel alongside food—running out of firewood mid-winter is nearly as deadly as running out of food.</p>
+                  <p className="font-serif text-sm text-ink-light mt-1">Each heating source consumes fuel continuously while lit. A fireplace may consume roughly 8-10 wood per day (community estimate). Multiply by your number of heat sources and winter days to plan fuel reserves. Stockpile fuel alongside food — running out of firewood mid-winter is nearly as deadly as running out of food.</p>
                 </div>
               </div>
             </section>
@@ -85,10 +85,10 @@ export default function WinterSurvivalPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Wool Tunic</td><td>+15&deg;C tolerance</td><td>Wool x3 (from sheep)</td><td>High—best cost-effective option</td></tr>
-                  <tr><td>Leather Coat</td><td>+12&deg;C tolerance</td><td>Leather x4</td><td>Medium—good alternative</td></tr>
-                  <tr><td>Fur Hat</td><td>+8&deg;C tolerance</td><td>Fur x2, Leather x1</td><td>Medium—head protection</td></tr>
-                  <tr><td>Winter Cloak</td><td>+20&deg;C tolerance</td><td>Wool x3, Fur x2, Leather x2</td><td>Best overall—craft last</td></tr>
+                  <tr><td>Wool Tunic</td><td>~+15°C tolerance</td><td>~Wool x3 (from sheep)</td><td>High — best cost-effective option</td></tr>
+                  <tr><td>Leather Coat</td><td>~+12°C tolerance</td><td>~Leather x4</td><td>Medium — good alternative</td></tr>
+                  <tr><td>Fur Hat</td><td>~+8°C tolerance</td><td>~Fur x2, Leather x1</td><td>Medium — head protection</td></tr>
+                  <tr><td>Winter Cloak</td><td>~+20°C tolerance</td><td>~Wool x3, Fur x2, Leather x2</td><td>Best overall — craft last</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -144,8 +144,8 @@ export default function WinterSurvivalPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Winter Prep Checklist</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">1. Food Stockpile</h4><p className="font-serif text-xs text-ink-muted mt-1">900+ units for 8 settlers, stored underground</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">2. Fuel Stockpile</h4><p className="font-serif text-xs text-ink-muted mt-1">1,500+ wood or coal for heating</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">1. Food Stockpile</h4><p className="font-serif text-xs text-ink-muted mt-1">~900+ units for 8 settlers (community estimate), stored underground</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">2. Fuel Stockpile</h4><p className="font-serif text-xs text-ink-muted mt-1">Hundreds of wood or coal for heating (season-dependent)</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">3. Winter Clothing</h4><p className="font-serif text-xs text-ink-muted mt-1">Wool tunics + fur hats for all settlers</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">4. Heat Sources</h4><p className="font-serif text-xs text-ink-muted mt-1">Fireplaces in all occupied rooms</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">5. Underground Farm</h4><p className="font-serif text-xs text-ink-muted mt-1">Optional—dig during summer if possible</p></div>
@@ -154,11 +154,11 @@ export default function WinterSurvivalPage() {
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Underground Temperature Guide</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div className="flex justify-between"><span>Surface Level</span><span className="text-vermillion">-20 to +5&deg;C</span></div>
-                <div className="flex justify-between"><span>Level -1</span><span className="text-ink-muted">0 to +8&deg;C</span></div>
-                <div className="flex justify-between"><span>Level -2 to -3</span><span className="text-gold">+5 to +12&deg;C</span></div>
-                <div className="flex justify-between"><span>Level -4+</span><span className="text-gold">+8 to +15&deg;C</span></div>
-                <div className="mt-2">The deeper you build, the warmer and more stable the temperature. Underground bases are the ultimate winter survival strategy.</div>
+                <div className="flex justify-between"><span>Surface Level</span><span className="text-vermillion">Varies (well below freezing in winter)</span></div>
+                <div className="flex justify-between"><span>Level -1</span><span className="text-ink-muted">~0 to +8°C (est.)</span></div>
+                <div className="flex justify-between"><span>Level -2 to -3</span><span className="text-gold">~5 to +12°C (est.)</span></div>
+                <div className="flex justify-between"><span>Level -4+</span><span className="text-gold">~8 to +15°C (est.)</span></div>
+                <div className="mt-2">All underground temperatures are community estimates. The deeper you build, the warmer and more stable the temperature. Underground bases are the ultimate winter survival strategy.</div>
               </div>
             </div>
           </aside>

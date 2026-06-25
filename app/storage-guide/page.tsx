@@ -44,15 +44,15 @@ export default function StorageGuidePage() {
               </thead>
               <tbody>
                 <tr><td className="font-semibold">Floor Stockpile</td><td>1x (baseline)</td><td>100% (normal)</td><td>Free (designate)</td><td>Bulk stone/wood, temporary overflow</td></tr>
-                <tr><td className="font-semibold">Wooden Shelf</td><td>3x capacity</td><td>90% (slower spoilage)</td><td>15 wood per shelf</td><td>Food, medicine, valuable items, long-term storage</td></tr>
-                <tr><td className="font-semibold">Weapon Rack</td><td>2x capacity</td><td>N/A</td><td>20 wood per rack</td><td>Weapons and ammunition near defensive positions</td></tr>
-                <tr><td className="font-semibold">Armor Stand</td><td>2x capacity</td><td>N/A</td><td>20 wood per stand</td><td>Armor storage near barracks or armory</td></tr>
+                <tr><td className="font-semibold">Wooden Shelf</td><td>~3x capacity</td><td>~90% spoilage (slower)</td><td>~15 wood per shelf</td><td>Food, medicine, valuable items, long-term storage</td></tr>
+                <tr><td className="font-semibold">Weapon Rack</td><td>~2x capacity</td><td>N/A</td><td>~20 wood per rack</td><td>Weapons and ammunition near defensive positions</td></tr>
+                <tr><td className="font-semibold">Armor Stand</td><td>~2x capacity</td><td>N/A</td><td>~20 wood per stand</td><td>Armor storage near barracks or armory</td></tr>
               </tbody>
             </table>
             <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
               <p className="font-serif text-sm text-ink leading-relaxed">
                 <strong className="text-vermillion">Shelf Strategy:</strong>
-                A 6x6 underground room with shelves on all 4 walls provides storage equivalent to a 10x10 floor stockpile room — that is a 60% space saving. This matters because smaller rooms are easier to temperature-control and require less excavation labor. Always shelf your underground food cellars first, then expand shelving to other storage zones as wood supply allows.
+                A 6x6 underground room with shelves provides dramatically higher effective storage capacity than floor stockpile alone. Shelves reduce spoilage rates and increase storage density. Smaller rooms are easier to temperature-control and require less excavation labor. Always shelf your underground food cellars first, then expand shelving to other storage zones as wood supply allows. Exact capacity multipliers and spoilage rates are community estimates.
               </p>
             </div>
           </section>
@@ -73,9 +73,9 @@ export default function StorageGuidePage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="font-semibold">Raw Food</td><td>1-5°C</td><td>-2F Cellar</td><td>Wooden Shelves</td><td>Coldest zone — extends shelf life 3-4x</td></tr>
-                <tr><td className="font-semibold">Preserved Food</td><td>5-10°C</td><td>-1F Cellar</td><td>Wooden Shelves</td><td>Longer shelf life, can tolerate slightly warmer temps</td></tr>
-                <tr><td className="font-semibold">Medicine & Herbs</td><td>5-10°C</td><td>-1F Cellar</td><td>Wooden Shelves (dedicated)</td><td>Separate from food to prevent accidental consumption</td></tr>
+                <tr><td className="font-semibold">Raw Food</td><td>~0-5°C</td><td>-2F Cellar</td><td>Wooden Shelves</td><td>Coldest zone — extends shelf life significantly</td></tr>
+                <tr><td className="font-semibold">Preserved Food</td><td>~5-10°C</td><td>-1F Cellar</td><td>Wooden Shelves</td><td>Longer shelf life, can tolerate slightly warmer temps</td></tr>
+                <tr><td className="font-semibold">Medicine & Herbs</td><td>~5-10°C</td><td>-1F Cellar</td><td>Wooden Shelves (dedicated)</td><td>Separate from food to prevent accidental consumption</td></tr>
                 <tr><td className="font-semibold">Raw Stone/Ore</td><td>Any temperature</td><td>-1F or Surface</td><td>Floor Stockpile</td><td>No decay, temperature irrelevant. Store near mines/workstations.</td></tr>
                 <tr><td className="font-semibold">Wood & Building Materials</td><td>Any temperature</td><td>Surface (covered)</td><td>Floor Stockpile</td><td>No decay but deteriorates in rain. Roof the stockpile area.</td></tr>
                 <tr><td className="font-semibold">Weapons & Armor</td><td>Any temperature</td><td>Near defensive positions</td><td>Weapon Racks / Armor Stands</td><td>Speed matters more than temperature — put near gates.</td></tr>
@@ -87,12 +87,12 @@ export default function StorageGuidePage() {
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Decay Mechanics & Spoilage Optimization</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Decay affects all organic items (food, herbs, medicine, animal products, textiles). The decay rate is calculated daily based on three factors: base item shelf life, temperature modifier, and storage type modifier (shelf vs floor). The effective shelf life formula is: Base Shelf Life x Temperature Modifier x Storage Modifier.
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Temperature modifier ranges from 0.3x (optimal cold, 1-5°C) to 3.0x (hot, 35°C+). Storage modifier is 1.0x for floor and 0.9x for shelf. This means a raw cabbage with 5-day base shelf life stored on a shelf at 3°C lasts: 5 x 0.3 x 0.9 = 1.35 effective decay rate → 5 / 1.35 = roughly 3.7x longer, or ~18 days. The same cabbage on a floor at 30°C: 5 x 2.0 x 1.0 = 10 effective decay → 5/10 = 0.5x, or ~2.5 days. The difference between optimal and poor storage is roughly a 7x shelf life difference.
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Decay Mechanics & Spoilage Optimization</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Decay affects all organic items (food, herbs, medicine, animal products, textiles). The decay rate is influenced by three factors: base item shelf life, temperature, and storage type (shelf vs floor). Cold temperatures (underground cellars) dramatically slow spoilage, while hot temperatures accelerate it.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                <strong className="text-vermillion">Note:</strong> The exact temperature multiplier values and decay formulas are not verified against official game data. Community testing suggests optimal cold storage (near-freezing underground temperatures) can extend food shelf life by roughly 3-4x compared to surface storage. Hot storage (summer temperatures) accelerates spoilage. Shelves appear to provide a modest spoilage reduction bonus compared to floor stockpiles. For reliable numbers, cross-reference with in-game behavior.
             </p>
           </section>
 
@@ -142,7 +142,7 @@ export default function StorageGuidePage() {
             <div className="faq-item">
               <details>
                 <summary>How do I stop settlers from hauling constantly?</summary>
-                <p>Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have enough dogs? A trained hauling dog eliminates 30-40% of settler hauling labor.</p>
+                <p>Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (community estimate: hauling dogs, if available, may additionally help).</p>
               </details>
             </div>
           </section>

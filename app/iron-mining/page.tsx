@@ -32,9 +32,9 @@ export default function IronMiningPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Ironstone Outcrops</td><td>Dark grey boulders with rust</td><td>3-6 iron ore</td><td>Surface</td><td>Mountain, Hills</td></tr>
-                  <tr><td>Underground Veins</td><td>Metallic streaks in rock walls</td><td>8-15 iron ore per tile</td><td>3-6 levels deep</td><td>All biomes</td></tr>
-                  <tr><td>Iron Ore Deposits</td><td>Reddish-brown patches</td><td>4-8 iron ore</td><td>Surface to level 2</td><td>River, Valley</td></tr>
+                  <tr><td>Ironstone Outcrops</td><td>Dark grey boulders with rust</td><td>~3-6 iron ore</td><td>Surface</td><td>Mountain, Hills</td></tr>
+                  <tr><td>Underground Veins</td><td>Metallic streaks in rock walls</td><td>~8-15 iron ore per tile</td><td>~3-6 levels deep</td><td>All biomes</td></tr>
+                  <tr><td>Iron Ore Deposits</td><td>Reddish-brown patches</td><td>~4-8 iron ore</td><td>Surface to level 2</td><td>River, Valley</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -86,12 +86,12 @@ export default function IronMiningPage() {
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                The coal advantage is dramatic. With wood fuel, 100 iron ore produces 50 ingots. With coal, the same 100 ore produces 100 ingots—double the output. Prioritize coal production as soon as you have a steady iron mining operation. Build a charcoal kiln (requires research) to convert wood into charcoal if natural coal is unavailable on your map.
+                The coal advantage is significant. With wood fuel, 100 iron ore produces ~50 ingots. With coal, the same 100 ore produces ~100 ingots — roughly double the output. Prioritize coal production as soon as you have a steady iron mining operation. Convert wood into charcoal (if that option is available on your game version) when natural coal is scarce on your map.
               </p>
               <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Fuel Supply Warning:</strong>
-                  A smelter running at full capacity consumes approximately 8-10 fuel units per day. If you're using wood as fuel, that's 8-10 wood daily—which means your lumberjack must dedicate roughly half their workday to logging just for the smelter. Transition to coal or charcoal as soon as your colony can support it to free up labor for other tasks.
+                  A smelter running at full capacity consumes fuel continuously. If you're using wood as fuel, your lumberjack must dedicate significant labor to logging just for the smelter. Transition to coal as soon as your colony can support it to free up labor for other tasks. Exact fuel consumption rates are community estimates.
                 </p>
               </div>
             </section>
@@ -99,13 +99,13 @@ export default function IronMiningPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Steel Production Chain</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Steel is the ultimate metal in Going Medieval—required for the best weapons and armor. The steel production chain is complex, requiring multiple processing steps and facilities, but the end result is equipment with 40% more durability and damage than iron equivalents.
+                Steel is the ultimate metal in Going Medieval — required for the best weapons and armor. The steel production chain is complex, requiring multiple processing steps and facilities, but the end result is superior equipment. The table below lists community-estimated recipes and values. These specific ratios may differ from your game version.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The complete steel production chain: Iron Ore → Smelter (with coal) → Iron Ingots → Blast Furnace (with coal, requires research) → Steel Ingots → Smithy → Steel Equipment. Each steel ingot requires 2 iron ingots and 1 coal in the blast furnace. This means a single steel sword (3 steel ingots) ultimately consumes 6 iron ore and 3 coal.
+                The complete steel production chain (community estimate): Iron Ore → Smelter (with coal) → Iron Ingots → Blast Furnace (with coal) → Steel Ingots → Smithy → Steel Equipment. Each steel ingot may require multiple iron ingots and coal in the blast furnace. This means a single steel sword ultimately consumes significant iron ore and coal.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Due to the high resource cost, steel production should be targeted, not mass-produced. Produce steel only for your best combat settlers' primary weapons and chest armor. Other settlers and secondary equipment pieces can use iron equivalents. A colony of 10 settlers typically needs only 3-4 pieces of steel equipment—the production chain isn't efficient enough for full steel loadouts.
+                Due to the high resource cost, steel production should be targeted, not mass-produced. Produce steel only for your best combat settlers' primary weapons and chest armor. Other settlers and secondary equipment pieces can use iron equivalents. The production chain isn't efficient enough for full steel loadouts.
               </p>
             </section>
 
@@ -145,10 +145,10 @@ export default function IronMiningPage() {
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Iron Demand by Colony Size</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div className="flex justify-between"><span>Early (5 settlers)</span><span className="text-gold">~50 ingots total</span></div>
-                <div className="flex justify-between"><span>Mid (8 settlers)</span><span className="text-vermillion">~150 ingots</span></div>
-                <div className="flex justify-between"><span>Late (12+ settlers)</span><span className="text-vermillion">~300+ ingots</span></div>
-                <div className="mt-2">Estimates include weapons, armor, tools, and construction needs for a fully equipped colony.</div>
+                <div className="flex justify-between"><span>Early (5 settlers)</span><span className="text-gold">~50 ingots total (est.)</span></div>
+                <div className="flex justify-between"><span>Mid (8 settlers)</span><span className="text-vermillion">~150 ingots (est.)</span></div>
+                <div className="flex justify-between"><span>Late (12+ settlers)</span><span className="text-vermillion">~300+ ingots (est.)</span></div>
+                <div className="mt-2">Community estimates for weapons, armor, tools, and construction needs for a fully equipped colony.</div>
               </div>
             </div>
           </aside>

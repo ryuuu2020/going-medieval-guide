@@ -26,11 +26,9 @@ export default function RaidDefensePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Bandit Raid</td><td>2-6</td><td>Clubs, bows, leather armor</td><td>Wall archers, spike traps</td></tr>
-                  <tr><td>Sapper Raid</td><td>4-10</td><td>Digs through walls, grenades</td><td>Reinforce vulnerable walls, melee intercept</td></tr>
-                  <tr><td>Trebuchet Raid</td><td>3-8+trebuchet</td><td>Ranged wall destruction</td><td>Counter-trebuchet fire, sorties</td></tr>
-                  <tr><td>Siege Tower Raid</td><td>6-12+tower</td><td>Bypasses walls, drops troops</td><td>Concentrated fire on tower, inner wall defense</td></tr>
-                  <tr><td>Animal Stampede</td><td>5-15 animals</td><td>Overwhelms via numbers</td><td>Chokepoints, spike traps, elevated archers</td></tr>
+                  <tr><td>Bandit Raid</td><td>~2-6 (est.)</td><td>Clubs, bows, leather armor</td><td>Wall archers, spike traps</td></tr>
+                  <tr><td>Siege Raid (Trebuchet)</td><td>~3-8 + siege engine</td><td>Ranged wall destruction</td><td>Counter-siege, sorties</td></tr>
+                  <tr><td>Animal Stampede</td><td>~5-15 animals (est.)</td><td>Overwhelms via numbers</td><td>Chokepoints, spike traps, elevated archers</td></tr>
                 </tbody>
               </table>
               <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
@@ -129,10 +127,10 @@ export default function RaidDefensePage() {
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Raid Threat by Colony Wealth</h3>
               <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div className="flex justify-between"><span>0-5K Wealth</span><span className="text-gold">2-4 Raiders</span></div>
-                <div className="flex justify-between"><span>5-15K Wealth</span><span className="text-gold">4-8 Raiders</span></div>
-                <div className="flex justify-between"><span>15-30K Wealth</span><span className="text-vermillion">8-12+ Raiders</span></div>
-                <div className="flex justify-between"><span>30K+ Wealth</span><span className="text-vermillion">12-20+ Siege</span></div>
+                <div className="flex justify-between"><span>0-5K Wealth</span><span className="text-gold">~2-4 Raiders (est.)</span></div>
+                <div className="flex justify-between"><span>5-15K Wealth</span><span className="text-gold">~4-8 Raiders (est.)</span></div>
+                <div className="flex justify-between"><span>15-30K Wealth</span><span className="text-vermillion">~8-12+ Raiders (est.)</span></div>
+                <div className="flex justify-between"><span>30K+ Wealth</span><span className="text-vermillion">~12-20+ with siege (est.)</span></div>
               </div>
             </div>
           </aside>
