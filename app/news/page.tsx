@@ -1,5 +1,11 @@
 
 const NEWS = [
+      {
+    date: '2026-06-26',
+    title: 'Medieval Monday Talk #81: Downtime Activities + Patch 1.0.105 Performance',
+    excerpt: "Foxy Voxel's Medieval Monday Talk #81 explores 'Interesting Downtime' — new idle activities for settlers between major construction projects. Proposed features include: settler social interactions (gossip and storytelling around campfires), animal petting mechanics with mood buffs, and a 'contemplation' system where idle settlers generate research points by observing nature. These are experimental-branch targets and won't hit main until stability is confirmed. Meanwhile, Patch 1.0.105 (June 24) delivers significantly faster map transitions for players with massive 50+ structure settlements — a long-requested optimization. Several crash fixes and visual glitch patches are included. Important: experimental and main branches are currently divergent; loading experimental saves on main may cause corruption. A new developer logging system on the experimental branch will help Foxy Voxel gather detailed crash telemetry.",
+    tag: 'Update',
+  },
   {
     date: '2026-06-25',
     title: 'Underground Mining 101: How to Build Your First Iron Mine Without Collapsing Everything',
