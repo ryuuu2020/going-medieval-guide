@@ -1,5 +1,12 @@
 
 const NEWS = [
+  {
+    date: "2026-06-27",
+    title: "Going Medieval Patch 1.0.105 — Load Time Optimization and Crash Fixes",
+    tag: "Update",
+    excerpt:
+      "Foxy Voxel shipped Going Medieval patch 1.0.105 on June 25, and the headline improvement is a significant reduction in loading times when entering or exiting sub-maps in large settlements. If your colony has grown to 30+ settlers with extensive underground construction, you have likely noticed the loading screens getting longer — this patch directly addresses that issue. Beyond load times, the patch fixes multiple crash scenarios, resolves a tutorial resource shortage bug that could block progression, and corrects several visual display errors. One known issue remains: assigned pets still do not sleep with their owners, which the developers have acknowledged but not yet fixed. The patch is live on both the main branch and the demo, so new players trying the game during the Steam Summer Sale will get the optimized build. For veteran colony builders, the load time improvement alone makes this patch worth updating to — large save files that previously took 30+ seconds to load sub-maps should now be noticeably faster.",
+  },
       {
     date: '2026-06-26',
     title: 'Medieval Monday Talk #81: Downtime Activities + Patch 1.0.105 Performance',
