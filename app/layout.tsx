@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Going Medieval Guide — Colony Sim Strategy Wiki",
@@ -73,22 +75,14 @@ export default function RootLayout({
           rel="stylesheet"
         />
         {/* Google Analytics GA4 */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-ET6778V62K"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-ET6778V62K');
-            `,
-          }}
-        />
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
+        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-ET6778V62K" />
+        <Script strategy="lazyOnload" id="gtag-init">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ET6778V62K');`}
+            </Script>
+        <Script strategy="lazyOnload" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
       </head>
       <body>
         {/* ── Sidebar + Main wrapper ── */}
@@ -289,7 +283,7 @@ export default function RootLayout({
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.75rem",
                   fontWeight: 600,
-                  color: "#f5ecd7",
+                  color: "var(--color-bg)",
                   backgroundColor: "var(--color-accent)",
                   borderRadius: "3px 12px 3px 12px",
                   textDecoration: "none",
@@ -440,10 +434,10 @@ export default function RootLayout({
                     borderTop: "1px solid var(--color-divider)",
                   }}
                 >
-                  <a href="/about" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>About</a>
-                  <a href="/privacy" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Privacy</a>
-                  <a href="/terms" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Terms</a>
-                  <a href="/faq" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>FAQ</a>
+                  <Link href="/about" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>About</Link>
+                  <Link href="/privacy" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Privacy</Link>
+                  <Link href="/terms" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Terms</Link>
+                  <Link href="/faq" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>FAQ</Link>
                   <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener" style={{ color: "var(--color-accent)", fontSize: "0.9rem", fontWeight: 600 }}>❤️ Support Us</a>
                 </div>
 

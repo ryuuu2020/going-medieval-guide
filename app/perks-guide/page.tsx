@@ -6,7 +6,7 @@ export default function PerksGuidePage() {
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
             <h1 className="chapter-heading">Settler Traits & Perks Guide</h1>
-            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
+            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: 'var(--color-accent)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; IMPORTANT:</strong> Going Medieval settlers possess traits and perks that affect their skills, mood, and work efficiency. However, <strong>specific trait names, exact numerical bonuses, and complete trait lists are community-documented</strong> and may vary between game versions. This guide focuses on general trait categories and evaluation strategies confirmed through the Going Medieval Wiki (goingmedieval.fandom.com) and community observation. Do not assume traits from other colony sims (e.g., RimWorld) exist in Going Medieval — the trait systems are different games with different designs.
                 </p>
@@ -90,7 +90,7 @@ export default function PerksGuidePage() {
                 <h4 className="font-display text-base font-semibold text-ink">Step 3: Assess Your Colony's Needs</h4>
                 <p className="font-serif text-sm text-ink-light mt-1">An average settler who fills an urgent gap (you have no cook and they have Cooking 6+) may be worth recruiting despite mediocre traits. A great settler who duplicates a role you already have filled is a luxury — recruit them if you can support the extra mouth, but don't feel obligated. Match the settler to your colony's current bottleneck.</p>
               </div>
-              <div className="journal-card p-4" style={{ borderLeft: '4px solid #8b2500' }}>
+              <div className="journal-card p-4" style={{ borderLeft: '4px solid var(--color-accent)' }}>
                 <h4 className="font-display text-base font-semibold text-ink">Step 4: Look for Red-Flag Negative Traits</h4>
                 <p className="font-serif text-sm text-ink-light mt-1">Watch for negative traits that are difficult to manage. A significant work-speed penalty affects everything the settler does. A severe learning penalty means they'll never improve meaningfully. Traits that cause dangerous behavior (if any exist in the current version) should make you reject the settler outright. One mild negative trait balanced by two strong positives is usually acceptable.</p>
               </div>
@@ -213,7 +213,7 @@ export default function PerksGuidePage() {
               <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Always Recruit</h4><p className="font-serif text-xs text-ink-muted mt-1">Work-speed boost + any other positive trait. Fast learner with relevant skills. Two strong positives, no negatives.</p></div>
               <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Strongly Consider</h4><p className="font-serif text-xs text-ink-muted mt-1">One strong positive trait + fills a colony need. Mental resilience for combat roles. High skills despite average traits.</p></div>
               <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Conditional</h4><p className="font-serif text-xs text-ink-muted mt-1">Fills urgent skill gap. One minor positive, no severe negatives. Late-game luxury recruit.</p></div>
-              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink" style={{"color": "#8b2500"}}>Reject</h4><p className="font-serif text-xs text-ink-muted mt-1">Severe work-speed + slow-learning combo. Dangerous behavioral traits. Multiple severe negatives without compensation.</p></div>
+              <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink" style={{"color": "var(--color-accent)"}}>Reject</h4><p className="font-serif text-xs text-ink-muted mt-1">Severe work-speed + slow-learning combo. Dangerous behavioral traits. Multiple severe negatives without compensation.</p></div>
             </div>
           </div>
           <div className="journal-card p-5">
