@@ -444,6 +444,33 @@ td {
   font-family: 'Lora', serif;
   font-style: italic;
 }
+.footer-eeat {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 90, 43, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-eeat-text {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-family: 'Lora', serif;
+}
+.footer-eeat-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-eeat-link:hover {
+  color: var(--color-terracotta);
+}
+.footer-eeat-updated {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 .footer-guides-title {
   font-family: 'Cormorant Garamond', serif;
   color: var(--color-accent);
