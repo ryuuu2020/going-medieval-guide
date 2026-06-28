@@ -204,7 +204,7 @@ td {
 /* Tag label — like a wax seal */
 .wax-tag {
   display: inline-block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
