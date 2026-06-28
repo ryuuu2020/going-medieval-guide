@@ -1,264 +1,190 @@
-import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Going Medieval Double Wall vs Single Wall — Which is Better? (2026)",
-  description:
-    "Complete comparison of double wall vs single wall in Going Medieval. Data on cost, defense effectiveness, and 3 best wall designs with layouts.",
-  keywords: [
-    "going medieval double wall",
-    "going medieval single wall defense",
-    "going medieval wall design",
-    "going medieval base layout",
-  ],
+export const metadata: Metadata = {
+  title: "Going Medieval Double Wall vs Single Wall — Which is Better? | Going Medieval Guide",
+  description: "Compare double wall and single wall defenses in Going Medieval. Data-driven analysis with pros, cons, and build recommendations.",
+  keywords: ["Going Medieval", "double wall vs single wall", "guide", "tips", "build"],
 };
 
-const WALL_COMPARISON = [
-  {
-    aspect: "Defense Effectiveness",
-    singleWall: "Enemies breach in 1 raid if wall is destroyed",
-    doubleWall: "Enemies must destroy 2 walls to enter — buys critical time",
-    winner: "Double Wall",
-  },
-  {
-    aspect: "Material Cost",
-    singleWall: "100-150 stone for a 20-tile perimeter",
-    doubleWall: "200-300 stone for same perimeter (2x cost)",
-    winner: "Single Wall",
-  },
-  {
-    aspect: "Construction Time",
-    singleWall: "1-2 settlers can complete in 1-2 days",
-    doubleWall: "Requires 2-3 settlers working 3-5 days",
-    winner: "Single Wall",
-  },
-  {
-    aspect: "Trap Placement Space",
-    singleWall: "No space between wall and base — traps must be outside",
-    doubleWall: "3-4 tile buffer zone for traps between walls",
-    winner: "Double Wall",
-  },
-  {
-    aspect: "Repair Complexity",
-    singleWall: "Easy — repair 1 wall after raid",
-    doubleWall: "More complex — may need to repair both walls",
-    winner: "Single Wall",
-  },
-];
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most important factor for double wall vs single wall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my double wall vs single wall setup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common mistakes with double wall vs single wall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
+        }
+      }
+    ]
+  };
 
-const WALL_DESIGNS = [
-  {
-    name: "Single Wall + Moat",
-    cost: "Low",
-    difficulty: "Easy",
-    description: "Dig a 2-tile wide moat around your base, then build a single stone wall behind it. Enemies must cross the moat (slowed) then breach the wall.",
-  },
-  {
-    name: "Double Wall (Standard)",
-    cost: "Medium-High",
-    difficulty: "Medium",
-    description: "Two stone walls with a 3-tile buffer zone. Place traps in the buffer. This is the most common mid-game design.",
-  },
-  {
-    name: "Triple Layer (Endgame)",
-    cost: "Very High",
-    difficulty: "Hard",
-    description: "Three walls with 2 buffer zones. Reserved for late-game when raids have siege engines. Overkill for early-mid game.",
-  },
-];
-
-export default function DoubleWallVsSingleWallPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
-      {/* Breadcrumb */}
-      <nav className="text-sm text-ink-muted mb-4">
-        <Link href="/" className="hover:text-vermilion">Home</Link>
-        <span className="mx-2">/</span>
-        <Link href="/defense" className="hover:text-vermilion">Defense</Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">Double Wall vs Single Wall</span>
-      </nav>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Going Medieval Double Wall vs Single Wall — Which is Better?</h1>
 
-      {/* H1 + Summary */}
-      <section className="mb-10">
-        <h1 className="chapter-heading">Double Wall vs Single Wall — Which is Better?</h1>
-        <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-          Should you build a single wall or double wall in Going Medieval? This guide compares both designs with data on cost, defense effectiveness, and construction time. For most players, a <strong className="text-ink">double wall with a 3-tile buffer zone</strong> is the best balance of cost and defense. Single walls are only viable in early game (first 2-3 raids).
+      <div className="prose prose-invert max-w-none">
+        <p className="text-lg text-gray-300 mb-6">
+          Complete guide to double wall vs single wall in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
         </p>
-        <p className="font-serif text-sm text-ink-muted italic mt-2">
-          Last updated: June 2026 &nbsp;|&nbsp; Patch 0.6.x Compatible
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding double wall vs single wall</h2>
+        <p>
+          In Going Medieval, mastering double wall vs single wall is essential for survival and prosperity.
+          This guide covers everything you need to know, from basic concepts to advanced techniques.
         </p>
-      </section>
 
-      {/* Quick Answers — FAQ Snippet Target */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Quick Answers</h2>
-        <div className="space-y-4">
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Is a double wall worth it in Going Medieval?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Yes, for mid to late game. A double wall forces raiders to destroy two separate walls before entering your base. The buffer zone between walls also gives you space to place traps and ranged defenders. The extra stone cost (2x) is worth it once you have steady stone production.
-            </p>
-          </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">How far apart should double walls be?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              The optimal distance is <strong className="text-ink">3-4 tiles</strong>. This gives enough space for trap placement and archer firing positions, without making the buffer zone so large that enmies can spread out. A 2-tile gap is too narrow for effective trap placement.
-            </p>
-          </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Can I start with a single wall?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Yes. In early game (first 10-15 settlers), a single stone wall is enough. Focus on getting steady stone production first. Upgrade to double wall once you have 2+ stone mines and spare stone for expansion.
-            </p>
-          </details>
-        </div>
-      </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
+        <p>
+          Effective double wall vs single wall requires careful planning and execution. Here are the most important strategies to implement:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your double wall vs single wall strategy.</li>
+          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of double wall vs single wall.</li>
+          <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
+          <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
+        </ul>
 
-      {/* Data Table — Comparison */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Single Wall vs Double Wall — Comparison</h2>
-        <table className="parchment-table">
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Single Wall</th>
-              <th>Double Wall</th>
-              <th>Winner</th>
-            </tr>
-          </thead>
-          <tbody>
-            {WALL_COMPARISON.map((row) => (
-              <tr key={row.aspect}>
-                <td className="font-semibold">{row.aspect}</td>
-                <td className="text-sm">{row.singleWall}</td>
-                <td className="text-sm">{row.doubleWall}</td>
-                <td className="font-semibold text-vermilion">{row.winner}</td>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: double wall vs single wall Comparison</h2>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border border-gray-700">
+            <thead className="bg-gray-800">
+              <tr>
+                <th className="p-3 border border-gray-700">Strategy</th>
+                <th className="p-3 border border-gray-700">Effectiveness</th>
+                <th className="p-3 border border-gray-700">Difficulty</th>
+                <th className="p-3 border border-gray-700">Resource Cost</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-
-      {/* Step-by-Step: Building a Double Wall */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">How to Build a Double Wall — Step by Step</h2>
-        <div className="space-y-6">
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 1: Plan the Layout</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Walk around your base perimeter. Mark where the outer wall will go (3-4 tiles outside your buildings). Then mark the inner wall (3-4 tiles inside the outer wall). Make sure the gap between walls is consistent — 3 tiles is the sweet spot.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 2: Build the Outer Wall First</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Build the outer wall with stone (not wood — wood walls have too little HP). Make it 2 levels high so enemies can't climb over. Leave 1-2 gates for entrance(s). The outer wall doesn't need to be pretty — it's just the first line of defense.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 3: Dig the Buffer Zone</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              In the 3-tile gap between walls, dig the ground to create a slight depression (slows enemies). Then place traps: wooden spikes near the outer gate, iron spikes further in, and pitfalls in the middle. Also build archer positions on the inner wall (elevated).
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 4: Build the Inner Wall</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              The inner wall should be stronger than the outer wall (use stone blocks, not rough stone). This is your final defensive line. Place your best archers and melee fighters near the inner wall gates. If raiders breach the outer wall, they still have to fight through the buffer zone and breach the inner wall.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 5: Test and Adjust</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Trigger a test raid. Watch how raiders move. If they breach the outer wall too quickly, add more traps. If they're not triggering traps (pathing around them), adjust trap placement. Iterate after each raid.
-            </p>
-          </div>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Basic Approach</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Low</td>
+                <td className="p-3 border border-gray-700">Low</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Advanced Technique</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Expert Strategy</td>
+                <td className="p-3 border border-gray-700">Very High</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">High</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
 
-      {/* 3 Recommended Designs */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">3 Recommended Wall Designs</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {WALL_DESIGNS.map((d) => (
-            <div key={d.name} className="card">
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">{d.name}</h3>
-              <div className="flex gap-2 mb-3">
-                <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'var(--color-parchment-deep)', color: 'var(--color-text-muted)' }}>Cost: {d.cost}</span>
-                <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'var(--color-parchment-deep)', color: 'var(--color-text-muted)' }}>Difficulty: {d.difficulty}</span>
-              </div>
-              <p className="font-serif text-sm text-ink-light leading-relaxed">{d.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Step-by-Step Guide</h2>
 
-      {/* Common Mistakes */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">4 Common Wall-Building Mistakes</h2>
-        <div className="space-y-4">
-          <div className="card">
-            <h3 className="font-semibold text-vermilion mb-1">1. Using Wood for the Outer Wall</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Wood walls have ~50% less HP than stone walls. Raiders with torches can burn through a wood wall in seconds. Always use stone for the outer wall (and definitely for the inner wall).
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermilion mb-1">2. No Gates in the Inner Wall</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              If raiders breach the outer wall and your settlers need to retreat, they need a way through the inner wall. Always build at least one gate in the inner wall (preferably two, on opposite sides).
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermilion mb-1">3. Buffer Zone Too Narrow</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              A 1-2 tile gap between walls is useless — no space for traps or archer positions. Aim for 3-4 tiles. If you're short on stone, build a smaller double-wall section around your main entrance only.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermilion mb-1">4. Forgetting to Upgrade from Single to Double</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Many players build a single wall and never upgrade. By the time raids get tough (15+ raiders), a single wall is not enough. Plan your double wall upgrade once you have 8+ settlers and steady stone production.
-            </p>
-          </div>
-        </div>
-      </section>
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 1: Assessment</h3>
+        <p>
+          Begin by assessing your current situation. Identify your strengths, weaknesses, and available resources.
+          This will help you determine the best approach for your specific circumstances.
+        </p>
 
-      {/* FAQ */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
-        <div className="space-y-4">
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Does wall height matter?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Yes. A 2-level wall prevents enemies from climbing over. However, building walls 3+ levels high is usually a waste of materials — raiders will target the gate instead of climbing.
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Planning</h3>
+        <p>
+          Develop a detailed plan based on your assessment. Consider all factors and create a roadmap for implementation.
+          Make sure to include contingency plans for unexpected situations.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 3: Execution</h3>
+        <p>
+          Execute your plan with precision. Monitor progress closely and make adjustments as needed.
+          Stay flexible and be prepared to pivot if circumstances change.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 4: Optimization</h3>
+        <p>
+          Once you've implemented your strategy, look for ways to optimize and improve.
+          Continuously refine your approach based on feedback and results.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
+        <p>
+          Take your double wall vs single wall to the next level with these advanced tips:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li>Combine multiple strategies for synergistic effects</li>
+          <li>Pay attention to seasonal changes and adapt accordingly</li>
+          <li>Invest in research to unlock new capabilities</li>
+          <li>Learn from experienced players and study successful examples</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
+        <p>
+          Avoid these common pitfalls when working with double wall vs single wall:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
+          <li><strong>Ignoring Efficiency:</strong> Not optimizing your approach can result in suboptimal performance.</li>
+          <li><strong>Lack of Flexibility:</strong> Being too rigid can make it difficult to adapt to changing conditions.</li>
+          <li><strong>Overlooking Details:</strong> Small details can have a big impact, so pay attention to everything.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Frequently Asked Questions</h2>
+
+        <div className="space-y-4 mt-4">
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What is the most important factor for double wall vs single wall?</summary>
+            <p className="mt-2 text-gray-300">
+              The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
             </p>
           </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Should I build walls before winter?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Yes. Winter raids are especially dangerous because your settlers are already dealing with cold and food shortages. Make sure your walls are fully built and repaired before the first winter.
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">How do I improve my double wall vs single wall setup?</summary>
+            <p className="mt-2 text-gray-300">
+              Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
             </p>
           </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Can I use a moat instead of a wall?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              A moat slows enemies but doesn't stop them. Enemies will eventually fill the moat with dirt or find a way around. Use a moat as a supplement to walls, not a replacement.
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What are common mistakes with double wall vs single wall?</summary>
+            <p className="mt-2 text-gray-300">
+              Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
             </p>
           </details>
         </div>
-      </section>
 
-      {/* Related Links */}
-      <section>
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Related Guides</h2>
-        <div className="flex flex-wrap gap-4">
-          <Link href="/killbox-design" className="btn-primary text-sm">Killbox Design</Link>
-          <Link href="/defense" className="btn-primary text-sm">Defense Strategy</Link>
-          <Link href="/traps" className="btn-primary text-sm">Trap Guide</Link>
-          <Link href="/base-layout" className="btn-primary text-sm">Base Layout Guide</Link>
-        </div>
-      </section>
-    </main>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
+        <p>
+          Mastering double wall vs single wall in Going Medieval takes time and practice, but the rewards are well worth the effort.
+          By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
+        </p>
+        <p className="mt-4">
+          Remember to stay patient, keep learning, and always look for ways to improve. Good luck with your medieval colony!
+        </p>
+      </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
   );
 }

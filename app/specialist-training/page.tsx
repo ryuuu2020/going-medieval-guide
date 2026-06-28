@@ -1,141 +1,190 @@
-export const metadata = {
-  title: "Going Medieval Specialist Training — Skill Leveling Guide (2026)",
-  description: "Train specialist settlers in Going Medieval. Fastest skill leveling methods, work priority setup, passion traits, and which skills to specialize first.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Going Medieval Specialist Training | Going Medieval Guide",
+  description: "Train specialists in Going Medieval. Develop skilled colonists in combat, crafting, research, and other essential skills.",
+  keywords: ["Going Medieval", "specialist training guide", "guide", "tips", "build"],
 };
 
-export default function SpecialistTrainingPage() {
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most important factor for specialist training guide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my specialist training guide setup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common mistakes with specialist training guide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
+        }
+      }
+    ]
+  };
+
   return (
-    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-        <div className="flex-1 lg:max-w-[65%] space-y-10">
-          <section>
-            <h1 className="chapter-heading">Going Medieval Specialist Training — Complete Skill Guide</h1>
-            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              A colony of generalist settlers who do everything at medium skill level will always underperform a colony with dedicated specialists who excel at critical roles. In Going Medieval, settler skills advance through use — a settler who spends 80% of their time farming reaches high Farming skill far faster than one who splits time between farming, crafting, and construction. The key to rapid specialization is using the work priority system to focus each settler on their highest-need role and removing all competing task assignments that dilute their skill progression. This guide explains skill mechanics, how work priorities affect leveling speed, which skills to specialize first, and how trait-based passions accelerate certain skill paths.
-            </p>
-          </section>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Going Medieval Specialist Training</h1>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">How Skill Progression Works</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Skills in Going Medieval advance on an experience-point system. Performing tasks related to a skill awards experience. The experience required per level increases with each level, so early levels advance quickly while higher levels require sustained specialization.
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler performing a task they are not skilled in works significantly slower than a specialist. This creates a compounding advantage for specialization: the specialist finishes tasks faster, freeing time for more tasks, accumulating more experience per day than a generalist performing the same task at low skill.
-              </p>
-            </section>
+      <div className="prose prose-invert max-w-none">
+        <p className="text-lg text-gray-300 mb-6">
+          Complete guide to specialist training guide in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
+        </p>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Work Priority Configuration for Specialization</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Set each settler's work priorities to reflect their designated specialty. The priority system assigns a numeric priority to each task category. A settler with Farming at priority 1 and everything else at 3-4 will spend the majority of their active work hours farming, advancing Farming skill rapidly.
-              </p>
-              <table className="parchment-table">
-                <thead>
-                  <tr>
-                    <th>Specialty Role</th>
-                    <th>Priority 1 (Primary)</th>
-                    <th>Priority 2 (Secondary)</th>
-                    <th>Everything Else</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Farmer</td><td>Farming, Foraging</td><td>Hauling</td><td>Off or Low</td></tr>
-                  <tr><td>Carpenter</td><td>Building, Crafting</td><td>Hauling</td><td>Off or Low</td></tr>
-                  <tr><td>Smith</td><td>Smithing, Smelting</td><td>Mining</td><td>Off or Low</td></tr>
-                  <tr><td>Mason</td><td>Building, Mining</td><td>Hauling</td><td>Off or Low</td></tr>
-                  <tr><td>Archer</td><td>Combat (Ranged)</td><td>Hunting</td><td>Off or Low</td></tr>
-                  <tr><td>Cook</td><td>Cooking, Baking</td><td>Hauling food</td><td>Off or Low</td></tr>
-                  <tr><td>Healer</td><td>Medicine</td><td>Research</td><td>Off or Low</td></tr>
-                </tbody>
-              </table>
-            </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding specialist training guide</h2>
+        <p>
+          In Going Medieval, mastering specialist training guide is essential for survival and prosperity.
+          This guide covers everything you need to know, from basic concepts to advanced techniques.
+        </p>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Passion Traits and Skill Acceleration</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Settler traits include Passion designations for specific skills. A settler with Major Passion for Farming advances Farming skill at roughly double the normal experience rate. A settler with Minor Passion advances at approximately 1.5x. Settlers with no passion advance at 1x.
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Always match specialist roles to settler passions where possible. A settler with Major Passion for Combat is an ideal dedicated warrior; one with Major Passion for Farming should be your primary farmer. Assigning a passion settler to a role they have no passion for wastes their skill acceleration potential.
-              </p>
-            </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
+        <p>
+          Effective specialist training guide requires careful planning and execution. Here are the most important strategies to implement:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your specialist training guide strategy.</li>
+          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of specialist training guide.</li>
+          <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
+          <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
+        </ul>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Priority Specialization Order — Which Skills First</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Not all skills are equally critical in the early game. Prioritize specialization in this order based on impact:
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                1. <strong className="text-ink">Farmer (Farming 8+)</strong> — high-skill farming produces dramatically more food per tile. 2. <strong className="text-ink">Carpenter (Building 8+)</strong> — faster construction and higher-quality furniture. 3. <strong className="text-ink">Smith (Smithing 8+)</strong> — better weapons and armor for defense. 4. <strong className="text-ink">Cook (Cooking 8+)</strong> — better meals mean ongoing mood bonuses for every settler. 5. <strong className="text-ink">Healer (Medicine 8+)</strong> — prevents injury deaths that trigger colony-wide mood spirals.
-              </p>
-            </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-6">Frequently Asked Questions</h2>
-
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">Can a specialist change roles later if needed?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Yes — work priorities can be changed at any time and skills do not decay. If your designated farmer is injured, you can temporarily reassign another settler to cover farming and switch back when the specialist recovers. Skills persist, so the specialist's high Farming level remains available whenever they return to that role.</p>
-                </div>
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">What level should I aim for in critical skills?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Level 8 is the practical target for most specialist roles — at this level, the quality bonuses for crafted items and work speed improvements are significant. Level 10 (maximum) is ideal for your most important roles: Farming, Smithing, Cooking. Diminishing returns apply, so Level 10 is worth pursuing only for the most-used skills.</p>
-                </div>
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">How do I identify which settler has the best potential for each role?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Check settler traits for Passions (double skill XP) and Aptitude scores at settler arrival. The inspect settler panel shows skill starting values — a settler arriving with Farming 4 and Major Passion for Farming is a far better farmer candidate than one arriving at Farming 1 with no passion, even if they have similar total stats.</p>
-                </div>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl font-semibold text-ink mb-4">Related Guides</h2>
-            <div className="space-y-2">
-                  <a href="/settlers" className="text-accent hover:text-accent-hover underline">Settlers</a>
-                  <a href="/work-priorities" className="text-accent hover:text-accent-hover underline">Work Priorities</a>
-                  <a href="/settler-skills" className="text-accent hover:text-accent-hover underline">Settler Skills</a>
-                  <a href="/settler-traits-tier-list" className="text-accent hover:text-accent-hover underline">Settler Traits Tier List</a>
-
-            </div>
-          </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: specialist training guide Comparison</h2>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border border-gray-700">
+            <thead className="bg-gray-800">
+              <tr>
+                <th className="p-3 border border-gray-700">Strategy</th>
+                <th className="p-3 border border-gray-700">Effectiveness</th>
+                <th className="p-3 border border-gray-700">Difficulty</th>
+                <th className="p-3 border border-gray-700">Resource Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Basic Approach</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Low</td>
+                <td className="p-3 border border-gray-700">Low</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Advanced Technique</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Expert Strategy</td>
+                <td className="p-3 border border-gray-700">Very High</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">High</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Step-by-Step Guide</h2>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 1: Assessment</h3>
+        <p>
+          Begin by assessing your current situation. Identify your strengths, weaknesses, and available resources.
+          This will help you determine the best approach for your specific circumstances.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Planning</h3>
+        <p>
+          Develop a detailed plan based on your assessment. Consider all factors and create a roadmap for implementation.
+          Make sure to include contingency plans for unexpected situations.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 3: Execution</h3>
+        <p>
+          Execute your plan with precision. Monitor progress closely and make adjustments as needed.
+          Stay flexible and be prepared to pivot if circumstances change.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 4: Optimization</h3>
+        <p>
+          Once you've implemented your strategy, look for ways to optimize and improve.
+          Continuously refine your approach based on feedback and results.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
+        <p>
+          Take your specialist training guide to the next level with these advanced tips:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li>Combine multiple strategies for synergistic effects</li>
+          <li>Pay attention to seasonal changes and adapt accordingly</li>
+          <li>Invest in research to unlock new capabilities</li>
+          <li>Learn from experienced players and study successful examples</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
+        <p>
+          Avoid these common pitfalls when working with specialist training guide:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
+          <li><strong>Ignoring Efficiency:</strong> Not optimizing your approach can result in suboptimal performance.</li>
+          <li><strong>Lack of Flexibility:</strong> Being too rigid can make it difficult to adapt to changing conditions.</li>
+          <li><strong>Overlooking Details:</strong> Small details can have a big impact, so pay attention to everything.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Frequently Asked Questions</h2>
+
+        <div className="space-y-4 mt-4">
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What is the most important factor for specialist training guide?</summary>
+            <p className="mt-2 text-gray-300">
+              The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
+            </p>
+          </details>
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">How do I improve my specialist training guide setup?</summary>
+            <p className="mt-2 text-gray-300">
+              Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
+            </p>
+          </details>
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What are common mistakes with specialist training guide?</summary>
+            <p className="mt-2 text-gray-300">
+              Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
+            </p>
+          </details>
+        </div>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
+        <p>
+          Mastering specialist training guide in Going Medieval takes time and practice, but the rewards are well worth the effort.
+          By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
+        </p>
+        <p className="mt-4">
+          Remember to stay patient, keep learning, and always look for ways to improve. Good luck with your medieval colony!
+        </p>
       </div>
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can a specialist change roles later if needed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — work priorities can be changed at any time and skills do not decay. If your designated farmer is injured, you can temporarily reassign another settler to cover farming and switch back when the specialist recovers. Skills persist, so the specialist's high Farming level remains available whenever they return to that role."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What level should I aim for in critical skills?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Level 8 is the practical target for most specialist roles — at this level, the quality bonuses for crafted items and work speed improvements are significant. Level 10 (maximum) is ideal for your most important roles: Farming, Smithing, Cooking. Diminishing returns apply, so Level 10 is worth pursuing only for the most-used skills."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I identify which settler has the best potential for each role?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Check settler traits for Passions (double skill XP) and Aptitude scores at settler arrival. The inspect settler panel shows skill starting values — a settler arriving with Farming 4 and Major Passion for Farming is a far better farmer candidate than one arriving at Farming 1 with no passion, even if they have similar total stats."
-      }
-    }
-            ]
-          })
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    </main>
+    </div>
   );
 }

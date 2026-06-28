@@ -1,4 +1,3 @@
-'use client';
 
 import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
 export const metadata = {
@@ -159,7 +158,7 @@ export default function IronMiningPage() {
             </div>
           </aside>
         </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -188,7 +187,7 @@ export default function IronMiningPage() {
       }
     }
   ]
-}` } />
+}` }} />
       </main>
       <SiteFooter />
     </div>

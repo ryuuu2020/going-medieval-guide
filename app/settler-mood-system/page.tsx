@@ -1,156 +1,190 @@
-export const metadata = {
-  title: "Going Medieval Settler Mood System — Complete Guide (2026)",
-  description: "Master the Going Medieval mood system. All mood factors, debuff thresholds, how to keep settlers happy, and preventing mood spiral in your colony.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Going Medieval Settler Mood System | Going Medieval Guide",
+  description: "Master the mood system in Going Medieval. Keep your colonists happy with needs fulfillment, recreation, and beautiful rooms.",
+  keywords: ["Going Medieval", "settler mood system", "guide", "tips", "build"],
 };
 
-export default function SettlerMoodSystemPage() {
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most important factor for settler mood system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my settler mood system setup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common mistakes with settler mood system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
+        }
+      }
+    ]
+  };
+
   return (
-    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-        <div className="flex-1 lg:max-w-[65%] space-y-10">
-          <section>
-            <h1 className="chapter-heading">Going Medieval Settler Mood System — How to Keep Settlers Happy</h1>
-            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Settler mood is one of the most consequential systems in Going Medieval. A happy settler works faster, recovers from illness more quickly, and contributes to positive social dynamics across your whole colony. An unhappy settler works slower, is more prone to mental breaks, refuses certain tasks, and can trigger a debuff cascade that drags down the mood of surrounding settlers. Understanding the mood system — what buffs it, what tanks it, and how to design your base to maintain positive mood across all settlers — is one of the highest-leverage management skills in the game. This guide covers every mood factor, their weights, the debuff thresholds you must avoid, and practical systems for keeping settler mood reliably in the positive range.
-            </p>
-          </section>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Going Medieval Settler Mood System</h1>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">The Mood Score System</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Each settler has an individual mood score (typically displayed as a percentage or numerical value). This score is the sum of all active mood modifiers at any given moment. Positive events and conditions add to the score; negative conditions subtract from it. The net total determines the settler's mood tier.
-              </p>
-              <table className="parchment-table">
-                <thead>
-                  <tr>
-                    <th>Mood Tier</th>
-                    <th>Approximate Score</th>
-                    <th>Effect</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Ecstatic</td><td>80-100</td><td>+20% work speed; positive social influence</td></tr>
-                  <tr><td>Happy</td><td>60-79</td><td>+10% work speed; normal behavior</td></tr>
-                  <tr><td>Content</td><td>40-59</td><td>No bonus or penalty; baseline performance</td></tr>
-                  <tr><td>Unhappy</td><td>20-39</td><td>-10% work speed; may refuse some tasks</td></tr>
-                  <tr><td>Miserable</td><td>0-19</td><td>-25% work speed; risk of mental break</td></tr>
-                  <tr><td>Mental Break</td><td>&lt;0</td><td>Settler becomes uncontrollable temporarily</td></tr>
-                </tbody>
-              </table>
-            </section>
+      <div className="prose prose-invert max-w-none">
+        <p className="text-lg text-gray-300 mb-6">
+          Complete guide to settler mood system in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
+        </p>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Highest-Impact Mood Factors</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Not all mood factors are equal. Some factors can swing mood by 15-30 points; others are minor 1-3 point adjustments. Prioritize the high-impact factors to get the most mood improvement per effort.
-              </p>
-              <table className="parchment-table">
-                <thead>
-                  <tr>
-                    <th>Factor</th>
-                    <th>Mood Impact</th>
-                    <th>Duration</th>
-                    <th>Management</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Bedroom Quality</td><td>+15 to +25</td><td>Ongoing (daily)</td><td>Build quality private bedrooms</td></tr>
-                  <tr><td>Meal Quality</td><td>+10 to +20</td><td>After each meal (8h)</td><td>Cook varied meals; upgrade kitchen</td></tr>
-                  <tr><td>Settler Death Witnessed</td><td>-20 to -40</td><td>7-30 days</td><td>Prevent deaths; keep warriors armored</td></tr>
-                  <tr><td>Recreation Satisfied</td><td>+10 to +15</td><td>After recreation</td><td>Build recreation spaces; schedule free time</td></tr>
-                  <tr><td>Social Interaction</td><td>+5 to +10</td><td>After socializing</td><td>Shared dining hall; recreation scheduling</td></tr>
-                  <tr><td>Clothing Quality</td><td>+5 to +15</td><td>Ongoing</td><td>Dress all settlers in quality clothes</td></tr>
-                  <tr><td>Outdoors Time</td><td>+5 to +10</td><td>After outdoor activities</td><td>Farm/hunting roles; outdoor workbenches</td></tr>
-                  <tr><td>Injury / Pain</td><td>-10 to -30</td><td>Until healed</td><td>Hospital; trained healer settler</td></tr>
-                </tbody>
-              </table>
-            </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding settler mood system</h2>
+        <p>
+          In Going Medieval, mastering settler mood system is essential for survival and prosperity.
+          This guide covers everything you need to know, from basic concepts to advanced techniques.
+        </p>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Preventing the Mood Spiral</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A mood spiral occurs when one settler's mental break or death causes nearby settlers to receive negative mood events, which in turn pushes their mood lower, increasing the chance of further breaks. Left unchecked, a spiral can collapse a colony within a few in-game days.
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Prevent spirals by maintaining a mood buffer — keeping all settlers at Content or above so that a single negative event cannot push any settler into the danger zone. Monitor mood values daily in the colonist panel and act immediately when any settler drops below 40.
-              </p>
-            </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
+        <p>
+          Effective settler mood system requires careful planning and execution. Here are the most important strategies to implement:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your settler mood system strategy.</li>
+          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of settler mood system.</li>
+          <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
+          <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
+        </ul>
 
-            <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">High-Value Mood Investments (Ordered by ROI)</h2>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                If you need to improve colony mood quickly, prioritize these investments in order:
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                1. <strong className="text-ink">Private bedrooms with quality beds</strong> — ongoing daily bonus, affects every night. 2. <strong className="text-ink">Varied cooked meals</strong> — train a dedicated cook, use multiple ingredients. 3. <strong className="text-ink">Quality clothing for every settler</strong> — dress everyone in cloth or leather garments made by a skilled tailor. 4. <strong className="text-ink">Recreation space</strong> — a great hall with chairs, game boards, instruments satisfies social and recreation needs simultaneously. 5. <strong className="text-ink">Outdoor work assignments</strong> — settlers with traits that value nature need regular outdoor task assignments.
-              </p>
-            </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-6">Frequently Asked Questions</h2>
-
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">What is the minimum mood I should allow before taking action?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Treat 40 (the bottom of Content tier) as your intervention threshold. When any settler drops below 40, investigate the cause immediately and address it. Common causes: poor bedroom, no recent meals, witnessed a death, recurring pain from injury. Do not wait until a settler reaches Miserable before acting.</p>
-                </div>
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">Do settler traits affect how much each factor matters?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Yes — traits significantly modify mood factor weights. A settler with the 'Ascetic' trait cares less about room quality; one with 'Gourmet' needs better food quality; 'Outdoorsy' settlers need more outdoor time. Always check trait descriptions when a settler seems harder to keep happy than expected.</p>
-                </div>
-                <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-                  <h3 className="font-display text-lg font-semibold text-ink mb-2">Can settler relationships affect mood?</h3>
-                  <p className="font-serif text-base text-ink-light leading-relaxed">Yes — settlers develop positive and negative relationships over time based on interactions, shared meals, and working proximity. Strong positive relationships provide small ongoing mood bonuses. Hostile relationships create recurring negative events. Manage problematic relationships by separating incompatible settlers into different work schedules or living quarters.</p>
-                </div>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl font-semibold text-ink mb-4">Related Guides</h2>
-            <div className="space-y-2">
-                  <a href="/settlers" className="text-accent hover:text-accent-hover underline">Settlers</a>
-                  <a href="/happiness-guide" className="text-accent hover:text-accent-hover underline">Happiness Guide</a>
-                  <a href="/room-quality" className="text-accent hover:text-accent-hover underline">Room Quality</a>
-                  <a href="/recreation-scheduling" className="text-accent hover:text-accent-hover underline">Recreation Scheduling</a>
-
-            </div>
-          </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: settler mood system Comparison</h2>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border border-gray-700">
+            <thead className="bg-gray-800">
+              <tr>
+                <th className="p-3 border border-gray-700">Strategy</th>
+                <th className="p-3 border border-gray-700">Effectiveness</th>
+                <th className="p-3 border border-gray-700">Difficulty</th>
+                <th className="p-3 border border-gray-700">Resource Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Basic Approach</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Low</td>
+                <td className="p-3 border border-gray-700">Low</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Advanced Technique</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Expert Strategy</td>
+                <td className="p-3 border border-gray-700">Very High</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">High</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Step-by-Step Guide</h2>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 1: Assessment</h3>
+        <p>
+          Begin by assessing your current situation. Identify your strengths, weaknesses, and available resources.
+          This will help you determine the best approach for your specific circumstances.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Planning</h3>
+        <p>
+          Develop a detailed plan based on your assessment. Consider all factors and create a roadmap for implementation.
+          Make sure to include contingency plans for unexpected situations.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 3: Execution</h3>
+        <p>
+          Execute your plan with precision. Monitor progress closely and make adjustments as needed.
+          Stay flexible and be prepared to pivot if circumstances change.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 4: Optimization</h3>
+        <p>
+          Once you've implemented your strategy, look for ways to optimize and improve.
+          Continuously refine your approach based on feedback and results.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
+        <p>
+          Take your settler mood system to the next level with these advanced tips:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li>Combine multiple strategies for synergistic effects</li>
+          <li>Pay attention to seasonal changes and adapt accordingly</li>
+          <li>Invest in research to unlock new capabilities</li>
+          <li>Learn from experienced players and study successful examples</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
+        <p>
+          Avoid these common pitfalls when working with settler mood system:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
+          <li><strong>Ignoring Efficiency:</strong> Not optimizing your approach can result in suboptimal performance.</li>
+          <li><strong>Lack of Flexibility:</strong> Being too rigid can make it difficult to adapt to changing conditions.</li>
+          <li><strong>Overlooking Details:</strong> Small details can have a big impact, so pay attention to everything.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Frequently Asked Questions</h2>
+
+        <div className="space-y-4 mt-4">
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What is the most important factor for settler mood system?</summary>
+            <p className="mt-2 text-gray-300">
+              The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
+            </p>
+          </details>
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">How do I improve my settler mood system setup?</summary>
+            <p className="mt-2 text-gray-300">
+              Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
+            </p>
+          </details>
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What are common mistakes with settler mood system?</summary>
+            <p className="mt-2 text-gray-300">
+              Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
+            </p>
+          </details>
+        </div>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
+        <p>
+          Mastering settler mood system in Going Medieval takes time and practice, but the rewards are well worth the effort.
+          By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
+        </p>
+        <p className="mt-4">
+          Remember to stay patient, keep learning, and always look for ways to improve. Good luck with your medieval colony!
+        </p>
       </div>
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the minimum mood I should allow before taking action?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Treat 40 (the bottom of Content tier) as your intervention threshold. When any settler drops below 40, investigate the cause immediately and address it. Common causes: poor bedroom, no recent meals, witnessed a death, recurring pain from injury. Do not wait until a settler reaches Miserable before acting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do settler traits affect how much each factor matters?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — traits significantly modify mood factor weights. A settler with the 'Ascetic' trait cares less about room quality; one with 'Gourmet' needs better food quality; 'Outdoorsy' settlers need more outdoor time. Always check trait descriptions when a settler seems harder to keep happy than expected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can settler relationships affect mood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — settlers develop positive and negative relationships over time based on interactions, shared meals, and working proximity. Strong positive relationships provide small ongoing mood bonuses. Hostile relationships create recurring negative events. Manage problematic relationships by separating incompatible settlers into different work schedules or living quarters."
-      }
-    }
-            ]
-          })
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    </main>
+    </div>
   );
 }

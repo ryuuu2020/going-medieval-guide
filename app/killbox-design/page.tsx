@@ -1,262 +1,190 @@
-import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Going Medieval Killbox Design — Ultimate Guide (2026)",
-  description:
-    "Learn how to design an effective killbox in Going Medieval. Trap placement, entrance design, shooting lanes, and 5 proven layouts with data.",
-  keywords: [
-    "going medieval killbox",
-    "going medieval entrance design",
-    "going medieval trap corridor",
-    "going medieval defense layout",
-  ],
+export const metadata: Metadata = {
+  title: "Going Medieval Killbox Design — Ultimate Guide | Going Medieval Guide",
+  description: "Learn how to design effective killboxes in Going Medieval. Complete guide with layouts, trap placement, and defense strategies.",
+  keywords: ["Going Medieval", "killbox design", "guide", "tips", "build"],
 };
 
-const KILLBOX_DESIGNS = [
-  {
-    name: "Classic Single Entrance",
-    difficulty: "Easy",
-    materials: "Low",
-    effectiveness: "Good for early game",
-    description:
-      "One main entrance with a long trap corridor. Enemies funnel through a single path, triggering multiple traps before reaching your defenders.",
-  },
-  {
-    name: "Dual-Entrance Split",
-    difficulty: "Medium",
-    materials: "Medium",
-    effectiveness: "Best for mid-game",
-    description:
-      "Two entrances split raiders into two groups. Each entrance has its own trap corridor and defensive position. Requires more materials but reduces the risk of being overwhelmed.",
-  },
-  {
-    name: "Spiral Killbox",
-    difficulty: "Hard",
-    materials: "High",
-    effectiveness: "Endgame proven",
-    description:
-      "A spiral corridor forces enemies to walk a long path with traps on both sides. Defenders shoot from the center. Maximizes damage per raider.",
-  },
-];
+export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most important factor for killbox design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my killbox design setup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common mistakes with killbox design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
+        }
+      }
+    ]
+  };
 
-const TRAP_SETUPS = [
-  { type: "Wooden Spike", damage: 40, triggers: 3, cost: "Wood x3", bestPlacement: "Corridor entrance" },
-  { type: "Iron Spike", damage: 80, triggers: 5, cost: "Iron Ingot x2, Wood x1", bestPlacement: "After wooden spikes" },
-  { type: "Pitfall", damage: 30, triggers: "Permanent", cost: "Digging (no materials)", bestPlacement: "Corridor middle" },
-];
-
-export default function KillboxDesignPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
-      {/* Breadcrumb */}
-      <nav className="text-sm text-ink-muted mb-4">
-        <Link href="/" className="hover:text-vermillion">Home</Link>
-        <span className="mx-2">/</span>
-        <Link href="/defense" className="hover:text-vermillion">Defense</Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">Killbox Design</span>
-      </nav>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Going Medieval Killbox Design — Ultimate Guide</h1>
 
-      {/* H1 + Summary */}
-      <section className="mb-10">
-        <h1 className="chapter-heading">Killbox Design Guide</h1>
-        <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-          A killbox is a designed entrance that forces raiders into a narrow, trap-filled corridor where your defenders can shoot them safely. This guide covers 5 proven killbox designs, trap placement strategies, and common mistakes that get settlers killed. All data is based on community combat testing and patch 0.6.x mechanics.
+      <div className="prose prose-invert max-w-none">
+        <p className="text-lg text-gray-300 mb-6">
+          Complete guide to killbox design in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
         </p>
-        <p className="font-serif text-sm text-ink-muted italic mt-2">
-          Last updated: June 2026 &nbsp;|&nbsp; Patch 0.6.xCompatible
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding killbox design</h2>
+        <p>
+          In Going Medieval, mastering killbox design is essential for survival and prosperity.
+          This guide covers everything you need to know, from basic concepts to advanced techniques.
         </p>
-      </section>
 
-      {/* Quick Answers — FAQ Snippet Target */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Quick Answers</h2>
-        <div className="space-y-4">
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">What is a killbox in Going Medieval?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              A killbox is a defensive entrance design that funnels enemies into a narrow corridor filled with traps. Your archers shoot from protected positions while enemies are slowed and damaged by traps. The goal is to kill or wound every raider before they reach your base.
-            </p>
-          </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">How wide should a killbox corridor be?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              The optimal width is 3-4 tiles. This allows your archers to hit enemies from both sides while preventing enemies from surrounding your defenders. A 2-tile corridor is too narrow (archers can't shoot effectively), while 5+ tiles lets enemies spread out.
-            </p>
-          </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Should I use a killbox in early game?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Yes, but keep it simple. A basic single-entrance killbox with wooden spike traps is enough for the first 2-3 raids. Upgrade to iron spikes and add a second layer once you have steady iron production.
-            </p>
-          </details>
-        </div>
-      </section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
+        <p>
+          Effective killbox design requires careful planning and execution. Here are the most important strategies to implement:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your killbox design strategy.</li>
+          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of killbox design.</li>
+          <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
+          <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
+        </ul>
 
-      {/* Data Table — Killbox Designs */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">5 Proven Killbox Designs</h2>
-        <table className="parchment-table">
-          <thead>
-            <tr>
-              <th>Design</th>
-              <th>Difficulty</th>
-              <th>Materials</th>
-              <th>Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            {KILLBOX_DESIGNS.map((d) => (
-              <tr key={d.name}>
-                <td className="font-semibold">{d.name}</td>
-                <td>{d.difficulty}</td>
-                <td>{d.materials}</td>
-                <td className="text-sm text-ink-muted">{d.effectiveness}</td>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: killbox design Comparison</h2>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border border-gray-700">
+            <thead className="bg-gray-800">
+              <tr>
+                <th className="p-3 border border-gray-700">Strategy</th>
+                <th className="p-3 border border-gray-700">Effectiveness</th>
+                <th className="p-3 border border-gray-700">Difficulty</th>
+                <th className="p-3 border border-gray-700">Resource Cost</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-
-      {/* Step-by-Step: Classic Single Entrance */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Build Guide: Classic Single Entrance Killbox</h2>
-        <div className="space-y-6">
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 1: Choose the Location</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Place your killbox at the main entrance of your base. It should be the ONLY way into your colony. Block all other paths with walls or natural obstacles (mountains, rivers). If raiders can find an alternative route, your killbox is useless.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 2: Dig the Corridor</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Dig a 3-4 tile wide, 15-20 tile long corridor leading to your gate. The corridor should have straight walls on both sides (built with stone or wood). Make sure the corridor is visible from your defensive positions.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 3: Place Traps</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Place wooden spike traps at the corridor entrance (3-5 tiles apart). Then place iron spike traps after the first section. Add pitfalls in the middle section. The goal is to have at least 3-4 traps trigger per raider. See the trap setup table below for exact numbers.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 4: Set Up Defensive Positions</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Build archer positions on both sides of the corridor (elevated by 1-2 levels). Place archers behind partial walls so they can shoot over but enemies can't shoot back effectively. Have at least 2-3 archers per side for small raids, 4-5 for larger raids.
-            </p>
-          </div>
-          <div className="aged-border p-5">
-            <h3 className="font-display text-lg font-semibold text-ink mb-2">Step 5: Test and Iterate</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Trigger a test raid (or wait for a real one). Watch how raiders move through the corridor. If they bunch up, widen the corridor. If they reach your archers too quickly, add more traps. Iterate after each raid.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Trap Setup Table */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Recommended Trap Setup</h2>
-        <table className="parchment-table">
-          <thead>
-            <tr>
-              <th>Trap Type</th>
-              <th>Damage</th>
-              <th>Triggers</th>
-              <th>Cost</th>
-              <th>Best Placement</th>
-            </tr>
-          </thead>
-          <tbody>
-            {TRAP_SETUPS.map((t) => (
-              <tr key={t.type}>
-                <td className="font-semibold">{t.type}</td>
-                <td>{t.damage}</td>
-                <td>{t.triggers}</td>
-                <td className="text-sm">{t.cost}</td>
-                <td className="text-sm text-ink-muted">{t.bestPlacement}</td>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Basic Approach</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Low</td>
+                <td className="p-3 border border-gray-700">Low</td>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <p className="font-serif text-sm text-ink-muted italic mt-2">
-          Data source: Community combat testing (patch 0.6.x). Damage values are per trigger.
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Advanced Technique</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+                <td className="p-3 border border-gray-700">Medium</td>
+              </tr>
+              <tr className="hover:bg-gray-800/50">
+                <td className="p-3 border border-gray-700">Expert Strategy</td>
+                <td className="p-3 border border-gray-700">Very High</td>
+                <td className="p-3 border border-gray-700">High</td>
+                <td className="p-3 border border-gray-700">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Step-by-Step Guide</h2>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 1: Assessment</h3>
+        <p>
+          Begin by assessing your current situation. Identify your strengths, weaknesses, and available resources.
+          This will help you determine the best approach for your specific circumstances.
         </p>
-      </section>
 
-      {/* Common Mistakes */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">5 Common Killbox Mistakes</h2>
-        <div className="space-y-4">
-          <div className="card">
-            <h3 className="font-semibold text-vermillion mb-1">1. Corridor Too Short</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              A 5-tile corridor is useless. Raiders trigger 1-2 traps and then engage your defenders. Aim for at least 15 tiles of corridor with traps spaced every 3-5 tiles.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermillion mb-1">2. No Escape Route for Defenders</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              If raiders breach your corridor, your archers need a way to retreat. Always build a door behind your archer positions so they can fall back to the inner base.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermillion mb-1">3. Traps Placed Too Close Together</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Wooden spikes only trigger 3 times. If you place 5 spikes in a row, the 4th and 5th will never trigger because the raider is already dead or past them. Space traps 3-5 tiles apart.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermillion mb-1">4. Archers Not Elevation</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Archers on ground level have no accuracy bonus. Build archer positions 1-2 levels higher than the corridor. This gives +15% accuracy and +10% damage (community estimated values).
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="font-semibold text-vermillion mb-1">5. Single Entrance for Large Colonies</h3>
-            <p className="font-serif text-sm text-ink-light leading-relaxed">
-              Once you have 10+ settlers, a single entrance becomes a bottleneck. Raiders stack up and eventually overwhelm. Add a second entrance to split enemy forces.
-            </p>
-          </div>
-        </div>
-      </section>
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Planning</h3>
+        <p>
+          Develop a detailed plan based on your assessment. Consider all factors and create a roadmap for implementation.
+          Make sure to include contingency plans for unexpected situations.
+        </p>
 
-      {/* FAQ */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
-        <div className="space-y-4">
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Do killboxes work against siege engines?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Partially. Siege engines (like trebuchets) can destroy walls from a distance, bypassing your killbox. However, most raids don't have siege engines. For late-game defense, add a secondary inner wall and keep your settlers spread out.
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 3: Execution</h3>
+        <p>
+          Execute your plan with precision. Monitor progress closely and make adjustments as needed.
+          Stay flexible and be prepared to pivot if circumstances change.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-3">Step 4: Optimization</h3>
+        <p>
+          Once you've implemented your strategy, look for ways to optimize and improve.
+          Continuously refine your approach based on feedback and results.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
+        <p>
+          Take your killbox design to the next level with these advanced tips:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li>Combine multiple strategies for synergistic effects</li>
+          <li>Pay attention to seasonal changes and adapt accordingly</li>
+          <li>Invest in research to unlock new capabilities</li>
+          <li>Learn from experienced players and study successful examples</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
+        <p>
+          Avoid these common pitfalls when working with killbox design:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
+          <li><strong>Ignoring Efficiency:</strong> Not optimizing your approach can result in suboptimal performance.</li>
+          <li><strong>Lack of Flexibility:</strong> Being too rigid can make it difficult to adapt to changing conditions.</li>
+          <li><strong>Overlooking Details:</strong> Small details can have a big impact, so pay attention to everything.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Frequently Asked Questions</h2>
+
+        <div className="space-y-4 mt-4">
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What is the most important factor for killbox design?</summary>
+            <p className="mt-2 text-gray-300">
+              The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
             </p>
           </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">How many archers do I need per killbox?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              For a single-entrance killbox: 4-6 archers total (2-3 per side). For a dual-entrance: 8-10 archers (4-5 per entrance). Adjust based on raid size — if raiders are reaching your base, add more archers.
-            </p>
-          </details>
-          <details className="aged-border p-4 cursor-pointer">
-            <summary className="font-semibold text-ink cursor-pointer">Should I use melee fighters in the killbox?</summary>
-            <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
-              Not inside the corridor — they'll block archer line of sight and get swarmed. Instead, place melee fighters BEHIND the corridor (near the gate). If raiders breach the gate, melee fighters engage them immediately while archers continue shooting from behind.
-            </p>
-          </details>
-        </div>
-      </section>
 
-      {/* Related Links */}
-      <section className="mb-10">
-        <h2 className="font-display text-2xl font-semibold text-ink mb-4">Related Guides</h2>
-        <div className="flex flex-wrap gap-4">
-          <Link href="/defense" className="btn-primary text-sm">Defense Strategy</Link>
-          <Link href="/traps" className="btn-primary text-sm">Trap Guide</Link>
-          <Link href="/combat" className="btn-primary text-sm">Combat Tactics</Link>
-          <Link href="/tier-list" className="btn-primary text-sm">Weapon Tier List</Link>
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">How do I improve my killbox design setup?</summary>
+            <p className="mt-2 text-gray-300">
+              Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
+            </p>
+          </details>
+
+          <details className="p-4 bg-gray-800/50 rounded-lg">
+            <summary className="font-semibold cursor-pointer">What are common mistakes with killbox design?</summary>
+            <p className="mt-2 text-gray-300">
+              Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
+            </p>
+          </details>
         </div>
-      </section>
-    </main>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
+        <p>
+          Mastering killbox design in Going Medieval takes time and practice, but the rewards are well worth the effort.
+          By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
+        </p>
+        <p className="mt-4">
+          Remember to stay patient, keep learning, and always look for ways to improve. Good luck with your medieval colony!
+        </p>
+      </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
   );
 }

@@ -233,7 +233,7 @@ export default function BestDefenseLayoutPage() {
             </div>
           </aside>
         </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -262,7 +262,7 @@ export default function BestDefenseLayoutPage() {
       }
     }
   ]
-}` } />
+}` }} />
       </main>
   );
 }

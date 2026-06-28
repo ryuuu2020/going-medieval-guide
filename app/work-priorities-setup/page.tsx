@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Going Medieval Stockpile Optimization | Going Medieval Guide",
-  description: "Optimize stockpile placement in Going Medieval. Reduce hauling time and improve colony efficiency with smart zone management.",
-  keywords: ["Going Medieval", "stockpile placement optimization", "guide", "tips", "build"],
+  title: "Going Medieval Work Priorities Setup | Going Medieval Guide",
+  description: "Configure work priorities in Going Medieval. Assign tasks efficiently to maximize colonist productivity and avoid bottlenecks.",
+  keywords: ["Going Medieval", "work priorities setup", "guide", "tips", "build"],
 };
 
 export default function Page() {
@@ -13,7 +13,7 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the most important factor for stockpile placement optimization?",
+        "name": "What is the most important factor for work priorities setup?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
@@ -21,7 +21,7 @@ export default function Page() {
       },
       {
         "@type": "Question",
-        "name": "How do I improve my stockpile placement optimization setup?",
+        "name": "How do I improve my work priorities setup setup?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
@@ -29,7 +29,7 @@ export default function Page() {
       },
       {
         "@type": "Question",
-        "name": "What are common mistakes with stockpile placement optimization?",
+        "name": "What are common mistakes with work priorities setup?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
@@ -40,31 +40,31 @@ export default function Page() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Going Medieval Stockpile Optimization</h1>
+      <h1 className="text-3xl font-bold mb-6">Going Medieval Work Priorities Setup</h1>
 
       <div className="prose prose-invert max-w-none">
         <p className="text-lg text-gray-300 mb-6">
-          Complete guide to stockpile placement optimization in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
+          Complete guide to work priorities setup in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding stockpile placement optimization</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding work priorities setup</h2>
         <p>
-          In Going Medieval, mastering stockpile placement optimization is essential for survival and prosperity.
+          In Going Medieval, mastering work priorities setup is essential for survival and prosperity.
           This guide covers everything you need to know, from basic concepts to advanced techniques.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
         <p>
-          Effective stockpile placement optimization requires careful planning and execution. Here are the most important strategies to implement:
+          Effective work priorities setup requires careful planning and execution. Here are the most important strategies to implement:
         </p>
         <ul className="list-disc pl-6 mt-4 space-y-2">
-          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your stockpile placement optimization strategy.</li>
-          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of stockpile placement optimization.</li>
+          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your work priorities setup strategy.</li>
+          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of work priorities setup.</li>
           <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
           <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: stockpile placement optimization Comparison</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: work priorities setup Comparison</h2>
         <div className="overflow-x-auto my-6">
           <table className="w-full text-left border border-gray-700">
             <thead className="bg-gray-800">
@@ -126,7 +126,7 @@ export default function Page() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
         <p>
-          Take your stockpile placement optimization to the next level with these advanced tips:
+          Take your work priorities setup to the next level with these advanced tips:
         </p>
         <ul className="list-disc pl-6 mt-4 space-y-2">
           <li>Combine multiple strategies for synergistic effects</li>
@@ -137,7 +137,7 @@ export default function Page() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
         <p>
-          Avoid these common pitfalls when working with stockpile placement optimization:
+          Avoid these common pitfalls when working with work priorities setup:
         </p>
         <ul className="list-disc pl-6 mt-4 space-y-2">
           <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
@@ -150,21 +150,21 @@ export default function Page() {
 
         <div className="space-y-4 mt-4">
           <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">What is the most important factor for stockpile placement optimization?</summary>
+            <summary className="font-semibold cursor-pointer">What is the most important factor for work priorities setup?</summary>
             <p className="mt-2 text-gray-300">
               The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
             </p>
           </details>
 
           <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">How do I improve my stockpile placement optimization setup?</summary>
+            <summary className="font-semibold cursor-pointer">How do I improve my work priorities setup setup?</summary>
             <p className="mt-2 text-gray-300">
               Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
             </p>
           </details>
 
           <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">What are common mistakes with stockpile placement optimization?</summary>
+            <summary className="font-semibold cursor-pointer">What are common mistakes with work priorities setup?</summary>
             <p className="mt-2 text-gray-300">
               Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
             </p>
@@ -173,7 +173,7 @@ export default function Page() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
         <p>
-          Mastering stockpile placement optimization in Going Medieval takes time and practice, but the rewards are well worth the effort.
+          Mastering work priorities setup in Going Medieval takes time and practice, but the rewards are well worth the effort.
           By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
         </p>
         <p className="mt-4">
