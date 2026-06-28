@@ -147,6 +147,36 @@ export default function BuildingsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which is better to build — wood or stone walls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Early-game wood walls are your only option, but mid-to-late game you must upgrade to stone. Stone walls have 3x the durability of wood and better insulation. Prioritize upgrading walls facing the outside — interior partitions can stay wood temporarily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I dig an underground base without it collapsing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a grid layout when digging, leaving 1-tile-wide rock pillars every 4 tiles as support. Avoid excavating large areas all at once. If you need a large hall, dig the perimeter first, then the interior, watching for cracks as you go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Settlers keep complaining about small rooms. What do I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Expand living quarters to at least 4x4 tiles, add a bed, table, chair, and decorations. Individual rooms per settler work best. If resources are tight, you can house 2 per room but must scale up the room size accordingly. Keeping rooms clean also boosts mood."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

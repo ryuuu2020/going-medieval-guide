@@ -153,6 +153,44 @@ export default function BreweryGuidePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can settlers become addicted to alcohol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The game tracks alcohol consumption frequency. Settlers who drink daily for multiple consecutive days may develop \"alcohol tolerance,\" which reduces the happiness buff by 50%. Rotate alcohol with non-alcoholic recreation (music, socializing) to prevent tolerance buildup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get honey for mead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Build an Apiary — this is the confirmed beekeeping structure. Place it outdoors within range of flowering crops or wild plants. The Apiary produces honey passively over time. Harvest the honey and ferment it into mead at the brewing station. Honey production is automatic — no settler interaction needed until harvest time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I sell alcohol to merchants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, alcohol is one of the best trade goods. Rough Wine fetches the highest price, Beer/Ale are reliable mid-value commodities, and Mead trades at moderate value. Always keep 2 barrels in reserve for colony use before selling surplus alcohol to caravans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need hops to brew beer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Hops are not a confirmed crop in Going Medieval. Beer and Ale are both brewed from Barley — hops are not required for any brewing recipe in the game. This is a common misconception carried over from other colony sim games."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

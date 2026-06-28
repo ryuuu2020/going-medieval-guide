@@ -119,6 +119,36 @@ export default function BaseLayoutPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which base layout is best for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with a surface camp, then transition to a hill fort on your first permanent map. Hill forts provide natural defenses with manageable construction costs. Mountain bases demand too much mining labor for new players; open-field compounds require wall construction resources beginners won't have."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tiles should I leave between buildings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum 2 tiles between structures for settler pathing, 3 tiles if you plan to grow crops between them, and 4 tiles along your outer wall interior for kill box space. Cramped colonies cause settler collision slowdowns and inefficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine base layouts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Many experienced players build a hill fort great hall with mountain-base bedroom and stockpile wings tunneled into the hill. Hybrid designs let you optimize each room type for its specific function while maintaining overall defensive cohesion."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

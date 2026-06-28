@@ -155,6 +155,36 @@ export default function BiomesPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which terrain is best for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temperate Forest is the best choice. Balanced resources, moderate seasonal variations, and natural barriers (trees) make it ideal for learning the game mechanics. Try other terrains once you're comfortable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I build a farm on Mountain terrain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create farmland on flat areas at the mountain's base, or plant on terraced platforms along the slope. If flat land is truly insufficient, prioritize high-value crops (barley, herbs, redcurrant) and trade for low-value crops (cabbage)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change terrain mid-game?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The starting terrain is fixed for the entire playthrough. However, you can explore different areas within the same map, such as relocating from the forest to a nearby mountain. Choose your starting location carefully."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

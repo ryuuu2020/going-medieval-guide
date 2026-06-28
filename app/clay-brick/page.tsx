@@ -160,6 +160,36 @@ export default function ClayBrickPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I skip brick and go straight to stone walls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are community estimates)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much clay do I need for a full wall upgrade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical small colony perimeter requires 60-80 wall sections. At 3 raw clay per brick and 4 bricks per wall section, you need 720-960 raw clay and 240-320 wood fuel for the kiln. Plan for one full season of dedicated brick production to complete a perimeter upgrade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does clay respawn or run out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Surface clay deposits are finite—once gathered, they're gone. However, maps typically have 200-400 tiles of clay, which is enough for massive construction projects. If you exhaust surface clay, underground clay veins (on hill/mountain maps) and trading with merchants are your remaining clay sources."
+      }
+    }
+  ]
+}` } />
       </main>
       <SiteFooter />
     </div>

@@ -141,6 +141,36 @@ export default function TemperatureControlPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if a settler is too cold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the settler's Needs panel. Temperature warnings appear as \"Cold\" (mild discomfort, -2 mood), \"Freezing\" (moderate, -5 mood + slowed movement), or \"Hypothermia\" (severe, health damage + possible death). The settler's body will also visibly shiver when cold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do double-thick walls improve insulation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Rooms with walls 2 tiles thick insulate approximately 30% better than single-thick walls, reducing heat loss in winter and heat gain in summer. This is most impactful for food storage rooms and bedrooms — consider double-thick stone walls for these critical rooms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mix heating and cooling in the same room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes, but it's inefficient and wasteful. A brazier heating a room while a ventilation shaft cools it results in fuel consumption with no net benefit. Plan rooms as either heated (winter) or cooled/ventilated (summer), and adjust infrastructure seasonally rather than running both simultaneously."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

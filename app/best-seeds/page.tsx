@@ -227,6 +227,36 @@ export default function BestSeedsPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the absolute best seed for a beginner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The VALLEY seed (code: valley123) is the best beginner seed. It provides the ideal balance of farming (large fertile valley floor), water (river access), defense (predictable raid paths through valley entrances), and resources (abundant stone, berries, and wildlife). Beginners will not struggle with food or basic resources, allowing them to focus on learning game mechanics rather than fighting the terrain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a random seed and still have a good game?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but random seeds produce inconsistent results. Some random seeds generate borderline unplayable maps (no water, all sand, no fertile soil). If you use a random seed, always scout the map before committing more than 10 minutes. Check for: fertile soil near your spawn point, a water source within 30 tiles, and some elevation for future underground expansion. If any of these are missing, reroll."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which seed is best for a combat-focused playthrough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The CANYON seed (code: canyon99) is the strongest seed for combat because it provides a single chokepoint entrance. Build one gate and one set of walls, and you defend your entire colony. The towering cliffs also provide ideal archer positions with height advantage against any enemy entering the canyon. The trade-off is very limited farming — you will need to trade for food or terrace-farm on the canyon walls."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

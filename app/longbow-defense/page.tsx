@@ -135,6 +135,36 @@ export default function LongbowDefensePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I use longbow or short bow for defense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Longbow is strictly superior for defense. The short bow has a slightly faster fire rate but significantly less range and damage. The extra range of the longbow means you start damaging enemies sooner, getting 2-3 extra volleys before they reach your walls. Short bows are better suited for hunting animals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many arrows per archer should I stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A minimum of 40 arrows per archer for a standard raid, 60+ for large raids. Archers consume ammunition rapidly—a 6-archer squad can fire 100+ arrows in a prolonged engagement. Always have a backup arrow stockpile near your wall positions so archers can rearm quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use longbows at night or in bad weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Night and weather (rain, fog) reduce accuracy by 15-25%. Lighting near wall positions (torches, braziers) mitigates night penalties. For critical raids, try to schedule combat during daylight if possible. Bad weather penalties affect both your archers and enemy ranged attackers equally."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

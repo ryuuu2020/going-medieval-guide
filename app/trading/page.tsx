@@ -134,6 +134,36 @@ export default function TradingPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often do merchants visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Merchants visit roughly every 7-14 days (in-game), with random type each time. Building a trade post increases visit frequency. Autumn sees the most merchant visits — the best time for concentrated trading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I'm short on silver coins. What can I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use barter mode to directly trade your goods for needed items. Sell surplus food, alcohol, or weapons for silver. Beer is the most efficient money-maker — mass-produce it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get better trade prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assign the settler with the highest Speechcraft skill to handle trading — higher skill means better discounts. Keeping the merchant happy (offering food and drink) can also slightly improve prices. Bulk trading often yields better unit prices."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

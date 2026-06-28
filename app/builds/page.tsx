@@ -261,6 +261,44 @@ export default function BuildsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I build a kill-box or a moat first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For your first year, start with the Twin Tower Gate and a basic perimeter wall. Moats require immense digging labor — even with 4 settlers dedicated to mining, a full perimeter moat takes 8-12 in-game days to excavate. Kill-boxes need stone walls and traps that may strain your early resources. Build the towers around day 10, expand to a moat by winter of year 1 if you have 6+ settlers, and convert to a kill-box in year 2 once your stone production is established."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many archers do I need for each defense layout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kill-box: 4 archers minimum, 8 optimal. Moat fortress: 3-4 archers on walls, plus 2 melee at the gate. Twin tower gate: 2 archers (one per tower). Always assign your highest Marksman-skill settlers to archer duty — Marksman affects both accuracy and damage, making a skill-15 archer roughly 3x more effective than a skill-5 one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine multiple defense layouts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely — layered defense is the meta for colonies with 10+ settlers. The optimal late-game setup is: outermost layer = moat with drawbridge, middle layer = kill-box at the main gate, innermost layer = a keep with reinforced walls around your Great Hall and food storage. Each layer buys time for the next, and no single breach collapses your entire defense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best room size for settler bedrooms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Individual bedrooms should be 4x4 minimum (16 tiles interior). At 4x4, a bed, small table, chair, and torch fit comfortably and trigger the \"Spacious Bedroom\" mood bonus (+3). Going larger than 5x5 provides diminishing returns on mood and wastes valuable space. If you're housing 2 settlers per room temporarily, use 5x5 with two beds on opposite walls."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

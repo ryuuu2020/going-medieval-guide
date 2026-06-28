@@ -233,6 +233,36 @@ export default function BestDefenseLayoutPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the ideal corridor width for a killbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 3-tile wide corridor is the optimal killbox width in Going Medieval. This width compresses raiders into a tight column for concentrated archer fire, allows center-tile trap placement with safe walking paths on the sides, and limits the number of enemies that can simultaneously engage your melee defenders at the corridor exit. Wider corridors reduce trap and archer effectiveness; narrower corridors block settler movement and prevent melee engagement space."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do merlons actually reduce incoming damage for archers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Merlons provide cover to settlers standing on wall tops. Archers positioned behind merlons receive significantly less damage from enemy ranged attacks compared to archers on exposed wall sections. The cover mechanic means enemy arrows that would hit an exposed settler are partially blocked by the merlon structure. Every wall section where you station ranged defenders should have merlons — without them, your archers will be killed or driven off their positions by enemy bowmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I defend against trebuchets without limestone brick walls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you lack limestone brick, use limestone walls as your inner stronghold and focus on speed rather than durability. Dispatch a sortie team through a sally port immediately when trebuchets appear — the goal is to destroy the siege engine before it fires multiple shots. Wall archers provide covering fire to suppress enemy bowmen protecting the trebuchet. Even clay brick outer walls can survive 1-2 trebuchet hits, giving your sortie enough time if you act fast. The key is proactive destruction of the siege engine rather than passive wall endurance."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

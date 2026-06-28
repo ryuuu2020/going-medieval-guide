@@ -122,6 +122,36 @@ export default function RoomDesignPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do room floors matter for room quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dirt floors reduce a room's quality rating. Stone floors provide a baseline, wood plank floors are moderate quality, and tile/carpet floors are top tier. Upgrade floors progressively — stone for stockpiles, wood for bedrooms and workshops, and tile for great halls and temples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a room serve multiple types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The game assigns a room type based on the dominant furniture inside it. Placing a bed and a crafting bench in the same room usually creates a \"workshop\" rather than a bedroom. Dedicated single-purpose rooms always produce better bonuses — avoid combining functions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the minimum room size to activate bonuses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most room types require a minimum of 3x3 interior tiles to be recognized as a room. Rooms smaller than this (2x2 or 1x1 closets) receive no room type, even with furniture. The \"cramped room\" penalty activates below 3x3, \"tight\" at 3x3-4x4, and \"spacious\" at 6x6 or larger."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

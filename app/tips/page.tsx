@@ -109,6 +109,36 @@ export default function TipsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do these tips apply to all difficulty levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tips work across all difficulties, though some strategies need adjustment at higher difficulties. For example, raids are more frequent on higher difficulty, requiring earlier defense; food consumption is higher, requiring more farmland. Core principles stay the same, but execution tempo must be faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which tip is the most important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you only remember one: store food underground. Temperature directly affects spoilage rate, and the constant temperature 2 levels below ground can extend food shelf life by 3x or more. This directly determines whether you survive your first winter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if tips conflict with each other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some tips have different priorities at different stages. For example, early-game \"food first\" is more important than \"defense,\" but mid-game \"defense\" becomes critical. Adjust flexibly based on your colony's current primary threat — no strategy is one-size-fits-all."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

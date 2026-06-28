@@ -133,6 +133,36 @@ export default function ResearchPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I earn research points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research points accumulate automatically through settler work at the research table. There are no shortcuts, so building a research table early and assigning dedicated researchers is key. Higher Intelligence settlers produce points faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I research first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's strongly recommended to research Agriculture Tech first to unlock clay brick walls and advanced crops, followed by Construction Tech to unlock stone walls. These two branches directly boost your colony's survivability and defense — the best early-game investments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many research tables do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One research table is enough early on. Mid-game, build 2 and assign 2 researchers to work simultaneously. Upgraded research tables are dramatically more efficient but costly — upgrade when resources are plentiful."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -140,6 +140,36 @@ export default function CrossbowDefensePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is crossbow worth the research cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely, for mid-to-late game. The research cost is moderate compared to the defensive power gain. Crossbows transform your ability to handle armored raiders. If you're consistently seeing raiders in plate or steel armor, the crossbow research is the highest-priority tech on your tree."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many crossbows should I craft?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 8-10 settler colony, craft 2-3 crossbows. You want enough to handle armored priority targets but not so many that your overall fire rate suffers. The ideal ranged squad is 60% longbow, 40% crossbow. More than 3 crossbows typically leads to fire rate problems unless you have 8+ archers total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Crossbow vs trebuchet—can crossbows destroy siege engines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Crossbows deal moderate damage to siege engines but are not the ideal counter. Trebuchets have high structure HP and crossbow bolts do reduced damage against structures. Send melee settlers on a sortie to destroy trebuchets; use crossbows to pick off the engineers operating the siege equipment rather than targeting the engine itself."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

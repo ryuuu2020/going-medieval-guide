@@ -166,6 +166,36 @@ export default function WorkPrioritiesPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why are my settlers ignoring priority 1 tasks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common reasons: 1) The task requires a material that isn't available (e.g., crafting without raw materials), 2) The settler's schedule currently says \"Recreation\" or \"Sleep\"—even if it's priority 1, schedule blocks override work priorities, 3) The task is inaccessible (blocked path, locked door, forbidden zone). Check all three before assuming it's a bug."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle settlers with no useful skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Even settlers with poor skills can serve as dedicated haulers and cleaners. Set Hauling and Cleaning to priority 1 for low-skill settlers. This frees up your skilled workers from these time-consuming but low-skill tasks, allowing them to focus on their specialties. A dedicated hauler can significantly increase overall colony efficiency just by offloading hauling from skilled workers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use the manual work tab or just priorities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Priorities handle 90% of work management. Use the manual work tab (direct orders) only for: 1) Emergency situations (fire, combat, critical construction), 2) One-time projects that need immediate attention, 3) Correcting priority system oversights. Overusing manual orders defeats the purpose of the priority system and leads to micromanagement fatigue."
+      }
+    }
+  ]
+}` } />
       </main>
       <SiteFooter />
     </div>

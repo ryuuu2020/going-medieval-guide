@@ -76,6 +76,20 @@ export default function FAQPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{item.q}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{item.a}"
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -154,6 +154,36 @@ export default function FarmingPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How big should my farmland be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each field zone should be about 8x8 to 10x10 tiles. 3-4 fields of this size can feed 6-8 settlers. Fields that are too large lead to delayed harvesting, causing crops to rot in the field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I run out of food in winter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If winter food runs short, try: 1) Send settlers to underground caves to hunt bats and similar creatures; 2) Trade with passing merchants for food; 3) Slaughter excess livestock. But the best solution is always advance stockpiling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's beer used for — is it worth growing barley for it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ale and Beer are important settler mood boosters. They are brewed from Barley — the confirmed grain crop. Settlers with mood below 30 can trigger negative events. A regular beer supply effectively maintains morale. Plant barley for brewing once you have sufficient food reserves."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

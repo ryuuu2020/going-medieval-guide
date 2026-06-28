@@ -140,6 +140,36 @@ export default function TailorGuidePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens if settlers have no clothing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nude settlers suffer a \"naked\" mood penalty (-4 mood) and have zero temperature protection. In winter this is lethal within 1-2 days outdoors. Even in mild weather, the mood penalty alone justifies crafting basic cloth tunics for everyone by the end of the first week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better: leather or cloth clothing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather provides better physical protection (armor %) and moderate warmth. Cloth is lighter, provides less warmth but no movement penalty, and is easier to mass-produce. Use leather for combat settlers and winter outdoor workers; cloth for indoor crafters and cooks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get more leather for crafting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hunting wildlife (deer, boar) and slaughtering domesticated livestock (cattle, sheep, goats) both produce raw hides. Process raw hides at a tanning rack into leather. Each large animal yields 3-5 leather. Maintain a herd of 4-6 cattle or sheep for sustained leather production."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -118,6 +118,36 @@ export default function UndergroundPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I light an underground base?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Underground spaces need artificial lighting. The most basic is torches (wood + tallow), which have limited light range. After research unlocks, you can build oil lamps and candles with better lighting. Ventilation shafts also provide natural light. Dark environments lower settler mood and work efficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Excavation is too slow. What can I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three ways to speed up excavation: 1) Assign settlers with the highest Construction skill as dedicated miners; 2) Craft iron pickaxes (50% faster than stone); 3) Have multiple settlers excavate different zones simultaneously. Mining is physically demanding — keep workers well-fed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the dangers of an underground base?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three main dangers: 1) Cave-ins — watch your structural supports; 2) Underground creatures — caves may harbor bats and other creatures that can occasionally attack settlers; 3) Poor ventilation — without ventilation shafts, air quality declines. With proper precautions, underground bases are safe to use."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

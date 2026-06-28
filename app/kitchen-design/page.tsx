@@ -148,6 +148,36 @@ export default function KitchenDesignPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many stoves do I need for my colony?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One stove per 6 settlers for basic meal production. If you're cooking Stew or Lavish meals (which have longer cook times), plan for one stove per 4-5 settlers. Two stoves with a dedicated cook can feed a colony of 10-12 settlers comfortably."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I build the kitchen above or below ground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Above ground with good ventilation eliminates smoke issues from campfires. If building underground, you must construct a dedicated chimney shaft (1x1 vertical tunnel to surface) directly above the cooking station to vent smoke, plus a grate at the top to prevent rain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best fuel source for cooking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wood is the standard early-game fuel. Coal (processed from raw coal deposits) burns 3x longer per unit, reducing refueling interruptions for your cook. Charcoal (crafted in a charcoal kiln) is more labor-intensive but renewable. Prioritize coal once you discover deposits."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

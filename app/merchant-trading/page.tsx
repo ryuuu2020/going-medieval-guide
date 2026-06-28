@@ -168,6 +168,36 @@ export default function MerchantTradingPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I get merchants to visit more often?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three methods to increase merchant frequency: 1) Build a trade post (unlocked via research) — this provides a guaranteed +30% visit frequency; 2) Increase your colony's total wealth — wealthier colonies attract more merchant attention; 3) Maintain friendly relations — attacking or robbing merchants will permanently reduce visit frequency. Building a trade post is the most reliable and recommended method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I attack merchants and steal their goods?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes, but the consequences are severe. Attacking a merchant caravan turns their faction permanently hostile — they will never trade with you again and may send raiding parties in retaliation. All other merchant types will also visit less frequently (reduced by ~50%). The short-term loot is rarely worth the permanent economic damage. Only consider this as a desperate survival measure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I always buy from merchants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prioritize goods you cannot produce yourself or that are extremely scarce: medicine kits (if you lack herbs), advanced weapons (if you lack a skilled smith), rare seeds (for crop variety), and iron ore (if your mines are depleted). Avoid buying basic resources like wood, stone, or raw food — these are almost always cheaper to produce locally."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -135,6 +135,36 @@ export default function CraftingPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I get iron ingots?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First mine iron ore underground, then smelt it in a furnace using wood or charcoal as fuel. 1 iron ore produces 1 iron ingot. Iron is typically found 3+ levels underground, appearing as gray speckled patches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why aren't settlers crafting items?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check three things: 1) Is the workbench occupied? 2) Are all crafting materials available and accessible in the stockpile? 3) Is the corresponding crafting task enabled in the settler's work priorities? Settlers execute tasks in priority order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does crafted item quality matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The higher the settler's crafting skill, the better the resulting item quality. Higher-quality weapons deal more damage; higher-quality armor lasts longer. Assign important gear crafting to your most skilled crafters."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

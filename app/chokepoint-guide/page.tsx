@@ -237,6 +237,36 @@ export default function ChokepointGuidePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How wide should my chokepoint corridor be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 3-tile wide corridor is the optimal width for a Going Medieval chokepoint. This width compresses raiders into a tight column for concentrated archer fire, allows center-tile trap placement with settler-safe walking paths on the sides, and permits exactly 3 melee settlers to fight side-by-side at the exit — the maximum that can simultaneously engage. Wider corridors (4+ tiles) reduce trap density and let more enemies reach your melee line at once. Narrower corridors (2 tiles) block settler movement and reduce your melee engagement frontage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do chokepoints work against trebuchets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chokepoints are designed for infantry control — trebuchets bypass them entirely by attacking your walls from range. When facing trebuchet raids, your chokepoint handles the raider infantry but cannot stop the siege engine. Use a sally port to dispatch a sortie team of 2-3 armored melee settlers directly to the trebuchet while your wall archers and chokepoint defenders handle the raider force. Limestone brick walls are essential for surviving trebuchet bombardment long enough to mount a successful sortie. Wooden and clay walls collapse too quickly against siege projectiles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can enemies break through walls instead of using my chokepoint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Raiders will attack and destroy wall sections if they are significantly shorter paths than walking around to your chokepoint entrance. The AI evaluates path length — not path safety. If your chokepoint forces a long walk-around, raiders may decide that breaking through a nearby wall is the shorter route. Mitigate this by keeping your perimeter walls consistent in strength (avoid weak sections near the chokepoint) and keeping the funnel entrance prominent and unobstructed so pathfinding consistently prefers it. Additionally, raiders with trebuchets will target wall sections regardless of path length — material upgrades (limestone brick) and proactive sortie strikes are the only reliable counter."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

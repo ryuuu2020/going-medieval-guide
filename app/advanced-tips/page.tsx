@@ -116,6 +116,36 @@ export default function AdvancedTipsPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do these tips work on all difficulty levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tips apply across all difficulties, but higher difficulties require faster execution and more aggressive scaling. On Normal difficulty, you can build a double-layered wall by late Year 1. On Hard, you should have at least the first layer by Day 15 because raids come sooner and hit harder. Core principles (underground storage, specialized settlers, focused-fire combat) are universal — only the urgency changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which tip gives the biggest immediate improvement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you implement only one tip today, make it underground food storage (-2F cellar). Temperature-controlled storage extends food shelf life by 3-4x, which cascades into: less food loss, smaller harvest requirements, more settler time for other work, and greater winter safety margin. Every other optimization becomes easier when your food supply is stable and efficient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know which optimizations to prioritize?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apply optimizations based on your current colony bottleneck. If food is running out → prioritize farming and storage tips. If raids are killing settlers → prioritize combat and building tips. If silver is scarce → prioritize economy tips. If settlers are unhappy → prioritize settler mood tips. Diagnose the problem first, then apply the relevant solution — do not optimize randomly."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

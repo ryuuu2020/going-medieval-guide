@@ -163,6 +163,36 @@ export default function WinterSurvivalPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does winter last in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Winter duration varies by biome and game settings. Note: winter length estimates differ between community sources (some report ~12-15 days, others 30-90 days). Temperate biomes typically have shorter winters; colder biomes may have longer ones. Check your biome type when starting a new game — it is displayed during map selection and determines how aggressively you need to prepare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can settlers die from cold even indoors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If indoor temperature drops below -5&deg;C, hypothermia risk begins regardless of being indoors. This is why heating sources are critical—walls alone insulate but don't generate heat. A room with stone walls and no heat source will eventually drop to outdoor temperature during prolonged cold snaps. Always have at least one lit heat source in every occupied building."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the single most important winter preparation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Food stockpiling. You can survive without optimal heating (mood penalties are recoverable). You can survive with basic clothing (cold damage takes time). You cannot survive without food—starvation kills settlers within 3-5 days. If you only do one thing to prepare for winter, triple-check your food reserves. Everything else is secondary to having enough food."
+      }
+    }
+  ]
+}` } />
       </main>
       <SiteFooter />
     </div>

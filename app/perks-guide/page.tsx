@@ -241,6 +241,52 @@ export default function PerksGuidePage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can negative traits be removed or changed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Traits in Going Medieval are permanent. There is no in-game mechanic to remove a negative trait, add a positive one, or change a settler's traits after they are generated. The only way to replace a bad settler is to recruit a better one and either exile the problematic settler or accept their limitations. This is why trait evaluation at recruitment is so critical — a bad decision now affects your colony for the rest of that save."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are traits more important than skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your colony's stage. For a new colony (first 10 days): skills matter slightly more because you need immediate productivity to survive. For an established colony (after the first winter): traits matter more because skills can be trained but traits are permanent. A settler with great traits and mediocre skills will eventually surpass a settler with great skills and mediocre traits — it just takes time. The ideal recruit has both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many traits does each settler have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system. Community documentation on the Going Medieval Wiki (goingmedieval.fandom.com) tracks known traits and their effects across versions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do traits affect combat performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Physical traits affect durability and damage output. Mental resilience traits affect whether a settler breaks morale during extended combat. A settler with strong combat-related traits is significantly more effective than one without, even at the same skill level. For your primary defenders, prioritize combat-relevant traits alongside high Melee or Marksman skill. A skilled archer with fragile morale is less reliable than an average archer with iron nerves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find a complete list of Going Medieval traits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Going Medieval Wiki (goingmedieval.fandom.com) maintains a community-documented list of known traits, their effects, and which game versions they appear in. Keep in mind that Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates. For the most current information, check the wiki and cross-reference with what you see in your own game. Steam community guides may also contain up-to-date trait documentation."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -146,6 +146,36 @@ export default function BeginnersPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many settlers should I start with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3-4 settlers is the recommended start. With 3, you can cover basic work (building, farming, cooking). With 4, you have one extra for dedicated research or combat. Too few settlers means low efficiency; too many means high food consumption and complex management. Expand through recruitment once the colony stabilizes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I research first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prioritize Agriculture tech to unlock clay brick walls. Clay bricks are much stronger than wood, and the material (mud) is easy to obtain. Next, Construction tech to unlock stone walls for further defense upgrades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My settlers are always unhappy. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common beginner issue. Three quick improvements: 1) Ensure food is processed (bread/stew) — raw food lowers mood; 2) Give each settler an individual bedroom with a table and chair; 3) Plant barley and brew beer ASAP — beer is the best mood booster."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

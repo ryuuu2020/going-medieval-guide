@@ -104,6 +104,36 @@ export default function AboutPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this guide site official?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This site is entirely a community-created unofficial guide site with no affiliation with the game developer. All content is based on community experience and testing and is for reference only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I repost content from this site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You're welcome to share our guide content, but please credit the source and include a link. Commercial use requires prior contact for authorization. Game screenshots and trademarks are the property of their respective owners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the guide data accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do our best to ensure data accuracy, but the game is continuously updated and some data may change with versions. All data notes \"community estimate\" or \"community testing.\" If discrepancies exist, refer to actual in-game values."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

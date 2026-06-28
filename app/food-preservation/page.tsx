@@ -176,6 +176,36 @@ export default function FoodPreservationPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the best preservation method overall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The optimal chain combines smoked meat + pickled vegetables + cheese + bread. Barley is the confirmed grain — mill it into flour and bake into bread for a long-lasting carbohydrate source. Smoked meat preserves hunting surplus. Pickled vegetables use vinegar to turn excess vegetables into winter food. Cheese from milk provides the longest shelf life. Combine all methods for a diversified stockpile that covers all nutritional needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I store food outside in winter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "During the coldest winter days when surface temperature drops below 0°C, outdoor storage is temporarily viable. However, winter temperatures fluctuate — a warm day can spike above 5°C and trigger rapid spoilage. Never rely on outdoor winter storage as your primary preservation method. Always build an underground cellar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prioritize which food to eat first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set up stockpile priorities: place high-spoil-rate foods (raw meat, raw vegetables) on the closest shelves with highest priority for settlers to eat. Place long-lasting preserved foods (pickles, bread, cheese) on lower-priority shelves deeper in the cellar. Settlers will consume the most perishable items first if they are the most accessible."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

@@ -159,6 +159,36 @@ export default function IronMiningPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should I start mining iron?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start scouting for iron on day one, but don't prioritize mining until you have basic shelter, food production, and perimeter walls established. Typically, iron mining begins in earnest around day 15-20 (late spring/early summer of year 1). This gives you time to establish the colony before committing labor to mining."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many miners should I assign to iron?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a standard 8-settler colony, 1-2 dedicated miners is sufficient. One miner operating 6 hours daily can extract 20-30 iron ore, which produces 10-30 ingots depending on fuel type. Two miners double this output and can also assist with stone quarrying when iron demand is low."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my map has no surface iron?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every map has underground iron veins—you must dig to find them. If surface iron is absent, prioritize building a mineshaft to level 3-4 as soon as practical. Trading with merchant caravans can provide temporary iron supplies while you establish mining operations. Iron ingots and iron ore are among the most commonly traded industrial goods from traveling merchants."
+      }
+    }
+  ]
+}` } />
       </main>
       <SiteFooter />
     </div>

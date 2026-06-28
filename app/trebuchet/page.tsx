@@ -208,6 +208,44 @@ export default function TrebuchetPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I build my own trebuchet to fight back?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Going Medieval does not include player-buildable trebuchets. There is no trebuchet research, no construction recipe, and no way for settlers to operate siege weapons. The only trebuchets in the game are enemy siege weapons. Your counter-options are limited to sallying out with melee settlers or mitigating damage through structural defenses. Do not waste time searching for a trebuchet blueprint — it does not exist in the base game."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do moats or drawbridges stop trebuchet fire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moats and drawbridges stop ground units from reaching your walls, but they do NOT stop trebuchet projectiles. Trebuchets fire in a high arc over obstacles, so a moat provides zero protection against bombardment. However, a moat combined with a drawbridge prevents enemy melee units from rushing through a trebuchet-made breach — the moat is still useful, just not against the trebuchet itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I bait the trebuchet to target a specific wall section?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trebuchets appear to target the nearest or largest structure. You cannot directly control what the enemy trebuchet aims at. However, you can influence targeting by building a sacrificial outer wall or tower further out from your main base — the trebuchet may target it first, buying time for your main walls. This is expensive in materials but can be effective if your settlement layout supports it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I ignore the trebuchet and fight the infantry instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is almost always a losing strategy. While you fight the infantry, the trebuchet continues firing unopposed. By the time you defeat the ground troops, your outer wall will be breached and possibly your inner buildings damaged. The better approach is to destroy or distract the trebuchet crew first, then deal with the infantry. If you cannot reach the trebuchet, fight the infantry from behind your strongest remaining wall section and be prepared to retreat to inner defenses."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

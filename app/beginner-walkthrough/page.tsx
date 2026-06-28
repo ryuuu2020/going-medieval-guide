@@ -183,6 +183,36 @@ export default function BeginnerWalkthroughPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What if I run out of food mid-winter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Emergency options in order: 1) Check if any wild animals spawned near the map edge — winter animals can still be hunted; 2) Slaughter domestic animals — every livestock animal provides meat; 3) Trade with any passing merchant — buy food at any price, silver is worthless if your colony is dead; 4) Dig into deeper underground levels — rare underground mushrooms may be harvestable. Prevention is always better: never enter winter with fewer than 100 food units per settler."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I accept wanderers in Year 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, no. An additional settler means another mouth to feed through winter. Only accept a wanderer in Year 1 if: 1) You have at least 250+ food units stockpiled (well above the 200 minimum); 2) The wanderer has exceptional skills or perks (Industrious, Fast Learner, or Construction/Mining 8+); 3) It is still early autumn and you have time to produce extra food. Reject all others — they will come back in Year 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a settler dies in Year 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Losing a settler in Year 1 is a major setback but not necessarily fatal. Immediately reassign the dead settler's responsibilities to survivors. The biggest loss is usually your dedicated farmer or builder — if your farmer dies, every surviving settler must pitch in on farming. If a builder dies, construction projects will slow dramatically. Prioritize recruiting a replacement as soon as possible via wanderer acceptance or prisoner recruitment, but only if food supplies allow."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

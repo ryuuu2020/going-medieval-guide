@@ -155,6 +155,36 @@ export default function BedroomLayoutPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can couples share a bedroom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and they should. Settlers in romantic relationships receive a positive \"slept with partner\" mood buff when sharing a bedroom. Build a double-sized room (6x6 or larger) with a double bed (research unlock) for couples — this combines the best of both solo and shared sleeping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How important are bedroom floors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Very. Dirt floors reduce cleanliness and comfort scores. Stone is the bare minimum, wood planks are the standard, and tile floors boost comfort significantly. Floor quality is one of the cheapest ways to improve bedroom ratings — upgrade floors before adding premium furniture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I give my best bedroom to the cook or the crafter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prioritize settlers who contribute the most value to the colony and who have mood-sensitive traits. A cook with the \"gourmand\" trait who experiences mood breaks stops feeding everyone. Generally: nobles first, then cook, then high-skill crafters, then regular workers."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

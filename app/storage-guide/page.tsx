@@ -177,6 +177,36 @@ export default function StorageGuidePage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many stockpiles should I have in total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a colony of 8 settlers, the optimal setup is 6-8 specialized stockpiles (food, construction materials, workshop inputs, weapons, medicine, overflow, valuables) rather than 1-2 general stockpiles. Specialization allows temperature optimization per resource type and eliminates contamination (food mixing with stone, medicine mixing with food). Each specialized stockpile saves roughly 3-5 tiles of walking distance per settler per trip compared to one central stockpile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use shelves for everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shelves for: food, medicine, valuables, seeds (everything temperature-sensitive or capacity-critical). Floor stockpiles for: stone blocks, clay bricks, raw ore, wood logs (high-volume, no-decay items where shelf capacity matters less than floor space). The 15-wood cost per shelf is negligible late-game but significant early-game — prioritize shelving your food cellar first, then expand as wood supply grows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop settlers from hauling constantly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (community estimate: hauling dogs, if available, may additionally help)."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

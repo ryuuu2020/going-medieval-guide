@@ -188,6 +188,52 @@ export default function SteamAchievementsPage() {
           </div>
         </aside>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many Steam achievements does Going Medieval have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exact number is not confirmed by this guide. Community observations suggest approximately 30-40 achievements, which is typical for a colony sim in Early Access. The number may increase with major game updates. For the authoritative count, check the Steam achievements page for Going Medieval (App ID 1029780) directly in your Steam client."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I earn achievements on Peaceful difficulty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This depends on the specific achievement. Survival, building, crafting, and farming achievements likely work on any difficulty. Combat-related achievements (killing raiders, combat skill milestones) will be impossible on Peaceful since no raids occur. For efficient achievement hunting, Normal difficulty is the recommended setting — it enables all achievement categories without excessive difficulty penalties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do mods disable achievements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Going Medieval is an Early Access title, and its achievement policy regarding mods is not definitively documented. In many Steam games, mods do not disable achievements unless they use console commands or cheat functions. To be safe, earn achievements on an unmodded save first. If you use UI or quality-of-life mods, they are unlikely to interfere with achievement unlocks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there missable achievements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In colony sims, most achievements are cumulative or milestone-based and cannot be permanently missed as long as your colony survives. The exception would be achievements tied to specific events or conditions that only occur once. Since Going Medieval is a sandbox colony sim without a linear storyline, it is unlikely to have truly missable achievements — if you miss a milestone, you can usually earn it later in the same save."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find the official achievement list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The official and most accurate achievement list is on the Steam store page for Going Medieval. Open Steam, navigate to Going Medieval (App ID 1029780), and click \"View All Achievements\" under the achievements section. This shows all achievements, their descriptions, and the global unlock percentages — which is also useful for identifying which achievements are considered most difficult by the player base."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

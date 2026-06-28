@@ -147,6 +147,36 @@ export default function DefensePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do raid frequency and difficulty increase over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As your colony's wealth and population grow, raid size and frequency escalate. Early-game you might face 2-3 bandits; late-game you could face organized raiding parties of 10+. Continually upgrade your defenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I improve settler combat skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Settlers gain combat experience through fighting. You can also set up regular training (craft target dummies for archery practice). Better weapons and armor also significantly boost combat effectiveness. Prioritize assigning high-combat-skill settlers to your guard force."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do with prisoners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hold prisoners in a prison cell and provide food regularly. After some time you can attempt to recruit them — successfully recruited prisoners become new settlers. If you don't need more population, you can release or execute them (execution lowers mood)."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

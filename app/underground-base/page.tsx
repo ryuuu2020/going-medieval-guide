@@ -125,6 +125,36 @@ export default function UndergroundBasePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How deep should I dig for maximum temperature stability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three layers below the surface provides optimal thermal stability (8-12&deg;C year-round). Two layers gives moderate stability; one layer is barely better than a surface structure. Beyond four layers deep adds no additional thermal benefit and increases mining labor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do underground bases need defense against raids?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While underground bases are safer than surface compounds, raiders can and will dig through your stone walls if given enough time. Always maintain a reinforced entrance corridor with traps and embrasures. Raiders prioritize the entrance over breaking walls — use this to your advantage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can settlers get cabin fever from living underground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The game tracks time spent without sunlight. Settlers who never go above ground accumulate mood penalties over time. Schedule surface work rotations (hunting, foraging, farming) for underground settlers, or create open-air atrium rooms where settlers can briefly access sunlight."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

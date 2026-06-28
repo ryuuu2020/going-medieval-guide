@@ -141,6 +141,36 @@ export default function RaidDefensePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know what type of raid is coming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The raid notification tells you the faction and sometimes hints at equipment. Pay attention to the enemy count displayed. If the notification mentions \"siege engines\" or \"heavy equipment,\" prepare for trebuchets or siege towers. Animal stampedes have distinct notification text mentioning \"beasts\" or specific animal types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I avoid raids entirely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No—raids are a core mechanic and cannot be disabled in standard game settings. However, you can reduce raid frequency by keeping colony wealth modest, avoiding rapid expansion, and choosing mountain maps where attackers have fewer approach paths. Custom difficulty settings allow raid frequency adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if all my combat settlers are wounded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-combat settlers will still attempt to defend themselves with bare fists or whatever they're carrying, but they'll be extremely ineffective. If your combat force is wiped out, consider retreating everyone to the deepest room and barricading doors with furniture. Better preparation is always the answer—never send your entire combat force into one engagement without reserves."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

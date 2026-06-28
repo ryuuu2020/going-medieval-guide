@@ -158,6 +158,36 @@ export default function StoneManagementPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many stone blocks do I need for a full perimeter wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate based on your perimeter length. A typical early-game 40-tile perimeter requires 160 stone blocks (4 blocks per wall section × 40). Add 20% for gates, towers, and reinforced sections—plan for ~200 blocks minimum. This translates to roughly 65-100 raw limestone chunks, depending on your stonecutter's skill level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I build underground without cave-ins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, by following the 4x4 rule: no unsupported ceiling span should exceed 4x4 tiles without a support pillar. Build stone pillars every 4 tiles in a grid pattern. Natural rock supports 4 tiles in each direction. For larger rooms (like a great hall), use constructed stone pillars to replace the rock pillars you mine away."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the fastest way to get stone in the early game?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mine surface-level limestone deposits rather than digging deep. Surface mining is faster because settlers don't need to navigate stairs or deep shafts. Identify limestone patches on your starting map within the first day and designate a mining zone immediately. Even before building your first house, get stone production started."
+      }
+    }
+  ]
+}` } />
       </main>
       <SiteFooter />
     </div>

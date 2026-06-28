@@ -133,6 +133,36 @@ export default function SeasonsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "My settlers keep getting frostbite in winter. What do I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three measures: 1) Ensure living quarters have fireplaces with ample firewood; 2) Craft warm clothing for settlers; 3) Schedule indoor work as much as possible to reduce outdoor exposure time. If frostbite has already occurred, order bed rest and treatment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much food does a winter require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Winter lasts about 10-15 days (in-game). 6 settlers consume roughly 12-18 food units per day, totaling 120-270 units. Plan for 300+ units to handle emergencies. Processed foods last longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does summer heat affect work efficiency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Above 30&deg;C, settler work efficiency drops. Above 35&deg;C, heatstroke becomes a risk. Install vents in buildings to ensure air flow. During heat waves, pause heavy outdoor labor and assign indoor work."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

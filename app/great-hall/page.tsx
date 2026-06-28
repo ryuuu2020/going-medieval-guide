@@ -130,6 +130,36 @@ export default function GreatHallPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many chairs do I really need per settler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One chair per settler who might eat simultaneously — typically 60-80% of your population, since not everyone eats at exactly the same moment. For 10 settlers, 7-8 chairs is safe. Having extra chairs generates no penalty, but insufficient seating causes mood loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I have multiple Great Halls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The game only recognizes one Great Hall per colony. If you build a second room with tables and chairs, it registers as a \"dining room\" instead and may produce reduced mood bonuses. Focus all decoration and furniture investment into a single Great Hall. This behavior is based on community observation and may vary by game version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best floor material for Great Halls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tile floors are the highest-quality flooring and significantly boost room quality scores. Wood plank floors are a good mid-game option. Stone is an acceptable budget choice. Dirt floors should never be used in a Great Hall — they generate negative cleanliness penalties."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

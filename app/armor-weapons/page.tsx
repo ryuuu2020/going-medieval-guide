@@ -307,6 +307,36 @@ export default function ArmorWeaponsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I equip every settler with weapons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — every settler, even non-combat specialists, should carry at least a basic weapon. Raiders can breach your walls and reach civilians. A cook with a Cudgel or Wooden Spear is far more useful than a cook fighting bare-handed. Keep a stockpile of basic weapons for emergency armament of non-combat settlers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often does armor need replacing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Armor durability degrades with each hit taken. Gambeson typically lasts 2-3 battles, Leather Armour 3-4 battles, Mail Armour 5-7 battles, Plate Armour (Steel) 10+ battles. Check armor condition after every raid. Replace any armor piece below 30% durability — damaged armor provides reduced protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is steel worth the production chain investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For your best melee defenders, yes. Steel Plate Armour and Steel Long Swords provide a significant combat advantage that justifies the complex production chain (iron → smelt → coal → blast furnace → steel). However, only produce steel for your top 2-3 combat settlers; the rest can use Iron Mail Armour or Iron Plate Armour perfectly well. Gold variants should never be crafted for combat — they are purely decorative."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

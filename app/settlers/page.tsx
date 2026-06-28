@@ -154,6 +154,36 @@ export default function SettlersPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What if I don't have enough settlers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three ways to expand population: 1) Recruit prisoners — build a prison, hold captives, provide food regularly, and attempt recruitment after some time; 2) Accept wanderers — occasionally wanderers will ask to join; boost their opinion through social interaction to recruit; 3) Birth — settler couples may have children, but they take a long time to grow up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle injured settlers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assign settlers with high Medical skill to treat the wounded. Severe injuries require bed rest; medicine accelerates recovery. Pull combat-injured settlers to a safe zone immediately to avoid worsening their condition. Build a medical room with hospital beds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I level up settler skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skills improve through continued use. Have settlers repeatedly perform a task to gain experience. You can also build training facilities (e.g., target dummies to train Marksman skill). Skill gain speed is influenced by the settler's learning attribute."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

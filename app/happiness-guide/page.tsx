@@ -190,6 +190,36 @@ export default function HappinessGuidePage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I diagnose why a settler is unhappy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click the settler, open their Needs/Mood panel. All active positive (green) and negative (red) mood modifiers are listed with their values. Start by fixing the largest red numbers first — address hunger, cold, and darkness before investing in luxury items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I prevent mental breaks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a settler drops below happiness 10, a mental break is nearly guaranteed — prevention must happen earlier. Monitor happiness scores weekly (click through settlers during evening hours) and intervene at happiness 25 or below with emergency measures: alcohol, recreation time, or temporary work relief."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the fastest way to boost happiness in a crisis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rough Wine (+8 happiness, 10 hours) followed by assigning the settler to 2 hours of recreation in a high-quality Great Hall (+5-8 happiness). Together these can push a settler from misery (20) to contentment (60+) within a single day. Keep emergency Rough Wine barrels in your Great Hall for this exact scenario."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }

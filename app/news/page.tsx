@@ -132,6 +132,36 @@ export default function NewsPage() {
             </div>
           </aside>
         </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's different between 1.0 and Early Access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1.0 added a massive amount of content: trading system, underground exploration, new biomes, new weapons and armor, etc. It also features improved AI and UI, plus numerous bug fixes. Early Access players get a free upgrade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will there be future updates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The developer has indicated they will continue maintaining the game post-1.0, optimizing and fixing based on community feedback. Major content update plans haven't been announced yet, but the modding tool release provides community-driven content expansion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get the latest news?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow this site's news page for information. You can also follow the Steam store page, the dev team's social media, and the official Discord for firsthand English-language news."
+      }
+    }
+  ]
+}` } />
       </main>
   );
 }
