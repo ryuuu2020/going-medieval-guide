@@ -1,6 +1,12 @@
 'use client';
 
 import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
+export const metadata = {
+  title: "Going Medieval Stone Management — Masonry Guide (2026)",
+  description:
+    "Complete stone management guide for Going Medieval. Stone cutting, masonry, construction applications, and resource efficiency.",
+};
+
 
 export default function StoneManagementPage() {
   return (

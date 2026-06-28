@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Room Design — Layout & Quality Guide (2026)",
+  description:
+    "Complete room design guide for Going Medieval. Room quality, bedroom layouts, great hall design, and comfort optimization.",
+};
+
 
 export default function RoomDesignPage() {
   return (

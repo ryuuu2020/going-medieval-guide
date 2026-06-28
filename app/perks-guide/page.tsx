@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Settler Traits & Perks — Complete Guide (2026)",
+  description:
+    "Complete settler traits and perks guide for Going Medieval. Best traits for each role, trait synergy, and recruitment strategies.",
+};
+
 
 export default function PerksGuidePage() {
   return (

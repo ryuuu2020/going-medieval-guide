@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Biomes Guide — Which is Best? (2026)",
+  description:
+    "Complete biomes guide for Going Medieval. Terrain features, resource availability, and best biome for your colony start.",
+};
+
 
 export default function BiomesPage() {
   return (

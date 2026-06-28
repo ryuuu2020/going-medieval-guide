@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Bedroom Layout — Comfort & Mood Guide (2026)",
+  description:
+    "Complete bedroom layout guide for Going Medieval. Maximize settler comfort, mood bonuses, and room quality for better productivity.",
+};
+
 
 export default function BedroomLayoutPage() {
   return (

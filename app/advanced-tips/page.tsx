@@ -26,6 +26,12 @@ const TIPS = [
   { cat: 'Farming', tip: 'Plant cabbage and barley in a 1:1 ratio during spring. Cabbage matures in 6 days (fast food), barley matures in roughly 10 days (processed into bread for winter). The cabbage feeds your colony while waiting for barley, then barley becomes the winter staple. After harvesting barley in summer, immediately replant with more cabbage for a second fast harvest before autumn. This double-cabbage + single-barley rotation maximizes food output per tile per year.', why: 'Cabbage-barley rotation is the mathematical optimum for Year 1 food production. One 8x8 cabbage field produces ~50 units in 6 days → feeds 3 settlers for ~8 days. One 8x8 barley field produces ~35 flour → ~30 bread in 10 days. Total from 16 tiles: ~80 units of food per season. The staggered harvest (cabbage at Day 6, barley at Day 10) ensures continuous food supply rather than feast-then-famine cycles.' },
   { cat: 'Farming', tip: 'Reserve 10-15% of each harvest as seed stock. Do not eat or process your last seeds. A colony that consumes all its harvested barley has zero barley to plant next spring, ending your farming operation. Use stockpile filters to designate a "Seed Reserve" stockpile with highest priority that accepts only seeds. Place this stockpile in a locked room (forbid the door) so settlers cannot accidentally consume it. Unlock only during planting season.', why: 'Seed consumption is a silent colony-killer. There is no alert when your last seed is eaten — you only discover it when you try to plant next spring and find zero seeds available. At that point, you need to buy seeds from a merchant (unreliable) or find wild crop spawns (rare) to restart your farm. A locked seed reserve costs a 2x2 room and takes 5 minutes to set up, preventing a potential colony-ending catastrophe.' },
 ];
+export const metadata = {
+  title: "Going Medieval Advanced Tips & Tricks — 20 Pro Strategies (2026)",
+  description:
+    "20 advanced tips and tricks for Going Medieval. Master pro strategies for defense, farming, settler management, and economy.",
+};
+
 
 export default function AdvancedTipsPage() {
   return (

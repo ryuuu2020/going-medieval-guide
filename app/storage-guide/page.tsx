@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Storage Guide — Stockpile Optimization (2026)",
+  description:
+    "Complete storage and stockpile guide for Going Medieval. Stockpile placement, organization, and hauling optimization.",
+};
+
 
 export default function StorageGuidePage() {
   return (

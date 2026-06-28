@@ -64,6 +64,12 @@ const CROPS = [
   { tier: 'C', name: 'Flax', growth: 'Summer', yield_: 'Low-medium', bestUse: 'Linen production for clothing, armor, bandages. Non-edible but essential for survival gear' },
   { tier: 'D', name: 'Hay', growth: 'Spring/Summer, fast growing', yield_: 'High volume', bestUse: 'Animal feed only. Essential if raising livestock but offers zero benefit to human settlers directly' },
 ];
+export const metadata = {
+  title: "Going Medieval Best Crops Tier List — S to D Ranking (2026)",
+  description:
+    "Complete crops tier list for Going Medieval. Best crops for each season, yield data, and S-tier to D-tier rankings for food production.",
+};
+
 
 export default function BestCropsTierListPage() {
   return (

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Temperature Control — Summer & Winter (2026)",
+  description:
+    "Complete temperature control guide for Going Medieval. Manage extreme heat and cold, clothing layers, and underground stability.",
+};
+
 
 export default function TemperatureControlPage() {
   return (

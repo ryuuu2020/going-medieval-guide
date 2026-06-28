@@ -1,4 +1,10 @@
 {/* Meta description: Learn when raids happen in Going Medieval and how to prepare. Complete guide to raid triggers, enemy types, timing patterns, and defense preparation strategies. */}
+export const metadata = {
+  title: "Going Medieval Raid Schedule — Timing & Preparation (2026)",
+  description:
+    "Complete raid schedule guide for Going Medieval. Raid timing, warning signs, and pre-raid preparation checklist.",
+};
+
 
 export default function RaidScheduleGuidePage() {
   return (

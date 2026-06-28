@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval archer vs crossbow — complete comparison of bow (short bow, longbow) and crossbow (light, heavy) stats, damage, range, accuracy, resource costs, and best tactical use cases for ranged combat defense. */}
+export const metadata = {
+  title: "Going Medieval Archer vs Crossbow — Which is Better? (2026)",
+  description:
+    "Complete comparison of archers vs crossbows in Going Medieval. Range, damage, accuracy, and best use cases for each.",
+};
+
 
 export default function ArcherVsCrossbowPage() {
   return (

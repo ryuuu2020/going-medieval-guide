@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Settler Skills — Specialization Guide (2026)",
+  description:
+    "Complete settler skills guide for Going Medieval. Skill training, specialization strategies, and optimal skill assignments.",
+};
+
 
 export default function SettlerSkillsPage() {
   return (

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Seasons & Temperature — Complete Guide (2026)",
+  description:
+    "Complete seasons and temperature guide for Going Medieval. Seasonal crop planning, temperature management, and winter survival.",
+};
+
 
 export default function SeasonsPage() {
   return (

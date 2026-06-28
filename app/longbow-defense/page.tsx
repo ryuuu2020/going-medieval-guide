@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Longbow Defense — Archer Guide (2026)",
+  description:
+    "Complete longbow defense guide for Going Medieval. Archer positioning, range advantage, and ranged combat strategies.",
+};
+
 
 export default function LongbowDefensePage() {
   return (

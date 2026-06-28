@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Brewery Guide — Beer & Alcohol (2026)",
+  description:
+    "Complete brewery and alcohol production guide for Going Medieval. Beer economy, brewing process, and profit optimization.",
+};
+
 
 export default function BreweryGuidePage() {
   return (

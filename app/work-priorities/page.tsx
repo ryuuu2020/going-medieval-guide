@@ -1,6 +1,12 @@
 'use client';
 
 import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
+export const metadata = {
+  title: "Going Medieval Work Priorities — Schedule Optimization (2026)",
+  description:
+    "Complete work priorities and schedule guide for Going Medieval. Optimize settler productivity, task assignment, and time management.",
+};
+
 
 export default function WorkPrioritiesPage() {
   return (

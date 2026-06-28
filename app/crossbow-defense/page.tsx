@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Crossbow Defense Guide — Setup & Tips (2026)",
+  description:
+    "Complete crossbow defense guide for Going Medieval. Crossbowman positioning, load time management, and elite marksman strategies.",
+};
+
 
 export default function CrossbowDefensePage() {
   return (

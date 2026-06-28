@@ -31,6 +31,12 @@ const TIPS = [
   { cat: 'Farming', tip: 'Herbs and barley are high-value crops. Once food is plentiful, switch to cash crops to boost trade income.' },
   { cat: 'Building', tip: 'A hillside is the ideal site — level ground for farming above, mountain for an underground base below. Best of both worlds.' },
 ];
+export const metadata = {
+  title: "Going Medieval: 30 Pro Tips — Advanced Strategies (2026)",
+  description:
+    "30 pro tips for Going Medieval. Advanced strategies for defense, farming, economy, and settler management from experienced players.",
+};
+
 
 export default function TipsPage() {
   return (

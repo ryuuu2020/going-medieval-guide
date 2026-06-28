@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval mood management guide — learn how settler happiness works, the most impactful positive and negative mood modifiers, room impressiveness tiers, and how to prevent mental breaks and desertion. */}
+export const metadata = {
+  title: "Going Medieval Mood Management — Prevent Mental Breaks (2026)",
+  description:
+    "Complete mood management guide for Going Medieval. Prevent mental breaks, manage settler needs, and maintain colony stability.",
+};
+
 
 export default function MoodManagementGuidePage() {
   return (

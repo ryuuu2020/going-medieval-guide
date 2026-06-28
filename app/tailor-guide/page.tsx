@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Tailoring & Clothing — Complete Guide (2026)",
+  description:
+    "Complete tailoring and clothing guide for Going Medieval. Clothing quality, warmth bonuses, and tailor workshop setup.",
+};
+
 
 export default function TailorGuidePage() {
   return (

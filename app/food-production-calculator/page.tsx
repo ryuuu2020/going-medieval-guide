@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval Food Production Calculator — calculate the exact number of crop tiles, meal yields, and nutrition requirements to keep your colony fed through every season. A data-driven optimization guide with crop yield tables, settler consumption rates, seasonal planning, and food preservation strategies. */}
+export const metadata = {
+  title: "Going Medieval Food Calculator — Plan Your Colony Diet (2026)",
+  description:
+    "Going Medieval food production calculator. Plan crop yields, storage targets, and seasonal food requirements for your colony.",
+};
+
 
 export default function FoodProductionCalculatorPage() {
   return (

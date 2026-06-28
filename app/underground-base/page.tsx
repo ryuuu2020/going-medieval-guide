@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Underground Base — Complete Guide (2026)",
+  description:
+    "Complete underground base building guide for Going Medieval. Excavation, room design, temperature stability, and defense integration.",
+};
+
 
 export default function UndergroundBasePage() {
   return (

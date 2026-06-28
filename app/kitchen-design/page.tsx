@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Kitchen Design — Food Production (2026)",
+  description:
+    "Complete kitchen design guide for Going Medieval. Kitchen layout, cooking efficiency, meal quality, and food production optimization.",
+};
+
 
 export default function KitchenDesignPage() {
   return (

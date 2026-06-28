@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval moat design guide — dry moats, water moats, digging strategies, bridge chokepoints, and combining moats with walls for compound defense. */}
+export const metadata = {
+  title: "Going Medieval Moat Design — Water Defense (2026)",
+  description:
+    "Complete moat design guide for Going Medieval. Water defenses, drawbridge integration, and fortification strategies.",
+};
+
 
 export default function MoatDesignPage() {
   return (

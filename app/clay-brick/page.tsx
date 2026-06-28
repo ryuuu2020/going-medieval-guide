@@ -1,6 +1,12 @@
 'use client';
 
 import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
+export const metadata = {
+  title: "Going Medieval Clay & Brick Production — Complete Guide (2026)",
+  description:
+    "Complete clay and brick production guide for Going Medieval. Clay sourcing, brick mold, kiln setup, and construction applications.",
+};
+
 
 export default function ClayBrickPage() {
   return (

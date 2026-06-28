@@ -56,6 +56,12 @@ const NEWS = [
     tag: 'Dev',
   },
 ];
+export const metadata = {
+  title: "Going Medieval News & Updates — Latest Patches (2026)",
+  description:
+    "Latest Going Medieval news and updates. Patch notes, new features, and community highlights for Going Medieval players.",
+};
+
 
 export default function NewsPage() {
   return (

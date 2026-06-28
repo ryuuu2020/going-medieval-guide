@@ -46,6 +46,12 @@ const SEEDS = [
     rating: 3
   }, 
 ];
+export const metadata = {
+  title: "Going Medieval Best Seeds & Maps — Top 10 Picks (2026)",
+  description:
+    "Top 10 best seeds for Going Medieval. Hand-picked maps with rich resources, defensible terrain, and optimal biome placement.",
+};
+
 
 export default function BestSeedsPage() {
   return (

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Animal Husbandry — Complete Guide (2026)",
+  description:
+    "Complete animal husbandry guide for Going Medieval. Tannable vs wild animals, breeding, butchering, and food production strategies.",
+};
+
 
 export default function AnimalHusbandryPage() {
   return (

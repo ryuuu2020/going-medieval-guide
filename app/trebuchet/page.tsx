@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Trebuchet Defense — Counter enemy siege (2026)",
+  description:
+    "Complete trebuchet defense guide for Going Medieval. Counter enemy siege weapons, fortification strategies, and base hardening.",
+};
+
 
 export default function TrebuchetPage() {
   return (

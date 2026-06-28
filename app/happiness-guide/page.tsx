@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Happiness & Mood Guide — Complete (2026)",
+  description:
+    "Complete settler happiness and mood guide for Going Medieval. Mood system, needs, bonuses, and preventing mental breaks.",
+};
+
 
 export default function HappinessGuidePage() {
   return (

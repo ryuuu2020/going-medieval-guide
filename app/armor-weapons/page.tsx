@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Best Armor & Weapons — Complete Guide (2026)",
+  description:
+    "Complete armor and weapons guide for Going Medieval. Best gear for defense, durability, crafting requirements, and combat loadouts.",
+};
+
 
 export default function ArmorWeaponsPage() {
   return (

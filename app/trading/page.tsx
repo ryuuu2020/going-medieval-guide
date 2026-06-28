@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Trading System — Merchant Guide (2026)",
+  description:
+    "Complete trading system guide for Going Medieval. Merchant visits, best trade goods, and profit maximization strategies.",
+};
+
 
 export default function TradingPage() {
   return (

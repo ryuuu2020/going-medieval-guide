@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Beginner Walkthrough — Day 1 to Year 1 (2026)",
+  description:
+    "Complete beginner walkthrough for Going Medieval. Survive your first year with this day-by-day guide to base building, farming, and defense.",
+};
+
 
 export default function BeginnerWalkthroughPage() {
   return (

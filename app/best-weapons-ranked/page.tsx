@@ -116,6 +116,12 @@ const RANGED_WEAPONS = [
   { tier: 'C', name: 'Short Bow', damage: '12 (fixed)', dps: '~2.22', range: '18m', armorPen: '80%', attackDur: '5.4s', bestUse: 'Entry-level ranged — zero skill requirements, early game' },
   { tier: 'D', name: 'Gold Weapons (Any)', damage: 'Lowest', dps: 'Lowest', range: '—', armorPen: 'Same', attackDur: 'Slowest', bestUse: 'Decorative only — never craft for combat, sell or display' },
 ];
+export const metadata = {
+  title: "Going Medieval Best Weapons Ranked — Tier List (2026)",
+  description:
+    "Complete weapons tier list for Going Medieval. Best swords, bows, crossbows, and armor ranked by damage, speed, and accuracy.",
+};
+
 
 export default function BestWeaponsRankedPage() {
   return (

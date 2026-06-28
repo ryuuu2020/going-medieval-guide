@@ -13,6 +13,12 @@ const FAQS = [
   { q: 'How do I recruit prisoners?', a: 'Build a prison to hold captives and provide food regularly. After some time (typically 3-5 days), you can attempt recruitment through social interaction. Settlers with higher Speechcraft skill have better recruitment success rates.' },
   { q: 'How accurate is this guide site\'s data?', a: 'All data on this site is based on community player testing and estimates, and may change with game updates. We do our best to keep information current but cannot guarantee 100% accuracy. When in doubt, refer to actual in-game values.' },
 ];
+export const metadata = {
+  title: "Going Medieval FAQ — Frequently Asked Questions (2026)",
+  description:
+    "Frequently asked questions about Going Medieval. Answers to common gameplay questions, mechanics, and colony management tips.",
+};
+
 
 export default function FAQPage() {
   return (

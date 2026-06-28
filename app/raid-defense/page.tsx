@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Raid Defense — Survive Every Attack (2026)",
+  description:
+    "Complete raid defense guide for Going Medieval. Raid types, defense preparations, and strategies to survive every attack.",
+};
+
 
 export default function RaidDefensePage() {
   return (

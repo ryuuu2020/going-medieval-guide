@@ -1,6 +1,12 @@
 'use client';
 
 import { SiteHeader, SiteFooter } from '@/components/SiteHeader';
+export const metadata = {
+  title: "Going Medieval Iron Mining & Smelting — Complete Guide (2026)",
+  description:
+    "Complete iron mining and smelting guide for Going Medieval. Iron ore locations, smelting process, and weapon/armor production chain.",
+};
+
 
 export default function IronMiningPage() {
   return (

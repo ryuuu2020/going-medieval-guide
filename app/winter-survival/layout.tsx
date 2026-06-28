@@ -9,3 +9,11 @@ export const metadata = {
     "going medieval winter preparation",
   ],
 };
+
+export default function WinterSurvivalLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}

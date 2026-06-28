@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Privacy Policy — Going Medieval Guide",
+  description:
+    "Privacy policy for Going Medieval Guide website. Information about data collection and usage.",
+};
+
 
 export default function PrivacyPage() {
   return (

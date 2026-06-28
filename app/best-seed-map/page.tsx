@@ -1,4 +1,10 @@
 {/* Meta description: Discover the best Going Medieval map seeds for optimal starting locations. Includes verified seed codes, terrain analysis, and tips for choosing the perfect map for your playstyle. */}
+export const metadata = {
+  title: "Going Medieval Best Seed Map — Best Start Locations (2026)",
+  description:
+    "Find the best seed and start location in Going Medieval. Optimal maps for beginners, resource-rich biomes, and terrain advantages.",
+};
+
 
 export default function BestSeedMapPage() {
   return (

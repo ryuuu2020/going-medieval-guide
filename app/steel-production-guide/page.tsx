@@ -1,4 +1,10 @@
 {/* Meta description: Complete guide to steel production in Going Medieval — covering iron ore mining, smelting furnace setup, coal fuel management, steel ingot crafting, and advanced metalworking for weapons and armor. */}
+export const metadata = {
+  title: "Going Medieval Steel Production — Advanced Smithing (2026)",
+  description:
+    "Complete steel production guide for Going Medieval. Steel smelting, advanced weapons, and late-game gear progression.",
+};
+
 
 export default function SteelProductionGuidePage() {
   return (

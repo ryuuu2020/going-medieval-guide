@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Great Hall Guide — Maximize Happiness (2026)",
+  description:
+    "Complete great hall guide for Going Medieval. Room design, decoration, mood bonuses, and maximizing settler happiness.",
+};
+
 
 export default function GreatHallPage() {
   return (

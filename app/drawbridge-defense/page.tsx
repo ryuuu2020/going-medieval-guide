@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval drawbridge defense guide — destroyable bridge chokepoints, moat integration, kill zone design, and tactical bridge removal for raid defense. */}
+export const metadata = {
+  title: "Going Medieval Drawbridge Defense — Gate Design (2026)",
+  description:
+    "Complete drawbridge defense guide for Going Medieval. Gate design, retraction mechanics, and fortification strategies.",
+};
+
 
 export default function DrawbridgeDefensePage() {
   return (

@@ -64,6 +64,12 @@ const TR = ({
     <td className="text-ink-light">{conflicts || '—'}</td>
   </tr>
 );
+export const metadata = {
+  title: "Going Medieval Settler Traits Tier List — S to D (2026)",
+  description:
+    "Complete settler traits tier list for Going Medieval. Best traits for each role, and how to recruit high-value settlers.",
+};
+
 
 export default function SettlerTraitsTierListPage() {
   return (

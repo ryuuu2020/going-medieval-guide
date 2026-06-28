@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Best Builds — Defense & Colony Layouts (2026)",
+  description:
+    "Best builds and defense layouts for Going Medieval. Proven colony designs, killbox variations, and specialization strategies.",
+};
+
 
 export default function BuildsPage() {
   return (

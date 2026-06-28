@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "About Going Medieval Guide — Colony Sim Wiki",
+  description:
+    "Learn about the Going Medieval Guide project. Comprehensive colony sim strategies, guides, and wiki for Foxy Voxel's medieval survival game.",
+};
+
 
 export default function AboutPage() {
   return (

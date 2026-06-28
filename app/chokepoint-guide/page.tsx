@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval chokepoint guide — how to build funnel corridors, kill corridors, trap placement, and manipulate enemy pathing for maximum defense. */}
+export const metadata = {
+  title: "Going Medieval Chokepoint Guide — Trap Corridor Design (2026)",
+  description:
+    "Complete chokepoint guide for Going Medieval. Design trap corridors, force enemy pathfinding, and maximize killzone efficiency.",
+};
+
 
 export default function ChokepointGuidePage() {
   return (

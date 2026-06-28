@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Food Preservation — Storage & Shelf Life (2026)",
+  description:
+    "Complete food preservation guide for Going Medieval. Root cellars, smoking, fermentation, and maximizing food shelf life.",
+};
+
 
 export default function FoodPreservationPage() {
   return (

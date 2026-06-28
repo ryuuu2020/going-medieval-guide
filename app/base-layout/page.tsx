@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Best Base Layouts — Colony Design Guide (2026)",
+  description:
+    "Best base layouts and colony designs for Going Medieval. Killbox integration, efficient workflows, and 5 proven base layouts.",
+};
+
 
 export default function BaseLayoutPage() {
   return (

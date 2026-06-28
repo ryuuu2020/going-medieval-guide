@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Underground Base Building — Dig Guide (2026)",
+  description:
+    "Complete underground base guide for Going Medieval. Digging strategy, room layout, and efficient underground colony design.",
+};
+
 
 export default function UndergroundPage() {
   return (

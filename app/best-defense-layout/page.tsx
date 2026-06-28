@@ -1,4 +1,10 @@
 {/* Meta description: Going Medieval best defense layout guide — optimal wall layouts, killbox design, merlon placement, trap corridors, and multi-layer defense strategies. */}
+export const metadata = {
+  title: "Going Medieval Best Defense Layout — 5 Proven Designs (2026)",
+  description:
+    "5 best defense layouts for Going Medieval. Killbox designs, wall configurations, and trap placements that work against raids.",
+};
+
 
 export default function BestDefenseLayoutPage() {
   return (

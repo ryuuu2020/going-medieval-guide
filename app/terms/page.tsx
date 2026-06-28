@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Terms of Use — Going Medieval Guide",
+  description:
+    "Terms of use for Going Medieval Guide website.",
+};
+
 
 export default function TermsPage() {
   return (

@@ -1,4 +1,10 @@
 {/* Meta description: Learn how to design efficient storage systems in Going Medieval. Compare stockpiles vs shelves, master food spoilage prevention, optimize zone-based layouts, and configure hauling priorities for maximum colony efficiency. */}
+export const metadata = {
+  title: "Going Medieval Storage Optimization — Stockpile Guide (2026)",
+  description:
+    "Complete storage optimization guide for Going Medieval. Stockpile placement, organization strategies, and hauling efficiency tips.",
+};
+
 
 export default function StorageOptimizationPage() {
   return (

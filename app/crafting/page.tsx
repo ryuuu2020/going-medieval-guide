@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Crafting System — Complete Guide (2026)",
+  description:
+    "Complete crafting guide for Going Medieval. Workbenches, crafting chains, resource requirements, and efficiency optimization.",
+};
+
 
 export default function CraftingPage() {
   return (

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Going Medieval Steam Achievements — Complete Guide (2026)",
+  description:
+    "Complete Steam achievements guide for Going Medieval. All achievement requirements, tips, and walkthroughs to 100% the game.",
+};
+
 
 export default function SteamAchievementsPage() {
   return (

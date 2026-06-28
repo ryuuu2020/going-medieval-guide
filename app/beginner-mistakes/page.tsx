@@ -1,4 +1,10 @@
 {/* Meta description: Top 10 beginner mistakes in Going Medieval and how to fix them. Learn about food spoilage, defense errors, research priorities, and more. */}
+export const metadata = {
+  title: "Going Medieval: 10 Beginner Mistakes to Avoid (2026)",
+  description:
+    "Avoid these 10 common beginner mistakes in Going Medieval. Base building errors, defense flaws, and how to fix them early.",
+};
+
 
 export default function BeginnerMistakesPage() {
   return (
