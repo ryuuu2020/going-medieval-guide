@@ -1,4 +1,16 @@
 
+export const metadata = {
+  title: "Going Medieval Research Tech Tree — Complete Guide (2026)",
+  description:
+    "Complete research guide. Tech tree, unlock order, research points, branch recommendations.",
+  keywords: [
+    "going medieval research",
+    "going medieval tech tree",
+    "going medieval research guide",
+    "going medieval unlock order",
+  ],
+};
+
 export default function ResearchPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">

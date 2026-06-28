@@ -1,4 +1,16 @@
 
+export const metadata = {
+  title: "Going Medieval Settler Management — Skills, Mood & Needs (2026)",
+  description:
+    "Complete settler management guide. Skills system, mood management, needs, traits, work priorities.",
+  keywords: [
+    "going medieval settlers",
+    "going medieval settler management",
+    "going medieval skills",
+    "going medieval mood",
+  ],
+};
+
 export default function SettlersPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
