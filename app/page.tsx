@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "Going Medieval Guide — Colony Building & Defense Wiki",
+  description:
+    "Complete Going Medieval guide. Beginner walkthrough, defense layouts, farming, crafting, settler management. 50+ in-depth guides.",
+  keywords: [
+    "going medieval guide",
+    "going medieval beginner guide",
+    "going medieval wiki",
+    "going medieval colony building",
+  ],
+};
+
 const NAV_ITEMS = [
   { label: 'Home', href: '/', tilt: -1 },
   { label: 'Buildings', href: '/buildings', tilt: 2 },

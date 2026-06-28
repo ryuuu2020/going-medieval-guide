@@ -1,4 +1,16 @@
 
+export const metadata = {
+  title: "Going Medieval Beginner Guide — Complete Walkthrough (2026)",
+  description:
+    "Complete Going Medieval beginner guide. First 10 days walkthrough, base building, farming, defense. Perfect for new players.",
+  keywords: [
+    "going medieval beginner guide",
+    "going medieval walkthrough",
+    "going medieval first 10 days",
+    "going medieval tutorial",
+  ],
+};
+
 export default function BeginnersPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">

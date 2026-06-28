@@ -1,4 +1,16 @@
 
+export const metadata = {
+  title: "Going Medieval Building System — Complete Guide (2026)",
+  description:
+    "Complete Going Medieval building guide. Wall types, room requirements, structural stability, multi-story construction.",
+  keywords: [
+    "going medieval buildings",
+    "going medieval building guide",
+    "going medieval wall types",
+    "going medieval room requirements",
+  ],
+};
+
 export default function BuildingsPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
