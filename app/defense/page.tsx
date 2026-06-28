@@ -1,11 +1,23 @@
 
+export const metadata = {
+  title: "Going Medieval Best Defense Layout — Ultimate Guide (2026)",
+  description:
+    "Learn the best defense layout in Going Medieval. Double wall vs single wall, killbox design, trap placement, and 5 proven layouts with data.",
+  keywords: [
+    "going medieval best defense layout",
+    "going medieval defense layout",
+    "going medieval wall design",
+    "going medieval killbox",
+  ],
+};
+
 export default function DefensePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Defense Strategy Guide</h1>
+              <h1 className="chapter-heading">Going Medieval Best Defense Layout</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
                 In the world of Going Medieval, raiders can strike at any time. From scattered bandits to organized raiding parties, your colony must be combat-ready at all times. This guide systematically covers wall layouts, trap configurations, weapon selection, and raid response tactics to help you build a multi-layered defense that leaves no invader standing. Data below is based on community combat experience and is for reference only.
               </p>
