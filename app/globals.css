@@ -368,6 +368,17 @@ td {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+.header-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.9rem;
+}
 .header-brand {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 2rem;
@@ -387,7 +398,7 @@ td {
   padding: 0.2rem 0;
   transition: color 0.2s, transform 0.2s;
 }
-.nav-pill:hover { color: var(--color-accent); }
+.nav-link:hover { color: var(--color-accent); }
 .header-support {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.8rem;
@@ -432,5 +443,25 @@ td {
   line-height: 1.6;
   font-family: 'Lora', serif;
   font-style: italic;
+}
+.footer-guides-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.footer-guides-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-guide-link {
+  font-size: 0.9rem;
+}
+.footer-support-link {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
