@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/', tilt: -1 },
@@ -66,11 +67,15 @@ export default function HomePage() {
     <>
       {/* ===== Hero Parchment Unfurl ===== */}
       <header className="pt-16 pb-8 px-4 text-center max-w-4xl mx-auto">
-        <img
-          src="/hero.jpg"
-          alt="Going Medieval"
-          className="w-full h-48 lg:h-64 object-cover rounded-lg mb-6"
-        />
+      <div className="relative w-full h-48 lg:h-64 rounded-lg mb-6 overflow-hidden">
+          <Image
+            src="/hero.jpg"
+            alt="Going Medieval colony building screenshot"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <h1
           className="font-display font-bold text-ink leading-none"
           style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', letterSpacing: '0.05em' }}

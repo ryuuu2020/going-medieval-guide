@@ -71,7 +71,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
         {/* Google Analytics GA4 */}
@@ -85,253 +85,89 @@ gtag('config', 'G-ET6778V62K');`}
         <Script strategy="lazyOnload" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
       </head>
       <body>
-        {/* ── Sidebar + Main wrapper ── */}
-        <div style={{ display: "flex", minHeight: "100vh" }}>
+        <div className="flex min-h-screen">
           {/* ===== Sidebar ===== */}
-          <aside
-            className="hidden lg:flex"
-            style={{
-              flexDirection: "column",
-              width: "260px",
-              backgroundColor: "var(--color-bg-elevated)",
-              borderRight: "2px double var(--color-accent-gold)",
-              flexShrink: 0,
-              padding: "1.5rem 1rem",
-              gap: "1.5rem",
-            }}
-          >
+          <aside className="sidebar">
             {/* Site identity */}
-            <a
-              href="/"
-              style={{
-                fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-                fontSize: "1.4rem",
-                fontWeight: 700,
-                color: "var(--color-accent)",
-                textDecoration: "none",
-                letterSpacing: "0.02em",
-              }}
-            >
+            <a href="/" className="sidebar-brand">
               Going Medieval Guide
             </a>
 
             {/* Quick Navigation */}
             <div>
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  color: "var(--color-accent)",
-                  marginBottom: "0.75rem",
-                  borderBottom: "1px solid var(--color-divider)",
-                  paddingBottom: "0.4rem",
-                }}
-              >
-                Quick Navigation
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <h3 className="sidebar-heading">Quick Navigation</h3>
+              <div className="flex flex-col gap-2">
                 {SIDEBAR_LINKS.map((link, i) => (
-                  <a
-                    key={i}
-                    href={link.href}
-                    style={{
-                      display: "block",
-                      textDecoration: "none",
-                      padding: "0.3rem 0",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "'Cormorant Garamond', serif",
-                        fontSize: "0.9rem",
-                        fontWeight: 600,
-                        color: "var(--color-text)",
-                        display: "block",
-                      }}
-                    >
-                      {link.label}
-                    </span>
-                    <span
-                      style={{
-                        display: "block",
-                        fontFamily: "'Lora', serif",
-                        fontSize: "0.72rem",
-                        color: "var(--color-text-muted)",
-                        marginTop: "0.1rem",
-                      }}
-                    >
-                      {link.desc}
-                    </span>
+                  <a key={i} href={link.href} className="sidebar-nav-link">
+                    <span className="sidebar-nav-label">{link.label}</span>
+                    <span className="sidebar-nav-desc">{link.desc}</span>
                   </a>
                 ))}
               </div>
             </div>
 
             {/* Game Stats */}
-            <div
-              style={{
-                backgroundColor: "var(--color-bg-card)",
-                border: "1px solid var(--color-border)",
-                borderRadius: "3px 12px 3px 12px",
-                padding: "1rem",
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  color: "var(--color-accent)",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                Game Stats
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px solid var(--color-divider)", paddingBottom: "0.35rem" }}>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", color: "var(--color-text-muted)" }}>Steam Reviews</span>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 700, color: "var(--color-text)" }}>21,000+</span>
+            <div className="sidebar-stats">
+              <h3 className="sidebar-heading">Game Stats</h3>
+              <div className="flex flex-col gap-2">
+                <div className="sidebar-stats-row">
+                  <span className="sidebar-stats-label">Steam Reviews</span>
+                  <span className="sidebar-stats-value">21,000+</span>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px solid var(--color-divider)", paddingBottom: "0.35rem" }}>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", color: "var(--color-text-muted)" }}>Positive Rating</span>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 700, color: "var(--color-accent)" }}>89%</span>
+                <div className="sidebar-stats-row">
+                  <span className="sidebar-stats-label">Positive Rating</span>
+                  <span className="sidebar-stats-value accent">89%</span>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px solid var(--color-divider)", paddingBottom: "0.35rem" }}>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", color: "var(--color-text-muted)" }}>Version</span>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", fontWeight: 700, color: "var(--color-accent-gold)" }}>1.0</span>
+                <div className="sidebar-stats-row">
+                  <span className="sidebar-stats-label">Version</span>
+                  <span className="sidebar-stats-value gold">1.0</span>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", color: "var(--color-text-muted)" }}>Release Date</span>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.85rem", fontWeight: 600, color: "var(--color-text)" }}>2026.03.12</span>
+                <div className="sidebar-stats-row">
+                  <span className="sidebar-stats-label">Release Date</span>
+                  <span className="sidebar-stats-value">2026.03.12</span>
                 </div>
               </div>
-              <p style={{ fontFamily: "'Lora', serif", fontSize: "0.65rem", color: "var(--color-text-muted)", marginTop: "0.75rem", fontStyle: "italic" }}>Data source: Steam community estimates</p>
+              <p className="sidebar-stats-source">Data source: Steam community estimates</p>
             </div>
 
             {/* Community News */}
             <div>
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  color: "var(--color-accent)",
-                  marginBottom: "0.75rem",
-                  borderBottom: "1px solid var(--color-divider)",
-                  paddingBottom: "0.4rem",
-                }}
-              >
-                Community News
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+              <h3 className="sidebar-heading">Community News</h3>
+              <div className="flex flex-col gap-2">
                 <div>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "var(--color-text-muted)" }}>2026.06</span>
-                  <p style={{ fontFamily: "'Lora', serif", fontSize: "0.75rem", color: "var(--color-text)", marginTop: "0.15rem", lineHeight: 1.4 }}>1.0 launch review: massive content expansion, new biomes arrive</p>
+                  <span className="sidebar-news-date">2026.06</span>
+                  <p className="sidebar-news-item">1.0 launch review: massive content expansion, new biomes arrive</p>
                 </div>
                 <div>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "var(--color-text-muted)" }}>2026.05</span>
-                  <p style={{ fontFamily: "'Lora', serif", fontSize: "0.75rem", color: "var(--color-text)", marginTop: "0.15rem", lineHeight: 1.4 }}>Community Mod tools released, custom content surges</p>
+                  <span className="sidebar-news-date">2026.05</span>
+                  <p className="sidebar-news-item">Community Mod tools released, custom content surges</p>
                 </div>
                 <div>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.65rem", color: "var(--color-text-muted)" }}>2026.03</span>
-                  <p style={{ fontFamily: "'Lora', serif", fontSize: "0.75rem", color: "var(--color-text)", marginTop: "0.15rem", lineHeight: 1.4 }}>1.0 full release launches with new trading system and underground exploration</p>
+                  <span className="sidebar-news-date">2026.03</span>
+                  <p className="sidebar-news-item">1.0 full release launches with new trading system and underground exploration</p>
                 </div>
               </div>
             </div>
 
             {/* Support Us */}
-            <div
-              style={{
-                border: "1px solid var(--color-border)",
-                borderRadius: "3px 16px 3px 16px",
-                padding: "1rem",
-                backgroundColor: "var(--color-bg-card)",
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "0.9rem",
-                  fontWeight: 600,
-                  color: "var(--color-text)",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Support This Site
-              </h3>
-              <p
-                style={{
-                  fontFamily: "'Lora', serif",
-                  fontSize: "0.7rem",
-                  color: "var(--color-text-muted)",
-                  lineHeight: 1.5,
-                  marginBottom: "0.75rem",
-                }}
-              >
+            <div className="sidebar-support">
+              <h3 className="sidebar-support-title">Support This Site</h3>
+              <p className="sidebar-support-desc">
                 This guide site is maintained by community players and all content is free. If our guides helped you, consider supporting us via Afdian to help us keep updating.
               </p>
-              <a
-                href="https://afdian.com/a/gameguidehub"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.4rem",
-                  padding: "0.5rem 1rem",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  color: "var(--color-bg)",
-                  backgroundColor: "var(--color-accent)",
-                  borderRadius: "3px 12px 3px 12px",
-                  textDecoration: "none",
-                }}
-              >
-                &#10084; Support on Afdian
+              <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener noreferrer" className="support-btn">
+                ♥ Support on Afdian
               </a>
             </div>
           </aside>
 
           {/* ===== Main content area ===== */}
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
-            {/* Header — Parchment scroll style */}
-            <header
-              style={{
-                backgroundColor: "var(--color-bg-elevated)",
-                borderBottom: "2px double var(--color-accent-gold)",
-                padding: "1.25rem 2rem",
-                position: "sticky",
-                top: 0,
-                zIndex: 50,
-                boxShadow: "0 1px 8px rgba(60,42,30,0.06)",
-              }}
-            >
-              <div
-                style={{
-                  maxWidth: "1200px",
-                  margin: "0 auto",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  gap: "0.75rem",
-                }}
-              >
+          <div className="flex-1 flex flex-col min-w-0">
+            {/* Header */}
+            <header className="header">
+              <div className="header-inner">
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                  {/* Site Title — Cormorant Garamond */}
-                  <a
-                    href="/"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-                      fontSize: "2rem",
-                      fontWeight: 700,
-                      color: "var(--color-accent)",
-                      textDecoration: "none",
-                      letterSpacing: "0.02em",
-                    }}
-                  >
+                  <a href="/" className="header-brand">
                     Going Medieval Guide
                   </a>
                   {/* Navigation — Bookmark-like tabs */}
@@ -352,7 +188,7 @@ gtag('config', 'G-ET6778V62K');`}
                           color: "var(--color-text-muted)",
                           textDecoration: "none",
                           fontWeight: 500,
-                          fontFamily: "'Inter', sans-serif",
+                          fontFamily: "'IBM Plex Sans', sans-serif",
                           fontSize: "0.82rem",
                           textTransform: "uppercase",
                           letterSpacing: "0.05em",
@@ -371,7 +207,7 @@ gtag('config', 'G-ET6778V62K');`}
                   target="_blank"
                   rel="noopener"
                   style={{
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'IBM Plex Sans', sans-serif",
                     fontSize: "0.8rem",
                     fontWeight: 600,
                     color: "var(--color-accent)",
@@ -434,10 +270,10 @@ gtag('config', 'G-ET6778V62K');`}
                     borderTop: "1px solid var(--color-divider)",
                   }}
                 >
-                  <Link href="/about" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>About</Link>
-                  <Link href="/privacy" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Privacy</Link>
-                  <Link href="/terms" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>Terms</Link>
-                  <Link href="/faq" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'Inter', sans-serif" }}>FAQ</Link>
+                  <Link href="/about" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'IBM Plex Sans', sans-serif" }}>About</Link>
+                  <Link href="/privacy" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'IBM Plex Sans', sans-serif" }}>Privacy</Link>
+                  <Link href="/terms" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'IBM Plex Sans', sans-serif" }}>Terms</Link>
+                  <Link href="/faq" style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", fontFamily: "'IBM Plex Sans', sans-serif" }}>FAQ</Link>
                   <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener" style={{ color: "var(--color-accent)", fontSize: "0.9rem", fontWeight: 600 }}>❤️ Support Us</a>
                 </div>
 
