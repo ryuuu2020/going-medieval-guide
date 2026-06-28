@@ -195,7 +195,7 @@ gtag('config', 'G-ET6778V62K');`}
             </header>
 
             {/* Main Content */}
-            <main style={{ flex: 1 }}>{children}</main>
+            <main>{children}</main>
 
             {/* Footer — Parchment with aged feel */}
             <footer className="footer">
