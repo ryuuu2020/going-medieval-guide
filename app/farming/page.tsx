@@ -1,11 +1,23 @@
 
+export const metadata = {
+  title: "Going Medieval Best Crops for Each Season — Full Guide (2026)",
+  description:
+    "Learn the best crops for each season in Going Medieval. Barley, Cabbage, Carrots, Beet, Flax, and food preservation strategies.",
+  keywords: [
+    "going medieval best crops for each season",
+    "going medieval farming",
+    "going medieval food guide",
+    "going medieval crop guide",
+  ],
+};
+
 export default function FarmingPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
-              <h1 className="chapter-heading">Farming System In-Depth</h1>
+              <h1 className="chapter-heading">Going Medieval Best Crops for Each Season</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
                 Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. There are 9 confirmed crops: Barley, Cabbage, Carrots, Beet, Flax, Herbs, Redcurrant, Hay, and Mushrooms. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full. Data below is based on community testing and is for reference only.
               </p>
