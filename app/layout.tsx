@@ -83,6 +83,36 @@ gtag('js', new Date());
 gtag('config', 'G-ET6778V62K');`}
             </Script>
         <Script strategy="lazyOnload" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8925824244664340" crossOrigin="anonymous" />
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Going Medieval Guide",
+  "description": "The ultimate Going Medieval guide and wiki. Master colony survival with in-depth guides on buildings, research, settlers, farming, defense, and more.",
+  "url": "https://going-medieval-guide.vercel.app",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://going-medieval-guide.vercel.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Game Guide Hub",
+  "url": "https://going-medieval-guide.vercel.app",
+  "logo": "https://going-medieval-guide.vercel.app/og-image.jpg"
+}`,
+          }}
+        />
       </head>
       <body>
         <div className="flex min-h-screen">
