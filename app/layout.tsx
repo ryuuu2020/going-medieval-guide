@@ -45,6 +45,8 @@ const NAV_LINKS = [
 const SIDEBAR_LINKS = [
   { label: "Beginner's Guide", href: "/beginners", desc: "Build your colony from scratch" },
   { label: "30 Pro Tips", href: "/tips", desc: "Essential strategies for advanced players" },
+  { label: "Production Chains", href: "/production-chain-optimization", desc: "Resource flow & workshop optimization" },
+  { label: "Colony Efficiency", href: "/colony-efficiency-benchmarks", desc: "Settler ratios & production targets" },
   { label: "Seasons Survival Guide", href: "/seasons", desc: "Managing temperature extremes year-round" },
   { label: "Research Tech Tree", href: "/research", desc: "Optimal unlock order recommendations" },
   { label: "Crafting System", href: "/crafting", desc: "Workbenches, recipes, and materials" },
