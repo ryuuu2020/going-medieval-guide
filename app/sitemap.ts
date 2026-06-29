@@ -19,16 +19,17 @@ function getRoutes(): string[] {
       const pagePath = path.join(fullPath, 'page.tsx');
       const pagePathJs = path.join(fullPath, 'page.jsx');
       const pagePathJsOnly = path.join(fullPath, 'page.js');
+      const route = prefix === '' ? `/${entry.name}` : `${prefix}/${entry.name}`;
 
       if (
         fs.existsSync(pagePath) ||
         fs.existsSync(pagePathJs) ||
         fs.existsSync(pagePathJsOnly)
       ) {
-        routes.push(prefix === '' ? '' : `/${prefix}`);
+        routes.push(route);
       }
 
-      walk(fullPath, prefix === '' ? entry.name : `${prefix}/${entry.name}`);
+      walk(fullPath, route);
     }
   }
 
