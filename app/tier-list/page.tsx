@@ -1,3 +1,24 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Going Medieval Tier List — Skills, Crops, Animals & Defense (2026)",
+  description:
+    "Complete Going Medieval tier list ranking settler skills, crops, livestock, and defensive structures from S to C tier. Find the best picks for your colony with community-verified rankings and detailed explanations.",
+  keywords: [
+    "Going Medieval tier list",
+    "Going Medieval best skills",
+    "Going Medieval best crops",
+    "Going Medieval best animals",
+    "Going Medieval defense tier",
+    "Going Medieval rankings",
+  ],
+  openGraph: {
+    title: "Going Medieval Tier List — Skills, Crops, Animals & Defense",
+    description:
+      "Rank every skill, crop, animal, and defense structure in Going Medieval from S to C tier.",
+  },
+  robots: { index: true, follow: true },
+};
 
 /* ── Tier badge style helpers ── */
 const tierBadge = (tier: string) => {

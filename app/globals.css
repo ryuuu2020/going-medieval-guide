@@ -130,6 +130,10 @@ td {
   transition: background 0.2s, transform 0.1s;
   display: inline-block;
   text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-primary:hover {
   background: var(--color-accent-hover);
@@ -185,6 +189,15 @@ td {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   .hero-section { padding: 3rem 1rem; }
+  /* Hide sidebar on mobile — header nav provides navigation */
+  .sidebar { display: none; }
+  /* Ensure main content takes full width */
+  .flex-1 { width: 100%; }
+  /* Stack header elements vertically */
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .header-nav { font-size: 0.78rem; gap: 0.15rem 0.75rem; }
+  /* Reduce footer padding on mobile */
+  .footer { padding: 2rem 1rem 1.5rem; }
 }
 
 /* Hand-drawn border simulation */
@@ -340,6 +353,7 @@ td {
 .support-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   padding: 0.5rem 1rem;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -349,6 +363,7 @@ td {
   background-color: var(--color-accent);
   border-radius: 3px 12px 3px 12px;
   text-decoration: none;
+  min-height: 44px;
 }
 .header {
   background-color: var(--color-bg-elevated);
