@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Going Medieval Guide — Colony Sim Strategy Wiki",
-      metadataBase: new URL("https://goingmedieval.gguidehub.com"),
   description:
       "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
     type: "website",
