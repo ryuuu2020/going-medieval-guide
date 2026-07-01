@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 import Link from "next/link";
+import SchemaMarkup from '@/shared/SchemaMarkup';
+
 
 export const metadata: Metadata = {
   title: "Going Medieval Guide — Colony Sim Strategy Wiki",
+    metadataBase: new URL("https://goingmedieval.gguidehub.com"),
   description:
     "The ultimate Going Medieval guide and wiki. Master colony survival with in-depth guides on buildings, research, settlers, farming, defense, trade, biomes, and more. Your go-to resource for Foxy Voxel's medieval colony sim.",
   keywords: [
@@ -23,7 +26,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Going Medieval Guide — Colony Sim Strategy Wiki",
-    description:
+      metadataBase: new URL("https://goingmedieval.gguidehub.com"),
+  description:
       "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
     type: "website",
   },
