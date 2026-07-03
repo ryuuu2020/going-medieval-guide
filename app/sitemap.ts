@@ -38,7 +38,7 @@ function getRoutes(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://going-medieval-guide.vercel.app';
+  const baseUrl = 'https://goingmedieval.gguidehub.com';
   const routes = getRoutes();
 
   // Always include root
