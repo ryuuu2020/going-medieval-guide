@@ -1,199 +1,321 @@
-export const metadata = {
-  title: "Going Medieval Merchant Trading — Complete Guide (2026)",
-  description:
-    "Complete merchant trading guide for Going Medieval. Trade goods, profit optimization, and best items to buy and sell.",
-};
 
+export const metadata = {
+  title: "Going Medieval Merchant Trading Guide — Trade Routes & Caravans (2026)",
+  description:
+    "Complete merchant trading guide for Going Medieval. Learn how to unlock the Cartography Table, trade with all 8 factions, maximize profits with speechcraft, and master caravan mechanics.",
+  keywords: [
+    "going medieval trading",
+    "going medieval merchant guide",
+    "going medieval cartography table",
+    "going medieval trade routes",
+    "going medieval caravan",
+    "going medieval speechcraft",
+  ],
+};
 
 export default function MerchantTradingPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-        <div className="flex-1 lg:max-w-[65%] space-y-10">
-          <section>
-            <h1 className="chapter-heading">Merchant Trading Guide</h1>
-            <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
-                <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Specific merchant type names, "trade beacon" mechanics, silver economy details, and item prices below are <strong>community estimates and NOT verified against official sources</strong>. The "trade beacon" concept is characteristic of other colony sims and may function differently (or not exist) in Going Medieval. Merchant caravan behavior and visit frequency have not been verified.
-                </p>
-              </div>
-            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Merchant trading is the primary method for acquiring resources your colony cannot produce — rare ores, exotic goods, advanced weapons, and specialty items. Understanding merchant types, trade mechanics, and how to maximize trade efficiency can transform your colony from self-sufficient to prosperous. This guide covers caravan frequency, the most profitable items to sell, and advanced trade strategies. Data below is based on community compilation and is for reference only.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Merchant Types & Their Goods</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Different merchant types visit your colony carrying specialized inventories. Identifying which merchant is arriving (visible in the notification) helps you prepare your trade goods in advance. Each merchant has buying preferences that affect trade prices for specific categories.
-            </p>
-            <table className="parchment-table">
-              <thead>
-                <tr>
-                  <th>Merchant Type</th>
-                  <th>Primary Goods Sold</th>
-                  <th>Buys At Premium</th>
-                  <th>Visit Frequency</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="font-semibold">General Merchant</td><td>Food, tools, basic materials, medicine</td><td>All goods (neutral)</td><td>Very Common (every 7-10 days)</td></tr>
-                <tr><td className="font-semibold">Weaponsmith</td><td>Weapons, armor, ammunition, shields</td><td>Metal ores, ingots, gems</td><td>Common (every 10-14 days)</td></tr>
-                <tr><td className="font-semibold">Materials Trader</td><td>Wood, stone blocks, cloth, leather</td><td>Food, alcohol, prepared meals</td><td>Common (every 10-14 days)</td></tr>
-                <tr><td className="font-semibold">Herbalist</td><td>Herbs, medicine kits, bandages</td><td>Precious metals, animal products</td><td>Uncommon (every 14-18 days)</td></tr>
-                <tr><td className="font-semibold">Exotic Goods Trader</td><td>Rare items, artifacts, decorations</td><td>High-quality crafted items</td><td>Rare (every 18-25 days)</td></tr>
-                <tr><td className="font-semibold">Livestock Merchant</td><td>Domestic animals, animal feed</td><td>Leather, wool, milk products</td><td>Uncommon (every 14-18 days)</td></tr>
-              </tbody>
-            </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Mechanics & The Silver Economy</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Trade operates on a value-based system. Every item has a base value in silver. When buying, merchants charge roughly 130-150% of base value. When selling, merchants pay roughly 60-70% of base value. This spread means you lose roughly 50% of value on every round-trip trade — making self-sufficiency always more cost-effective than relying on trade for basic goods.
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Silver coins serve as the universal currency. You earn silver by selling goods to merchants. You can also use barter mode to directly exchange your goods for the merchant's wares without silver — the trade completes when both sides' values are approximately equal. Barter is useful when you lack silver but have surplus goods. Assign a settler with high Speechcraft skill to handle all trades for better prices.
-            </p>
-            <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <p className="font-serif text-sm text-ink leading-relaxed">
-                <strong className="text-vermillion">Economic Insight:</strong>
-                The trade spread means that buying raw materials, processing them, and selling the finished product is profitable IF your crafter's skill is high enough. For example: buy iron ore for ~30 silver, smelt into ingots, craft into a sword worth ~100 silver — net gain even after the spread. This is the foundation of a trade-based economy.
+      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex-1 lg:max-w-[65%] space-y-10">
+            <section>
+              <h1 className="chapter-heading">Merchant Trading Guide</h1>
+              <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+                The trading system in Going Medieval unlocks a powerful economy layer for your colony. By building a Cartography Table and establishing diplomatic relationships with regional factions, you can acquire rare goods, offload excess resources, and gain access to exotic weapons and structures not yet researched. Whether you choose honest barter or caravan theft, mastering trade is essential for mid-to-late game colony prosperity. This guide covers every aspect of the merchant system — from unlocking trade to maximizing profit margins. Data below is based on community compilation and is for reference only.
               </p>
-            </div>
-          </section>
+            </section>
 
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Best Items to Sell for Profit</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Not all goods are created equal for trade. The best trade goods have high value density (value per unit weight), use renewable or abundant inputs, and benefit from high-skill processing. Focus your trade production on these categories.
-            </p>
-            <table className="parchment-table">
-              <thead>
-                <tr>
-                  <th>Trade Good</th>
-                  <th>Inputs</th>
-                  <th>Approx. Sell Value</th>
-                  <th>Profitability</th>
-                  <th>Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="font-semibold">Beer</td><td>Barley (confirmed crop)</td><td>~40-50 silver</td><td className="text-gold">High</td><td>Highest profit per input. Grow barley in summer, brew in autumn, sell in winter. Mass-produce for a silver empire.</td></tr>
-                <tr><td className="font-semibold">Iron Sword</td><td>Iron ore (mined)</td><td>~80-120 silver</td><td className="text-gold">High</td><td>High base value but requires smelting and forging chain. Needs skilled smith (Crafting 10+).</td></tr>
-                <tr><td className="font-semibold">Smoked Meat</td><td>Raw meat (hunting)</td><td>~15-20 silver</td><td className="text-gold">High</td><td>Doubles meat value through processing. Hunters provide infinite raw input. Excellent early-game income.</td></tr>
-                <tr><td className="font-semibold">Cloth Tunic</td><td>Flax cloth (farmed)</td><td>~20-30 silver</td><td className="text-gold">High</td><td>Flax is easy to grow in bulk. Clothing multiplies cloth value 2-3x. Good for tailors.</td></tr>
-                <tr><td className="font-semibold">Bread</td><td>Barley (farmed)</td><td>~10-15 silver</td><td>Medium</td><td>Mediocre profit but staple food. Sell surplus only — prioritize feeding settlers.</td></tr>
-                <tr><td className="font-semibold">Pickled Vegetables</td><td>Cabbage/Veg (farmed)</td><td>~8-12 silver</td><td>Medium</td><td>Long shelf life makes it easy to stockpile for bulk sales. Low individual value but high volume.</td></tr>
-              </tbody>
-            </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
-          </section>
-
-          <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Beacon Placement</h2>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">How to Unlock Trading</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                <strong className="text-vermillion">&#9888; NOTE:</strong> The "trade beacon" mechanic described below is characteristic of other colony sims and may function differently (or not exist as a distinct structure) in Going Medieval. Merchant arrival mechanics have not been verified against official sources. The guidance below is based on community reports about merchant interaction behavior.
-            </p>
-            <div className="space-y-3">
-              <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Inside Outer Walls, Near Main Gate</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Place the beacon in a courtyard between your outer and inner walls. Merchants enter through the main gate and trade in a secure area without accessing your inner colony. Build a small covered pavilion over the beacon so your trading settler is protected from weather and enemy fire.</p>
+                Trading is not available at the start of the game. You must progress through the research tree and construct the Cartography Table — the cornerstone building that enables all diplomatic and trade interactions with regional factions.
+              </p>
+              <div className="space-y-4">
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">1</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Research Architecture</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">Unlock the basic research prerequisite. Architecture is one of the early-game tech branches and should be prioritized early on.</p>
+                </div>
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">2</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Research Cartography (30 Chronicles)</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">After Architecture, allocate 30 additional chronicles to unlock Cartography. This unlocks the Cartography Table build option in the furniture menu.</p>
+                </div>
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">3</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Build the Cartography Table</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">Requires 90 wood and a settler with Construction skill of 15+. The table is 4x1x2 in size and classified as furniture — it does not degrade when placed outdoors, though it can be damaged by raids and lightning storms.</p>
+                </div>
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">4</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Access the Region Map</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">Once the Cartography Table is built, the Region tab becomes available. This map shows nearby settlements and their basic information. From here, you can send settler caravans to trade actively or wait for merchant visits as random events.</p>
+                </div>
               </div>
-              <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Near a Dedicated Trade Stockpile</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">Place a high-priority stockpile zone directly adjacent to the trade beacon, set to accept only trade goods (beer, crafted weapons, surplus food). Your haulers will pre-stage trade inventory here, minimizing the time your trading settler spends running back and forth.</p>
-              </div>
-              <div className="journal-card p-4">
-                <h4 className="font-display text-base font-semibold text-ink">Avoid: Beacon Inside Living Quarters</h4>
-                <p className="font-serif text-sm text-ink-light mt-1">NEVER place the trade beacon inside your main living area or near your bedroom wing. Merchants (and any raiders that follow them) will path through your colony's core, exposing settlers and stockpiles. Keep trade traffic at the perimeter.</p>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Caravan Frequency & Timing</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Merchant caravans visit on a semi-random schedule. Base frequency is roughly every 10-14 in-game days, but this is modified by several factors. Building a trade post increases visit frequency by roughly 30%. The Speechcraft skill of your colony (collective) also affects how often merchants choose to stop. Caravans are more frequent in autumn than other seasons, making autumn the best time to prepare trade goods.
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed">
-              Strategic timing: use the gaps between merchant visits to produce trade goods. After a trade completes, immediately queue up the next batch of production. A well-oiled trade cycle looks like: Spring — plant barley and flax; Summer — harvest and brew beer/ale, weave cloth; Autumn — craft clothing, finalize beer batches, sell everything; Winter — use silver to buy scarce goods, prepare for spring. This annual rhythm ensures you always have something valuable when merchants arrive.
-            </p>
-          </section>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Building a Trade Lobby</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                When merchants conclude a trade, they simply dump purchased items at their feet — items that will slowly decay if left on bare ground outdoors. Building a proper trade lobby near your settlement entrance is critical for protecting your investments.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                Design a large foyer with ample flooring and a roof. If buying food, maintain temperature-controlled storage nearby to prevent spoilage. Merchant NPCs will path towards rooms with doors located near campfires or hearths — keep the entrance simple and unobstructed. The more complex your stronghold layout, the longer merchants take to reach the trade area. Only items currently in stockpiles (including weapon racks, bookshelves, and chests) are available for outgoing trade, so maintain dedicated haulers to keep your trade goods organized.
+              </p>
+            </section>
 
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
-            <div className="faq-item">
-              <details>
-                <summary>How do I get merchants to visit more often?</summary>
-                <p>Three methods to increase merchant frequency: 1) Build a trade post (unlocked via research) — this provides a guaranteed +30% visit frequency; 2) Increase your colony's total wealth — wealthier colonies attract more merchant attention; 3) Maintain friendly relations — attacking or robbing merchants will permanently reduce visit frequency. Building a trade post is the most reliable and recommended method.</p>
-              </details>
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Regional Factions & Merchant Types</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Each map spawns a selection of up to 8 possible factions, though factions sharing similar philosophies are unlikely to appear together in the same region. Each faction has unique trade preferences, favored goods, and diplomatic dispositions. Building faction alignment through profitable trades unlocks better deals and access to exclusive items.
+              </p>
+
+              <div className="overflow-x-auto mb-4">
+                <table className="w-full text-sm font-serif text-ink-light border-collapse">
+                  <thead>
+                    <tr className="bg-amber-950/30">
+                      <th className="p-3 text-left font-display text-ink border-b-2 border-amber-800/40">Faction</th>
+                      <th className="p-3 text-left font-display text-ink border-b-2 border-amber-800/40">Type</th>
+                      <th className="p-3 text-left font-display text-ink border-b-2 border-amber-800/40">Trades</th>
+                      <th className="p-3 text-left font-display text-ink border-b-2 border-amber-800/40">Visit Frequency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Faithful Sons of England</td>
+                      <td className="p-3">Royalist Loyalists</td>
+                      <td className="p-3">Protection gear, combat equipment, armor</td>
+                      <td className="p-3">Moderate (8-12 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Band of the She-Wolf</td>
+                      <td className="p-3">French Nobility</td>
+                      <td className="p-3">Refined items, production facilities, luxury goods</td>
+                      <td className="p-3">Rare (12-16 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Kingdom of York</td>
+                      <td className="p-3">Peasant Rebellion</td>
+                      <td className="p-3">Everyday items, simple tools, food supplies</td>
+                      <td className="p-3">Frequent (5-8 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Heresy of the Rose</td>
+                      <td className="p-3">Anti-Religion Group</td>
+                      <td className="p-3">Random grab bag, mixed quality goods</td>
+                      <td className="p-3">Moderate (8-12 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Philosophers of the Natural</td>
+                      <td className="p-3">Scholars</td>
+                      <td className="p-3">Textbooks, research materials, chronicles</td>
+                      <td className="p-3">Rare (12-16 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Circle of Avalon</td>
+                      <td className="p-3">Oak Brethren Devout</td>
+                      <td className="p-3">Temple goods, religious decorations</td>
+                      <td className="p-3">Moderate (8-12 days)</td>
+                    </tr>
+                    <tr className="border-b border-amber-800/20 hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Ancrene Disciples</td>
+                      <td className="p-3">Restitution Cult</td>
+                      <td className="p-3">Chapel goods, religious items, ritual materials</td>
+                      <td className="p-3">Moderate (8-12 days)</td>
+                    </tr>
+                    <tr className="hover:bg-amber-950/20">
+                      <td className="p-3 font-semibold text-ink">Church of the Third Coming</td>
+                      <td className="p-3">Restitution Zealots</td>
+                      <td className="p-3">Weapons, chapel decorations, rare arms</td>
+                      <td className="p-3">Rare (12-16 days)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="font-serif text-xs text-ink-muted italic">Visit frequency estimates based on community data. Actual frequency varies by settlement location and faction proximity.</p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trade Value & Speechcraft</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                Going Medieval uses a barter system — there is no currency. Each item's value is dynamically determined by the faction's supply and demand, item durability, and quality tier. Perceived value when buying from merchants is always higher than when selling, even if you already have a huge surplus.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The settler conducting the trade is critical. Assign a settler with high <strong>Speechcraft</strong> to handle all merchant interactions. At baseline, merchants will only accept trades at a minimum 5% loss (you must give more value than you receive). With high enough speechcraft skill, merchants will tolerate up to a 20% loss — meaning you can effectively profit 20% per transaction. Each profitable trade increases your alignment with the associated faction, unlocking friendlier relations and eventually access to weapons and armor from neutral merchants.
+              </p>
+              <div className="recipe-card p-4">
+                <h4 className="font-display text-sm font-semibold text-ink mb-2">Speechcraft Trade Benefits</h4>
+                <ul className="space-y-1 font-serif text-xs text-ink-light">
+                  <li>&bull; <strong>Low Speechcraft (0-5):</strong> 5% maximum loss tolerance — barely break even</li>
+                  <li>&bull; <strong>Medium Speechcraft (6-10):</strong> 10-12% loss tolerance — moderate profit margins</li>
+                  <li>&bull; <strong>High Speechcraft (11-15):</strong> 15-18% loss tolerance — strong profits</li>
+                  <li>&bull; <strong>Expert Speechcraft (16+):</strong> 20% maximum loss tolerance — best possible deals</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Active vs. Passive Trading</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The trading system operates through two distinct mechanics. <strong>Passive trading</strong> occurs when merchant caravans randomly arrive at your settlement — these are event-driven and cannot be directly controlled. Merchants arrive with armed escorts but will not attack unless provoked. Neutral parties can even walk through locked doors like settlers.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                <strong>Active trading</strong> becomes available after building the Cartography Table. You can dispatch settler caravans to nearby towns shown on the region map. This lets you choose when and where to trade, targeting specific factions for desirable goods. Use active trading to fill supply gaps when random merchant visits are infrequent, especially for factions with rare visit schedules like the Philosophers of the Natural (research materials) or the Church of the Third Coming (weapons).
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Merchant Theft: High Risk, High Reward</h2>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                If a merchant dies, they drop all carried items — opening the door to caravan theft as an alternative acquisition strategy. Merchants do not eat or sleep, so you cannot trap them by removing doors. You must actively assault the caravan.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                Alignment loss is calculated per individual hit, not total damage. Use expert two-handed swordsmen or heavy crossbowmen to minimize the number of hits needed for a kill. Guards do not fight back unless the faction drops to hostile status. A clever strategy: gift items to raise faction standing to friendly, then assassinate the merchant while falling back to neutral. If the faction becomes hostile, guards launch an incursion identical to a raid — they'll prioritize destroying production facilities and knocking settlers unconscious before leaving.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Best Trades by Game Stage</h2>
+              <div className="space-y-4">
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">E</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Early Game: Food & Basic Tools</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">Trade excess raw food and wood for items you haven't researched yet. The Kingdom of York offers the most frequent visits and best early-game deals on food supplies and simple tools. Use this faction to bridge resource gaps during the first year.</p>
+                </div>
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">M</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Mid Game: Production Facilities & Research</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">Target the Band of the She-Wolf for production facilities you haven't unlocked yet, and the Philosophers of the Natural for chronicles and research materials to accelerate your tech tree. The Faithful Sons provide quality combat gear for defense.</p>
+                </div>
+                <div className="journal-card p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="step-number">L</span>
+                    <h4 className="font-display text-lg font-semibold text-ink">Late Game: Exotic Weapons & Steel</h4>
+                  </div>
+                  <p className="font-serif text-sm text-ink-light">The Church of the Third Coming sells rare weapons including the falchion. The Circle of Avalon and Ancrene Disciples offer high-end decoration items for settler mood management. Trade excess iron, gold, and silver ingots for maximum profit.</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">FAQ</h2>
+              <div className="faq-item">
+                <details>
+                  <summary>How do I start trading in Going Medieval?</summary>
+                  <p>Research Architecture first, then allocate 30 chronicles to research Cartography. Build a Cartography Table (90 wood, Construction skill 15+). Once built, the Region tab unlocks, allowing you to send caravans to nearby settlements. Merchant caravans will also begin randomly visiting your colony as events.</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>Which settler should handle trades?</summary>
+                  <p>Always use a settler with the highest Speechcraft skill. Speechcraft determines how favorable the barter terms are — at low skill merchants demand a 5% value loss, while expert speechcraft (16+) allows up to 20% profit per trade. A dedicated trader with high speechcraft is one of the most valuable colonists in your settlement.</p>
+                </details>
+              </div>
+              <div className="faq-item">
+                <details>
+                  <summary>Can I attack merchants to steal their goods?</summary>
+                  <p>Yes, but with significant risk. Killing a merchant drops all carried items. Guards only fight back if the faction becomes hostile. Use heavy crossbowmen to minimize hits (alignment loss is per-hit). If hostility triggers, guards launch a raid-like incursion targeting production facilities. Gifting items to reach friendly status before assassination can mitigate diplomatic damage.</p>
+                </details>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Related Guides</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="/research" className="recipe-card p-4 no-underline">
+                  <h4 className="font-display text-sm font-semibold text-ink">Research Tech Tree</h4>
+                  <p className="font-serif text-xs text-ink-muted mt-1">Unlock Cartography and other essential technologies</p>
+                </a>
+                <a href="/crafting" className="recipe-card p-4 no-underline">
+                  <h4 className="font-display text-sm font-semibold text-ink">Crafting System</h4>
+                  <p className="font-serif text-xs text-ink-muted mt-1">Produce goods to trade with merchants</p>
+                </a>
+                <a href="/production-chain-optimization" className="recipe-card p-4 no-underline">
+                  <h4 className="font-display text-sm font-semibold text-ink">Production Chains</h4>
+                  <p className="font-serif text-xs text-ink-muted mt-1">Optimize resource flow for trade surplus</p>
+                </a>
+                <a href="/trading" className="recipe-card p-4 no-underline">
+                  <h4 className="font-display text-sm font-semibold text-ink">Trading System Overview</h4>
+                  <p className="font-serif text-xs text-ink-muted mt-1">General trading mechanics and resource exchange</p>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <aside className="lg:w-[35%] space-y-8 shrink-0">
+            <div className="field-sidebar-block">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">Trade Prerequisites</h3>
+              <div className="space-y-3">
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Research: Architecture</h4><p className="font-serif text-xs text-ink-muted mt-1">Required before Cartography research</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Research: Cartography</h4><p className="font-serif text-xs text-ink-muted mt-1">30 chronicles — unlocks trade table</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Cartography Table</h4><p className="font-serif text-xs text-ink-muted mt-1">90 wood, Construction skill 15+</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Trade Lobby</h4><p className="font-serif text-xs text-ink-muted mt-1">Roofed foyer near entrance — protects goods</p></div>
+              </div>
             </div>
-            <div className="faq-item">
-              <details>
-                <summary>Can I attack merchants and steal their goods?</summary>
-                <p>Technically yes, but the consequences are severe. Attacking a merchant caravan turns their faction permanently hostile — they will never trade with you again and may send raiding parties in retaliation. All other merchant types will also visit less frequently (reduced by ~50%). The short-term loot is rarely worth the permanent economic damage. Only consider this as a desperate survival measure.</p>
-              </details>
+
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Trading Tips</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>&bull; Assign highest Speechcraft settler as trader</li>
+                <li>&bull; Keep stockpiles organized for quick trade access</li>
+                <li>&bull; Build roofed lobby to prevent item decay</li>
+                <li>&bull; Gift to factions to improve relations before big trades</li>
+                <li>&bull; Neutral merchants won't sell weapons — befriend them first</li>
+                <li>&bull; Faction alignment improves with profitable trades</li>
+                <li>&bull; Can steal from caravans — but guards may retaliate</li>
+              </ul>
             </div>
-            <div className="faq-item">
-              <details>
-                <summary>What should I always buy from merchants?</summary>
-                <p>Prioritize goods you cannot produce yourself or that are extremely scarce: medicine kits (if you lack herbs), advanced weapons (if you lack a skilled smith), rare seeds (for crop variety), and iron ore (if your mines are depleted). Avoid buying basic resources like wood, stone, or raw food — these are almost always cheaper to produce locally.</p>
-              </details>
+
+            <div className="journal-card p-5">
+              <h3 className="font-display text-base font-semibold text-ink mb-3">Best Merchant Factions</h3>
+              <ul className="space-y-2 font-serif text-sm text-ink-light">
+                <li>&bull; <strong>Kingdom of York:</strong> Most frequent visits, everyday items</li>
+                <li>&bull; <strong>Faithful Sons:</strong> Best combat equipment</li>
+                <li>&bull; <strong>Philosophers:</strong> Rare research chronicles</li>
+                <li>&bull; <strong>Band of She-Wolf:</strong> High-end production facilities</li>
+                <li>&bull; <strong>Church 3rd Coming:</strong> Exotic weapons (falchion)</li>
+              </ul>
             </div>
-          </section>
+          </aside>
         </div>
-
-        <aside className="lg:w-[35%] space-y-8 shrink-0">
-          <div className="field-sidebar-block">
-            <h3 className="font-display text-lg font-semibold text-ink mb-4">Trade Profit Rankings</h3>
-            <div className="space-y-2 font-serif text-sm text-ink-light">
-              <div className="flex justify-between"><span>1. Beer</span><span className="text-gold">High</span></div>
-              <div className="flex justify-between"><span>2. Iron Sword</span><span className="text-gold">High</span></div>
-              <div className="flex justify-between"><span>3. Smoked Meat</span><span className="text-gold">High</span></div>
-              <div className="flex justify-between"><span>4. Cloth Tunic</span><span className="text-gold">High</span></div>
-              <div className="flex justify-between"><span>5. Cheese</span><span>Medium</span></div>
-              <div className="flex justify-between"><span>6. Pickled Cabbage</span><span>Medium</span></div>
-            </div>
-          </div>
-          <div className="journal-card p-5">
-            <h3 className="font-display text-base font-semibold text-ink mb-3">Annual Trade Calendar</h3>
-            <div className="space-y-2 font-serif text-sm text-ink-light">
-                <div><span className="field-tag vermillion text-[10px]">Spring</span> Plant barley + flax</div>
-                <div><span className="field-tag gold text-[10px]">Summer</span> Harvest, brew beer, weave cloth</div>
-              <div><span className="field-tag ink text-[10px]">Autumn</span> Finalize goods, major trade season</div>
-              <div><span className="field-tag ink text-[10px]">Winter</span> Spend silver on scarce goods</div>
-            </div>
-          </div>
-        </aside>
-      </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I get merchants to visit more often?",
+      "name": "How do I start trading in Going Medieval?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Three methods to increase merchant frequency: 1) Build a trade post (unlocked via research) — this provides a guaranteed +30% visit frequency; 2) Increase your colony's total wealth — wealthier colonies attract more merchant attention; 3) Maintain friendly relations — attacking or robbing merchants will permanently reduce visit frequency. Building a trade post is the most reliable and recommended method."
+        "text": "Research Architecture first, then allocate 30 chronicles to research Cartography. Build a Cartography Table (90 wood, Construction skill 15+). Once built, the Region tab unlocks, allowing you to send caravans to nearby settlements. Merchant caravans will also begin randomly visiting your colony as events."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I attack merchants and steal their goods?",
+      "name": "Which settler should handle trades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Technically yes, but the consequences are severe. Attacking a merchant caravan turns their faction permanently hostile — they will never trade with you again and may send raiding parties in retaliation. All other merchant types will also visit less frequently (reduced by ~50%). The short-term loot is rarely worth the permanent economic damage. Only consider this as a desperate survival measure."
+        "text": "Always use a settler with the highest Speechcraft skill. Speechcraft determines how favorable the barter terms are — at low skill merchants demand a 5% value loss, while expert speechcraft (16+) allows up to 20% profit per trade."
       }
     },
     {
       "@type": "Question",
-      "name": "What should I always buy from merchants?",
+      "name": "Can I attack merchants to steal their goods?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Prioritize goods you cannot produce yourself or that are extremely scarce: medicine kits (if you lack herbs), advanced weapons (if you lack a skilled smith), rare seeds (for crop variety), and iron ore (if your mines are depleted). Avoid buying basic resources like wood, stone, or raw food — these are almost always cheaper to produce locally."
+        "text": "Yes, but with significant risk. Killing a merchant drops all carried items. Guards only fight back if the faction becomes hostile. Use heavy crossbowmen to minimize hits (alignment loss is per-hit). If hostility triggers, guards launch a raid-like incursion targeting production facilities."
       }
     }
   ]

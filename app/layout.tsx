@@ -267,6 +267,8 @@ gtag('config', 'G-ET6778V62K');`}
                   <p className="footer-eeat-updated">Last updated: June 2026 (verified for Game Version 0.4.x)</p>
                 </div>
               </div>
+
+              <p className="footer-disclaimer">Part of the <a href="https://gguidehub.com" className="footer-eeat-link">GameGuideHub</a> network.</p>
             </footer>
           </div>
         </div>
