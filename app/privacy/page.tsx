@@ -28,13 +28,13 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-display text-xl font-semibold text-ink mb-3">Third-Party Links</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              This site contains links to third-party websites (such as Steam, Afdian). These websites have their own privacy policies, and this site is not responsible for their content.
+              This site contains links to third-party websites (such as Steam, UniFans). These websites have their own privacy policies, and this site is not responsible for their content.
             </p>
           </section>
           <section>
             <h2 className="font-display text-xl font-semibold text-ink mb-3">Contact</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              For privacy-related inquiries, please contact us through Afdian (afdian.com/a/gameguidehub).
+              For privacy-related inquiries, please contact us through UniFans (app.unifans.io/c/ryu2020).
             </p>
           </section>
         </div>

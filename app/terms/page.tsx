@@ -34,7 +34,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-display text-xl font-semibold text-ink mb-3">Terms Changes</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              This site reserves the right to modify these Terms of Use at any time. Revised terms take effect upon posting, and continued use of this site constitutes acceptance of the revised terms. For questions, please contact us via Afdian.
+              This site reserves the right to modify these Terms of Use at any time. Revised terms take effect upon posting, and continued use of this site constitutes acceptance of the revised terms. For questions, please contact us via UniFans.
             </p>
           </section>
         </div>

@@ -188,10 +188,10 @@ gtag('config', 'G-ET6778V62K');`}
             <div className="sidebar-support">
               <h3 className="sidebar-support-title">Support This Site</h3>
               <p className="sidebar-support-desc">
-                This guide site is maintained by community players and all content is free. If our guides helped you, consider supporting us via Afdian to help us keep updating.
+                This guide site is maintained by community players and all content is free. If our guides helped you, consider supporting us via UniFans to help us keep updating.
               </p>
-              <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener noreferrer" className="support-btn">
-                ♥ Support on Afdian
+              <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener noreferrer" className="support-btn">
+                Support us on UniFans
               </a>
             </div>
           </aside>
@@ -219,12 +219,12 @@ gtag('config', 'G-ET6778V62K');`}
                   </nav>
                 </div>
                 <a
-                  href="https://afdian.com/a/gameguidehub"
+                  href="https://app.unifans.io/c/ryu2020"
                   target="_blank"
                   rel="noopener"
                   className="header-support"
                 >
-                  ❤️ Support Us
+                  Support us on UniFans
                 </a>
               </div>
             </header>
@@ -252,7 +252,7 @@ gtag('config', 'G-ET6778V62K');`}
                   <Link href="/privacy" className="footer-link">Privacy</Link>
                   <Link href="/terms" className="footer-link">Terms</Link>
                   <Link href="/faq" className="footer-link">FAQ</Link>
-                  <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener" className="footer-support-link">❤️ Support Us</a>
+                  <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener" className="footer-support-link">Support us on UniFans</a>
                 </div>
 
                 <p className="footer-disclaimer">

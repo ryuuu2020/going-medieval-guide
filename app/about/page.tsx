@@ -23,7 +23,7 @@ export default function AboutPage() {
                 This site was founded in 2026, coinciding with the Going Medieval 1.0 full release. We noticed a lack of systematic guide resources in the community, with many new players giving up after hitting early challenges. So we decided to build this site, organizing community experience into structured, readable guides.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                All guide content is free and open — no registration or payment required. We are committed to having no paywalls and no intrusive ads. If our guides help you, consider supporting us via Afdian to help us keep updating.
+                All guide content is free and open — no registration or payment required. We are committed to having no paywalls and no intrusive ads. If our guides help you, consider supporting us via UniFans to help us keep updating.
               </p>
             </section>
 
@@ -52,8 +52,8 @@ export default function AboutPage() {
                 If you have guide suggestions, content feedback, or collaboration ideas, you can reach us through:
               </p>
               <div className="space-y-3 mt-4">
-                <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener noreferrer" className="block journal-card p-4">
-                  <h4 className="font-display text-base font-semibold text-ink">Afdian Support</h4>
+                <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener noreferrer" className="block journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">UniFans Support</h4>
                   <p className="font-serif text-sm text-ink-muted mt-1">Support ongoing site updates and access more guide content</p>
                 </a>
               </div>

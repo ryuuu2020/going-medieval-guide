@@ -89,12 +89,12 @@ export function SiteFooter() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://afdian.com/a/gameguidehub"
+            href="https://app.unifans.io/c/ryu2020"
             target="_blank"
             rel="noopener noreferrer"
             className="font-label text-sm font-semibold text-vermillion hover:text-vermillion-light transition-colors"
           >
-            Support Us &rarr;
+            Support us on UniFans
           </a>
         </div>
       </div>
