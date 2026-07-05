@@ -1,190 +1,183 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Going Medieval Castle Building Guide — How to Build a Full Castle from Keep to Fortress | Going Medieval Guide",
-  description: "Step-by-step castle building progression guide for Going Medieval. Learn how to plan, build, and defend a complete castle from wooden keep to stone fortress.",
+  title: "Going Medieval Castle Building Guide — Full Fortress Construction",
+  description: "Learn how to plan and build an entire castle from scratch in Going Medieval. Keep layout, curtain walls, towers, gatehouses, bailey, living quarters, multi-story construction, stability, and defensive layers explained.",
 };
 
-const castleStages = [
-  { stage: "Wooden Keep", materials: "200 Wood, 60 Labor", settlersNeeded: 3, defenseRating: "Low (250 HP walls)", buildTime: "3-5 days", keyFeature: "Basic shelter, storage, one bedroom" },
-  { stage: "Stone Keep Upgrade", materials: "400 Stone, 120 Labor", settlersNeeded: 4, defenseRating: "Medium (600 HP walls)", buildTime: "5-7 days", keyFeature: "Replace wood walls with stone, add arrow slits" },
-  { stage: "Inner Bailey Wall", materials: "600 Stone, 200 Labor", settlersNeeded: 5, defenseRating: "Medium-High (600 HP perimeter)", buildTime: "8-10 days", keyFeature: "Enclosed courtyard, protected farms and workshops" },
-  { stage: "Gatehouse", materials: "300 Stone, 80 Iron, 100 Labor", settlersNeeded: 5, defenseRating: "High (adds choke point)", buildTime: "3-4 days", keyFeature: "Reinforced gate, murder holes, defensive platform" },
-  { stage: "Corner Towers", materials: "300 Stone, 60 Iron per tower, 80 Labor each", settlersNeeded: 6, defenseRating: "High (flanking fire coverage)", buildTime: "4-5 days per tower", keyFeature: "360-degree archer coverage, elevated firing positions" },
-  { stage: "Outer Curtain Wall", materials: "800 Stone, 300 Labor", settlersNeeded: 7, defenseRating: "Very High (creates kill zone)", buildTime: "10-14 days", keyFeature: "Second defense layer, kill zone between walls" },
-  { stage: "Moat / Dry Ditch", materials: "200 Labor (no materials)", settlersNeeded: 8, defenseRating: "Maximum (slows all ground enemies)", buildTime: "5-7 days", keyFeature: "Uncrossable barrier, forces enemies to gate" },
-  { stage: "Fortified Keep (Final)", materials: "1000 Stone, 200 Iron, 80 Steel, 500 Labor", settlersNeeded: 10, defenseRating: "Impenetrable", buildTime: "15-20 days", keyFeature: "Multi-story keep with vault, throne room, panic room" },
+const castleZones = [
+  { zone: "The Keep", purpose: "Last-resort stronghold, treasury, and settler shelter", location: "Center of the castle, highest ground", minStories: "3 stories", wallMaterial: "Reinforced Stone or Limestone", notes: "Must survive even if outer walls fall. Include a panic room and food stockpile inside." },
+  { zone: "Inner Bailey", purpose: "Protected courtyard for workshops, kitchens, and barracks", location: "Surrounding the keep, inside the inner curtain wall", minStories: "1-2 stories", wallMaterial: "Stone Wall", notes: "The daily life of your colony happens here. Keep it walkable and organized." },
+  { zone: "Outer Bailey", purpose: "Farms, pastures, and bulk storage", location: "Between inner and outer curtain walls", minStories: "Open ground", wallMaterial: "Stone Wall or Clay Brick", notes: "Acts as a kill zone during raids. Do not place irreplaceable structures here." },
+  { zone: "Gatehouse", purpose: "Controlled entry point with murder holes and fallback gate", location: "Single opening in the outer curtain wall", minStories: "2 stories", wallMaterial: "Reinforced Stone", notes: "The most attacked tile in the entire game. Layer it with a drawbridge if possible." },
+  { zone: "Corner Towers", purpose: "360-degree archer fire and flanking coverage", location: "Each corner of the outer curtain wall", minStories: "3 stories", wallMaterial: "Stone or Limestone", notes: "Build at least four. Each tower should hold 2-3 archers during a raid." },
+  { zone: "Curtain Walls", purpose: "Continuous defensive perimeter with walkable parapet", location: "Connecting towers and gatehouse", minStories: "2 stories (walkable top)", wallMaterial: "Stone Wall minimum", notes: "The parapet floor is where archers stand. Never leave gaps in a curtain wall." },
 ];
 
-const wallComparison = [
-  { material: "Wood Wall", hp: "250", resourceCost: "15 Wood per tile", buildSpeed: "Fast", bestUse: "Temporary structures, early game", upgradeTo: "Stone Wall" },
-  { material: "Stone Wall", hp: "600", resourceCost: "8 Stone Blocks per tile", buildSpeed: "Medium", bestUse: "Main settlement walls, mid-game", upgradeTo: "Limestone Wall" },
-  { material: "Limestone Wall", hp: "800", resourceCost: "6 Limestone Blocks per tile", buildSpeed: "Medium", bestUse: "Premium defense, aesthetic choice", upgradeTo: "Reinforced Stone" },
-  { material: "Clay Brick Wall", hp: "500", resourceCost: "6 Clay Bricks per tile", buildSpeed: "Fast", bestUse: "Quick upgrades when stone is scarce", upgradeTo: "Stone Wall" },
-  { material: "Reinforced Stone", hp: "1200", resourceCost: "8 Stone Blocks + 2 Iron Ingots per tile", buildSpeed: "Slow", bestUse: "Keep walls, vault, critical defense points", upgradeTo: "N/A (max tier)" },
-];
-
-const defenseLayers = [
-  { layer: 1, name: "Outer Moat / Ditch", purpose: "Slows enemies, channels them to choke points", priority: "Build last — after walls are complete" },
-  { layer: 2, name: "Outer Curtain Wall", purpose: "First line of defense, archer platforms", priority: "Mid-game — after inner settlement is stable" },
-  { layer: 3, name: "Kill Zone", purpose: "Open ground between outer and inner walls — archers fire from both sides", priority: "Natural result of dual-wall design" },
-  { layer: 4, name: "Inner Bailey Wall", purpose: "Final defensive line, protects farms and workshops", priority: "Early-mid — surround your core settlement first" },
-  { layer: 5, name: "Gatehouse + Towers", purpose: "Reinforced entry point, elevated archer positions", priority: "After inner wall — gates are the weakest point" },
-  { layer: 6, name: "The Keep", purpose: "Last stand position, treasure vault, settler shelter", priority: "Gradually upgrade from wooden shack to stone fortress" },
+const constructionPhases = [
+  { phase: "Phase 1 — Wooden Keep", settlersRequired: "3-4", primaryMaterials: "Wood, Thatch", buildTime: "3-5 days", defenseLevel: "Low", keyGoal: "Establish shelter, storage, and a single bedroom. Survive the first winter." },
+  { phase: "Phase 2 — Stone Keep", settlersRequired: "4-5", primaryMaterials: "Stone Blocks", buildTime: "5-7 days", defenseLevel: "Medium", keyGoal: "Replace wood walls with stone. Add arrow slits. Dig underground food storage." },
+  { phase: "Phase 3 — Inner Curtain Wall", settlersRequired: "5-6", primaryMaterials: "Stone Blocks, Wood", buildTime: "8-10 days", defenseLevel: "Medium-High", keyGoal: "Enclose your core settlement. Protect workshops and bedrooms from raids." },
+  { phase: "Phase 4 — Gatehouse and Towers", settlersRequired: "6-7", primaryMaterials: "Stone Blocks, Iron", buildTime: "6-8 days", defenseLevel: "High", keyGoal: "Build the gatehouse with murder holes. Erect corner towers for archer coverage." },
+  { phase: "Phase 5 — Outer Curtain Wall", settlersRequired: "7-8", primaryMaterials: "Stone Blocks, Limestone", buildTime: "10-14 days", defenseLevel: "Very High", keyGoal: "Add the second wall layer. The gap between walls becomes a kill zone." },
+  { phase: "Phase 6 — Moat and Final Keep", settlersRequired: "8-10", primaryMaterials: "Reinforced Stone, Iron, Steel", buildTime: "15-20 days", defenseLevel: "Impenetrable", keyGoal: "Dig the moat. Upgrade the keep to maximum tier. Your fortress is complete." },
 ];
 
 export default function CastleBuildingGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="chapter-heading font-display text-4xl mb-2">
-        Castle Building Guide
+        Castle Building Guide — Full Fortress Construction
       </h1>
       <p className="text-ink-faded text-lg mb-8 drop-cap">
-        Building a castle in Going Medieval is the ultimate expression of your colony progress. It transforms your settlement from a collection of wooden shacks into an impenetrable fortress. But the gap between your first wooden keep and a fully fortified stone castle is enormous — and rushing it will break your colony. This guide walks you through every stage, using the Tower of London progression method favored by veteran players.
+        A player on r/goingmedivial recently asked the question every colony leader eventually faces: "How do you build an entire castle?" The answer is not a single blueprint. It is a phased construction project that spans in-game years, demands careful material planning, and tests your understanding of the stability system at every step. This guide breaks down the full fortress construction process from a wooden keep to a multi-story stone castle with curtain walls, towers, a gatehouse, bailey, and living quarters.
       </p>
 
-      {/* Castle Building Stages */}
+      {/* Planning the Castle Layout */}
       <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Castle Building Stages — From Shack to Fortress
+        Planning the Castle Layout
       </h2>
       <p className="text-ink-light mb-4">
-        The community-driven Tower of London method recommends growing your castle organically. Start with a modest wooden keep, then expand outward in concentric rings. Each stage adds a layer of defense while maintaining a livable interior. Jumping straight to a massive stone fortress with 4 settlers will collapse from starvation and mental breaks.
+        Before placing a single wall, survey your terrain. The best castle sites sit on elevated ground with at least two natural barriers — a cliff, a river, or dense forest — reducing the directions enemies can approach from. Flat open ground is the worst choice because it forces you to defend all four sides equally. Mark your build zone with stockpile areas first so settlers do not plant farms on your future gatehouse.
+      </p>
+      <p className="text-ink-light mb-4">
+        A proper castle has six functional zones: the keep, the inner bailey, the outer bailey, the gatehouse, corner towers, and the curtain walls connecting them. Plan the footprint of each zone before construction begins. A common mistake is building the keep too small and being unable to expand it later because the inner bailey has grown around it. Allocate at least a 7x7 tile area for the keep foundation even if you only build a 3x3 wooden shack initially.
+      </p>
+      <p className="text-ink-light mb-4">
+        Plan for multi-story construction from day one. The keep should reach three stories: ground floor for storage and the vault, second floor for living quarters and the great hall, third floor for archer positions and a panic room. Staircases must be placed inside the keep footprint so they remain protected. Every upper floor depends on the walls below it for structural support, so ground-floor walls must be the strongest material you can afford.
+      </p>
+
+      {/* Castle Zones Table */}
+      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
+        Castle Zones and Their Purpose
+      </h2>
+      <p className="text-ink-light mb-4">
+        Each zone of the castle serves a specific defensive and economic function. Understanding these roles prevents the most common layout mistake: mixing military and civilian structures in the same space, which creates pathfinding chaos during raids.
       </p>
       <div className="overflow-x-auto">
         <table className="parchment-table w-full text-sm">
           <thead>
             <tr>
-              <th>Stage</th>
-              <th>Materials</th>
-              <th>Settlers</th>
-              <th>Defense</th>
-              <th>Build Time</th>
-              <th>Key Feature</th>
-            </tr>
-          </thead>
-          <tbody>
-            {castleStages.map((s, i) => (
-              <tr key={i}>
-                <td className="font-display text-accent">{s.stage}</td>
-                <td>{s.materials}</td>
-                <td className="text-center">{s.settlersNeeded}</td>
-                <td>{s.defenseRating}</td>
-                <td>{s.buildTime}</td>
-                <td>{s.keyFeature}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Wall Material Comparison */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Wall Material Comparison
-      </h2>
-      <p className="text-ink-light mb-4">
-        Wall material is the single largest resource investment in your castle. Choosing the wrong material for the wrong wall wastes hundreds of stone blocks. Use this table to decide what goes where.
-      </p>
-      <div className="overflow-x-auto">
-        <table className="parchment-table w-full text-sm">
-          <thead>
-            <tr>
-              <th>Material</th>
-              <th>HP</th>
-              <th>Cost/Tile</th>
-              <th>Build Speed</th>
-              <th>Best Use</th>
-              <th>Upgrades To</th>
-            </tr>
-          </thead>
-          <tbody>
-            {wallComparison.map((w, i) => (
-              <tr key={i}>
-                <td className="font-display text-accent">{w.material}</td>
-                <td className="text-center">{w.hp}</td>
-                <td>{w.resourceCost}</td>
-                <td>{w.buildSpeed}</td>
-                <td>{w.bestUse}</td>
-                <td>{w.upgradeTo}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Multi-Layer Defense */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        The Six-Layer Defense System
-      </h2>
-      <p className="text-ink-light mb-4">
-        A properly built castle uses layered defense. Each layer slows the enemy, gives your archers more time to fire, and creates fallback positions. Enemies should face resistance at every step from the outer moat to your inner keep.
-      </p>
-      <div className="overflow-x-auto">
-        <table className="parchment-table w-full text-sm">
-          <thead>
-            <tr>
-              <th>Layer</th>
-              <th>Structure</th>
+              <th>Zone</th>
               <th>Purpose</th>
-              <th>Build Priority</th>
+              <th>Location</th>
+              <th>Min. Stories</th>
+              <th>Wall Material</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
-            {defenseLayers.map((d, i) => (
+            {castleZones.map((z, i) => (
               <tr key={i}>
-                <td className="text-center">{d.layer}</td>
-                <td className="font-display text-accent">{d.name}</td>
-                <td>{d.purpose}</td>
-                <td>{d.priority}</td>
+                <td className="font-display text-accent">{z.zone}</td>
+                <td>{z.purpose}</td>
+                <td>{z.location}</td>
+                <td className="text-center">{z.minStories}</td>
+                <td>{z.wallMaterial}</td>
+                <td className="text-ink-light">{z.notes}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      {/* Gate Defense */}
+      {/* Construction Phases */}
       <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Gate Defense — Your Weakest Point
+        Construction Phases — From Wooden Keep to Stone Fortress
       </h2>
       <p className="text-ink-light mb-4">
-        Gates are the number one target for enemy raiders. A recent community discovery (confirmed after the latest patch) revealed that enemies pathfind to gates even when easier paths exist. This means you can predict where they will attack and concentrate defenses there. However, the latest update also introduced attacks from secondary directions — do not leave your sides completely undefended.
+        The biggest mistake new castle builders make is attempting the full fortress with only three or four settlers. While your builders haul stone, nobody farms, cooks, or researches. The result is a beautiful castle full of starving, miserable settlers. Build in phases, matching construction ambition to your settler count and economic capacity.
+      </p>
+      <div className="overflow-x-auto">
+        <table className="parchment-table w-full text-sm">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Settlers</th>
+              <th>Materials</th>
+              <th>Build Time</th>
+              <th>Defense</th>
+              <th>Key Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            {constructionPhases.map((p, i) => (
+              <tr key={i}>
+                <td className="font-display text-accent">{p.phase}</td>
+                <td className="text-center">{p.settlersRequired}</td>
+                <td>{p.primaryMaterials}</td>
+                <td>{p.buildTime}</td>
+                <td>{p.defenseLevel}</td>
+                <td className="text-ink-light">{p.keyGoal}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Multi-Story Construction and Stability */}
+      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
+        Multi-Story Construction and Stability
+      </h2>
+      <p className="text-ink-light mb-4">
+        Multi-story construction is what separates a shack from a castle. Going Medieval allows vertical stacking up to several stories, but every upper floor transfers its weight to the walls below. The stability overlay (toggled with F7) is your most important tool. Red walls are under maximum load. Green walls are well-supported. Gray means no load at all. Never place an upper floor on walls that show yellow or worse in the overlay.
       </p>
       <p className="text-ink-light mb-4">
-        <strong>Gate defense checklist:</strong> Reinforced gate (Iron Gate or better) → Murder holes above (floor opening with archers) → Two flanking towers for crossfire → Drawbridge over moat (optional but devastating) → Inner gate as fallback (double-gate system).
+        The ground-floor walls of your keep carry the weight of everything above them. They must be the highest-tier material you can produce. A common failure pattern: a player builds a three-story keep with wood walls on the ground floor, then wonders why the second floor collapses during a raid when a single arrow-slit wall tile is destroyed. Use stone walls minimum for any structure reaching two stories, and reinforced stone for three stories and above.
+      </p>
+      <p className="text-ink-light mb-4">
+        Support pillars are mandatory for spans wider than 6 tiles. A curtain wall stretching 20 tiles between two towers needs pillars at intervals of no more than 5 tiles, or the wall will sag and collapse under its own weight. Pillars also serve as renovation insurance: when you upgrade wall materials later, the pillars hold the load while you swap tiles one at a time. See our Renovation Guide for the full tile-by-tile upgrade method.
       </p>
 
-      {/* Common Mistakes */}
+      {/* Defensive Layers */}
       <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Common Castle Building Mistakes
+        Defensive Layers — The Onion Principle
       </h2>
-      <ul className="list-disc pl-6 space-y-2 text-ink-light mb-8">
-        <li><strong>Building too big too early.</strong> A massive stone castle with 3 settlers means nobody is farming, cooking, or researching. Your castle will be beautiful and your settlers will be dead. Always match your construction ambition to your settler count.</li>
-        <li><strong>Ignoring terrain.</strong> Building on flat ground wastes natural defense. Use hills, cliffs, and rivers as free walls. The best castle sites have at least two natural barriers reducing the directions enemies can approach from.</li>
-        <li><strong>No storage nearby.</strong> Builders walk to the stockpile for every single stone block. If your stone stockpile is on the opposite side of the map, construction takes 3x longer. Place a small material stockpile adjacent to every active construction site.</li>
-        <li><strong>One entrance only.</strong> A single gate is a single point of failure. Build at least two gates on opposite sides so settlers can evacuate or flank attackers. The secondary gate can be a simple door in a wall — it does not need to be elaborate.</li>
-        <li><strong>Upgrading all walls simultaneously.</strong> Removing a load-bearing wall causes structural collapse. Upgrade walls one section at a time, always checking the stability overlay (F7) before and after each replacement.</li>
-      </ul>
+      <p className="text-ink-light mb-4">
+        A castle is not a single wall. It is an onion of defensive layers, each one slowing the enemy and giving your archers more time to fire. From outside in: moat, outer curtain wall, kill zone, inner curtain wall, gatehouse with murder holes, corner towers providing flanking fire, and finally the keep as the last stand position. Enemies should face resistance at every step.
+      </p>
+      <p className="text-ink-light mb-4">
+        The gatehouse is your weakest point and the enemy knows it. Raiders pathfind toward gates even when easier routes exist. Concentrate your strongest defenses here: a reinforced iron gate, murder holes in the ceiling above, two flanking towers for crossfire, and a drawbridge over the moat if you can afford the iron. A double-gate system — where enemies break through the outer gate only to find a second gate in a kill zone — is devastating.
+      </p>
+      <p className="text-ink-light mb-4">
+        Corner towers give 360-degree archer coverage and eliminate blind spots along the curtain wall. Build them at least three stories tall so archers can fire over the parapet. Each tower should hold two to three archers with crossbows and a stockpile of bolts. During a raid, pull all archers into the towers and let the walls and moat do the slowing.
+      </p>
+
+      {/* Living Quarters and Bailey Economy */}
+      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
+        Living Quarters and the Bailey Economy
+      </h2>
+      <p className="text-ink-light mb-4">
+        The inner bailey is where your colony actually lives. Place bedrooms, the kitchen, the workshop, and the great hall inside the inner curtain wall. Bedrooms should be at least 3x3 tiles with a bed, a lamp, and a chest for personal storage. The great hall doubles as a dining area and a morale booster — a well-decorated great hall with flagstone flooring and a fireplace significantly improves settler mood.
+      </p>
+      <p className="text-ink-light mb-4">
+        The outer bailey holds farms, pastures, and bulk storage. These are economically essential but militarily expendable. If raiders breach the outer wall, they should find only crops and cheap storage — never your armory or treasury. Place the armory and vault inside the keep, behind the inner curtain wall, where they survive even a full breach.
+      </p>
+      <p className="text-ink-light mb-4">
+        A well-planned bailey keeps walk distances short. Settlers walk to the stockpile for every material. If your stone stockpile is on the far side of the outer bailey, construction of the inner keep takes three times longer. Place small material stockpiles adjacent to every active construction site, and relocate them as the project moves.
+      </p>
 
       {/* FAQ */}
       <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">FAQ</h2>
 
       <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">Should I build underground or above ground?</h3>
+        <h3 className="font-display text-accent text-lg mb-2">How long does it take to build a full castle in Going Medieval?</h3>
         <p className="text-ink-light">
-          Both. The ideal Going Medieval settlement combines above-ground castle walls with underground storage, workshops, and panic rooms. Underground rooms are naturally insulated (stable temperature year-round), immune to trebuchet fire, and protect your most valuable resources during raids. Above-ground walls and towers provide archer platforms and line-of-sight that underground cannot. Build your keep above ground, your vault and food storage below.
+          A full fortress with keep, curtain walls, towers, gatehouse, and moat takes roughly 40-60 in-game days spread across multiple construction phases. With 8-10 settlers and steady material supply, you can complete the outer curtain wall by the end of year two and the final reinforced keep by year three. Rushing the project with too few settlers is the number one cause of colony collapse during castle construction.
         </p>
       </div>
 
       <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">How many settlers do I need to build a proper castle?</h3>
+        <h3 className="font-display text-accent text-lg mb-2">What is the minimum number of settlers needed for castle construction?</h3>
         <p className="text-ink-light">
-          Minimum 5 for a basic stone-walled settlement with a gatehouse. For a full castle with outer walls, towers, moat, and reinforced keep: 8 to 10 settlers. The bottleneck is not construction speed — it is the other jobs. While 3 settlers build walls, someone still needs to farm, cook, hunt, research, and haul. At 8 settlers, you can dedicate 3 to construction full-time without crippling your colony survival.
+          Five settlers is the minimum for a basic stone-walled settlement with a gatehouse. Eight to ten settlers is the sweet spot for a full castle with outer walls, towers, and a reinforced keep. The bottleneck is not construction speed — it is the survival economy. While three settlers build walls, someone must farm, cook, hunt, research, and haul. Below five settlers, do not attempt anything larger than a single-story stone keep.
         </p>
       </div>
 
       <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">Can I upgrade walls without demolishing them first?</h3>
+        <h3 className="font-display text-accent text-lg mb-2">Should I build the keep above ground or underground?</h3>
         <p className="text-ink-light">
-          Yes, but with caution. You can designate a wall for deconstruction and immediately place a new wall of a different material in the same spot. However, removing a load-bearing wall — even temporarily — causes everything above it to collapse. The safe method: build a temporary support beam or pillar adjacent to the wall you want to replace, then upgrade the wall section by section. Never remove more than one connected wall segment at a time. Use the F7 stability overlay to check structural integrity before every replacement. For detailed step-by-step instructions, see our Wall Upgrade Guide.
+          Both. The ideal castle combines an above-ground keep for defense and archer positions with underground vaults for food storage, workshops, and a panic room. Underground rooms maintain stable temperature year-round, are immune to trebuchet fire, and protect valuables during raids. Build the keep above ground for military advantage and dig beneath it for economic security. The underground entrance should be inside the keep so it is only accessible after breaching every defensive layer.
         </p>
       </div>
 
@@ -195,13 +188,15 @@ export default function CastleBuildingGuidePage() {
           <li><Link href="/defense" className="text-accent hover:underline">Complete Defense Guide</Link></li>
           <li><Link href="/best-defense-layout" className="text-accent hover:underline">Best Defense Layouts</Link></li>
           <li><Link href="/structural-mechanics" className="text-accent hover:underline">Structural Mechanics &amp; Stability</Link></li>
-          <li><Link href="/wall-upgrade-guide" className="text-accent hover:underline">Wall Upgrade Guide — Replace Without Collapse</Link></li>
+          <li><Link href="/renovation-guide" className="text-accent hover:underline">Renovation Guide — Safe Material Upgrades</Link></li>
           <li><Link href="/killbox-design" className="text-accent hover:underline">Killbox Design &amp; Trap Placement</Link></li>
           <li><Link href="/entrance-design" className="text-accent hover:underline">Entrance &amp; Gatehouse Design</Link></li>
+          <li><Link href="/base-layout" className="text-accent hover:underline">Base Layout Principles</Link></li>
+          <li><Link href="/vertical-stacking" className="text-accent hover:underline">Vertical Stacking &amp; Multi-Story Building</Link></li>
         </ul>
       </aside>
 
-      <p className="text-ink-faded text-sm mt-10">Last updated: July 2, 2026. Castle building mechanics verified against Going Medieval experimental branch. Community strategies sourced from r/goingmedieval.</p>
+      <p className="text-ink-faded text-sm mt-10">Last updated: July 5, 2026</p>
     </div>
   );
 }
