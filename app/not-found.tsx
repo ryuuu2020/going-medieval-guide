@@ -1,20 +1,29 @@
-'use client';
-
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4" style={{ backgroundColor: 'var(--color-parchment)' }}>
-      <div className="text-center max-w-lg">
-        <h1 className="font-display text-6xl font-bold text-vermillion mb-4">404</h1>
-        <p className="font-serif text-lg text-ink-muted mb-8 italic">
-          This parchment has been lost to the ages — like a colony that wasn't ready for winter.
+    <div className="min-h-screen bg-abyss text-text-primary flex items-center justify-center">
+      <div className="text-center px-4 py-20 max-w-lg">
+        <div className="text-6xl mb-6 opacity-30">🔮</div>
+        <h1 className="text-3xl font-heading font-bold mb-3">
+          Coming <span className="text-gold">Soon</span>
+        </h1>
+        <p className="text-text-secondary text-sm mb-6">
+          This guide page is being crafted by our Nusantara scholars.
+          We are researching, verifying, and writing in-depth content.
         </p>
-        <a
-          href="/"
-          className="inline-flex items-center px-6 py-3 font-label text-sm font-semibold text-parchment transition-colors"
-          style={{ backgroundColor: 'var(--color-vermillion)', borderRadius: 'var(--radius-scroll)' }}
-        >
-          &larr; Return to Settlement
-        </a>
+        <div className="flex items-center justify-center gap-4 text-sm">
+          <a href="/" className="px-4 py-2 border border-border-subtle rounded bg-abyss-light text-text-secondary hover:text-text-primary hover:border-gold/30 transition-colors">
+            ← Back Home
+          </a>
+          <a href="/faq" className="px-4 py-2 border border-border-subtle rounded bg-abyss-light text-text-secondary hover:text-text-primary hover:border-gold/30 transition-colors">
+            FAQ
+          </a>
+        </div>
+        <p className="text-xs text-text-muted mt-8">
+          Want to speed things up?{' '}
+          <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+            Support us on Afdian ❤️
+          </a>
+        </p>
       </div>
     </div>
   );
