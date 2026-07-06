@@ -18,8 +18,10 @@ type SchemaProps =
     }
   | {
       type: "article";
-      headline: string;
-      datePublished: string;
+      headline?: string;
+      title?: string;
+      description?: string;
+      datePublished?: string;
       dateModified?: string;
       authorName?: string;
       imageUrl?: string;
@@ -66,8 +68,9 @@ function buildSchema(props: SchemaProps): Record<string, unknown> {
       return {
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: props.headline,
-        datePublished: props.datePublished,
+        headline: props.headline || props.title || "",
+        description: props.description || "",
+        datePublished: props.datePublished || new Date().toISOString().split("T")[0],
         ...(props.dateModified && { dateModified: props.dateModified }),
         author: {
           "@type": "Organization",

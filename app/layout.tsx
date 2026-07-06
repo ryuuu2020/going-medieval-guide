@@ -262,7 +262,7 @@ gtag('config', 'G-ET6778V62K');`}
                 {/* E-E-A-T: Sources & Last Updated */}
                 <div className="footer-eeat">
                   <p className="footer-eeat-text">
-                    <strong>Sources:</strong> All guides are based on the <a href="https://goingmedievalwiki.com/" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Going Medieval Wiki</a>, <a href="https://store.steampowered.com/app/1029780/Going_Medieval/" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Steam patch notes</a>, and 200+ hours of gameplay testing. Data numbers are community estimates — always verify in-game.
+                    <strong>Sources:</strong> All guides are based on the <a href="https://goingmedievalwiki.com/" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Going Medieval Wiki</a>, <a href="https://store.steampowered.com/app/1029780/?curator_clanid=46198091" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Steam patch notes</a>, and 200+ hours of gameplay testing. Data numbers are community estimates — always verify in-game.
                   </p>
                   <p className="footer-eeat-updated">Last updated: June 2026 (verified for Game Version 0.4.x)</p>
                 </div>
