@@ -5,7 +5,6 @@ export const metadata = {
     "Complete moat design guide for Going Medieval. Water defenses, drawbridge integration, and fortification strategies.",
 };
 
-
 export default function MoatDesignPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -81,7 +80,6 @@ export default function MoatDesignPage() {
                 </tr>
               </tbody>
             </table>
-            <p style={{ fontFamily: "'Lora', serif", color: "var(--color-text-muted)", fontSize: "0.85rem", fontStyle: "italic" }}>Data source: Verified in-game mechanics and community testing.</p>
           </section>
 
           {/* ── Core Mechanics ── */}

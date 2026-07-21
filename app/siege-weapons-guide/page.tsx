@@ -1,192 +1,181 @@
-import Link from "next/link";
-
 export const metadata = {
-  title: "Going Medieval Siege Weapons Guide — Catapults, Trebuchets & How to Use Them | Going Medieval Guide",
+  title: "Going Medieval Siege Weapons Guide — Catapults, Trebuchets & Combat Tactics (2026)",
   description: "Complete Going Medieval siege weapons guide. Learn how to unlock, build, load, and fire catapults and trebuchets. Ammo types, placement strategy, and combat tactics.",
 };
 
-const siegeWeapons = [
-  { weapon: "Catapult", range: "Medium (12-18 tiles)", damage: "150 per hit (AoE)", reloadTime: "12 seconds", bestTarget: "Enemy clusters, walls (medium damage)", resourceCost: "200 Wood, 80 Iron, 60 Labor, Research: Siege Engineering I" },
-  { weapon: "Trebuchet", range: "Long (20-30 tiles)", damage: "300 per hit (AoE)", reloadTime: "20 seconds", bestTarget: "Walls (high damage), enemy siege equipment", resourceCost: "300 Wood, 120 Iron, 100 Labor, Research: Siege Engineering II" },
-  { weapon: "Ballista", range: "Very Long (25-35 tiles)", damage: "120 per hit (single target)", reloadTime: "8 seconds", bestTarget: "High-value single targets, enemy trebuchets", resourceCost: "150 Wood, 60 Iron, 40 Labor, Research: Siege Engineering I" },
-];
-
-const ammoTypes = [
-  { ammo: "Stone Shot", effect: "Standard impact damage, moderate wall damage", craftCost: "5 Stone per shot, Crafting Station", bestUse: "General purpose — good against both units and structures" },
-  { ammo: "Fire Shot", effect: "Sets target area on fire, damage over time, panics enemies", craftCost: "3 Stone + 2 Coal per shot, Smelter", bestUse: "Enemy clusters, wooden structures, creates area denial" },
-  { ammo: "Explosive Shot", effect: "Massive AoE damage, destroys walls quickly", craftCost: "3 Stone + 2 Sulfur per shot, Alchemy Table", bestUse: "Breaching walls, destroying enemy siege equipment instantly" },
-  { ammo: "Scatter Shot", effect: "Wide spread of small projectiles, hits multiple targets in arc", craftCost: "8 Stone per shot (catapult only)", bestUse: "Large enemy groups, suppressing raider waves" },
-];
-
-const placementTips = [
-  { tip: "Elevated Position", detail: "Place siege weapons on raised platforms, towers, or hills. Height bonus increases range by roughly 20 percent and gives better line of sight over walls.", priority: "Critical" },
-  { tip: "Clear Firing Arc", detail: "Remove trees, buildings, and terrain obstacles in front of the weapon. A blocked firing arc means the weapon cannot fire at all — wasted resources.", priority: "Critical" },
-  { tip: "Ammo Stockpile Adjacent", detail: "Place an ammo stockpile directly next to the weapon. Crew members reload from the nearest stockpile — every tile of walking distance adds 1-2 seconds to reload time.", priority: "High" },
-  { tip: "Cover for Crew", detail: "Siege weapon crews are vulnerable to enemy archers. Build a half-wall or battlement in front of the crew position. The weapon itself provides partial cover.", priority: "High" },
-  { tip: "Multiple Weapons", detail: "Two catapults on opposite sides of your gate create a crossfire that no enemy formation can survive. Redundancy also matters — if one weapon is destroyed, the other keeps firing.", priority: "Medium" },
-  { tip: "Inner Courtyard Backup", detail: "Place one trebuchet inside your inner bailey aimed at the gate. If the outer defense falls, this becomes your last line of heavy firepower — enemies funnel through the gate into your kill zone.", priority: "Medium" },
-];
-
 export default function SiegeWeaponsGuidePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="chapter-heading font-display text-4xl mb-2">
-        Siege Weapons Guide
-      </h1>
-      <p className="text-ink-faded text-lg mb-8 drop-cap">
-        Siege weapons are the most powerful defensive tools in Going Medieval — and the most misunderstood. Every week on the subreddit, players ask where to find them, how to load them, and why their trebuchet seems to do nothing. This guide answers every question, from unlocking the research to landing the killing shot.
-      </p>
+    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="flex-1 lg:max-w-[65%] space-y-10">
+          <section>
+            <h1 className="chapter-heading">Going Medieval Siege Weapons Guide — Catapults, Trebuchets & Combat Tactics</h1>
+            <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
+              Siege weapons are the most powerful defensive and offensive tools in Going Medieval, capable of turning the tide of battle with a single well-placed shot. Yet every week on the subreddit, players ask: "Where do I find siege weapons?" "How do I load them?" "Why is my trebuchet not firing?" This comprehensive guide answers every question about siege warfare in Going Medieval. You will learn how to research and unlock siege weapons, build and position them effectively, craft and select the right ammunition for each target, and employ advanced tactics that maximize their devastating potential. Whether you are preparing to defend your castle against a trebuchet-armed raid or planning to besiege an enemy position, this guide covers everything you need to master the art of medieval artillery.
+            </p>
+          </section>
 
-      {/* Siege Weapons Overview */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Siege Weapons Comparison
-      </h2>
-      <p className="text-ink-light mb-4">
-        There are three siege weapons in Going Medieval. Each has a distinct role, and using the wrong one for the wrong target wastes ammunition and time.
-      </p>
-      <div className="overflow-x-auto">
-        <table className="parchment-table w-full text-sm">
-          <thead>
-            <tr>
-              <th>Weapon</th>
-              <th>Range</th>
-              <th>Damage</th>
-              <th>Reload</th>
-              <th>Best Target</th>
-              <th>Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            {siegeWeapons.map((w, i) => (
-              <tr key={i}>
-                <td className="font-display text-accent">{w.weapon}</td>
-                <td>{w.range}</td>
-                <td className="text-center">{w.damage}</td>
-                <td className="text-center">{w.reloadTime}</td>
-                <td>{w.bestTarget}</td>
-                <td className="text-xs">{w.resourceCost}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Unlocking Siege Weapons — Research Path</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Siege weapons are not available from the start of the game. You must progress through the research tree to unlock them. The research path is: Basic Engineering (starting tech) → Advanced Construction → Siege Engineering I (unlocks Catapult and Ballista) → Siege Engineering II (unlocks Trebuchet). Each step requires the previous one to be completed, and the later research nodes require higher-tier research benches.
+            </p>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Siege Engineering I requires a Research Table II and approximately 800 research points to complete. With one dedicated researcher working full-time, this takes about 5-7 in-game days. Siege Engineering II requires a Research Table III and approximately 1,500 research points, taking 10-12 days of dedicated research. Plan your research queue accordingly — you don{''}t want to be halfway through Siege Engineering II when a trebuchet-armed raid arrives.
+            </p>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              After unlocking the research, you must build a Siege Workshop to construct the weapons. The Siege Workshop is a large structure (minimum 4×4 tiles) that must be placed on relatively flat ground. Once built, open its construction menu to select which siege weapon to build. Each weapon requires significant resources and labor to complete — plan ahead and stockpile materials before starting construction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Siege Weapon Types and Comparison</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Going Medieval features three siege weapons, each with distinct roles. The Catapult is the entry-level siege weapon — relatively cheap to build and fire, moderate range and damage, effective against enemy clusters and light structures. The Trebuchet is the endgame siege weapon — expensive, long reload, but devastating damage that can breach stone walls in 2-3 hits. The Ballista is a precision weapon — very long range, fast reload, but lower damage per shot, ideal for targeting enemy siege equipment or high-value single targets.
+            </p>
+            <table className="parchment-table">
+              <thead>
+                <tr>
+                  <th>Weapon</th>
+                  <th>Range</th>
+                  <th>Damage</th>
+                  <th>Reload Time</th>
+                  <th>Best Target</th>
+                  <th>Resource Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Catapult</td><td>Medium (12-18 tiles)</td><td>150 (AoE)</td><td>12 seconds</td><td>Enemy clusters, light walls</td><td>200 Wood, 80 Iron</td></tr>
+                <tr><td>Trebuchet</td><td>Long (20-30 tiles)</td><td>300 (AoE)</td><td>20 seconds</td><td>Walls, enemy siege equipment</td><td>300 Wood, 120 Iron</td></tr>
+                <tr><td>Ballista</td><td>Very Long (25-35 tiles)</td><td>120 (single)</td><td>8 seconds</td><td>Single targets, enemy trebuchets</td><td>150 Wood, 60 Iron</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Ammunition Types and Crafting</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Siege weapons require ammunition to fire, and different ammunition types serve different tactical purposes. Stone Shot is the default ammunition — moderate cost, standard impact damage, good all-around choice. Fire Shot adds burning damage over time and can panic enemy settlers, making it excellent against clustered enemies. Explosive Shot deals massive area-of-effect damage and is the best choice for breaching enemy walls quickly. Scatter Shot (catapult only) fires a wide spread of projectiles ideal for suppressing large enemy groups.
+            </p>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Crafting ammunition requires the appropriate workbench and raw materials. Stone Shot is crafted at the Stonemason table using 5 stone per shot. Fire Shot requires the Smelter and uses 3 stone + 2 coal per shot. Explosive Shot requires the Alchemy Table and uses 3 stone + 2 sulfur per shot. Always maintain a stockpile of at least 20-30 shots per siege weapon before engaging in serious combat — you don{''}t want to run out of ammo mid-battle.
+            </p>
+            <table className="parchment-table">
+              <thead>
+                <tr>
+                  <th>Ammo Type</th>
+                  <th>Effect</th>
+                  <th>Craft Cost</th>
+                  <th>Best Use</th>
+                  <th>Weapon Compatibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Stone Shot</td><td>Standard impact</td><td>5 Stone</td><td>General purpose</td><td>All weapons</td></tr>
+                <tr><td>Fire Shot</td><td>Burning + panic</td><td>3 Stone + 2 Coal</td><td>Enemy clusters</td><td>Catapult, Trebuchet</td></tr>
+                <tr><td>Explosive Shot</td><td>Massive AoE</td><td>3 Stone + 2 Sulfur</td><td>Breaching walls</td><td>Catapult, Trebuchet</td></tr>
+                <tr><td>Scatter Shot</td><td>Wide spread</td><td>8 Stone</td><td>Large enemy groups</td><td>Catapult only</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Placement Strategy and Crew Management</h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Proper placement is critical for siege weapon effectiveness. Always place siege weapons on elevated positions — towers, hills, or dedicated platforms. Height increases range by approximately 20% and provides better line of sight over walls and terrain features. Ensure a clear firing arc in front of the weapon — trees, buildings, and terrain obstacles block shots and can cause the weapon to refuse to fire entirely.
+            </p>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Crew management is equally important. Each siege weapon requires 1-2 crew members to operate (loader and aimer). Assign settlers with high shooting skill to siege weapon crews — their accuracy affects whether shots land on target. Keep an ammunition stockpile directly adjacent to the weapon; crew members reload from the nearest stockpile, and every tile of walking distance adds 1-2 seconds to reload time. Finally, protect your crews — siege weapon operators are vulnerable to enemy archers and should be behind cover (half-walls or battlements).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-6">Frequently Asked Questions</h2>
+
+            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <h3 className="font-display text-lg font-semibold text-ink mb-2">Why won{''}t my trebuchet fire?</h3>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                The most common cause is lack of ammunition. Check that you have the correct ammunition type in a stockpile adjacent to the trebuchet. Second, ensure the firing arc is clear — trees, buildings, or terrain within the weapon{''}s arc will block firing. Third, verify that a crew member is assigned and available (not sleeping, eating, or fighting). Finally, the target must be within range — trebuchets have a minimum range of about 10 tiles as well as a maximum range.
+              </p>
+            </div>
+            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <h3 className="font-display text-lg font-semibold text-ink mb-2">How many siege weapons should I build?</h3>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                For a standard colony defense, 2 catapults or 1 trebuchet plus 1 ballista is sufficient. Place them on opposite sides of your gatehouse to create crossfire. For endgame defense against trebuchet-armed raids, you need at least 2 trebuchets to destroy enemy siege equipment before it destroys your walls. Always build redundancy — if your only siege weapon is destroyed, you have no heavy firepower left.
+              </p>
+            </div>
+            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <h3 className="font-display text-lg font-semibold text-ink mb-2">Can I move siege weapons after placing them?</h3>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                Siege weapons cannot be moved after placement — they are fixed emplacements. Choose their positions carefully before building. If you must relocate a siege weapon, the only option is to deconstruct it (recovering 50% of materials) and rebuild at the new location. This takes significant time and labor, so proper initial placement is essential.
+              </p>
+            </div>
+            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
+              <h3 className="font-display text-lg font-semibold text-ink mb-2">Do siege weapons work in the rain?</h3>
+              <p className="font-serif text-base text-ink-light leading-relaxed">
+                Yes, siege weapons function in all weather conditions. However, crew members may seek shelter during heavy rain if their current needs are urgent, temporarily leaving the weapon unmanned. Assign military-status crew members to siege weapons — they prioritize their combat duty over personal needs and are less likely to abandon their post during inclement weather.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-semibold text-ink mb-4">Related Guides</h2>
+            <div className="space-y-2">
+              <a href="/defense" className="text-accent hover:text-accent-hover underline">Defense Guide</a>
+              <a href="/castle-building-complete-guide" className="text-accent hover:text-accent-hover underline">Castle Building Guide</a>
+              <a href="/research" className="text-accent hover:text-accent-hover underline">Research Tech Tree</a>
+              <a href="/combat-formation-tactics" className="text-accent hover:text-accent-hover underline">Combat Formation Tactics</a>
+              <a href="/endgame-content" className="text-accent hover:text-accent-hover underline">Endgame Content</a>
+            </div>
+          </section>
+        </div>
       </div>
 
-      {/* How to Unlock */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        How to Unlock Siege Weapons
-      </h2>
-      <p className="text-ink-light mb-4">
-        Siege weapons require research. The path is: <strong>Basic Engineering → Advanced Construction → Siege Engineering I (unlocks Catapult + Ballista) → Siege Engineering II (unlocks Trebuchet)</strong>. You will need a Research Table II for Siege Engineering I and Research Table III for Siege Engineering II. Total research time from Basic Engineering to Trebuchet is approximately 12-15 research days with one dedicated researcher.
-      </p>
-      <p className="text-ink-light mb-4">
-        After unlocking the research, build the weapon at a Siege Workshop (constructed separately from regular workshops, requires a large open area). Craft ammunition at the appropriate workstation — stone shot at the Stonemason table, fire shot at the Smelter, and explosive shot at the Alchemy Table.
-      </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why won't my trebuchet fire?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The most common cause is lack of ammunition. Check that you have the correct ammunition type in a stockpile adjacent to the trebuchet. Ensure the firing arc is clear of obstacles. Verify that a crew member is assigned and available."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many siege weapons should I build?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For standard colony defense, 2 catapults or 1 trebuchet plus 1 ballista is sufficient. For endgame defense against trebuchet-armed raids, you need at least 2 trebuchets. Always build redundancy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I move siege weapons after placing them?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Siege weapons cannot be moved after placement. They are fixed emplacements. If you must relocate, deconstruct (50% material recovery) and rebuild. Choose positions carefully before building."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do siege weapons work in the rain?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, siege weapons function in all weather. However, crew members may seek shelter during heavy rain. Assign military-status crew members to siege weapons — they prioritize duty over personal needs."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
-      {/* Ammo Types */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Ammunition Types
-      </h2>
-      <div className="overflow-x-auto">
-        <table className="parchment-table w-full text-sm">
-          <thead>
-            <tr>
-              <th>Ammo</th>
-              <th>Effect</th>
-              <th>Craft Cost</th>
-              <th>Best Use</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ammoTypes.map((a, i) => (
-              <tr key={i}>
-                <td className="font-display text-accent">{a.ammo}</td>
-                <td>{a.effect}</td>
-                <td>{a.craftCost}</td>
-                <td>{a.bestUse}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Placement */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        Placement Strategy
-      </h2>
-      <p className="text-ink-light mb-4">
-        Where you place your siege weapons matters as much as what you build. A trebuchet behind a hill is a trebuchet that fires into dirt. Follow these rules:
-      </p>
-      <div className="overflow-x-auto">
-        <table className="parchment-table w-full text-sm">
-          <thead>
-            <tr>
-              <th>Tip</th>
-              <th>Detail</th>
-              <th>Priority</th>
-            </tr>
-          </thead>
-          <tbody>
-            {placementTips.map((p, i) => (
-              <tr key={i}>
-                <td className="font-display text-accent">{p.tip}</td>
-                <td>{p.detail}</td>
-                <td>{p.priority}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* How to Operate */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
-        How to Operate Siege Weapons
-      </h2>
-      <p className="text-ink-light mb-4">
-        This is the most common point of confusion. After building a siege weapon, it does not fire automatically. You must:
-      </p>
-      <ol className="list-decimal pl-6 space-y-2 text-ink-light mb-8">
-        <li><strong>Assign a settler to operate it.</strong> Select the weapon, click the Operate button, then right-click a settler. The settler will walk to the weapon and man it. They will not leave this post unless you manually release them or they are downed.</li>
-        <li><strong>Stock ammunition nearby.</strong> The crew member will walk to the nearest ammo stockpile to reload. If the stockpile is 20 tiles away, your fire rate drops dramatically. Keep ammo within 3 tiles of the weapon.</li>
-        <li><strong>Target manually.</strong> Select the weapon, then right-click an enemy or structure to designate a target. The crew will fire, reload, and fire again at the same target until it is destroyed or you change targets. Without a target order, the weapon sits idle.</li>
-        <li><strong>Watch the reload bar.</strong> Each shot has a reload timer shown above the weapon. During reload, the crew is vulnerable and the weapon cannot fire. Time your shots — do not waste a trebuchet volley on a nearly-dead enemy.</li>
-      </ol>
-
-      {/* FAQ */}
-      <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">FAQ</h2>
-
-      <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">Do siege weapons work against raiders?</h3>
-        <p className="text-ink-light">
-          Yes, but with one critical caveat: they are slow. A catapult takes 12 seconds to reload and fire one shot. Against 15 raiders running toward your gate, you might get 2-3 shots before melee begins. Siege weapons excel against slow-moving threats (siege engines, large clustered groups) and are weak against fast, spread-out enemies. Pair siege weapons with archers — archers handle the fast movers while siege weapons delete the heavy targets.
-        </p>
-      </div>
-
-      <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">How many trebuchets do I need?</h3>
-        <p className="text-ink-light">
-          One well-placed trebuchet with explosive shot can handle most raids. For late-game siege events where enemies bring their own trebuchets, two are recommended — one to counter-battery the enemy siege equipment, one to suppress the infantry. Each trebuchet requires one dedicated crew member, so factor that into your settler allocation. Three trebuchets is overkill for defense but useful if you plan to siege enemy settlements in future updates.
-        </p>
-      </div>
-
-      <div className="bg-parchment-light rounded-lg p-5 mb-4">
-        <h3 className="font-display text-accent text-lg mb-2">Can enemies use my siege weapons against me?</h3>
-        <p className="text-ink-light">
-          No, enemies cannot operate your siege weapons. However, enemy trebuchets will target and destroy your siege equipment if it is within their range. This is why counter-battery fire (targeting their siege weapons with yours) is the first priority in any siege battle. Destroy their trebuchets before they destroy yours. If your siege weapon is destroyed, you lose the weapon and all loaded ammunition — but the crew member survives if they are not standing directly on the weapon.
-        </p>
-      </div>
-
-      <aside className="border-l-4 border-accent pl-4 mt-10">
-        <h3 className="font-display text-lg text-ink mb-2">Related Guides</h3>
-        <ul className="space-y-1">
-          <li><Link href="/defense" className="text-accent hover:underline">Complete Defense Guide</Link></li>
-          <li><Link href="/trebuchet" className="text-accent hover:underline">Trebuchet In-Depth</Link></li>
-          <li><Link href="/raid-defense" className="text-accent hover:underline">Raid Defense Strategy</Link></li>
-          <li><Link href="/best-weapons-for-defense" className="text-accent hover:underline">Best Weapons for Defense</Link></li>
-          <li><Link href="/castle-building-guide" className="text-accent hover:underline">Castle Building Guide</Link></li>
-        </ul>
-      </aside>
-
-      <p className="text-ink-faded text-sm mt-10">Last updated: July 2, 2026. Siege weapon mechanics sourced from community testing and r/goingmedieval Q&amp;A threads.</p>
-    </div>
+      <p className="text-xs text-text-muted mt-12 border-t border-border-subtle pt-4">Last updated: July 7, 2026</p>
+    </main>
   );
 }

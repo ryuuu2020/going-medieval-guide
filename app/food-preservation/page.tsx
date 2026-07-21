@@ -4,7 +4,6 @@ export const metadata = {
     "Complete food preservation guide for Going Medieval. Root cellars, smoking, fermentation, and maximizing food shelf life.",
 };
 
-
 export default function FoodPreservationPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -14,21 +13,21 @@ export default function FoodPreservationPage() {
             <h1 className="chapter-heading">Food Preservation & Storage Guide</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Pickled Vegetables, Smoked Meat, and Cheese (from Milk) are <strong>all confirmed</strong> preservation methods in Going Medieval. Vinegar is used for pickling vegetables. Salt and Ice Block are confirmed preservation items — Ice Block validates cold storage mechanics. Bread is a confirmed meal type but the baking chain from grain to flour to bread uses Barley (the confirmed grain crop), NOT wheat. Hops and wheat are NOT confirmed crops and do not exist in the game. Drying racks and dried meat/fish are <strong>unverified</strong>. Specific shelf life and temperature values below are community estimates.
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Pickled Vegetables, Smoked Meat, and Cheese (from Milk) are <strong>all confirmed</strong> preservation methods in Going Medieval. Vinegar is used for pickling vegetables. Salt and Ice Block are confirmed preservation items — Ice Block validates cold storage mechanics. Bread is a confirmed meal type but the baking chain from grain to flour to bread uses Barley (the confirmed grain crop), NOT wheat. Hops and wheat are NOT confirmed crops and do not exist in the game. Drying racks and dried meat/fish are <strong>unverified</strong>. Specific shelf life and temperature values below are approximate.
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking), and building an efficient root cellar. This guide explains preservation methods, optimal storage temperatures, and food requirements per settler for winter survival. All specific shelf life and temperature values below are community estimates and are for reference only.
+              Food spoilage is one of the most punishing mechanics in Going Medieval — a full harvest can rot within days if stored improperly. Mastering food preservation means understanding temperature mechanics, processing chains (pickling, smoking), and building an efficient root cellar. This guide explains preservation methods, optimal storage temperatures, and food requirements per settler for winter survival. All specific shelf life and temperature values below are approximate and are for reference only.
             </p>
           </section>
 
           <section>
             <h2 className="font-display text-2xl font-semibold text-ink mb-4">Food Spoilage Mechanics</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Every food item in Going Medieval has a base shelf life (in days) that is modified by two factors: temperature and processing state. Warmer temperatures accelerate spoilage; cooler temperatures slow it. Processed foods (bread, smoked meat, pickles) spoil at a significantly reduced rate compared to their raw counterparts. The optimal storage temperature for all food is as cold as possible, achievable by building stockpiles underground where temperatures are naturally lower. Specific temperature values and spoilage rates below are community estimates.
+              Every food item in Going Medieval has a base shelf life (in days) that is modified by two factors: temperature and processing state. Warmer temperatures accelerate spoilage; cooler temperatures slow it. Processed foods (bread, smoked meat, pickles) spoil at a significantly reduced rate compared to their raw counterparts. The optimal storage temperature for all food is as cold as possible, achievable by building stockpiles underground where temperatures are naturally lower. Specific temperature values and spoilage rates below are approximate.
             </p>
             <p className="font-serif text-base text-ink-light leading-relaxed">
-              Spoilage rate is calculated per-item per-day. At outdoor summer temperatures, raw vegetables may spoil within a few days. In a proper underground cellar, the same vegetables can last multiple times longer. Processed and stored underground, they can last long enough to span an entire winter. Understanding this chain is the difference between starvation and abundance. The shelf life examples below are community estimates based on player testing.
+              Spoilage rate is calculated per-item per-day. At outdoor summer temperatures, raw vegetables may spoil within a few days. In a proper underground cellar, the same vegetables can last multiple times longer. Processed and stored underground, they can last long enough to span an entire winter. Understanding this chain is the difference between starvation and abundance. The shelf life examples below are approximate, based on observed gameplay.
             </p>
           </section>
 
@@ -94,13 +93,12 @@ export default function FoodPreservationPage() {
                   <tr><td className="font-semibold">Vinegar Production</td><td>Fermented fruit/grain</td><td>Vinegar</td><td>~5 days (input)</td><td>~60+ days</td><td>Fermenting Station</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Winter Food Calculation</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The most critical calculation in Going Medieval: how much food do you need to survive winter? Community estimates suggest each settler consumes approximately 2 units of food per day. Winter lasts roughly 12-15 days depending on the biome (varies significantly — some community sources report longer durations in cold biomes). Therefore, a colony of N settlers needs roughly N x 2 x 15 = 30N units of food stockpiled before winter as a minimum. All numbers below are community estimates.
+                The most critical calculation in Going Medieval: how much food do you need to survive winter? Each settler consumes approximately 2 units of food per day. Winter lasts roughly 12-15 days depending on the biome, and cold biomes can run longer. Therefore, a colony of N settlers needs roughly N x 2 x 15 = 30N units of food stockpiled before winter as a minimum. All numbers below are approximate.
             </p>
             <table className="parchment-table">
               <thead>

@@ -6,7 +6,6 @@ export const metadata = {
     "Complete iron mining and smelting guide for Going Medieval. Iron ore locations, smelting process, and weapon/armor production chain.",
 };
 
-
 export default function IronMiningPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
@@ -17,7 +16,7 @@ export default function IronMiningPage() {
             <section>
               <h1 className="chapter-heading">Iron Mining & Smelting Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Iron is the strategic resource that transforms your colony from a wooden settlement into an armored, weapon-forging fortress. From iron swords and crossbows to plate armor and reinforced doors, nearly every mid-to-late-game upgrade depends on a steady iron supply. This guide covers iron deposit locations, deep mining setup, smelter efficiency optimization, fuel management strategies, and the complete steel production chain. Data below is based on community testing and is for reference only.
+                Iron is the strategic resource that transforms your colony from a wooden settlement into an armored, weapon-forging fortress. From iron swords and crossbows to plate armor and reinforced doors, nearly every mid-to-late-game upgrade depends on a steady iron supply. This guide covers iron deposit locations, deep mining setup, smelter efficiency optimization, fuel management strategies, and the complete steel production chain.
               </p>
             </section>
 
@@ -42,7 +41,6 @@ export default function IronMiningPage() {
                   <tr><td>Iron Ore Deposits</td><td>Reddish-brown patches</td><td>~4-8 iron ore</td><td>Surface to level 2</td><td>River, Valley</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Early scouting tip: On day one, zoom out and scan your map for ironstone outcrops—those dark grey boulders with reddish rust streaks. Mark their locations with planning designations. Each surface outcrop yields enough iron ore for 3-5 weapons or 1-2 armor pieces. For sustained iron production, you must transition to underground mining by year 2 at the latest.
               </p>
@@ -89,14 +87,13 @@ export default function IronMiningPage() {
                   <tr><td>Charcoal</td><td>1.5 ore → 1 ingot</td><td>2 smelts</td><td>Alternative when coal is scarce</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The coal advantage is significant. With wood fuel, 100 iron ore produces ~50 ingots. With coal, the same 100 ore produces ~100 ingots — roughly double the output. Prioritize coal production as soon as you have a steady iron mining operation. Convert wood into charcoal (if that option is available on your game version) when natural coal is scarce on your map.
               </p>
               <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Fuel Supply Warning:</strong>
-                  A smelter running at full capacity consumes fuel continuously. If you're using wood as fuel, your lumberjack must dedicate significant labor to logging just for the smelter. Transition to coal as soon as your colony can support it to free up labor for other tasks. Exact fuel consumption rates are community estimates.
+                  A smelter running at full capacity consumes fuel continuously. If you're using wood as fuel, your lumberjack must dedicate significant labor to logging just for the smelter. Transition to coal as soon as your colony can support it to free up labor for other tasks. Exact fuel consumption rates are approximate.
                 </p>
               </div>
             </section>
@@ -107,7 +104,7 @@ export default function IronMiningPage() {
                 Steel is the ultimate metal in Going Medieval — required for the best weapons and armor. The steel production chain is complex, requiring multiple processing steps and facilities, but the end result is superior equipment. The table below lists community-estimated recipes and values. These specific ratios may differ from your game version.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The complete steel production chain (community estimate): Iron Ore → Smelter (with coal) → Iron Ingots → Blast Furnace (with coal) → Steel Ingots → Smithy → Steel Equipment. Each steel ingot may require multiple iron ingots and coal in the blast furnace. This means a single steel sword ultimately consumes significant iron ore and coal.
+                The complete steel production chain (approximate): Iron Ore → Smelter (with coal) → Iron Ingots → Blast Furnace (with coal) → Steel Ingots → Smithy → Steel Equipment. Each steel ingot may require multiple iron ingots and coal in the blast furnace. This means a single steel sword ultimately consumes significant iron ore and coal.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Due to the high resource cost, steel production should be targeted, not mass-produced. Produce steel only for your best combat settlers' primary weapons and chest armor. Other settlers and secondary equipment pieces can use iron equivalents. The production chain isn't efficient enough for full steel loadouts.
@@ -153,7 +150,7 @@ export default function IronMiningPage() {
                 <div className="flex justify-between"><span>Early (5 settlers)</span><span className="text-gold">~50 ingots total (est.)</span></div>
                 <div className="flex justify-between"><span>Mid (8 settlers)</span><span className="text-vermillion">~150 ingots (est.)</span></div>
                 <div className="flex justify-between"><span>Late (12+ settlers)</span><span className="text-vermillion">~300+ ingots (est.)</span></div>
-                <div className="mt-2">Community estimates for weapons, armor, tools, and construction needs for a fully equipped colony.</div>
+                <div className="mt-2">Approximate totals for weapons, armor, tools, and construction needs for a fully equipped colony.</div>
               </div>
             </div>
           </aside>

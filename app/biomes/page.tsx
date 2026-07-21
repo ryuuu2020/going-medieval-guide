@@ -13,7 +13,7 @@ export default function BiomesPage() {
             <section>
               <h1 className="chapter-heading">Biomes</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Going Medieval offers multiple biomes, each with unique climates, resources, and challenges. Choosing a starting location that matches your playstyle is the first step toward colony success. This guide details the characteristics, advantages, and recommended strategies for each terrain type. Data below is based on community compilation and is for reference only.
+                Going Medieval offers multiple biomes, each with unique climates, resources, and challenges. Choosing a starting location that matches your playstyle is the first step toward colony success. This guide details the characteristics, advantages, and recommended strategies for each terrain type.
               </p>
             </section>
 

@@ -4,7 +4,6 @@ export const metadata = {
     "Complete tailoring and clothing guide for Going Medieval. Clothing quality, warmth bonuses, and tailor workshop setup.",
 };
 
-
 export default function TailorGuidePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function TailorGuidePage() {
             <section>
               <h1 className="chapter-heading">Tailoring & Clothing Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Clothing in Going Medieval is not cosmetic — it's a survival necessity that directly impacts settler temperature tolerance, combat survivability, and social standing. A settler wearing inappropriate clothing for the season will suffer hypothermia in winter or heatstroke in summer, while a poorly armored settler caught in melee is as good as dead. This guide covers every clothing item, their material requirements, seasonal layering strategies, the armor and clothing layer system, and how your tailor's skill level influences quality. Data below is based on community testing and is for reference only.
+                Clothing in Going Medieval is not cosmetic — it's a survival necessity that directly impacts settler temperature tolerance, combat survivability, and social standing. A settler wearing inappropriate clothing for the season will suffer hypothermia in winter or heatstroke in summer, while a poorly armored settler caught in melee is as good as dead. This guide covers every clothing item, their material requirements, seasonal layering strategies, the armor and clothing layer system, and how your tailor's skill level influences quality.
               </p>
             </section>
 
@@ -51,7 +50,6 @@ export default function TailorGuidePage() {
                   <tr><td>Noble Robes</td><td>~Cloth x5, Gold Thread x1</td><td>Outer</td><td>~+10°C warmth</td><td>~0%</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>
@@ -87,7 +85,7 @@ export default function TailorGuidePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Tailor Skill & Crafting Quality</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The Tailoring skill level of your dedicated crafter directly impacts three aspects of every garment produced: crafting speed, material efficiency, and item quality tier. Garments crafted by a high-skill tailor may receive bonuses including additional durability, improved temperature modifiers, and slightly increased armor values. A high-skill tailor can stretch limited leather and cloth supplies further than a low-skill crafter. Exact skill multipliers are community estimates.
+                The Tailoring skill level of your dedicated crafter directly impacts three aspects of every garment produced: crafting speed, material efficiency, and item quality tier. Garments crafted by a high-skill tailor may receive bonuses including additional durability, improved temperature modifiers, and slightly increased armor values. A high-skill tailor can stretch limited leather and cloth supplies further than a low-skill crafter. Exact skill multipliers are approximate.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Train your tailor deliberately: assign them to produce large quantities of simple items (cloth tunics, cloth pants) early on to build skill, then transition to crafting high-value items (leather armor, winter coats) once their skill improves. A dedicated tailor can produce enough clothing for a colony working alone; beyond that, consider a second tailor. Never assign your highest-Tailoring settler to multiple labor types — keep them at the bench producing constantly.

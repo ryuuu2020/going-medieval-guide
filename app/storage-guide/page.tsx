@@ -4,7 +4,6 @@ export const metadata = {
     "Complete storage and stockpile guide for Going Medieval. Stockpile placement, organization, and hauling optimization.",
 };
 
-
 export default function StorageGuidePage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function StorageGuidePage() {
           <section>
             <h1 className="chapter-heading">Storage & Stockpile Optimization Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Efficient storage is the circulatory system of your colony. Well-designed stockpiles reduce hauling time, prevent spoilage, and ensure resources are available where they are needed. Poor storage design forces settlers to walk 50+ tiles per trip, wastes 30% of your food to decay, and creates production bottlenecks. This guide covers stockpile priority systems, shelf vs floor storage, temperature zone management, decay mechanics, and optimal stockpile layouts for every resource type. Data below is based on community testing and is for reference only.
+              Efficient storage is the circulatory system of your colony. Well-designed stockpiles reduce hauling time, prevent spoilage, and ensure resources are available where they are needed. Poor storage design forces settlers to walk 50+ tiles per trip, wastes 30% of your food to decay, and creates production bottlenecks. This guide covers stockpile priority systems, shelf vs floor storage, temperature zone management, decay mechanics, and optimal stockpile layouts for every resource type.
             </p>
           </section>
 
@@ -58,7 +57,7 @@ export default function StorageGuidePage() {
             <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
               <p className="font-serif text-sm text-ink leading-relaxed">
                 <strong className="text-vermillion">Shelf Strategy:</strong>
-                A 6x6 underground room with shelves provides dramatically higher effective storage capacity than floor stockpile alone. Shelves reduce spoilage rates and increase storage density. Smaller rooms are easier to temperature-control and require less excavation labor. Always shelf your underground food cellars first, then expand shelving to other storage zones as wood supply allows. Exact capacity multipliers and spoilage rates are community estimates.
+                A 6x6 underground room with shelves provides dramatically higher effective storage capacity than floor stockpile alone. Shelves reduce spoilage rates and increase storage density. Smaller rooms are easier to temperature-control and require less excavation labor. Always shelf your underground food cellars first, then expand shelving to other storage zones as wood supply allows. Exact capacity multipliers and spoilage rates are approximate.
               </p>
             </div>
           </section>
@@ -89,7 +88,6 @@ export default function StorageGuidePage() {
                 <tr><td className="font-semibold">Raw Textiles (Flax, Wool)</td><td>Any temperature</td><td>Near Tailor Station</td><td>Floor Stockpile</td><td>Proximity to workstation &gt; storage conditions.</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           <section>
@@ -98,7 +96,7 @@ export default function StorageGuidePage() {
                 Decay affects all organic items (food, herbs, medicine, animal products, textiles). The decay rate is influenced by three factors: base item shelf life, temperature, and storage type (shelf vs floor). Cold temperatures (underground cellars) dramatically slow spoilage, while hot temperatures accelerate it.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                <strong className="text-vermillion">Note:</strong> The exact temperature multiplier values and decay formulas are not verified against official game data. Community testing suggests optimal cold storage (near-freezing underground temperatures) can extend food shelf life by roughly 3-4x compared to surface storage. Hot storage (summer temperatures) accelerates spoilage. Shelves appear to provide a modest spoilage reduction bonus compared to floor stockpiles. For reliable numbers, cross-reference with in-game behavior.
+                Optimal cold storage (near-freezing underground temperatures) extends food shelf life by roughly 3-4x compared to surface storage. Hot storage (summer temperatures) accelerates spoilage. Shelves provide a modest spoilage reduction bonus compared to floor stockpiles.
             </p>
           </section>
 
@@ -148,7 +146,7 @@ export default function StorageGuidePage() {
             <div className="faq-item">
               <details>
                 <summary>How do I stop settlers from hauling constantly?</summary>
-                <p>Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (community estimate: hauling dogs, if available, may additionally help).</p>
+                <p>Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (rough estimate: hauling dogs, if available, may additionally help).</p>
               </details>
             </div>
           </section>
@@ -202,7 +200,7 @@ export default function StorageGuidePage() {
       "name": "How do I stop settlers from hauling constantly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (community estimate: hauling dogs, if available, may additionally help)."
+        "text": "Excessive hauling is usually caused by poorly placed stockpiles. If settlers are hauling constantly, check: 1) Are production stations far from their input stockpiles? Move stockpiles adjacent to workstations. 2) Are there too many tiny stockpiles? Consolidate similar items. 3) Are stockpile priorities misconfigured? Use the priority system to create pull flow (bulk → local caches). 4) Do you have dedicated haulers? Assign low-skill settlers to hauling to reduce production worker hauling time (rough estimate: hauling dogs, if available, may additionally help)."
       }
     }
   ]

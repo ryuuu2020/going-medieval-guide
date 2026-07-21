@@ -5,14 +5,13 @@ export const metadata = {
     "Complete steel production guide for Going Medieval. Steel smelting, advanced weapons, and late-game gear progression.",
 };
 
-
 export default function SteelProductionGuidePage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
       <section>
         <h1 className="chapter-heading">Going Medieval Steel Production Guide</h1>
         <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-          Steel is the pinnacle of metalworking in Going Medieval. While iron suffices for early-game tools and basic weaponry, steel separates a struggling colony from a dominant one. Steel weapons deal more damage and steel armor absorbs more punishment than their iron counterparts, making steel the definitive late-game material for outfitting your best combat settlers. This guide walks through the entire production chain — from mining iron ore and coal, through smelting iron ingots, to forging steel and crafting elite equipment at the Blacksmith's Forge and Armourer's Table. Every figure below comes from community testing and wiki data; exact values may shift between game updates.
+          Steel is the pinnacle of metalworking in Going Medieval. While iron suffices for early-game tools and basic weaponry, steel separates a struggling colony from a dominant one. Steel weapons deal more damage and steel armor absorbs more punishment than their iron counterparts, making steel the definitive late-game material for outfitting your best combat settlers. This guide walks through the entire production chain — from mining iron ore and coal, through smelting iron ingots, to forging steel and crafting elite equipment at the Blacksmith's Forge and Armourer's Table.
         </p>
       </section>
 
@@ -65,7 +64,6 @@ export default function SteelProductionGuidePage() {
             </tr>
           </tbody>
         </table>
-        <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
         <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
           Coal veins are tough — at 1100 hit points each, a single vein takes significant mining time but yields a generous 60 coal. Because coal veins can span multiple underground layers and intersect with other mineral deposits, you may stumble upon coal while digging for iron, or vice versa. If your map lacks coal veins entirely, the kiln provides a renewable alternative: 30 wood produces 20 coal. This conversion is fuel-negative if you burn wood directly, but it is the only way to sustain steel production on maps without natural coal.
         </p>
@@ -135,7 +133,6 @@ export default function SteelProductionGuidePage() {
             </tr>
           </tbody>
         </table>
-        <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
         <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
           The smelting furnace has another valuable function: recycling. Old weapons looted from raiders can be melted down at the furnace to recover metal. After a raid, sweep the battlefield for dropped weapons and queue them for smelting. This not only cleans up the map but also provides free metal ingots and gives your settlers smithing experience. The return rate is not 1:1, but recycled metal significantly offsets the cost of equipping your colony.
         </p>
@@ -187,7 +184,6 @@ export default function SteelProductionGuidePage() {
             </tr>
           </tbody>
         </table>
-        <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
         <p className="font-serif text-base text-ink-light leading-relaxed mt-4 mb-4">
           Because sticks and wood cannot produce steel, every steel ingot ultimately requires coal. If your map has coal veins, prioritize mining them early — a single 60-coal vein fuels multiple steel smelting batches. If no coal veins exist, you must route wood through a kiln at a 3:2 ratio (30 wood yields 20 coal), which means every 20 coal costs 30 wood. Factor this into your lumberjack labor allocation: a steel-producing colony without natural coal needs significantly more woodcutting capacity than one that burns wood directly.
         </p>
@@ -251,11 +247,6 @@ export default function SteelProductionGuidePage() {
         </div>
       </section>
 
-      <section>
-        <p className="font-serif text-sm text-ink-muted italic">
-          Data source: Community testing estimates. Game mechanics, recipe amounts, and research costs are based on the Going Medieval wiki and player testing as of the latest game version. Values may change with game updates. Always verify in your current version before committing resources.
-        </p>
-      </section>
     </main>
   );
 }

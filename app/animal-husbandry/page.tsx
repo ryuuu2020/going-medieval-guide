@@ -4,7 +4,6 @@ export const metadata = {
     "Complete animal husbandry guide for Going Medieval. Tannable vs wild animals, breeding, butchering, and food production strategies.",
 };
 
-
 export default function AnimalHusbandryPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function AnimalHusbandryPage() {
           <section>
             <h1 className="chapter-heading">Animal Husbandry Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Animals are a vital component of a thriving colony in Going Medieval. Livestock such as cows, goats, sheep, and chickens provide a renewable source of milk, wool, eggs, and meat. Donkeys (asses) serve as invaluable pack animals for hauling heavy loads, while dogs offer hauling and guard utility and cats handle vermin control. Wild animals — including boars, deer, wolves, and foxes — can be tamed and penned for meat and leather. Understanding taming mechanics, pen size requirements, feeding needs, and breeding rates is essential to building a sustainable animal economy. This guide covers all animal types, their care requirements, and the optimal strategies for integrating them into your colony. Data below is verified against the official Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
+              Animals are a vital component of a thriving colony in Going Medieval. Livestock such as cows, goats, sheep, and chickens provide a renewable source of milk, wool, eggs, and meat. Donkeys (asses) serve as invaluable pack animals for hauling heavy loads, while dogs offer hauling and guard utility and cats handle vermin control. Wild animals — including boars, deer, wolves, and foxes — can be tamed and penned for meat and leather. Understanding taming mechanics, pen size requirements, feeding needs, and breeding rates is essential to building a sustainable animal economy. This guide covers all animal types, their care requirements, and the optimal strategies for integrating them into your colony.
             </p>
           </section>
 
@@ -43,7 +42,6 @@ export default function AnimalHusbandryPage() {
                 <tr><td className="font-semibold">Dog</td><td>Meat, Food scraps</td><td>Hauling, Combat support, Mood bonus</td><td>None (free roam)</td><td className="text-gold font-semibold">★★★★★</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           <section>
@@ -126,7 +124,6 @@ export default function AnimalHusbandryPage() {
                 <tr><td>Meat</td><td>Boar, Chicken, Cow, Goat, Sheep</td><td>On slaughter</td><td>Food, smoked meat</td><td>Smokehouse preserves 3x longer</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
           </section>
 
           <section>
@@ -183,9 +180,6 @@ export default function AnimalHusbandryPage() {
               <li>&bull; Pen size affects production speed</li>
             </ul>
           </div>
-          <p className="font-serif text-xs text-ink-muted italic text-center mt-8">
-            Data verified against Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
-          </p>
         </aside>
       </div>
     </main>

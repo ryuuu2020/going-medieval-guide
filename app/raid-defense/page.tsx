@@ -4,7 +4,6 @@ export const metadata = {
     "Complete raid defense guide for Going Medieval. Raid types, defense preparations, and strategies to survive every attack.",
 };
 
-
 export default function RaidDefensePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -37,7 +36,6 @@ export default function RaidDefensePage() {
                   <tr><td>Animal Stampede</td><td>~5-15 animals (est.)</td><td>Overwhelms via numbers</td><td>Chokepoints, spike traps, elevated archers</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

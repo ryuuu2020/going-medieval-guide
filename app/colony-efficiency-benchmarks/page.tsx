@@ -12,7 +12,7 @@ export default function ColonyEfficiencyBenchmarksPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Colony Efficiency Benchmarks</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              You have 12 settlers. Some farm, some craft, some fight. How many should do each? How much food do you need to produce per day to survive winter? When is a second cook worth the investment? These are not questions of preference — they are questions of math, and math has answers. This guide provides efficiency benchmarks for Going Medieval colonies across four size brackets (6, 10, 15, and 20+ settlers), covering food production targets, optimal labor allocation, resource consumption rates, and the productivity breakpoints where adding one more settler to a specific task stops being worth it. Every number below is derived from in-game mechanics and community testing data.
+              You have 12 settlers. Some farm, some craft, some fight. How many should do each? How much food do you need to produce per day to survive winter? When is a second cook worth the investment? These are not questions of preference — they are questions of math, and math has answers. This guide provides efficiency benchmarks for Going Medieval colonies across four size brackets (6, 10, 15, and 20+ settlers), covering food production targets, optimal labor allocation, resource consumption rates, and the productivity breakpoints where adding one more settler to a specific task stops being worth it. Every number below is derived from in-game mechanics.
             </p>
           </section>
 

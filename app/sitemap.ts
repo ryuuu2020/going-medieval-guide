@@ -1,60 +1,182 @@
-import { MetadataRoute } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { MetadataRoute } from 'next';
 
-// Dynamically discover all page routes at build time
-function getRoutes(): string[] {
-  const appDir = path.join(process.cwd(), 'app');
-  const routes: string[] = [];
+export const dynamic = "force-static";
 
-  function walk(dir: string, prefix: string = '') {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      if (!entry.isDirectory()) continue;
-      if (entry.name.startsWith('(') && entry.name.endsWith(')')) continue; // route groups
-      if (entry.name.startsWith('_')) continue; // private folders
-      if (entry.name === 'api') continue;
+const BASE = 'https://goingmedieval.gguidehub.com';
 
-      const fullPath = path.join(dir, entry.name);
-      const pagePath = path.join(fullPath, 'page.tsx');
-      const pagePathJs = path.join(fullPath, 'page.jsx');
-      const pagePathJsOnly = path.join(fullPath, 'page.js');
-      const route = prefix === '' ? `/${entry.name}` : `${prefix}/${entry.name}`;
-
-      if (
-        fs.existsSync(pagePath) ||
-        fs.existsSync(pagePathJs) ||
-        fs.existsSync(pagePathJsOnly)
-      ) {
-        routes.push(route);
-      }
-
-      walk(fullPath, route);
-    }
-  }
-
-  walk(appDir);
-  return routes;
-}
+// 该文件由 scripts/sync-sitemaps.py 自动生成，新增页面后重新运行脚本即可
+const ROUTES = [
+    '',
+    '/about',
+    '/advanced-tips',
+    '/animal-husbandry',
+    '/animal-taming-guide',
+    '/archer-vs-crossbow',
+    '/armor-layering-guide',
+    '/armor-types-comparison',
+    '/armor-weapons',
+    '/base-layout',
+    '/bedroom-layout',
+    '/beekeeping-guide',
+    '/beginner-mistakes',
+    '/beginner-walkthrough',
+    '/beginners',
+    '/berry-bush-conservation',
+    '/best-crops-for-each-season',
+    '/best-crops-tier-list',
+    '/best-defense-layout',
+    '/best-map-seeds',
+    '/best-seed-map',
+    '/best-seeds',
+    '/best-weapons-for-defense',
+    '/best-weapons-ranked',
+    '/best-workshop-layout',
+    '/biome-comparison',
+    '/biomes',
+    '/brewery-guide',
+    '/building-cost-guide',
+    '/building-material-tiers',
+    '/buildings',
+    '/builds',
+    '/camera-focus-fix-guide',
+    '/castle-building-complete-guide',
+    '/castle-building-guide',
+    '/chokepoint-guide',
+    '/clay-brick',
+    '/clothing-insulation-guide',
+    '/colony-design-philosophy',
+    '/colony-efficiency-benchmarks',
+    '/combat-formation-tactics',
+    '/combat-positioning',
+    '/community-meta-faq',
+    '/community-tips',
+    '/complete-research-tree',
+    '/corner-tower',
+    '/crafting',
+    '/crop-rotation-guide',
+    '/crossbow-defense',
+    '/defective-building-fix',
+    '/defense',
+    '/disease-plague-guide',
+    '/door-placement-tips',
+    '/double-wall-vs-single-wall',
+    '/drawbridge-defense',
+    '/early-game-mistakes',
+    '/endgame-content',
+    '/endgame-strategy',
+    '/enemy-pathfinding-exploit',
+    '/enemy-types-guide',
+    '/entrance-design',
+    '/faq',
+    '/farming',
+    '/farming-calendar',
+    '/flanking-defense',
+    '/flanking-maneuver',
+    '/floor-material-guide',
+    '/focus-fire-archers',
+    '/food-preservation',
+    '/food-preservation-guide',
+    '/food-production-calculator',
+    '/great-hall',
+    '/happiness-guide',
+    '/heating-system-guide',
+    '/herbal-medicine-guide',
+    '/hidden-mechanics',
+    '/hunting-strategy',
+    '/iron-mining',
+    '/iron-smelting',
+    '/irrigation-system',
+    '/item-repair-guide',
+    '/killbox-design',
+    '/kitchen-design',
+    '/longbow-defense',
+    '/maximize-settler-efficiency',
+    '/melee-vs-ranged',
+    '/merchant-pricing-guide',
+    '/merchant-trading',
+    '/meta-game-guide',
+    '/moat-design',
+    '/mood-management-guide',
+    '/needs-and-traits',
+    '/newcomers-skills',
+    '/news',
+    '/night-combat',
+    '/perk-combos',
+    '/perks-guide',
+    '/prisoner-management',
+    '/privacy',
+    '/production-chain-optimization',
+    '/quality-of-life-update',
+    '/raid-defense',
+    '/raid-defense-strategy',
+    '/raid-loot-table',
+    '/raid-schedule-guide',
+    '/recreation-scheduling',
+    '/relationships-system',
+    '/religion-guide',
+    '/renovation-guide',
+    '/research',
+    '/room-design',
+    '/room-quality',
+    '/room-quality-system',
+    '/root-cellar',
+    '/scavenging-expeditions',
+    '/scenario-guide',
+    '/seasons',
+    '/settler-death-prevention',
+    '/settler-job-assignment',
+    '/settler-mood-system',
+    '/settler-schedule-template',
+    '/settler-skills',
+    '/settler-social-dynamics',
+    '/settler-traits-tier-list',
+    '/settlers',
+    '/siege-weapons-guide',
+    '/soil-fertility',
+    '/specialist-training',
+    '/steam-achievements',
+    '/steel-production-guide',
+    '/stockpile-optimization',
+    '/stone-management',
+    '/storage-guide',
+    '/storage-optimization',
+    '/structural-mechanics',
+    '/tailor-guide',
+    '/tannable-vs-wild-animals',
+    '/temperature-control',
+    '/temperature-management',
+    '/terms',
+    '/tier-list',
+    '/tips',
+    '/trading',
+    '/trading-strategy',
+    '/trap-placement',
+    '/trebuchet',
+    '/ui-fixes-guide',
+    '/underground',
+    '/underground-base',
+    '/vertical-stacking',
+    '/wall-floor-material-upgrade',
+    '/wall-upgrade-guide',
+    '/water-well-placement',
+    '/wealth-scaling-raids',
+    '/weapon-durability-guide',
+    '/weather-combat-bonus',
+    '/weather-impact-guide',
+    '/winter-food-storage',
+    '/winter-survival',
+    '/work-priorities',
+    '/work-priorities-setup',
+    '/wounded-settler-healing',
+    '/year-two-guide',
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://goingmedieval.gguidehub.com';
-  const routes = getRoutes();
-
-  // Always include root
-  const allRoutes = routes.includes('') ? routes : ['', ...routes];
-
-  return allRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date('2026-06-28'),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority:
-      route === ''
-        ? 1.0
-        : route === '/beginners' || route === '/defense'
-          ? 0.9
-          : route === '/farming' || route === '/base-layout'
-            ? 0.85
-            : 0.7,
+  const now = new Date();
+  return ROUTES.map((path) => ({
+    url: `${BASE}${path}`,
+    lastModified: now,
+    changeFrequency: path === '' ? ('daily' as const) : ('weekly' as const),
+    priority: path === '' ? 1 : ['privacy', 'terms', 'about'].includes(path.slice(1)) ? 0.3 : 0.7,
   }));
 }

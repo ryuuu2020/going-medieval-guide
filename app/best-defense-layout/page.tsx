@@ -5,7 +5,6 @@ export const metadata = {
     "5 best defense layouts for Going Medieval. Killbox designs, wall configurations, and trap placements that work against raids.",
 };
 
-
 export default function BestDefenseLayoutPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -14,7 +13,7 @@ export default function BestDefenseLayoutPage() {
             <section>
               <h1 className="chapter-heading">Going Medieval Best Defense Layout</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                A colony that cannot defend itself does not survive past the third raid. In Going Medieval, defense is not a single wall or a row of archers — it is an integrated system of layered fortifications, chokepoint exploitation, and tactical positioning that turns every raider into a casualty before they reach your settlers. This guide details the best defense layout from early-game wooden palisades through late-game limestone citadels, covering wall tier progression, killbox architecture, merlon-archer synergy, trap corridor design, and the multi-layer defense framework that professional colony builders rely on. Every recommendation uses verified game mechanics — no invented features, no wishful thinking. Data below is based on community testing and is for reference only.
+                A colony that cannot defend itself does not survive past the third raid. In Going Medieval, defense is not a single wall or a row of archers — it is an integrated system of layered fortifications, chokepoint exploitation, and tactical positioning that turns every raider into a casualty before they reach your settlers. This guide details the best defense layout from early-game wooden palisades through late-game limestone citadels, covering wall tier progression, killbox architecture, merlon-archer synergy, trap corridor design, and the multi-layer defense framework that professional colony builders rely on. Every recommendation uses verified game mechanics — no invented features, no wishful thinking.
               </p>
             </section>
 
@@ -41,7 +40,6 @@ export default function BestDefenseLayoutPage() {
                   <tr><td>Limestone Brick Wall</td><td>Limestone Brick</td><td>Very High</td><td>Late Game</td><td>High</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Stability Warning:</strong>
@@ -97,7 +95,6 @@ export default function BestDefenseLayoutPage() {
                   <tr><td>Pitfall</td><td>30</td><td>Digging (no material)</td><td>Permanent</td><td>Outer perimeter, approach paths</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4 mt-4">
                 In your 3-tile wide killbox corridor, place spike traps on the center tile of every third position along the length. This creates a pattern where raiders walking the corridor hit a trap, then have two clear tiles, then hit another trap — the rhythm keeps them moving forward (they cannot easily retreat) while accumulating damage steadily. Reserve iron spike traps for the final 4-6 tiles of the corridor where raiders are closest to your melee defenders — the higher damage per trigger ensures that enemies reaching your fighters are already wounded and easier to finish.
               </p>

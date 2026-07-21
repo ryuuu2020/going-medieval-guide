@@ -74,6 +74,63 @@ const TIPS = [
   { tip: 'After crafting bows, station settlers on walls to shoot from above. High ground significantly boosts accuracy and damage.', category: 'Combat' },
 ];
 
+const START_HERE = [
+  {
+    phase: 'First 3 Days',
+    goal: 'Stabilize food, beds, and covered storage',
+    route: '/beginners',
+    guide: 'Beginner Guide',
+  },
+  {
+    phase: 'Before First Raid',
+    goal: 'Lock a simple choke, stock bows, and stop mood spirals',
+    route: '/best-defense-layout',
+    guide: 'Best Defense Layout',
+  },
+  {
+    phase: 'Before First Winter',
+    goal: 'Move perishables underground and secure heated rooms',
+    route: '/winter-survival',
+    guide: 'Winter Survival',
+  },
+  {
+    phase: 'Year Two Scale-Up',
+    goal: 'Upgrade workshops, labor flow, and trade surplus',
+    route: '/production-chain-optimization',
+    guide: 'Production Chain Optimization',
+  },
+];
+
+const NEXT_CLUSTERS = [
+  {
+    title: 'Castle & Layout',
+    description: 'Shape defensible castles, layered walls, and productive room flow once the colony stops firefighting.',
+    links: [
+      { label: 'Base Layout', href: '/base-layout' },
+      { label: 'Castle Building Guide', href: '/castle-building-guide' },
+      { label: 'Best Workshop Layout', href: '/best-workshop-layout' },
+    ],
+  },
+  {
+    title: 'Food & Temperature',
+    description: 'Prevent the two most common colony wipes: spoilage and winter collapse.',
+    links: [
+      { label: 'Best Crops Tier List', href: '/best-crops-tier-list' },
+      { label: 'Heating System Guide', href: '/heating-system-guide' },
+      { label: 'Food Preservation', href: '/food-preservation' },
+    ],
+  },
+  {
+    title: 'Combat & Scaling',
+    description: 'Turn one working defense into a repeatable raid answer as wealth and enemy size increase.',
+    links: [
+      { label: 'Raid Defense', href: '/raid-defense' },
+      { label: 'Best Weapons Ranked', href: '/best-weapons-ranked' },
+      { label: 'Chokepoint Guide', href: '/chokepoint-guide' },
+    ],
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -126,7 +183,7 @@ export default function HomePage() {
               Build Your Colony in the Medieval Wilderness
             </h2>
             <p className="drop-cap font-serif text-lg text-ink-light leading-relaxed mt-6">
-              Going Medieval is a medieval colony simulation game that launched its 1.0 full release on March 12, 2026. You lead a group of settlers building a settlement from scratch in the wilderness — constructing homes, cultivating farmland, forging weapons, fending off raiders, and surviving brutal winters. This guide site collects battle-tested community knowledge, covering all core systems: buildings, farming, defense, research, and more, to help you build a thriving medieval colony. All data is based on community estimates and provided for reference only.
+              Going Medieval is a medieval colony simulation game that launched its 1.0 full release on March 12, 2026. You lead a group of settlers building a settlement from scratch in the wilderness — constructing homes, cultivating farmland, forging weapons, fending off raiders, and surviving brutal winters. This guide site collects battle-tested community knowledge, covering all core systems: buildings, farming, defense, research, and more, to help you build a thriving medieval colony. All data is approximate and provided for reference only.
             </p>
           </section>
 
@@ -173,6 +230,39 @@ export default function HomePage() {
             </div>
           </section>
 
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="font-display text-2xl font-semibold text-ink">Start Here By Colony Phase</h3>
+                <p className="font-serif text-sm text-ink-muted mt-1">Use this route if you want the shortest path from a fresh start to a stable fortress.</p>
+              </div>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="parchment-table w-full text-sm">
+                <thead>
+                  <tr>
+                    <th>Phase</th>
+                    <th>Main Goal</th>
+                    <th>Best Guide</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {START_HERE.map((item) => (
+                    <tr key={item.phase}>
+                      <td className="font-display text-accent">{item.phase}</td>
+                      <td>{item.goal}</td>
+                      <td>
+                        <a href={item.route} className="text-vermillion hover:underline">
+                          {item.guide}
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           {/* --- Pro Tips --- */}
           <section>
             <h3 className="font-display text-2xl font-semibold text-ink mb-6">Pro Tips</h3>
@@ -181,6 +271,27 @@ export default function HomePage() {
                 <div key={i} className="journal-card p-4">
                   <span className="field-tag ink text-[10px] mb-2 inline-block">{item.category}</span>
                   <p className="font-serif text-sm text-ink leading-relaxed">{item.tip}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h3 className="font-display text-2xl font-semibold text-ink mb-6">What To Read Next</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {NEXT_CLUSTERS.map((cluster) => (
+                <div key={cluster.title} className="journal-card p-5">
+                  <h4 className="font-display text-lg font-semibold text-ink">{cluster.title}</h4>
+                  <p className="font-serif text-sm text-ink-light leading-relaxed mt-2">
+                    {cluster.description}
+                  </p>
+                  <div className="mt-4 space-y-2">
+                    {cluster.links.map((link) => (
+                      <a key={link.href} href={link.href} className="block font-serif text-sm text-vermillion hover:underline">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

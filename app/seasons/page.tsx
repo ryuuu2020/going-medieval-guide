@@ -4,7 +4,6 @@ export const metadata = {
     "Complete seasons and temperature guide for Going Medieval. Seasonal crop planning, temperature management, and winter survival.",
 };
 
-
 export default function SeasonsPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function SeasonsPage() {
             <section>
               <h1 className="chapter-heading">Seasons & Temperature Management</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Going Medieval's four-season system poses a serious challenge to colony survival. Each season brings different temperatures, weather, and resource yields — winter is especially deadly, with snow covering the ground, crops stopping growth, and temperatures plunging. Mastering seasonal patterns and temperature management is key to long-term colony survival. Data below is based on community testing and is for reference only.
+                Going Medieval's four-season system poses a serious challenge to colony survival. Each season brings different temperatures, weather, and resource yields — winter is especially deadly, with snow covering the ground, crops stopping growth, and temperatures plunging. Mastering seasonal patterns and temperature management is key to long-term colony survival.
               </p>
             </section>
 
@@ -35,7 +34,6 @@ export default function SeasonsPage() {
                   <tr><td>Winter</td><td>-10-5&deg;C</td><td>Heavy snow, no planting</td><td>Consume reserves, keep warm</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

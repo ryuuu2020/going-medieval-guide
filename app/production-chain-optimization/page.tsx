@@ -12,7 +12,7 @@ export default function ProductionChainOptimizationPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Production Chain Optimization</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              A colony is not the sum of its buildings — it is the sum of its production chains. Every meal eaten, every arrow loosed, and every limestone wall erected traces back through a chain of raw material gathering, intermediate processing, and final assembly. When these chains break — because a stockpile is too far from a workshop, or because a settler spends more time walking than crafting — the colony starves, freezes, or falls to the next raid. This guide maps every major production chain in Going Medieval, from raw resource to finished good, and provides the optimization principles that separate a colony that merely survives from one that thrives. All data is based on verified game mechanics from official patch notes and community testing.
+              A colony is not the sum of its buildings — it is the sum of its production chains. Every meal eaten, every arrow loosed, and every limestone wall erected traces back through a chain of raw material gathering, intermediate processing, and final assembly. When these chains break — because a stockpile is too far from a workshop, or because a settler spends more time walking than crafting — the colony starves, freezes, or falls to the next raid. This guide maps every major production chain in Going Medieval, from raw resource to finished good, and provides the optimization principles that separate a colony that merely survives from one that thrives. All data is based on verified game mechanics.
             </p>
           </section>
 
@@ -338,7 +338,7 @@ export default function ProductionChainOptimizationPage() {
           </section>
 
           <p className="text-sm text-ink-faded mt-8 italic">
-            Last updated: June 2026. Production chain mechanics verified against Going Medieval patch notes and community testing data. Workshop recipes, material requirements, and settler skill associations are based on in-game data. Optimization recommendations are derived from community best practices.
+            Last updated: June 2026. Workshop recipes, material requirements, and settler skill associations reflect in-game data. Game mechanics may change with future updates.
           </p>
         </div>
         <aside className="lg:w-[30%] space-y-6">

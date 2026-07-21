@@ -4,7 +4,6 @@ export const metadata = {
     "Complete settler happiness and mood guide for Going Medieval. Mood system, needs, bonuses, and preventing mental breaks.",
 };
 
-
 export default function HappinessGuidePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -18,14 +17,14 @@ export default function HappinessGuidePage() {
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Settler happiness is the invisible economy that underlies every other system in Going Medieval. A colony with eight fully content settlers outproduces a colony of twelve miserable colonists by a wide margin — happy settlers work faster and fight harder. An unhappy settler is a liability: they refuse work, start fights, destroy furniture, and in extreme cases may abandon the colony entirely. This guide maps mood factors in the game, explains how low mood triggers different behaviors, and provides a diagnostic framework for maintaining colony morale. Data below is based on community testing and is for reference only.
+                Settler happiness is the invisible economy that underlies every other system in Going Medieval. A colony with eight fully content settlers outproduces a colony of twelve miserable colonists by a wide margin — happy settlers work faster and fight harder. An unhappy settler is a liability: they refuse work, start fights, destroy furniture, and in extreme cases may abandon the colony entirely. This guide maps mood factors in the game, explains how low mood triggers different behaviors, and provides a diagnostic framework for maintaining colony morale.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Happiness Thresholds & Mental States</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Happiness in Going Medieval operates on a 0-100 scale (community estimate — exact range and thresholds not officially confirmed). The values below represent community-observed patterns and may not match the game's internal calculations precisely:
+                Happiness in Going Medieval operates on a 0-100 scale (approximate — exact range and thresholds are not officially published). The values below represent community-observed patterns and may not match the game's internal calculations precisely:
               </p>
               <table className="parchment-table">
                 <thead>
@@ -45,7 +44,6 @@ export default function HappinessGuidePage() {
                   <tr><td>~0-9</td><td>Broken</td><td>Mental break: berserk, catatonic, or desertion</td><td>Critical — may abandon colony</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The danger zone begins at happiness 25. Below this threshold, settlers begin random negative behaviors: insulting other settlers (causing chain reaction mood hits), destroying furniture, refusing work assignments, or entering a "wandering" state where they accomplish nothing. Below 10, a full mental break triggers — the settler becomes uncontrollable for several hours and may go berserk (attacking random targets), catatonic (unresponsive on the ground), or attempt to desert (walking off the map edge permanently). A single desertion in a small colony can cascade into a death spiral if that settler was your only cook or builder.
               </p>
@@ -78,7 +76,6 @@ export default function HappinessGuidePage() {
                   <tr><td>Romance</td><td>~+5</td><td>Days</td><td>Settlers forming romantic relationships</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>
@@ -109,7 +106,6 @@ export default function HappinessGuidePage() {
                   <tr><td>Insulted</td><td>~-3</td><td>Negative social interaction</td><td>Separate incompatible settlers</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

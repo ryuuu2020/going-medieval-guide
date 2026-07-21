@@ -4,7 +4,6 @@ export const metadata = {
     "Complete crafting guide for Going Medieval. Workbenches, crafting chains, resource requirements, and efficiency optimization.",
 };
 
-
 export default function CraftingPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function CraftingPage() {
             <section>
               <h1 className="chapter-heading">Crafting System</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The crafting system is the core mechanic in Going Medieval for converting raw resources into useful items. From simple wooden bows to fine iron armor, all equipment and tools must be produced at workbenches. This guide details every workbench type, crafting recipe, and material source to help you build an efficient production chain. Data below is based on community compilation and is for reference only.
+                The crafting system is the core mechanic in Going Medieval for converting raw resources into useful items. From simple wooden bows to fine iron armor, all equipment and tools must be produced at workbenches. This guide details every workbench type, crafting recipe, and material source to help you build an efficient production chain.
               </p>
             </section>
 
@@ -40,7 +39,6 @@ export default function CraftingPage() {
                   <tr><td>Apothecary Table</td><td>Medical research</td><td>Medicine crafting</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
             </section>
 
             <section>

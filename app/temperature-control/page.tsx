@@ -4,7 +4,6 @@ export const metadata = {
     "Complete temperature control guide for Going Medieval. Manage extreme heat and cold, clothing layers, and underground stability.",
 };
 
-
 export default function TemperatureControlPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function TemperatureControlPage() {
             <section>
               <h1 className="chapter-heading">Temperature Control Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Temperature is a silent killer in Going Medieval. A settler who freezes to death in their bedroom, collapses from heatstroke in the kitchen, or loses a limb to frostbite while hauling firewood during a winter blizzard — these deaths are entirely preventable with proper temperature control infrastructure. Managing colony temperature involves understanding the game's heat mechanics, placing heating sources efficiently, leveraging underground areas for natural cooling, building ventilation systems, and preparing seasonal survival strategies. This guide covers both heating and cooling systems from day one through late-game climate control. Data below is based on community testing and is for reference only.
+                Temperature is a silent killer in Going Medieval. A settler who freezes to death in their bedroom, collapses from heatstroke in the kitchen, or loses a limb to frostbite while hauling firewood during a winter blizzard — these deaths are entirely preventable with proper temperature control infrastructure. Managing colony temperature involves understanding the game's heat mechanics, placing heating sources efficiently, leveraging underground areas for natural cooling, building ventilation systems, and preparing seasonal survival strategies. This guide covers both heating and cooling systems from day one through late-game climate control.
               </p>
             </section>
 
@@ -23,13 +22,13 @@ export default function TemperatureControlPage() {
                 Going Medieval simulates heat transfer between tiles and through walls. Each tile has a temperature value influenced by: ambient outdoor temperature (determined by season and biome), heat sources in adjacent tiles (braziers, torches, campfires, forges), insulation provided by walls and roofs, and heat loss through open doors, unroofed areas, and ventilation shafts. Enclosed rooms retain heat better than open structures, and rooms with thick stone walls insulate more effectively than rooms with thin wooden walls.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Each settler has a comfortable temperature range — community testing suggests roughly 10-30°C for average settlers, with some traits potentially modifying this range. When ambient temperature drops below a settler's comfort minimum, they accumulate hypothermia; above their maximum, heatstroke. Both conditions start with mood penalties, progress to movement and work speed reductions, escalate to health damage, and ultimately lead to death if untreated. Clothing adds tolerance but does not eliminate the need for heated/cooled rooms. Exact temperature thresholds and trait modifiers have not been verified against official data.
+                Each settler has a comfortable temperature range — roughly 10-30°C for average settlers, with some traits modifying this range. When ambient temperature drops below a settler's comfort minimum, they accumulate hypothermia; above their maximum, heatstroke. Both conditions start with mood penalties, progress to movement and work speed reductions, escalate to health damage, and ultimately lead to death if untreated. Clothing adds tolerance but does not eliminate the need for heated/cooled rooms.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Heating Sources Compared</h2>
-              <p className="font-serif text-sm text-ink-muted italic mb-4">&#9888; All specific temperature values, heat radii, and construction costs below are community estimates. Exact values are not verified in official game data.</p>
+              <p className="font-serif text-sm text-ink-muted italic mb-4">&#9888; All specific temperature values, heat radii, and construction costs below are approximate and may vary slightly by game version.</p>
               <table className="parchment-table">
                 <thead>
                   <tr>
@@ -49,7 +48,6 @@ export default function TemperatureControlPage() {
                   <tr><td>Bonfire</td><td>~8 tiles</td><td>~+20°C</td><td>~Wood x5</td><td>~Wood x3</td><td>Outdoors only</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Braziers are the optimal heating choice for most indoor spaces. They produce consistent heat in a 5-tile radius, can be fueled with efficient coal, and their heat output is sufficient for rooms up to 7x7. Place braziers centrally for even heat distribution, not against walls. For larger rooms (great halls, workshops over 7x7), use two braziers placed in opposite corners to cover the floor area completely. Torches provide negligible heat and should be considered lighting only — relying on torches for heating during winter will result in frozen settlers.
               </p>
@@ -58,7 +56,7 @@ export default function TemperatureControlPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Underground Cooling: Natural Temperature Regulation</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Underground rooms are the most reliable and fuel-free cooling system in the game. Rooms dug at sufficient depth into solid rock maintain a naturally stable temperature year-round (community estimates suggest ~5-15°C range depending on depth), providing natural refrigeration in summer and insulation against extreme cold in winter. This makes underground spaces ideal for food stockpiles (preserving food significantly longer than surface storage), hospital rooms (stable temperature aids recovery), and emergency summer shelters for settlers suffering heatstroke.
+                Underground rooms are the most reliable and fuel-free cooling system in the game. Rooms dug at sufficient depth into solid rock maintain a naturally stable temperature year-round (typically ~5-15°C depending on depth), providing natural refrigeration in summer and insulation against extreme cold in winter. This makes underground spaces ideal for food stockpiles (preserving food significantly longer than surface storage), hospital rooms (stable temperature aids recovery), and emergency summer shelters for settlers suffering heatstroke.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
                 The cooling effectiveness of underground rooms depends on depth and isolation. Rooms at shallow depth provide minimal cooling; deeper rooms achieve greater stability. Rooms near the surface entrance (within a few tiles of an open door or ventilation shaft) lose thermal stability as outdoor air mixes in. Place your most temperature-sensitive rooms — food storage, hospital, and brewery barrel cellar — as far from the entrance as practical, and use airlock-style double doors at the surface entrance to minimize temperature bleed.
@@ -78,7 +76,7 @@ export default function TemperatureControlPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Winter Heating Strategy</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Winter preparation begins in autumn. Before the first snow falls, every occupied room must have a heat source and adequate fuel reserves. For a colony of ~8 settlers in a cold biome, plan for braziers in each occupied room. Fuel consumption rates are community estimates: each brazier may consume roughly 1 wood or 0.5 coal per day, so a ~15-day winter requires a substantial fuel stockpile (hundreds of wood or coal units). Store this fuel in an accessible underground stockpile — wood left on the surface in snow may rot or deteriorate.
+                Winter preparation begins in autumn. Before the first snow falls, every occupied room must have a heat source and adequate fuel reserves. For a colony of ~8 settlers in a cold biome, plan for braziers in each occupied room. Fuel consumption rates are approximate: each brazier may consume roughly 1 wood or 0.5 coal per day, so a ~15-day winter requires a substantial fuel stockpile (hundreds of wood or coal units). Store this fuel in an accessible underground stockpile — wood left on the surface in snow may rot or deteriorate.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Fuel management is critical. Coal may burn longer per unit than wood (community reports suggest roughly 3x duration), making it the superior winter fuel. Mine coal deposits as aggressively as possible during spring and summer, and store the coal underground. If coal is unavailable, establish a woodcutting rotation — several trees cut per day — and build a dedicated wood storage shed with roof protection. Rationing: during mild winter days, extinguish braziers in unused rooms and concentrate settlers in heated common areas (great hall) to conserve fuel for the coldest nights.

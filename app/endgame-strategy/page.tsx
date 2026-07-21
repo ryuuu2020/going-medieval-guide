@@ -117,7 +117,7 @@ export default function EndgamePage() {
 
       <div className="mt-10 p-5 border border-gray-700 rounded-lg bg-gray-900 text-center">
         <p className="text-gray-300 mb-2 text-sm">Build your ultimate medieval colony:</p>
-        <a href="https://store.steampowered.com/app/1029780/?curator_clanid=46198091/?curator_clanid=46198091" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded transition-colors text-lg">
+        <a href="https://store.steampowered.com/app/1029780/?curator_clanid=46198091" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded transition-colors text-lg">
           Buy Going Medieval on Steam
         </a>
       </div>

@@ -5,7 +5,6 @@ export const metadata = {
     "Complete chokepoint guide for Going Medieval. Design trap corridors, force enemy pathfinding, and maximize killzone efficiency.",
 };
 
-
 export default function ChokepointGuidePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -14,7 +13,7 @@ export default function ChokepointGuidePage() {
             <section>
               <h1 className="chapter-heading">Going Medieval Chokepoint Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                In Going Medieval, victory is not about outnumbering the enemy — it is about out-positioning them. The game's enemy AI uses deterministic pathfinding: raiders take the shortest available route to your settlers or beds. This means the layout of your walls, corridors, and gates directly controls where enemies walk and where they fight. A well-engineered chokepoint transforms chaotic raid encounters into controlled, repeatable kill sequences. This guide covers funnel corridor design, enemy path manipulation, trap placement strategy, killbox dimensions, archer platform positioning, melee blocking formations, and late-game trebuchet countermeasures. Every recommendation is based on verified game mechanics — no invented features, no filler. Data below is based on community testing and is for reference only.
+                In Going Medieval, victory is not about outnumbering the enemy — it is about out-positioning them. The game's enemy AI uses deterministic pathfinding: raiders take the shortest available route to your settlers or beds. This means the layout of your walls, corridors, and gates directly controls where enemies walk and where they fight. A well-engineered chokepoint transforms chaotic raid encounters into controlled, repeatable kill sequences. This guide covers funnel corridor design, enemy path manipulation, trap placement strategy, killbox dimensions, archer platform positioning, melee blocking formations, and late-game trebuchet countermeasures. Every recommendation is based on verified game mechanics — no invented features, no filler.
               </p>
             </section>
 
@@ -60,7 +59,6 @@ export default function ChokepointGuidePage() {
                   <tr><td>Archer Platform</td><td>2 levels above killbox floor</td><td>Elevated firing position</td><td>Merlon cover required; double-sided in killbox</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

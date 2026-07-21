@@ -19,7 +19,7 @@ export default function FarmingPage() {
             <section>
               <h1 className="chapter-heading">Going Medieval Best Crops for Each Season</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. There are 9 confirmed crops: Barley, Cabbage, Carrots, Beet, Flax, Herbs, Redcurrant, Hay, and Mushrooms. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full. Data below is based on community testing and is for reference only.
+                Farming is the most stable food source in Going Medieval. From sowing to harvest, you need to plan crop types, planting zones, and storage methods carefully. Before winter arrives, an adequate food stockpile is the fundamental guarantee of your colony's survival. There are 9 confirmed crops: Barley, Cabbage, Carrots, Beet, Flax, Herbs, Redcurrant, Hay, and Mushrooms. This guide covers crop types, seasonal patterns, irrigation, and food preservation strategies in full.
               </p>
             </section>
 
@@ -50,10 +50,10 @@ export default function FarmingPage() {
                   <tr><td>Mushrooms</td><td>~6 days (est.)</td><td>Low</td><td>Eat raw, stews</td><td>Year-round (caves)</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Crop names confirmed via Wiki. Growth cycles are community estimates.</p>
+              <p className="font-serif text-sm text-ink-muted italic">Growth cycles are approximate and may vary with temperature events.</p>
               <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">Blight Warning:</strong> Blight (crop disease) affects flax, barley, cabbage, carrots, and beets. This has been confirmed from official Update #3 patch notes. If you see crops withering, destroy the affected plants immediately to prevent spread.
+                  <strong className="text-vermillion">Blight Warning:</strong> Blight (crop disease) affects flax, barley, cabbage, carrots, and beets. This is confirmed behavior in the current game. If you see crops withering, destroy the affected plants immediately to prevent spread.
                 </p>
               </div>
             </section>

@@ -21,7 +21,7 @@ export default function MerchantTradingPage() {
             <section>
               <h1 className="chapter-heading">Merchant Trading Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The trading system in Going Medieval unlocks a powerful economy layer for your colony. By building a Cartography Table and establishing diplomatic relationships with regional factions, you can acquire rare goods, offload excess resources, and gain access to exotic weapons and structures not yet researched. Whether you choose honest barter or caravan theft, mastering trade is essential for mid-to-late game colony prosperity. This guide covers every aspect of the merchant system — from unlocking trade to maximizing profit margins. Data below is based on community compilation and is for reference only.
+                The trading system in Going Medieval unlocks a powerful economy layer for your colony. By building a Cartography Table and establishing diplomatic relationships with regional factions, you can acquire rare goods, offload excess resources, and gain access to exotic weapons and structures not yet researched. Whether you choose honest barter or caravan theft, mastering trade is essential for mid-to-late game colony prosperity. This guide covers every aspect of the merchant system — from unlocking trade to maximizing profit margins.
               </p>
             </section>
 

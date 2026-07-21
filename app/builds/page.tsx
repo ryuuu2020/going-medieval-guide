@@ -13,7 +13,7 @@ export default function BuildsPage() {
             <section>
               <h1 className="chapter-heading">Best Builds &amp; Defense Layouts</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                In Going Medieval, the layout of your walls, rooms, and production zones determines whether your colony thrives for decades or collapses at the first raid. This guide covers the most effective defense designs — from the meta-defining kill-box to budget-friendly early-game towers — alongside proven room templates for happiness, food storage, and workshop efficiency, plus colony-scale layouts that shape your entire settlement strategy. Every dimension and settler count below is drawn from hundreds of hours of community testing; use it to build smarter, not harder.
+                In Going Medieval, the layout of your walls, rooms, and production zones determines whether your colony thrives for decades or collapses at the first raid. This guide covers the most effective defense designs — from the meta-defining kill-box to budget-friendly early-game towers — alongside proven room templates for happiness, food storage, and workshop efficiency, plus colony-scale layouts that shape your entire settlement strategy. Every dimension and settler count below is battle-tested; use it to build smarter, not harder.
               </p>
             </section>
 

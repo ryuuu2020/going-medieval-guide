@@ -42,7 +42,7 @@ export default function AdvancedTipsPage() {
             <h1 className="chapter-heading">20 Advanced Tips & Tricks</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> The "skill passions" system described in Settler tips (50% XP bonus, compounding advantage) is <strong>characteristic of other colony sims and may not exist in Going Medieval exactly as described</strong>. Specific damage numbers and percentages are community estimates. Wheat and hops are NOT confirmed crops — Barley is the confirmed grain crop. Verify mechanics against in-game behavior.
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> The "skill passions" system described in Settler tips (50% XP bonus, compounding advantage) is <strong>characteristic of other colony sims and may not exist in Going Medieval exactly as described</strong>. Specific damage numbers and percentages are approximate. Wheat and hops are NOT confirmed crops — Barley is the confirmed grain crop. Verify mechanics against in-game behavior.
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">

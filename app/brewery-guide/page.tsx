@@ -4,7 +4,6 @@ export const metadata = {
     "Complete brewery and alcohol production guide for Going Medieval. Beer economy, brewing process, and profit optimization.",
 };
 
-
 export default function BreweryGuidePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -14,11 +13,11 @@ export default function BreweryGuidePage() {
               <h1 className="chapter-heading">Brewery & Alcohol Production Guide</h1>
               <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Ale, Beer, Rough Wine, Cider, Mead, Dubious Booze, and Alcohol are <strong>all confirmed</strong> drink types in Going Medieval. Barley is a confirmed crop used for Ale and Beer. Honey comes from the Apiary (beekeeping) and is used for Mead — <strong>CONFIRMED</strong>. Cider uses Apples, Rough Wine uses fruit. Hops and grapes are <strong>NOT</strong> in the verified crop list and should not be referenced as ingredients. Alcohol does NOT require hops for any brewing recipe. Specific happiness buff values and production numbers below are community estimates.
+                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> Ale, Beer, Rough Wine, Cider, Mead, Dubious Booze, and Alcohol are <strong>all confirmed</strong> drink types in Going Medieval. Barley is a confirmed crop used for Ale and Beer. Honey comes from the Apiary (beekeeping) and is used for Mead — <strong>CONFIRMED</strong>. Cider uses Apples, Rough Wine uses fruit. Hops and grapes are <strong>NOT</strong> in the verified crop list and should not be referenced as ingredients. Alcohol does NOT require hops for any brewing recipe. Specific happiness buff values and production numbers below are approximate.
                 </p>
               </div>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Alcohol is a frontline mood management tool in Going Medieval. With seven confirmed drink types — Ale, Beer, Rough Wine, Cider, Mead, Dubious Booze, and generic Alcohol — your colony has multiple brewing paths to choose from. Each drink uses specific ingredients (Barley for Ale and Beer, Apples for Cider, Honey for Mead, fruit for Rough Wine) and provides happiness buffs that offset negative mood from raids, deaths, and harsh living conditions. Brewing also creates valuable trade goods. This guide covers all confirmed alcohol types with their production chains. Data below is based on community testing and is for reference only.
+                Alcohol is a frontline mood management tool in Going Medieval. With seven confirmed drink types — Ale, Beer, Rough Wine, Cider, Mead, Dubious Booze, and generic Alcohol — your colony has multiple brewing paths to choose from. Each drink uses specific ingredients (Barley for Ale and Beer, Apples for Cider, Honey for Mead, fruit for Rough Wine) and provides happiness buffs that offset negative mood from raids, deaths, and harsh living conditions. Brewing also creates valuable trade goods. This guide covers all confirmed alcohol types with their production chains.
               </p>
             </section>
 
@@ -44,7 +43,7 @@ export default function BreweryGuidePage() {
                 Ale and Beer are the most accessible alcohol types and should be every colony's first brewing objective. Both are made from Barley, a confirmed crop grown from spring through summer in standard field plots. Ale is the simpler brew — fermented Barley mash at the brewing station. Beer requires an additional step in the fermentation process. Both provide happiness buffs: Beer provides approximately +4 happiness for 8 hours after consumption. Settlers who drink beer during their evening recreation period carry the buff through the night and into the next morning's work shift.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Barley-based brewing is reasonably scalable: one field produces barley, which can be brewed into ale or beer. Plant barley in early spring alongside your food crops. Barley has a growth cycle that allows it to be harvested within a single growing season if planted immediately at spring's start. A dedicated brewer with Culinary skill can manage both food and beer production. Exact yield numbers below are community estimates.
+                Barley-based brewing is reasonably scalable: one field produces barley, which can be brewed into ale or beer. Plant barley in early spring alongside your food crops. Barley has a growth cycle that allows it to be harvested within a single growing season if planted immediately at spring's start. A dedicated brewer with Culinary skill can manage both food and beer production. Exact yield numbers below are approximate.
               </p>
             </section>
 
@@ -64,7 +63,7 @@ export default function BreweryGuidePage() {
                 Cider and Rough Wine are fruit-based alcohol options. Cider is made from Apples, while Rough Wine is made from generic fruit. Unlike Barley-based drinks, these do not require dedicated crop fields — fruit can be gathered from orchards or wild sources. Cider and Rough Wine offer an alternative brewing path when your barley fields are committed to food production or when you have surplus fruit that would otherwise spoil.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                Rough Wine serves as the premium drink in the game — it provides the strongest happiness buff of all alcohol types (estimated +8 for approximately 10 hours). This makes Rough Wine the ultimate crisis management tool: serving it after a devastating raid, a settler death, or during a prolonged winter starvation period can prevent mental breaks. Cider is a moderate-strength alternative. Both ferment from fruit at the brewing station. Specific buff values are community estimates.
+                Rough Wine serves as the premium drink in the game — it provides the strongest happiness buff of all alcohol types (estimated +8 for approximately 10 hours). This makes Rough Wine the ultimate crisis management tool: serving it after a devastating raid, a settler death, or during a prolonged winter starvation period can prevent mental breaks. Cider is a moderate-strength alternative. Both ferment from fruit at the brewing station. Specific buff values are approximate.
               </p>
             </section>
 
@@ -97,7 +96,6 @@ export default function BreweryGuidePage() {
                   <tr><td>Dubious Booze</td><td>Various scrap</td><td>~+2 (est.)</td><td>~4 hours (est.)</td><td>Very Low</td><td>Emergency only</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

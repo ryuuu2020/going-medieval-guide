@@ -25,7 +25,7 @@ export default function WealthScalingRaidsPage() {
               </p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; Note:</strong> Exact wealth thresholds are not displayed in-game and vary by difficulty setting. The values in this guide are based on community testing and are approximate. Use them as relative indicators rather than exact numbers.
+                  <strong className="text-vermillion">&#9888; Note:</strong> Exact wealth thresholds are not displayed in-game and vary by difficulty setting. The values in this guide are approximate. Use them as relative indicators rather than exact numbers.
                 </p>
               </div>
             </section>

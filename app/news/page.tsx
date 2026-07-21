@@ -28,7 +28,7 @@ const NEWS = [
   {
     date: '2026-06-15',
     title: 'Going Medieval 1.0 Full Release Review: Massive Content Expansion, New Biomes Arrive',
-    excerpt: 'The 1.0 full release delivers a massive content expansion over earlier versions, adding Grasslands and Desert biomes, a trading system, underground exploration, and more. The game\'s level of completion has significantly improved, with an 89% positive Steam rating (community estimate). This guide site has been fully updated for 1.0.',
+    excerpt: 'The 1.0 full release delivers a massive content expansion over earlier versions, adding Grasslands and Desert biomes, a trading system, underground exploration, and more. The game\'s level of completion has significantly improved, with an 89% positive Steam rating. This guide site has been fully updated for 1.0.',
     tag: 'Review',
   },
   {
@@ -60,6 +60,10 @@ export const metadata = {
   title: "Going Medieval News & Updates — Latest Patches (2026)",
   description:
     "Latest Going Medieval news and updates. Patch notes, new features, and community highlights for Going Medieval players.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 

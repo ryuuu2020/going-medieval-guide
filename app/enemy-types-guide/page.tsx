@@ -185,7 +185,7 @@ export default function EnemyTypesGuidePage() {
         </ul>
       </aside>
 
-      <p className="text-ink-faded text-sm mt-10">Last updated: July 3, 2026. Enemy faction behavior and archetype data sourced from community testing documentation and r/goingmedieval combat analysis.</p>
+      <p className="text-ink-faded text-sm mt-10">Last updated: July 3, 2026.</p>
     </div>
   );
 }

@@ -4,7 +4,6 @@ export const metadata = {
     "Complete armor and weapons guide for Going Medieval. Best gear for defense, durability, crafting requirements, and combat loadouts.",
 };
 
-
 export default function ArmorWeaponsPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,14 +12,14 @@ export default function ArmorWeaponsPage() {
             <section>
               <h1 className="chapter-heading">Best Armor & Weapons Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Armor and weapons are what keep your settlers alive when walls fail. Going Medieval's equipment system spans multiple armor tiers from Gambeson to Steel Plate Armour, with helmets, shields, and distinct weapon categories — one-handed, two-handed, ranged, and siege. Each item has material quality tiers (Steel &gt; Iron &gt; Wood; Gold is decorative only) and specific crafting workstation requirements. Choosing the right gear for each settler and upgrading equipment as your colony advances is fundamental to survival. This guide compares every armor tier and weapon type, details crafting requirements, and provides optimal equipment recommendations for every stage of the game. Data below is based on community testing and is for reference only.
+                Armor and weapons are what keep your settlers alive when walls fail. Going Medieval's equipment system spans multiple armor tiers from Gambeson to Steel Plate Armour, with helmets, shields, and distinct weapon categories — one-handed, two-handed, ranged, and siege. Each item has material quality tiers (Steel &gt; Iron &gt; Wood; Gold is decorative only) and specific crafting workstation requirements. Choosing the right gear for each settler and upgrading equipment as your colony advances is fundamental to survival. This guide compares every armor tier and weapon type, details crafting requirements, and provides optimal equipment recommendations for every stage of the game.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Armor Tier Comparison</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Armor in Going Medieval reduces incoming damage by a percentage based on the armor tier versus the attacker's weapon penetration. Higher-tier armor provides better protection and improved durability. Material quality follows Steel &gt; Iron &gt; Wood; Gold variants exist for Mail and Plate Armour but are decorative only — they provide identical protection to their Iron counterparts and should never be crafted for combat. All numerical values below are community estimates.
+                Armor in Going Medieval reduces incoming damage by a percentage based on the armor tier versus the attacker's weapon penetration. Higher-tier armor provides better protection and improved durability. Material quality follows Steel &gt; Iron &gt; Wood; Gold variants exist for Mail and Plate Armour but are decorative only — they provide identical protection to their Iron counterparts and should never be crafted for combat. All numerical values below are approximate.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -43,7 +42,6 @@ export default function ArmorWeaponsPage() {
                   <tr><td>Plate Armour (Steel)</td><td>Steel</td><td>~80% (est.)</td><td>~750 (est.)</td><td>~Steel x15, Leather x6 (est.)</td><td>Heavy</td><td>Endgame elite</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic mt-2">Data source: Community testing estimates. Gold Mail/Plate Armour variants exist but are decorative only — same stats as Iron.</p>
 
               <h3 className="font-display text-lg font-semibold text-ink mt-6 mb-3">Helmets</h3>
               <table className="parchment-table">
@@ -67,7 +65,6 @@ export default function ArmorWeaponsPage() {
                   <tr><td>Heretic Helmet</td><td>—</td><td>~30% (est.)</td><td>No (loot)</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic mt-2">Data source: Community testing estimates.</p>
 
               <h3 className="font-display text-lg font-semibold text-ink mt-6 mb-3">Shields</h3>
               <table className="parchment-table">
@@ -85,7 +82,6 @@ export default function ArmorWeaponsPage() {
                   <tr><td>Tower Shield</td><td>~60% (est.)</td><td>~300 (est.)</td><td>~Wood x4, Iron x2 (est.)</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic mt-2">Data source: Community testing estimates.</p>
 
               <h3 className="font-display text-lg font-semibold text-ink mt-6 mb-3">Non-Craftable Body Armour</h3>
               <p className="font-serif text-base text-ink-light leading-relaxed">
@@ -102,7 +98,7 @@ export default function ArmorWeaponsPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Weapon Comparison</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Weapon choice should be based on the settler's combat role, skill levels, and enemy types. Each weapon has distinct range, damage, speed, and special characteristics. Weapons are organized below by category — one-handed, two-handed, ranged, and siege — with craftable items listed first. All numerical values are community estimates.
+                Weapon choice should be based on the settler's combat role, skill levels, and enemy types. Each weapon has distinct range, damage, speed, and special characteristics. Weapons are organized below by category — one-handed, two-handed, ranged, and siege — with craftable items listed first. All numerical values are approximate.
               </p>
 
               <h3 className="font-display text-lg font-semibold text-ink mt-6 mb-3">One-Handed Melee Weapons</h3>
@@ -205,8 +201,6 @@ export default function ArmorWeaponsPage() {
                   <tr><td>Metal Battering Ram</td><td>~80-100 (est.)</td><td>Extreme</td><td>Very Slow</td><td>~Iron x6, Wood x4 (est.)</td><td>Endgame siege</td></tr>
                 </tbody>
               </table>
-
-              <p className="font-serif text-sm text-ink-muted italic mt-2">Data source: Community testing estimates. All numerical values are approximate.</p>
 
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Material quality matters for weapons too: Steel &gt; Iron &gt; Wood. A Steel Short Sword will outperform an Iron Falcon. Gold weapons exist but are decorative only — they deal the same damage as Iron equivalents. When choosing between craftable and non-craftable weapons, prioritize what your colony can produce reliably. Relying on loot drops for your frontline settlers' weapons creates a fragile equipment pipeline.

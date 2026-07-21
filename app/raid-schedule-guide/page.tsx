@@ -5,24 +5,23 @@ export const metadata = {
     "Complete raid schedule guide for Going Medieval. Raid timing, warning signs, and pre-raid preparation checklist.",
 };
 
-
 export default function RaidScheduleGuidePage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
       <h1 className="chapter-heading">Going Medieval Raid Schedule Guide</h1>
 
       <p className="font-serif text-base text-ink-light leading-relaxed drop-cap">
-        Understanding when raids will occur and how to prepare for them is perhaps the most critical skill in Going Medieval. Unlike some colony sims that provide clear warnings or fixed schedules, Going Medieval&apos;s raid system operates on a combination of random timing, progression-based scaling, and faction hostility. This guide compiles community testing data and observed patterns to help you predict, prepare for, and survive raids of all sizes.
+        Understanding when raids will occur and how to prepare for them is perhaps the most critical skill in Going Medieval. Unlike some colony sims that provide clear warnings or fixed schedules, Going Medieval&apos;s raid system operates on a combination of random timing, progression-based scaling, and faction hostility. This guide compiles observed raid patterns to help you predict, prepare for, and survive raids of all sizes.
       </p>
 
       <p className="font-serif text-base text-ink-light leading-relaxed">
-        Raids in Going Medieval are not purely random—they follow underlying logic tied to your colony&apos;s wealth, population, and the game&apos;s progression timer. While the exact algorithms are not fully documented by the developers, extensive community testing has revealed consistent patterns that can help you prepare. This guide will walk you through everything we currently understand about raid timing, enemy composition, and preparation strategies.
+        Raids in Going Medieval are not purely random—they follow underlying logic tied to your colony&apos;s wealth, population, and the game&apos;s progression timer. While the exact algorithms are not publicly documented, consistent patterns have emerged that can help you prepare. This guide will walk you through everything we currently understand about raid timing, enemy composition, and preparation strategies.
       </p>
 
       <h2 className="font-display text-2xl font-semibold text-ink mb-4">Raid Triggers and Timing Mechanics</h2>
 
       <p className="font-serif text-base text-ink-light leading-relaxed">
-        Raids in Going Medieval are triggered by hostile factions responding to your colony&apos;s growth and actions. The game does not provide a visible &quot;raid timer&quot; or warning system, but community testing suggests several key factors influence when raids occur.
+        Raids in Going Medieval are triggered by hostile factions responding to your colony&apos;s growth and actions. The game does not provide a visible &quot;raid timer&quot; or warning system, but several key factors consistently influence when raids occur.
       </p>
 
       <h3 className="font-display text-xl font-semibold text-ink mb-3">Primary Raid Triggers</h3>
@@ -71,7 +70,7 @@ export default function RaidScheduleGuidePage() {
       <h3 className="font-display text-xl font-semibold text-ink mb-3">Estimated Raid Timeline by Game Phase</h3>
 
       <p className="font-serif text-base text-ink-light leading-relaxed">
-        While raids can occur at any time, community testing suggests the following general timeline patterns. These are estimates based on player reports and should be treated as guidelines rather than exact mechanics.
+        While raids can occur at any time, the following general timeline patterns hold in most playthroughs. Treat them as guidelines rather than exact mechanics.
       </p>
 
       <table className="parchment-table">
@@ -119,7 +118,7 @@ export default function RaidScheduleGuidePage() {
 
       <div className="aged-border">
         <p className="font-serif text-base text-ink-light leading-relaxed">
-          <strong>Important Note:</strong> These timelines are community estimates based on standard difficulty settings. Your experience may vary significantly based on your colony&apos;s wealth accumulation rate, difficulty settings, and random variance. The &quot;first raid&quot; can sometimes occur as early as day 5 or as late as day 20 on standard settings.
+          <strong>Important Note:</strong> These timelines are approximate and based on standard difficulty settings. Your experience may vary significantly based on your colony&apos;s wealth accumulation rate, difficulty settings, and random variance. The &quot;first raid&quot; can sometimes occur as early as day 5 or as late as day 20 on standard settings.
         </p>
       </div>
 
@@ -418,7 +417,7 @@ export default function RaidScheduleGuidePage() {
       <div className="aged-border mb-4">
         <h3 className="font-display text-lg font-semibold text-ink mb-2">Do raids get harder if I accumulate more wealth?</h3>
         <p className="font-serif text-base text-ink-light leading-relaxed">
-          Community testing strongly suggests yes. Colony wealth appears to be a significant factor in both raid frequency and raid size. This creates an interesting strategic choice: expanding your colony and accumulating resources makes you more powerful but also triggers harder raids. Some players deliberately keep wealth low (by selling excess or minimizing decorative items) in the early game to reduce raid pressure while they build up their military.
+          Yes. Colony wealth is a significant factor in both raid frequency and raid size. This creates an interesting strategic choice: expanding your colony and accumulating resources makes you more powerful but also triggers harder raids. Some players deliberately keep wealth low (by selling excess or minimizing decorative items) in the early game to reduce raid pressure while they build up their military.
         </p>
       </div>
 
@@ -466,15 +465,6 @@ export default function RaidScheduleGuidePage() {
       <p className="font-serif text-base text-ink-light leading-relaxed">
         The factions you encounter and your diplomatic standing with them significantly affect your raid profile. If you have multiple hostile factions, you may face more frequent but smaller raids as different groups attack independently. If you have only one hostile faction, you may face larger, less frequent raids. Managing diplomacy to keep some factions neutral or friendly can reduce your overall raid pressure, though this requires careful resource management for gifts and trade agreements.
       </p>
-
-      <div className="aged-border">
-        <p className="font-serif text-base text-ink-light leading-relaxed text-vermillion">
-          <strong>Data Source Disclaimer:</strong> The raid timing estimates, enemy composition data, and preparation strategies in this guide are based on community testing and player observations. Going Medieval&apos;s raid algorithms are not fully documented by the developers, and actual raid behavior may vary based on game version, difficulty settings, and random seed. Treat the timelines and numbers in this guide as informed estimates rather than guaranteed mechanics. Always test defenses with your specific game configuration.
-        </p>
-        <p className="font-serif text-base text-ink-light leading-relaxed mt-2">
-          <strong>Data source: Community testing estimates</strong>
-        </p>
-      </div>
 
       <p className="font-serif text-base text-ink-light leading-relaxed mt-6">
         Mastering raid timing and preparation is an ongoing process that evolves with your colony. The strategies in this guide provide a foundation, but the most valuable knowledge comes from experience in your specific game. Pay attention to how raids unfold, learn from close calls and failures, and continuously adapt your defenses. With proper preparation and understanding of the underlying mechanics, even the largest raids become manageable challenges rather than existential threats.

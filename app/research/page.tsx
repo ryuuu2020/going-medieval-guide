@@ -19,7 +19,7 @@ export default function ResearchPage() {
             <section>
               <h1 className="chapter-heading">Research Tech Tree</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The research system is the key pathway to unlocking advanced buildings, weapons, and facilities in Going Medieval. Using research tables, you spend research points to progressively unlock technologies on the tech tree. A smart research order maximizes colony development efficiency with limited resources. This guide provides recommended unlock routes and detailed breakdowns of each tech branch. Data below is based on community compilation and is for reference only.
+                The research system is the key pathway to unlocking advanced buildings, weapons, and facilities in Going Medieval. Using research tables, you spend research points to progressively unlock technologies on the tech tree. A smart research order maximizes colony development efficiency with limited resources. This guide provides recommended unlock routes and detailed breakdowns of each tech branch.
               </p>
             </section>
 

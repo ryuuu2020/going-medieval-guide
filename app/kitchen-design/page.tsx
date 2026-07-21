@@ -4,7 +4,6 @@ export const metadata = {
     "Complete kitchen design guide for Going Medieval. Kitchen layout, cooking efficiency, meal quality, and food production optimization.",
 };
 
-
 export default function KitchenDesignPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function KitchenDesignPage() {
             <section>
               <h1 className="chapter-heading">Kitchen Design & Food Production Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The kitchen is your colony's engine of survival — without efficient food production, even the most well-defended fortress will collapse from within. Kitchen design in Going Medieval is about more than plunking down a campfire; it requires careful planning of stove placement, ingredient stockpile proximity, cook movement paths, and meal quality optimization. A well-designed kitchen doubles your cook's output per day, drastically reduces food spoilage, and elevates meal quality from basic survival rations to lavish meals and specialty dishes that generate active mood bonuses. Data below is based on community testing and is for reference only.
+                The kitchen is your colony's engine of survival — without efficient food production, even the most well-defended fortress will collapse from within. Kitchen design in Going Medieval is about more than plunking down a campfire; it requires careful planning of stove placement, ingredient stockpile proximity, cook movement paths, and meal quality optimization. A well-designed kitchen doubles your cook's output per day, drastically reduces food spoilage, and elevates meal quality from basic survival rations to lavish meals and specialty dishes that generate active mood bonuses.
               </p>
             </section>
 
@@ -33,7 +32,7 @@ export default function KitchenDesignPage() {
                 The campfire is your starting cooking station — it requires only wood for fuel and stone for construction, making it available from day one. However, campfires are less efficient than stoves: they produce only basic meals, cook slower than stoves, consume more fuel per meal, and may generate smoke issues in enclosed kitchens. The campfire should be placed outdoors or in a well-ventilated room with at least one open wall or a chimney shaft.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                The stove is a research-unlocked upgrade that represents a major leap in food production capability. Stoves cook significantly faster, consume fuel more efficiently, and crucially unlock advanced meal recipes that provide positive mood buffs. A stove requires iron ingots and stone to construct, so it's an early-mid game investment. Transition to a stove as soon as your colony reaches 5+ settlers — the efficiency gains are substantial. Exact speed/fuel ratios are community estimates.
+                The stove is a research-unlocked upgrade that represents a major leap in food production capability. Stoves cook significantly faster, consume fuel more efficiently, and crucially unlock advanced meal recipes that provide positive mood buffs. A stove requires iron ingots and stone to construct, so it's an early-mid game investment. Transition to a stove as soon as your colony reaches 5+ settlers — the efficiency gains are substantial. Exact speed/fuel ratios are approximate.
               </p>
             </section>
 
@@ -61,7 +60,7 @@ export default function KitchenDesignPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Cook Skill & Efficiency</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's Culinary skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food safety (lower skill may increase the risk of food-related illness). Assign your highest Culinary skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with high Culinary skill produces significantly more meals than a rotating-duty cook with low skill. Exact output multipliers are community estimates.
+                A settler's Culinary skill directly impacts meal output in three ways: cook speed (higher skill = faster cooking animations), meal quality tier (higher skill unlocks better recipes even with the same stove), and food safety (lower skill may increase the risk of food-related illness). Assign your highest Culinary skill settler as the dedicated cook and set cooking as their top work priority. A dedicated cook with high Culinary skill produces significantly more meals than a rotating-duty cook with low skill. Exact output multipliers are approximate.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Avoid task-switching penalties. A common mistake is assigning the cook to also haul, farm, or construct — every time they switch tasks, they lose productive cooking time moving between zones. Set your dedicated cook's work priorities so that Culinary is #1 and all other tasks are #4 or lower. This keeps them in the kitchen producing meals continuously. Supplement with a dedicated hauler who moves ingredients from main storage to the kitchen stockpile, so the cook never has to fetch supplies from the warehouse.
@@ -92,7 +91,6 @@ export default function KitchenDesignPage() {
                   <tr><td>Specialty Dishes</td><td>~12 (est.)</td><td>Yes</td><td>~+8 mood (est.)</td><td>Apple Pie, Honey Crispels, Redcurrant Pie, etc.</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The jump from basic meals to Stew is the most impactful upgrade in food production — it provides a reliable +4 mood buff to every settler who eats. Since settlers eat twice daily, this is the equivalent of a permanent +4 mood buff, which often makes the difference between a settler hovering at neutral versus positive mood. Target Stew as soon as you research and build your first stove.
               </p>
@@ -130,9 +128,6 @@ export default function KitchenDesignPage() {
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Butcher Table</h4><p className="font-serif text-xs text-ink-muted mt-1">Wood x5 | Process carcasses | No fuel needed</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Millstone</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x10 | Grain→Flour | Slow, assign skilled settler</p></div>
               </div>
-            </div>
-            <div className="journal-card p-5 mt-4">
-              <p className="font-serif text-xs text-ink-muted italic">Data verified against Going Medieval Wiki as of June 2026. Skill names and confirmed crops verified; meal names, recipe requirements, and specific numbers are community estimates.</p>
             </div>
             <div className="journal-card p-5">
               <h3 className="font-display text-base font-semibold text-ink mb-3">Kitchen Efficiency Checklist</h3>

@@ -4,7 +4,6 @@ export const metadata = {
     "Complete room design guide for Going Medieval. Room quality, bedroom layouts, great hall design, and comfort optimization.",
 };
 
-
 export default function RoomDesignPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function RoomDesignPage() {
             <section>
               <h1 className="chapter-heading">Room Design & Layout Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                In Going Medieval, a room is not just a four-walled enclosure — every dedicated room type provides specific gameplay bonuses that compound over time to create a thriving colony. The right room layout boosts settler mood, increases crafting speed, accelerates research, improves medical outcomes, and even increases the chance of converting prisoners. This guide covers all room types with their optimal sizes, required and recommended furniture, and the exact bonuses you can expect when you meet each room's quality threshold. Data below is based on community testing and is for reference only.
+                In Going Medieval, a room is not just a four-walled enclosure — every dedicated room type provides specific gameplay bonuses that compound over time to create a thriving colony. The right room layout boosts settler mood, increases crafting speed, accelerates research, improves medical outcomes, and even increases the chance of converting prisoners. This guide covers all room types with their optimal sizes, required and recommended furniture, and the exact bonuses you can expect when you meet each room's quality threshold.
               </p>
             </section>
 
@@ -42,7 +41,7 @@ export default function RoomDesignPage() {
                   <tr><td>Library</td><td>Research bench</td><td>5x5 to 6x6</td><td>Research speed</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-xs text-ink-muted italic">Note: "Library" as a distinct room type is NOT confirmed in the verified room type list. Research stations may simply function within Workshop or general rooms. Data source: Community testing estimates</p>
+              <p className="font-serif text-xs text-ink-muted italic">Note: "Library" as a distinct room type is not confirmed in the current room type list. Research stations may simply function within Workshop or general rooms.</p>
             </section>
 
             <section>

@@ -83,7 +83,7 @@ export default function SettlerTraitsTierListPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Settler Traits Tier List</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Settler traits in <em>Going Medieval</em> are random personality perks that can make a colonist indispensable or turn them into a liability. This tier list ranks all 48 verified traits from the game wiki, using cost, combat utility, productivity, and colony impact. Because traits are assigned randomly, always evaluate the <strong>full package</strong> — a terrible trait on a specialist you never need is less painful than a great trait on a settler with no matching skills.
+              Settler traits in <em>Going Medieval</em> are random personality perks that can make a colonist indispensable or turn them into a liability. This tier list ranks all 48 verified traits in the game, using cost, combat utility, productivity, and colony impact. Because traits are assigned randomly, always evaluate the <strong>full package</strong> — a terrible trait on a specialist you never need is less painful than a great trait on a settler with no matching skills.
             </p>
           </section>
 
@@ -315,7 +315,7 @@ export default function SettlerTraitsTierListPage() {
           <section>
             <div className="field-divider mb-4" />
             <p className="font-serif text-xs text-ink-muted italic">
-              Trait data verified against the Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026. Costs and effects may change with patches.
+              Costs and effects may change with patches.
             </p>
           </section>
 

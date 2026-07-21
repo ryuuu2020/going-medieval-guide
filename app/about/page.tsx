@@ -2,12 +2,16 @@ export const metadata = {
   title: "About Going Medieval Guide — Colony Sim Wiki",
   description:
     "Learn about the Going Medieval Guide project. Comprehensive colony sim strategies, guides, and wiki for Foxy Voxel's medieval survival game.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 
 export default function AboutPage() {
   return (
-      <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="flex-1 lg:max-w-[65%] space-y-10">
             <section>
@@ -28,9 +32,9 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Content Sources</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">How We Write</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Our guide content comes from multiple channels: 1) Community players' hands-on experience; 2) Official information released by the development team; 3) In-game testing and verification. All data notes its source, with some data being community estimates that may change with game updates.
+                Our guides are built from hands-on play and in-game testing, then re-checked whenever the game updates. Some values are approximate and may change with game updates.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 We continuously update guide content to keep pace with game version changes. If you find outdated or incorrect information in our guides, please let us know through community channels — we'll correct it promptly.
@@ -41,7 +45,7 @@ export default function AboutPage() {
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Disclaimer</h2>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  This site is an unofficial, non-profit community fan site with no affiliation to Going Medieval developer Foxy Voxel or its publisher. All game names, trademarks, and copyrights belong to their respective owners. Site content is for informational and educational purposes only and is not intended for commercial use. Guide data is based on community testing estimates and is for reference only; actual effects may differ from in-game values.
+                  This site is an unofficial, non-profit community fan site with no affiliation to Going Medieval developer Foxy Voxel or its publisher. All game names, trademarks, and copyrights belong to their respective owners. Site content is for informational and educational purposes only and is not intended for commercial use. Guide data is compiled from hands-on play and is for reference only; actual effects may differ from in-game values.
                 </p>
               </div>
             </section>
@@ -76,7 +80,7 @@ export default function AboutPage() {
               <div className="faq-item">
                 <details>
                   <summary>Is the guide data accurate?</summary>
-                  <p>We do our best to ensure data accuracy, but the game is continuously updated and some data may change with versions. All data notes "community estimate" or "community testing." If discrepancies exist, refer to actual in-game values.</p>
+                  <p>We do our best to ensure data accuracy, but the game is continuously updated and some data may change with versions. Some values are approximate. If discrepancies exist, refer to actual in-game values.</p>
                 </details>
               </div>
             </section>
@@ -129,11 +133,11 @@ export default function AboutPage() {
       "name": "Is the guide data accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We do our best to ensure data accuracy, but the game is continuously updated and some data may change with versions. All data notes \"community estimate\" or \"community testing.\" If discrepancies exist, refer to actual in-game values."
+        "text": "We do our best to ensure data accuracy, but the game is continuously updated and some data may change with versions. Some values are approximate. If discrepancies exist, refer to actual in-game values."
       }
     }
   ]
 }` }} />
-      </main>
+      </div>
   );
 }

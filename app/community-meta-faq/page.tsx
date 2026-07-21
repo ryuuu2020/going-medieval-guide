@@ -3,6 +3,10 @@ import Link from "next/link";
 export const metadata = {
   title: "Going Medieval Community FAQ — What the Game Is, Roadmap & Player Expectations | Going Medieval Guide",
   description: "Community-driven FAQ answering debated questions about Going Medieval: combat focus, RimWorld comparisons, roadmap features, and what to expect from early access.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const whatItIs = [
@@ -34,11 +38,18 @@ export default function CommunityMetaFaqPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="chapter-heading font-display text-4xl mb-2">
-        Community FAQ
+        Community Questions Archive
       </h1>
       <p className="text-ink-faded text-lg mb-8 drop-cap">
-        Going Medieval sparks strong opinions. On the subreddit, you will find passionate debates about what the game is, what it should be, and whether it delivers on its promises. This FAQ collects the community consensus — the questions that get asked every week and the answers that experienced players consistently give.
+        This page is a noindex reference sheet for repeated community debates, not a primary gameplay guide. Going Medieval sparks strong opinions around combat, pacing, and roadmap expectations, so this archive collects the questions that experienced players keep answering for newcomers who want context before they buy or restart a colony.
       </p>
+
+      <div className="bg-parchment-light rounded-lg p-5 mb-8">
+        <h2 className="font-display text-xl text-accent mb-3">When this page is useful</h2>
+        <p className="text-ink-light">
+          Read this archive when you want the big-picture player consensus: what kind of colony sim Going Medieval really is, where it still trails genre leaders, and which roadmap expectations are realistic. If you need practical help instead, jump to the Beginner Guide, castle layout routes, or defense pages linked below.
+        </p>
+      </div>
 
       {/* What the Game Is */}
       <h2 className="chapter-heading font-display text-2xl mt-10 mb-4">
@@ -158,12 +169,12 @@ export default function CommunityMetaFaqPage() {
           <li><Link href="/faq" className="text-accent hover:underline">Gameplay FAQ</Link></li>
           <li><Link href="/beginners" className="text-accent hover:underline">Beginner Guide</Link></li>
           <li><Link href="/beginner-walkthrough" className="text-accent hover:underline">Beginner Walkthrough (Day 1 to Year 1)</Link></li>
-          <li><Link href="/news" className="text-accent hover:underline">Latest News &amp; Updates</Link></li>
+          <li><Link href="/best-defense-layout" className="text-accent hover:underline">Best Defense Layout</Link></li>
           <li><Link href="/endgame-content" className="text-accent hover:underline">Endgame Content Guide</Link></li>
         </ul>
       </aside>
 
-      <p className="text-ink-faded text-sm mt-10">Last updated: July 2, 2026. Community consensus sourced from r/goingmedieval discussions and Steam reviews. Roadmap information from official developer communications.</p>
+      <p className="text-ink-faded text-sm mt-10">Last updated: July 9, 2026. Community consensus sourced from r/goingmedieval discussions and Steam reviews. Roadmap information from official developer communications.</p>
     </div>
   );
 }

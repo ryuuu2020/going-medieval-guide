@@ -277,7 +277,7 @@ export default function BestSeedMapPage() {
       </p>
 
       <p className="font-serif text-base text-ink-light leading-relaxed">
-        Beyond the broad map type, individual seeds within each category exhibit subcategories. Hill maps, for example, can generate as "Valley Like" (flat with a small hill), "V-Shaped Hill" (prominent central peak), "Small Center Hill" (defensible central position), "River" (with dry riverbeds), or "Unusual Features" (unique terrain generation). Understanding these subtypes helps you predict the general layout even before loading the map. Community resources like the Going Medieval Wiki catalog these variations with specific seed examples, making it easier to find exactly the terrain style you prefer.
+        Beyond the broad map type, individual seeds within each category exhibit subcategories. Hill maps, for example, can generate as "Valley Like" (flat with a small hill), "V-Shaped Hill" (prominent central peak), "Small Center Hill" (defensible central position), "River" (with dry riverbeds), or "Unusual Features" (unique terrain generation). Understanding these subtypes helps you predict the general layout even before loading the map. These variations are well catalogued with specific seed examples, making it easier to find exactly the terrain style you prefer.
       </p>
 
       <div className="aged-border my-6">
@@ -306,7 +306,7 @@ export default function BestSeedMapPage() {
         <div>
           <h3 className="font-display text-lg font-semibold text-ink mb-2">Can I create my own custom seeds?</h3>
           <p className="font-serif text-base text-ink-light leading-relaxed">
-            Absolutely! Going Medieval accepts any combination of letters and numbers as a seed code. Simply type whatever you want in the Random Seed box—your name, a meaningful date, a favorite word, or random characters. The game will generate a map based on that input. If you discover a particularly good custom seed, consider sharing it with the community on the official Going Medieval Discord or Fandom wiki. Many of the best seeds in this guide were discovered by players experimenting with custom codes.
+            Absolutely! Going Medieval accepts any combination of letters and numbers as a seed code. Simply type whatever you want in the Random Seed box—your name, a meaningful date, a favorite word, or random characters. The game will generate a map based on that input. If you discover a particularly good custom seed, consider sharing it with other players — many of the best seeds around were discovered by players experimenting with custom codes.
           </p>
         </div>
 
@@ -327,7 +327,7 @@ export default function BestSeedMapPage() {
 
       <div className="aged-border my-8">
         <p className="font-serif text-base text-ink-light leading-relaxed">
-          <strong className="text-ink">Disclaimer:</strong> Seed results may vary between game versions. Going Medieval is in Early Access development, and updates to the map generation system may alter how seeds generate. The seed codes and descriptions provided in this guide are based on community testing and may not produce identical results in future game versions. Always verify seeds in your current game version before committing to a long-term playthrough.
+          <strong className="text-ink">Disclaimer:</strong> Seed results may vary between game versions. Going Medieval is in Early Access development, and updates to the map generation system may alter how seeds generate. The seed codes and descriptions provided in this guide may not produce identical results in future game versions. Always verify seeds in your current game version before committing to a long-term playthrough.
         </p>
       </div>
 

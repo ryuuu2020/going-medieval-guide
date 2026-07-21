@@ -18,7 +18,7 @@ export default function UndergroundBasePage() {
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Digging into the earth is one of the most rewarding strategies in Going Medieval. An underground base leverages the natural insulation of stone, protects against surface raiders, and creates a temperature-stable environment that preserves food longer and keeps settlers comfortable year-round. However, underground living introduces unique challenges in lighting, food production, and structural stability management. Data below is based on community testing and is for reference only.
+                Digging into the earth is one of the most rewarding strategies in Going Medieval. An underground base leverages the natural insulation of stone, protects against surface raiders, and creates a temperature-stable environment that preserves food longer and keeps settlers comfortable year-round. However, underground living introduces unique challenges in lighting, food production, and structural stability management.
               </p>
             </section>
 

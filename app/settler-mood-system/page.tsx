@@ -1,190 +1,330 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Going Medieval Settler Mood System | Going Medieval Guide",
-  description: "Master the mood system in Going Medieval. Keep your colonists happy with needs fulfillment, recreation, and beautiful rooms.",
-  keywords: ["Going Medieval", "settler mood system", "guide", "tips", "build"],
+{/* Meta description: Going Medieval settler mood system — every documented mood modifier with values and durations, bedroom Impressiveness sleep bonuses, need-based penalties, and what actually happens at low mood. Data from the Going Medieval wiki. */}
+export const metadata = {
+  title: "Going Medieval Settler Mood System — Modifiers, Values & Thresholds (2026)",
+  description:
+    "How the Going Medieval settler mood system works: real mood modifier values and durations (Initial Optimism +25, Starving -20, Friend Died -25), bedroom Impressiveness sleep bonuses from Awful -4 to Palatial +12, need penalties, and what happens when mood hits zero.",
 };
 
-export default function Page() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the most important factor for settler mood system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I improve my settler mood system setup?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are common mistakes with settler mood system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance."
-        }
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens when mood gets low in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A settler with low mood can rebel and refuse to follow orders, and if a settler's mood reaches 0 they leave your settlement for good. Mood is the sum of every active modifier on the settler — needs penalties like Starving (-20) and Exhausted (-20) stack with event modifiers like Friend Died (-25 for 128 hours), so several problems at once can push a settler to zero surprisingly fast."
       }
-    ]
-  };
+    },
+    {
+      "@type": "Question",
+      "name": "What are the biggest positive mood modifiers in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The largest documented positives are Initial Optimism (+25 for 180 hours, which is why new settlers arrive happy), Together We Are Strong (+16 for 48 hours after helping someone in need), sleeping in a Palatial private chamber (+12 for 16 hours), Beautiful Surroundings (+10), eating in a Palatial great hall (+10 for 16 hours), and an Exquisite Meal (+8 for 8 hours). Reliable everyday positives are fulfilled entertainment and religious needs (+5 each), Job Satisfaction (+4 for 12 hours), and eating at a table (+4 for 12 hours)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a good bedroom improve mood in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 16-hour sleep modifier scales directly with the bedroom's Impressiveness tier. A private chamber runs from -4 (Awful) through 0 (Uninspiring), +2 (Modest), +4 (Good), +6 (Superior), +8 (Luxurious), +10 (Opulent) up to +12 (Palatial). A shared chamber pays exactly half, from -4 up to +6. Bed comfort is a separate 12-hour modifier from -1 (uncomfortable) to +6 (very comfortable), so the room and the bed stack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do mood modifiers stack in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — every active modifier adds to the settler's current mood, and each has its own duration. Modifiers range from short spikes like Drank Good Beer (+2, 4 hours) to marathon effects like Rival Died (+5, 128 hours) or Acquaintance Died (-10, 128 hours). Because they stack, a death in the colony can wipe out several days of good meals and nice rooms, which is why burying corpses quickly (Saw a Dead Body is -3 for 24 hours, Saw a Friend's Corpse is -4) matters so much after a raid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix a settler whose mood is crashing in Going Medieval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fix the biggest negative number first, not the easiest one. Hunger and sleep penalties dominate: Ravenous is -15 and Starving -20, Exhausted is -20, so food and rest outrank everything. Then clear event penalties — bury bodies, let grieving settlers ride out the 128-hour death modifiers. Only then add positives: schedule leisure so entertainment and religious needs flip from -8 deprived to +5 fulfilled, serve cooked meals (+4 to +8 for 8 hours), and move the settler into a better bedroom, which is worth up to +12 for 16 hours every single day."
+      }
+    }
+  ]
+};
 
+export default function SettlerMoodSystemPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Going Medieval Settler Mood System</h1>
+    <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
 
-      <div className="prose prose-invert max-w-none">
-        <p className="text-lg text-gray-300 mb-6">
-          Complete guide to settler mood system in Going Medieval. Learn proven strategies, avoid common mistakes, and dominate the medieval battlefield.
-        </p>
+      <h1 className="chapter-heading">Going Medieval Settler Mood System: Every Modifier, Every Number</h1>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Understanding settler mood system</h2>
-        <p>
-          In Going Medieval, mastering settler mood system is essential for survival and prosperity.
-          This guide covers everything you need to know, from basic concepts to advanced techniques.
-        </p>
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-6">
+        <span className="drop-cap">M</span>ood in Going Medieval is not a vibe — it is arithmetic. Every
+        settler carries a running total of named modifiers, each with a fixed value and duration, and the
+        game reads that total to decide whether your people work, rebel, or walk. A settler whose mood
+        drops low enough can refuse orders entirely, and at zero they simply leave your settlement. The
+        modifiers themselves are fully documented, so mood management stops being guesswork the moment
+        you know which levers are worth &plusmn;2 and which are worth &plusmn;20. This guide collects the
+        real numbers: the big positives, the killers, and the Impressiveness-scaled bonuses that quietly
+        do most of the daily work.
+      </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Key Strategies</h2>
-        <p>
-          Effective settler mood system requires careful planning and execution. Here are the most important strategies to implement:
-        </p>
-        <ul className="list-disc pl-6 mt-4 space-y-2">
-          <li><strong>Plan Ahead:</strong> Always think several steps ahead when designing your settler mood system strategy.</li>
-          <li><strong>Optimize Efficiency:</strong> Minimize waste and maximize output in every aspect of settler mood system.</li>
-          <li><strong>Adapt to Conditions:</strong> Be flexible and adjust your approach based on the situation.</li>
-          <li><strong>Use Data:</strong> Track performance metrics and use data to guide your decisions.</li>
-        </ul>
+      {/* Mechanics */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">How Mood Actually Works</h2>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Data Table: settler mood system Comparison</h2>
-        <div className="overflow-x-auto my-6">
-          <table className="w-full text-left border border-gray-700">
-            <thead className="bg-gray-800">
-              <tr>
-                <th className="p-3 border border-gray-700">Strategy</th>
-                <th className="p-3 border border-gray-700">Effectiveness</th>
-                <th className="p-3 border border-gray-700">Difficulty</th>
-                <th className="p-3 border border-gray-700">Resource Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="hover:bg-gray-800/50">
-                <td className="p-3 border border-gray-700">Basic Approach</td>
-                <td className="p-3 border border-gray-700">Medium</td>
-                <td className="p-3 border border-gray-700">Low</td>
-                <td className="p-3 border border-gray-700">Low</td>
-              </tr>
-              <tr className="hover:bg-gray-800/50">
-                <td className="p-3 border border-gray-700">Advanced Technique</td>
-                <td className="p-3 border border-gray-700">High</td>
-                <td className="p-3 border border-gray-700">Medium</td>
-                <td className="p-3 border border-gray-700">Medium</td>
-              </tr>
-              <tr className="hover:bg-gray-800/50">
-                <td className="p-3 border border-gray-700">Expert Strategy</td>
-                <td className="p-3 border border-gray-700">Very High</td>
-                <td className="p-3 border border-gray-700">High</td>
-                <td className="p-3 border border-gray-700">High</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        Each modifier on a settler adds or subtracts points for a set duration — from 4-hour beer buzzes
+        to 128-hour grief. They all stack, and the stack <em>is</em> the settler's mood. Two rules follow.
+        First, <strong className="text-ink">durations matter as much as values</strong>: a +8 that lasts
+        48 hours (Victorious!) is worth far more than a +8 that lasts 4. Second, the deep holes are
+        need-based — a starving, exhausted settler is carrying −40 before you count a single event, and
+        no amount of fine wine (+2, 4 hours) papers over that.
+      </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Step-by-Step Guide</h2>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">Step 1: Assessment</h3>
-        <p>
-          Begin by assessing your current situation. Identify your strengths, weaknesses, and available resources.
-          This will help you determine the best approach for your specific circumstances.
-        </p>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Planning</h3>
-        <p>
-          Develop a detailed plan based on your assessment. Consider all factors and create a roadmap for implementation.
-          Make sure to include contingency plans for unexpected situations.
-        </p>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">Step 3: Execution</h3>
-        <p>
-          Execute your plan with precision. Monitor progress closely and make adjustments as needed.
-          Stay flexible and be prepared to pivot if circumstances change.
-        </p>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">Step 4: Optimization</h3>
-        <p>
-          Once you've implemented your strategy, look for ways to optimize and improve.
-          Continuously refine your approach based on feedback and results.
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Advanced Tips</h2>
-        <p>
-          Take your settler mood system to the next level with these advanced tips:
-        </p>
-        <ul className="list-disc pl-6 mt-4 space-y-2">
-          <li>Combine multiple strategies for synergistic effects</li>
-          <li>Pay attention to seasonal changes and adapt accordingly</li>
-          <li>Invest in research to unlock new capabilities</li>
-          <li>Learn from experienced players and study successful examples</li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Common Mistakes to Avoid</h2>
-        <p>
-          Avoid these common pitfalls when working with settler mood system:
-        </p>
-        <ul className="list-disc pl-6 mt-4 space-y-2">
-          <li><strong>Poor Planning:</strong> Failing to plan adequately can lead to wasted resources and missed opportunities.</li>
-          <li><strong>Ignoring Efficiency:</strong> Not optimizing your approach can result in suboptimal performance.</li>
-          <li><strong>Lack of Flexibility:</strong> Being too rigid can make it difficult to adapt to changing conditions.</li>
-          <li><strong>Overlooking Details:</strong> Small details can have a big impact, so pay attention to everything.</li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Frequently Asked Questions</h2>
-
-        <div className="space-y-4 mt-4">
-          <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">What is the most important factor for settler mood system?</summary>
-            <p className="mt-2 text-gray-300">
-              The most important factor is understanding the game mechanics and planning ahead. Always consider your colony's specific needs and constraints.
-            </p>
-          </details>
-
-          <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">How do I improve my settler mood system setup?</summary>
-            <p className="mt-2 text-gray-300">
-              Focus on optimization and efficiency. Use data-driven approaches to refine your strategy and adapt to changing conditions.
-            </p>
-          </details>
-
-          <details className="p-4 bg-gray-800/50 rounded-lg">
-            <summary className="font-semibold cursor-pointer">What are common mistakes with settler mood system?</summary>
-            <p className="mt-2 text-gray-300">
-              Common mistakes include poor planning, ignoring efficiency, and not adapting to the situation. Always have a backup plan and monitor performance.
-            </p>
-          </details>
-        </div>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
-        <p>
-          Mastering settler mood system in Going Medieval takes time and practice, but the rewards are well worth the effort.
-          By following the strategies and tips in this guide, you'll be well on your way to becoming an expert.
-        </p>
-        <p className="mt-4">
-          Remember to stay patient, keep learning, and always look for ways to improve. Good luck with your medieval colony!
+      <div className="aged-border p-4 mb-8">
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          <strong>The floor is real:</strong> low mood can make a settler rebel and refuse orders; a mood
+          of zero makes them leave the settlement permanently. New arrivals start with Initial Optimism
+          (+25 for 180 hours), which is why fresh settlers seem easy to please — the bonus is temporary,
+          and their real baseline shows up a week later.
         </p>
       </div>
+
+      {/* Positive table */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">The Positive Levers, Ranked by Value</h2>
+
+      <table className="parchment-table mb-8">
+        <thead>
+          <tr>
+            <th>Modifier</th>
+            <th>Value</th>
+            <th>Duration</th>
+            <th>How to Trigger It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Initial Optimism</td><td>+25</td><td>180 h</td><td>Automatic for new settlers — spend the grace period building real comforts</td></tr>
+          <tr><td>Together We Are Strong</td><td>+16</td><td>48 h</td><td>Take in someone in need (sanctuary event)</td></tr>
+          <tr><td>Slept in own quarters (Palatial)</td><td>+12</td><td>16 h</td><td>Private chamber at the top Impressiveness tier</td></tr>
+          <tr><td>Beautiful surroundings</td><td>+10</td><td>While present</td><td>Keep living/working areas beautiful</td></tr>
+          <tr><td>Ate in great hall (Palatial)</td><td>+10</td><td>16 h</td><td>Meals in a Palatial great hall (scales down by tier)</td></tr>
+          <tr><td>Victorious!</td><td>+8</td><td>48 h</td><td>Survive and win a raid</td></tr>
+          <tr><td>Ate an Exquisite Meal</td><td>+8</td><td>8 h</td><td>High-quality cooked meals</td></tr>
+          <tr><td>Extremely comfortable</td><td>+8</td><td>While present</td><td>Comfortable surroundings/furnishings</td></tr>
+          <tr><td>Religious needs fulfilled</td><td>+5</td><td>While fulfilled</td><td>Shrine/chapel/temple of the settler's faith + leisure time</td></tr>
+          <tr><td>Entertainment needs fulfilled</td><td>+5</td><td>While fulfilled</td><td>Pastimes (e.g. backgammon) + scheduled leisure</td></tr>
+          <tr><td>Ate at a table</td><td>+4</td><td>12 h</td><td>Any table beats eating standing (+2) or on the move</td></tr>
+          <tr><td>Job Satisfaction</td><td>+4</td><td>12 h</td><td>Work matching the settler's job preferences</td></tr>
+          <tr><td>Slept in very comfortable bed</td><td>+6</td><td>12 h</td><td>Best beds; comfortable +4, nice +2, uncomfortable −1</td></tr>
+          <tr><td>Wonderful/pleasant dreams</td><td>+1 to +2</td><td>6–10 h</td><td>Random overnight — free, don't plan around it</td></tr>
+        </tbody>
+      </table>
+
+      {/* Negative table */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">The Killers: Biggest Negative Modifiers</h2>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        Negatives cluster in three families: <strong className="text-ink">unmet needs</strong> (fixable in
+        hours), <strong className="text-ink">grief and horror</strong> (fixable only by time and burial
+        detail), and <strong className="text-ink">discomfort</strong> (fixable by construction). Sorted by
+        damage:
+      </p>
+
+      <table className="parchment-table mb-8">
+        <thead>
+          <tr>
+            <th>Modifier</th>
+            <th>Value</th>
+            <th>Duration</th>
+            <th>Prevention / Fix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Friend Died</td><td>−25</td><td>128 h</td><td>Can't be prevented, only ridden out — pile on positives</td></tr>
+          <tr><td>Butchered someone I knew</td><td>−22</td><td>48 h</td><td>Never assign human butchering to friends of the dead</td></tr>
+          <tr><td>Starving / Losing HP</td><td>−20</td><td>While starving</td><td>Food security — see winter food storage</td></tr>
+          <tr><td>Exhausted / Losing consciousness</td><td>−20</td><td>While exhausted</td><td>More sleep hours in the daily schedule</td></tr>
+          <tr><td>Consumed human flesh</td><td>−20</td><td>48 h</td><td>Forbid human-meat meals in the manage panel</td></tr>
+          <tr><td>Ravenous</td><td>−15</td><td>While ravenous</td><td>Feed before it escalates to Starving</td></tr>
+          <tr><td>Banished friend</td><td>−15</td><td>48 h</td><td>Think twice before banishing settlers with friends</td></tr>
+          <tr><td>Acquaintance died</td><td>−10</td><td>128 h</td><td>Colony-wide after any death</td></tr>
+          <tr><td>Deprived of entertainment</td><td>−8</td><td>While deprived</td><td>Pastimes + leisure hours (lacking: −5)</td></tr>
+          <tr><td>Deprived of religious activities</td><td>−8</td><td>While deprived</td><td>Shrine of the right faith + leisure (lacking: −5)</td></tr>
+          <tr><td>Slept outside / in rain / in snow</td><td>−7</td><td>12 h</td><td>Any roofed bed; ground sleeping alone is −5</td></tr>
+          <tr><td>Freezing / Overheated</td><td>−8</td><td>While exposed</td><td>Seasonal clothing; chilly/sweaty are only −2</td></tr>
+          <tr><td>Lonely</td><td>−8</td><td>While lonely</td><td>Shared meals and social time</td></tr>
+          <tr><td>Saw a dead body / friend's corpse</td><td>−3 / −4</td><td>24 h</td><td>Bury or stockpile corpses far from living areas</td></tr>
+          <tr><td>Ugly apparel</td><td>−5</td><td>While worn</td><td>Tailor better clothing (elegant apparel: +5)</td></tr>
+        </tbody>
+      </table>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        Read the table as a triage order. Hunger (−2/−5/−15/−20 as it escalates) and tiredness
+        (−2/−8/−20) out-damage everything else combined, so the schedule and the pantry are your mood
+        system; rooms and recreation are multipliers on top of that foundation.
+      </p>
+
+      {/* Bedroom scaling */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">Rooms Are the Daily Engine: Impressiveness-Scaled Bonuses</h2>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        Three room bonuses scale with the room's Impressiveness tier, and they repeat every day, which
+        makes them the highest-leverage mood investment in the game. The sleep modifier lasts 16 hours —
+        two-thirds of a settler's waking life — and a private chamber pays exactly double a shared one:
+      </p>
+
+      <table className="parchment-table mb-6">
+        <thead>
+          <tr>
+            <th>Impressiveness Tier</th>
+            <th>Private Chamber (16 h)</th>
+            <th>Shared Chamber (16 h)</th>
+            <th>Great Hall Meal (16 h)</th>
+            <th>Temple / Chapel (12 h)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Awful</td><td>−4</td><td>−4</td><td>−2</td><td>−4</td></tr>
+          <tr><td>Uninspiring</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Modest</td><td>+2</td><td>+1</td><td>+1</td><td>+2</td></tr>
+          <tr><td>Good</td><td>+4</td><td>+2</td><td>+2</td><td>+3</td></tr>
+          <tr><td>Superior</td><td>+6</td><td>+3</td><td>+4</td><td>+4</td></tr>
+          <tr><td>Luxurious</td><td>+8</td><td>+4</td><td>+6</td><td>+5</td></tr>
+          <tr><td>Opulent</td><td>+10</td><td>+5</td><td>+8</td><td>+6</td></tr>
+          <tr><td>Palatial</td><td>+12</td><td>+6</td><td>+10</td><td>+7</td></tr>
+        </tbody>
+      </table>
+
+      <figure className="mb-8">
+        <img
+          src="/images/settler-mood-system.png"
+          alt="Grouped bar chart of Going Medieval 16-hour sleep mood modifiers by bedroom Impressiveness tier: private chambers rise from -4 at Awful to +12 at Palatial, shared chambers from -4 to +6, with private paying exactly double at every tier"
+          className="w-full rounded-lg border border-[#3d3528]"
+          loading="lazy"
+        />
+        <figcaption className="mt-2 text-center text-sm text-ink-light font-serif">
+          Sleep modifiers by bedroom tier. Private chambers pay double shared ones at every rung, and an
+          Awful room actively taxes the sleeper — the first upgrade is getting everyone to Modest or better.
+        </figcaption>
+      </figure>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        The tiers behind this table — Awful 0 through Palatial 6000, and the wealth/beauty/spaciousness
+        formula that produces them — are laid out in{' '}
+        <a href="/room-quality-system" className="text-vermillion hover:underline">room quality system</a>.
+        Note the trap at the bottom: an <em>Awful</em> bedroom, great hall, or chapel is worse than no
+        bonus at all, so a half-finished showpiece room can be a net negative until you finish it.
+      </p>
+
+      <div className="aged-border p-4 mb-8">
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          <strong>Worked example — one good day:</strong> a settler who sleeps in a Good private chamber
+          (+4, 16 h), eats two meals in a Good great hall (+2 each, 16 h), sits at a table (+4, 12 h),
+          works a preferred job (+4, 12 h) and has faith and fun covered (+5 each) is carrying roughly
+          +24 through the working day — enough to shrug off an acquaintance's death (−10) without
+          blinking. The same settler in an Awful shared room starts at −4 and has no cushion at all.
+        </p>
+      </div>
+
+      {/* Traits */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">Traits Bend the Curve</h2>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+        Perks shift both a settler's mood target and how fast mood moves, so two settlers in identical
+        conditions can sit at very different totals. Congenial settlers run a +15% mood target with 15%
+        slower mood change (stable and happy); Churl settlers run −20% with faster mood swings and worse
+        social interactions; Contemplative settlers take −30% but barely socialize. Content-relevant
+        trait modifiers also show up directly in the modifier list — a Precious settler takes −4 for
+        sleeping in shared quarters and −4 from jealousy when someone has a better bedroom, while weather
+        perks flip rain and snow from penalties into +8 bonuses. The full tier list is in{' '}
+        <a href="/settler-traits-tier-list" className="text-vermillion hover:underline">settler traits tier list</a>.
+      </p>
+
+      <p className="font-serif text-base text-ink-light leading-relaxed mb-8">
+        Practical takeaway: check the mood panel by <em>sorting the modifiers</em>, not by watching the
+        bar. The bar tells you someone is unhappy; the modifier list tells you it is −15 from hunger and
+        −4 from an ugly shirt, which is a cooking problem and a tailoring problem, not a mystery. Keep
+        needs green, bury your dead, and let the rooms do the slow compounding — that is the entire
+        system.
+      </p>
+
+      {/* FAQ Section */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">Frequently Asked Questions</h2>
+
+      <div className="aged-border p-4 mb-4">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2">What happens when mood gets low in Going Medieval?</h3>
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          A settler with low mood can rebel and refuse to follow orders, and if mood reaches 0 they leave
+          your settlement for good. Mood is the sum of every active modifier — Starving (−20) and
+          Exhausted (−20) stack with grief like Friend Died (−25 for 128 hours), so several problems at
+          once can push a settler to zero fast.
+        </p>
+      </div>
+
+      <div className="aged-border p-4 mb-4">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2">What are the biggest positive mood modifiers?</h3>
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          Initial Optimism (+25, 180 h) for new settlers, Together We Are Strong (+16, 48 h), a Palatial
+          private chamber (+12, 16 h), Beautiful Surroundings (+10), a Palatial great hall meal (+10,
+          16 h), and Exquisite Meals (+8, 8 h). The everyday workhorses are fulfilled entertainment and
+          religious needs (+5 each), Job Satisfaction (+4, 12 h), and eating at a table (+4, 12 h).
+        </p>
+      </div>
+
+      <div className="aged-border p-4 mb-4">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2">How much does a good bedroom improve mood?</h3>
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          The 16-hour sleep modifier scales with Impressiveness: private chambers run −4 (Awful) through
+          +2 (Modest), +4 (Good), +8 (Luxurious) up to +12 (Palatial); shared chambers pay exactly half,
+          topping out at +6. Bed comfort is a separate 12-hour modifier from −1 to +6, so the room and
+          the bed stack.
+        </p>
+      </div>
+
+      <div className="aged-border p-4 mb-4">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2">Do mood modifiers stack?</h3>
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          Yes — every active modifier adds to current mood with its own duration, from Drank Good Beer
+          (+2, 4 h) to Acquaintance Died (−10, 128 h). Because they stack, one death can erase days of
+          good meals and nice rooms, which is why burying corpses quickly (Saw a Dead Body is −3 for
+          24 h) matters so much after a raid.
+        </p>
+      </div>
+
+      <div className="aged-border p-4 mb-8">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2">How do I fix a settler whose mood is crashing?</h3>
+        <p className="font-serif text-base text-ink-light leading-relaxed">
+          Fix the biggest number first: hunger and sleep penalties (Ravenous −15, Starving −20, Exhausted
+          −20) outrank everything, so food and rest come before luxuries. Then clear event penalties —
+          bury bodies, ride out the 128-hour grief. Finally add positives: schedule leisure so
+          entertainment and religion flip from −8 to +5, serve cooked meals, and upgrade the bedroom,
+          worth up to +12 for 16 hours a day.
+        </p>
+      </div>
+
+      {/* Related Guides */}
+      <h2 className="font-display text-2xl font-semibold text-ink mb-4">Related Guides</h2>
+      <ul className="list-disc pl-6 mb-8 space-y-2 font-serif text-base text-ink-light">
+        <li><a href="/room-quality-system" className="text-vermillion hover:underline">Room Quality System — the Impressiveness tiers behind room mood bonuses</a></li>
+        <li><a href="/mood-management-guide" className="text-vermillion hover:underline">Mood Management Guide — day-to-day stability routines</a></li>
+        <li><a href="/happiness-guide" className="text-vermillion hover:underline">Happiness Guide — the long game on morale</a></li>
+        <li><a href="/bedroom-layout" className="text-vermillion hover:underline">Bedroom Layout — private chambers worth +12 a day</a></li>
+        <li><a href="/great-hall" className="text-vermillion hover:underline">Great Hall — meals that pay mood for 16 hours</a></li>
+        <li><a href="/settler-schedule-template" className="text-vermillion hover:underline">Settler Schedule Template — sleep and leisure hours that prevent the −20s</a></li>
+        <li><a href="/religion-guide" className="text-vermillion hover:underline">Religion Guide — turning faith from −8 deprived into +5 fulfilled</a></li>
+        <li><a href="/recreation-scheduling" className="text-vermillion hover:underline">Recreation Scheduling — entertainment needs without lost work</a></li>
+        <li><a href="/settler-traits-tier-list" className="text-vermillion hover:underline">Settler Traits Tier List — perks that bend the mood curve</a></li>
+        <li><a href="/winter-food-storage" className="text-vermillion hover:underline">Winter Food Storage — never see Starving −20 again</a></li>
+      </ul>
+
+      <p className="font-serif text-sm text-ink-muted leading-relaxed mt-8 pt-4" style={{ borderTop: '1px solid var(--border)' }}>
+        Last updated: July 19, 2026. Game mechanics may change with future updates.
+      </p>
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    </div>
+    </main>
   );
 }

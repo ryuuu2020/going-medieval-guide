@@ -5,7 +5,6 @@ export const metadata = {
     "Complete drawbridge defense guide for Going Medieval. Gate design, retraction mechanics, and fortification strategies.",
 };
 
-
 export default function DrawbridgeDefensePage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -16,7 +15,7 @@ export default function DrawbridgeDefensePage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Drawbridge Defense Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              A drawbridge is not a single building in Going Medieval — it is a tactical concept. The game does not feature an animated, chain-raised bridge structure, but it does allow settlers to construct bridges over moats and ditches, and those bridges can be deconstructed or destroyed mid-raid. This destroyable crossing is the closest equivalent to a historical drawbridge, and it is one of the most powerful defensive levers in the game. By building exactly one bridge across your moat and removing it at the right moment, you convert a vulnerability into a killing field. Raiders stranded on a broken bridge are sitting targets for your archers; raiders on the far side must path around the entire moat, funneling directly into your trap corridors and killbox. This guide covers every verified drawbridge mechanic — bridge construction, destroyable segments, moat integration, kill zone design, and the tactical timing of bridge removal during raids. Every recommendation is based on real game mechanics. Data below is based on community testing and is for reference only.
+              A drawbridge is not a single building in Going Medieval — it is a tactical concept. The game does not feature an animated, chain-raised bridge structure, but it does allow settlers to construct bridges over moats and ditches, and those bridges can be deconstructed or destroyed mid-raid. This destroyable crossing is the closest equivalent to a historical drawbridge, and it is one of the most powerful defensive levers in the game. By building exactly one bridge across your moat and removing it at the right moment, you convert a vulnerability into a killing field. Raiders stranded on a broken bridge are sitting targets for your archers; raiders on the far side must path around the entire moat, funneling directly into your trap corridors and killbox. This guide covers every verified drawbridge mechanic — bridge construction, destroyable segments, moat integration, kill zone design, and the tactical timing of bridge removal during raids. Every recommendation is based on real game mechanics.
             </p>
           </section>
 
@@ -64,7 +63,6 @@ export default function DrawbridgeDefensePage() {
                 <tr><td>Clay Brick Floor</td><td>Medium</td><td>Clay Brick x1</td><td>Medium</td><td>Transitional bridges, early-mid game</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4 mt-4">
               The choice of bridge material has tactical implications beyond durability. A wooden bridge can be destroyed by a single settler with a melee weapon in seconds during a raid — you do not even need to wait for the full deconstruction action. Stone bridges require significantly more time and effort to remove, which can be fatal if you need to cut the bridge mid-combat. Always use wood for your drawbridge crossing. If you need a permanent, non-tactical bridge for settler logistics, build it elsewhere — never on your defensive perimeter.
             </p>
@@ -98,7 +96,6 @@ export default function DrawbridgeDefensePage() {
                 <tr><td>Dry Moat (3+ tiles)</td><td>Wider gap, maximum safety margin</td><td>Forced to long detour around perimeter</td><td>Extended — longer exposure time</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
           </section>
 
           {/* ── Kill Zone Design ── */}
@@ -179,7 +176,7 @@ export default function DrawbridgeDefensePage() {
           {/* ── Last Updated ── */}
           <section>
             <p className="font-serif text-sm text-ink-muted italic">
-              Last updated: June 2026. Data source: Community testing estimates. Game mechanics verified against Going Medieval 1.0. Strategies may change with future patches.
+              Last updated: June 2026. Game mechanics verified against Going Medieval 1.0. Strategies may change with future patches.
             </p>
           </section>
 

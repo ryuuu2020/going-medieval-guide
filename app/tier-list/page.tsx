@@ -234,13 +234,6 @@ export default function TierListPage() {
               <p className="font-serif text-sm text-ink-muted italic">Rankings consider cost-to-durability ratio, tactical versatility, and how well each defense scales into late-game scenarios.</p>
             </section>
 
-            {/* ── Verification note ── */}
-            <section>
-              <div className="field-divider mb-4" />
-              <p className="font-serif text-xs text-ink-muted italic">
-                Data verified against Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
-              </p>
-            </section>
 
             {/* ── Back to Home ── */}
             <section>

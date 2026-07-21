@@ -4,7 +4,6 @@ export const metadata = {
     "Complete great hall guide for Going Medieval. Room design, decoration, mood bonuses, and maximizing settler happiness.",
 };
 
-
 export default function GreatHallPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,14 +12,14 @@ export default function GreatHallPage() {
             <section>
               <h1 className="chapter-heading">Great Hall Guide: Maximize Happiness</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                The Great Hall is the heart of your colony — the single room that provides more mood bonuses than any other structure in Going Medieval. When properly designed, a Great Hall transforms every meal into a happiness-increasing event, provides recreation during idle hours, and serves as the social hub where settlers gather to chat, celebrate, and recover from the stresses of colony life. A poorly designed Great Hall, on the other hand, compounds negative mood: settlers eating in the dark on the floor will spiral into mental breakdowns faster than any raid can inflict. This guide covers dimensions, furniture, lighting, and the mechanics behind settler gathering. Data below is based on community testing and is for reference only.
+                The Great Hall is the heart of your colony — the single room that provides more mood bonuses than any other structure in Going Medieval. When properly designed, a Great Hall transforms every meal into a happiness-increasing event, provides recreation during idle hours, and serves as the social hub where settlers gather to chat, celebrate, and recover from the stresses of colony life. A poorly designed Great Hall, on the other hand, compounds negative mood: settlers eating in the dark on the floor will spiral into mental breakdowns faster than any raid can inflict. This guide covers dimensions, furniture, lighting, and the mechanics behind settler gathering.
               </p>
             </section>
 
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Optimal Dimensions and Room Size</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                The Great Hall's size directly determines its quality tier. The game calculates room quality based on a combination of size, cleanliness, furniture count, and decoration value. The minimum functional size is roughly 5x5 interior tiles, which accommodates a table, four chairs, and a torch — community reports suggest this may produce a "basic" Great Hall bonus. Larger sizes produce progressively better quality tiers. The ideal size for a late-game Great Hall is spacious enough for a large table cluster, multiple braziers, wall decorations, musical instruments, and a dedicated sideboard area for meal pickup. Exact size thresholds and mood bonuses are community estimates.
+                The Great Hall's size directly determines its quality tier. The game calculates room quality based on a combination of size, cleanliness, furniture count, and decoration value. The minimum functional size is roughly 5x5 interior tiles, which accommodates a table, four chairs, and a torch — this typically produces a "basic" Great Hall bonus. Larger sizes produce progressively better quality tiers. The ideal size for a late-game Great Hall is spacious enough for a large table cluster, multiple braziers, wall decorations, musical instruments, and a dedicated sideboard area for meal pickup. Exact size thresholds and mood bonuses are approximate.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
                 Wall material and flooring both contribute to Great Hall quality. Stone walls provide a base quality bonus over wood walls. The floor should be upgraded progressively: dirt floor → stone floor → wood plank floor → tile floor, with each upgrade contributing significantly to room quality calculations. A carpeted Great Hall (research unlock) with tile walls is the ceiling-tier build that generates the maximum possible room happiness bonus. Pillar placement matters in larger halls — for anything wider than 7 tiles, place a row of decorative stone pillars down the center, which doubles as torch-mounting infrastructure.
@@ -52,7 +51,6 @@ export default function GreatHallPage() {
                   <tr><td>Sideboard / Shelf</td><td>1-2</td><td>Meal staging area</td><td>Low</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

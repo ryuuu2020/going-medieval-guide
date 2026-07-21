@@ -21,7 +21,7 @@ export default function IronSmeltingPage() {
             <section>
               <h1 className="chapter-heading">Iron Smelting Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Metal production is one of the most important industrial chains in Going Medieval. Iron, the most common metal, serves as the backbone for weapons, armor, tools, and advanced structures. Mastering the smelting process — from locating iron deposits to efficiently producing steel ingots — transforms your colony from a wooden fort into a stone-and-steel fortress capable of withstanding the most brutal raids. This guide covers every aspect of iron smelting with real game data from community testing. Data below is based on community compilation and is for reference only.
+                Metal production is one of the most important industrial chains in Going Medieval. Iron, the most common metal, serves as the backbone for weapons, armor, tools, and advanced structures. Mastering the smelting process — from locating iron deposits to efficiently producing steel ingots — transforms your colony from a wooden fort into a stone-and-steel fortress capable of withstanding the most brutal raids. This guide covers every aspect of iron smelting with real game data.
               </p>
             </section>
 

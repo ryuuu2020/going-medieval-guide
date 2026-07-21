@@ -4,7 +4,6 @@ export const metadata = {
     "Complete settler skills guide for Going Medieval. Skill training, specialization strategies, and optimal skill assignments.",
 };
 
-
 export default function SettlerSkillsPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function SettlerSkillsPage() {
           <section>
             <h1 className="chapter-heading">Settler Skills & Specialization Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Your settlers' skills are the engine that powers your entire colony. Every task — from mining stone to baking bread, from researching technology to fending off raiders — scales with the relevant skill level. Understanding the 14 core skills, how they level up, and how to specialize settlers into effective roles is the single most impactful strategic decision you can make. This guide covers every skill in detail, the passion and interest system, dual-specialization strategies, and how to prevent skill decay. Data below is based on community compilation and is for reference only.
+              Your settlers' skills are the engine that powers your entire colony. Every task — from mining stone to baking bread, from researching technology to fending off raiders — scales with the relevant skill level. Understanding the 14 core skills, how they level up, and how to specialize settlers into effective roles is the single most impactful strategic decision you can make. This guide covers every skill in detail, the passion and interest system, dual-specialization strategies, and how to prevent skill decay.
             </p>
           </section>
 
@@ -48,7 +47,6 @@ export default function SettlerSkillsPage() {
                 <tr><td className="font-semibold">Animal Handling</td><td>Taming wild animals, feeding, training, fishing (Job: Fish)</td><td>Calm, Optimistic</td><td>Low</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
           </section>
 
           <section>
@@ -142,13 +140,6 @@ export default function SettlerSkillsPage() {
             </div>
           </section>
 
-          {/* Verification note */}
-          <section>
-            <div className="field-divider mb-4" />
-            <p className="font-serif text-xs text-ink-muted italic">
-              Data verified against Going Medieval Wiki (goingmedieval.fandom.com) as of June 2026.
-            </p>
-          </section>
         </div>
 
         <aside className="lg:w-[35%] space-y-8 shrink-0">

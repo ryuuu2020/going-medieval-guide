@@ -4,7 +4,6 @@ export const metadata = {
     "Complete bedroom layout guide for Going Medieval. Maximize settler comfort, mood bonuses, and room quality for better productivity.",
 };
 
-
 export default function BedroomLayoutPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function BedroomLayoutPage() {
             <section>
               <h1 className="chapter-heading">Bedroom Layout Guide: Settler Comfort</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Bedrooms are where your settlers spend roughly one-third of their lives, and the quality of those bedrooms dictates the mood they carry into every waking hour. A comfortable, well-furnished bedroom generates positive mood bonuses that compound over the full day; a cramped, dark, dirty sleeping spot creates negative mood that can push a settler into a mental break before breakfast. This guide covers solo versus shared bedrooms, optimal dimensions, furniture progression, temperature impact on sleep quality, and the special requirements for noble settlers who demand luxury quarters. Data below is based on community testing and is for reference only.
+                Bedrooms are where your settlers spend roughly one-third of their lives, and the quality of those bedrooms dictates the mood they carry into every waking hour. A comfortable, well-furnished bedroom generates positive mood bonuses that compound over the full day; a cramped, dark, dirty sleeping spot creates negative mood that can push a settler into a mental break before breakfast. This guide covers solo versus shared bedrooms, optimal dimensions, furniture progression, temperature impact on sleep quality, and the special requirements for noble settlers who demand luxury quarters.
               </p>
             </section>
 
@@ -56,7 +55,6 @@ export default function BedroomLayoutPage() {
                   <tr><td>7x7</td><td>Luxurious</td><td>~+5 (est.)</td><td>Noble bedroom minimum (unverified if nobles exist)</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The 5x5 bedroom is the sweet spot for cost-effectiveness. It fits a bed, bedside table, torch, brazier, and one decoration (banner or rug) while triggering the "comfortable" size bonus. Upgrading to 6x6 adds room for a second decoration and improved ventilation but costs 11 additional wall segments and floor tiles per room — a significant resource commitment for colonies of 8+ settlers.
               </p>

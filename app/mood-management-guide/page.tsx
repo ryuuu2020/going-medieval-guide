@@ -5,7 +5,6 @@ export const metadata = {
     "Complete mood management guide for Going Medieval. Prevent mental breaks, manage settler needs, and maintain colony stability.",
 };
 
-
 export default function MoodManagementGuidePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -14,7 +13,7 @@ export default function MoodManagementGuidePage() {
             <section>
               <h1 className="chapter-heading">Going Medieval Mood Management Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Mood is the single most important stat in Going Medieval. It represents your settlers&apos; happiness, and unlike skills or attributes it shifts every waking minute — every meal eaten, every night slept, every corpse stumbled past pushes the number up or down. The game does not use a fixed base mood: a settler&apos;s current mood is the live sum of every active modifier, positive and negative, stacked on top of each other. Keep that sum high and your colony hums along with productive, cooperative workers. Let it slide toward zero and the same settlers will rebel, refuse orders, and — at mood zero — walk off the map forever. This guide breaks down the real mood mechanics, the highest-value positive modifiers, the threats that drag morale into the dirt, and the scheduling and design habits that prevent mental breaks. Data below is based on community testing estimates cross-referenced with the Going Medieval wiki.
+                Mood is the single most important stat in Going Medieval. It represents your settlers&apos; happiness, and unlike skills or attributes it shifts every waking minute — every meal eaten, every night slept, every corpse stumbled past pushes the number up or down. The game does not use a fixed base mood: a settler&apos;s current mood is the live sum of every active modifier, positive and negative, stacked on top of each other. Keep that sum high and your colony hums along with productive, cooperative workers. Let it slide toward zero and the same settlers will rebel, refuse orders, and — at mood zero — walk off the map forever. This guide breaks down the real mood mechanics, the highest-value positive modifiers, the threats that drag morale into the dirt, and the scheduling and design habits that prevent mental breaks.
               </p>
             </section>
 
@@ -32,7 +31,7 @@ export default function MoodManagementGuidePage() {
                 </p>
               </div>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4 mb-4">
-                The table below summarizes the documented consequence thresholds. The exact numeric breakpoints are community estimates, but the behaviors — refusing orders, rebelling, and desertion at zero — are confirmed game mechanics.
+                The table below summarizes the documented consequence thresholds. The exact numeric breakpoints are approximate, but the behaviors — refusing orders, rebelling, and desertion at zero — are confirmed game mechanics.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -51,7 +50,6 @@ export default function MoodManagementGuidePage() {
                   <tr><td>0</td><td>Desertion</td><td>Settler leaves the settlement permanently</td><td>Too late — settler is gone</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>
@@ -83,7 +81,6 @@ export default function MoodManagementGuidePage() {
                   <tr><td>Job satisfaction</td><td>+4</td><td>12 hrs</td><td>Assign settlers to skills they excel at</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4 mb-4">
                 The strategy that pays the largest dividend is the <strong>bedroom + Great Hall + cooked meal</strong> triangle. A settler who sleeps in a palatial solo bedroom (+12), eats a lavish meal in a palatial Great Hall (+10 +8), and sits down to do it (+4) banks roughly +34 mood before any other modifier is counted. That margin survives a raid, an injury, even a bereavement. By contrast, a settler who sleeps on the ground outside (-7), eats raw food (-3), and has no entertainment (-8) is already at -18 before anything goes wrong — the first corpse they see (-3) pushes them into the rebellious range.
               </p>
@@ -124,7 +121,6 @@ export default function MoodManagementGuidePage() {
                   <tr><td>Lonely (social need)</td><td>-8</td><td>Ongoing</td><td>Let settlers gather in the Great Hall</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
                   <strong className="text-vermillion">&#9888; Cannibalism Trap:</strong> Eating cooked human meat gives +8 to a cannibal-believer but -10 (or -20 for raw) to a settler who realizes what they ate. If you must cook human meat to survive, open the Management panel and forbid it for everyone except settlers whose faith explicitly endorses it — otherwise a single meal can trigger a multi-settler mood collapse.
@@ -186,11 +182,6 @@ export default function MoodManagementGuidePage() {
               </div>
             </section>
 
-            <section>
-              <p className="font-serif text-sm text-ink-muted italic">
-                Data source: Community testing estimates. Mood modifier values and durations are drawn from the Going Medieval wiki and cross-checked against community reports; exact thresholds and the precise impressiveness scoring curves may change between game updates. Always verify current behavior against the in-game Needs panel and room Stats tab.
-              </p>
-            </section>
           </div>
         </div>
       </main>

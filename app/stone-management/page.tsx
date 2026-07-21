@@ -6,7 +6,6 @@ export const metadata = {
     "Complete stone management guide for Going Medieval. Stone cutting, masonry, construction applications, and resource efficiency.",
 };
 
-
 export default function StoneManagementPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
@@ -17,7 +16,7 @@ export default function StoneManagementPage() {
             <section>
               <h1 className="chapter-heading">Stone Management Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Stone is the most valuable building material in Going Medieval—the foundation of your walls, floors, and defensive fortifications. But efficient stone management requires understanding the differences between limestone, claystone, and ironstone; optimizing quarry layouts; organizing stockpiles for maximum efficiency; and mastering the stone-to-block conversion ratio. This comprehensive guide covers everything you need to turn raw rock into a fortress. Data below is based on community testing and is for reference only.
+                Stone is the most valuable building material in Going Medieval—the foundation of your walls, floors, and defensive fortifications. But efficient stone management requires understanding the differences between limestone, claystone, and ironstone; optimizing quarry layouts; organizing stockpiles for maximum efficiency; and mastering the stone-to-block conversion ratio. This comprehensive guide covers everything you need to turn raw rock into a fortress.
               </p>
             </section>
 
@@ -42,7 +41,6 @@ export default function StoneManagementPage() {
                   <tr><td>Ironstone</td><td>Dark grey with rust spots</td><td>~1 block + iron ore</td><td>Iron production, reinforced walls</td><td>Hard</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Limestone is your primary construction stone—abundant, high yield, and perfect for walls. Claystone is softer and yields fewer blocks, making it less efficient for bulk construction but useful for interior projects where aesthetics matter. Ironstone is the most valuable—it produces both stone blocks and iron ore simultaneously, making it a dual-purpose mining target that supplies both your building and smithing needs.
               </p>
@@ -82,7 +80,7 @@ export default function StoneManagementPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Stone-to-Block Conversion Ratio</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Understanding the stone-to-block conversion is critical for production planning. The stonecutter's bench processes raw stone chunks into usable stone blocks. The exact conversion ratio varies by stone type and worker skill level — the values below are community estimates based on player testing.
+                Understanding the stone-to-block conversion is critical for production planning. The stonecutter's bench processes raw stone chunks into usable stone blocks. The exact conversion ratio varies by stone type and worker skill level — the values below are approximate, based on observed gameplay.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -99,7 +97,6 @@ export default function StoneManagementPage() {
                   <tr><td>1 Ironstone Chunk</td><td>~1 Block + 1 Iron Ore</td><td>~1 Block + 2 Iron Ore</td><td>~40 sec</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Key insight: Assign your highest-Crafting-skill settler to the stonecutter's bench. The skill-based output multiplier means a higher-skill crafter produces significantly more blocks from the same raw stone as a lower-skill crafter. Over a large quarrying operation, this difference amounts to hundreds of extra stone blocks.
               </p>
@@ -138,7 +135,7 @@ export default function StoneManagementPage() {
             <div className="field-sidebar-block">
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Stone Quick Ref</h3>
               <div className="space-y-3">
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stone Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">~4 Stone Blocks | HP: community estimate</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stone Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">~4 Stone Blocks | HP: approximate</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stone Floor</h4><p className="font-serif text-xs text-ink-muted mt-1">~2 Stone Blocks | Cleanliness bonus</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stone Staircase</h4><p className="font-serif text-xs text-ink-muted mt-1">~6 Stone Blocks | Level connector</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Stone Pillar</h4><p className="font-serif text-xs text-ink-muted mt-1">~3 Stone Blocks | Ceiling support</p></div>

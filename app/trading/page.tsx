@@ -4,7 +4,6 @@ export const metadata = {
     "Complete trading system guide for Going Medieval. Merchant visits, best trade goods, and profit maximization strategies.",
 };
 
-
 export default function TradingPage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -13,7 +12,7 @@ export default function TradingPage() {
             <section>
               <h1 className="chapter-heading">Trading System</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Trade is an important avenue in Going Medieval for acquiring scarce resources and offloading surplus goods. Periodically visiting merchants carry various wares — you can trade with them using silver coins or via barter. Mastering trade techniques can be a lifeline when resources are scarce and a way to monetize surplus when you're flush. Data below is based on community compilation and is for reference only.
+                Trade is an important avenue in Going Medieval for acquiring scarce resources and offloading surplus goods. Periodically visiting merchants carry various wares — you can trade with them using silver coins or via barter. Mastering trade techniques can be a lifeline when resources are scarce and a way to monetize surplus when you're flush.
               </p>
             </section>
 
@@ -37,7 +36,6 @@ export default function TradingPage() {
                   <tr><td>Herbalist</td><td>Herbs, medicine, medical supplies</td><td>Precious metals, gems</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
             </section>
 
             <section>

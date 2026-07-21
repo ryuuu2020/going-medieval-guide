@@ -4,7 +4,6 @@ export const metadata = {
     "Complete crossbow defense guide for Going Medieval. Crossbowman positioning, load time management, and elite marksman strategies.",
 };
 
-
 export default function CrossbowDefensePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -42,7 +41,6 @@ export default function CrossbowDefensePage() {
                   <tr><td>Best Against</td><td>Light/unarmored enemies</td><td>Heavily armored enemies</td><td>Depends</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The takeaway: longbows dominate against lightly-armored bandits and animal raids through sustained fire. Crossbows shine against the late-game heavily-armored opponents that longbow arrows simply bounce off. A mixed squad of 4 longbow archers and 2 crossbow marksmen covers all threat types.
               </p>

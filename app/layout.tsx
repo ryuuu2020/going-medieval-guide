@@ -29,6 +29,13 @@ export const metadata: Metadata = {
   description:
       "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Going Medieval Guide — Colony Sim Strategy Wiki" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Going Medieval Guide — Colony Sim Strategy Wiki",
+    description: "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -41,13 +48,13 @@ const NAV_LINKS = [
   { label: "Farming", href: "/farming" },
   { label: "Defense", href: "/defense" },
   { label: "Beginner Guide", href: "/beginners" },
-  { label: "Tips", href: "/tips" },
-  { label: "News", href: "/news" },
+  { label: "Tier List", href: "/tier-list" },
+  { label: "Base Layout", href: "/base-layout" },
 ];
 
 const SIDEBAR_LINKS = [
   { label: "Beginner's Guide", href: "/beginners", desc: "Build your colony from scratch" },
-  { label: "30 Pro Tips", href: "/tips", desc: "Essential strategies for advanced players" },
+  { label: "Best Defense Layout", href: "/best-defense-layout", desc: "Layered kill zones and wall planning" },
   { label: "Production Chains", href: "/production-chain-optimization", desc: "Resource flow & workshop optimization" },
   { label: "Colony Efficiency", href: "/colony-efficiency-benchmarks", desc: "Settler ratios & production targets" },
   { label: "Seasons Survival Guide", href: "/seasons", desc: "Managing temperature extremes year-round" },
@@ -97,10 +104,10 @@ gtag('config', 'G-ET6778V62K');`}
   "@type": "WebSite",
   "name": "Going Medieval Guide",
   "description": "The ultimate Going Medieval guide and wiki. Master colony survival with in-depth guides on buildings, research, settlers, farming, defense, and more.",
-  "url": "https://going-medieval-guide.vercel.app",
+  "url": "https://goingmedieval.gguidehub.com",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://going-medieval-guide.vercel.app/?q={search_term_string}",
+    "target": "https://goingmedieval.gguidehub.com/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }`,
@@ -113,8 +120,8 @@ gtag('config', 'G-ET6778V62K');`}
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Game Guide Hub",
-  "url": "https://going-medieval-guide.vercel.app",
-  "logo": "https://going-medieval-guide.vercel.app/og-image.jpg"
+  "url": "https://goingmedieval.gguidehub.com",
+  "logo": "https://goingmedieval.gguidehub.com/og-image.png"
 }`,
           }}
         />
@@ -165,21 +172,21 @@ gtag('config', 'G-ET6778V62K');`}
               <p className="sidebar-stats-source">Data source: Steam community estimates</p>
             </div>
 
-            {/* Community News */}
+            {/* Colony Priorities */}
             <div>
-              <h3 className="sidebar-heading">Community News</h3>
+              <h3 className="sidebar-heading">Colony Priorities</h3>
               <div className="flex flex-col gap-2">
                 <div>
-                  <span className="sidebar-news-date">2026.06</span>
-                  <p className="sidebar-news-item">1.0 launch review: massive content expansion, new biomes arrive</p>
+                  <span className="sidebar-news-date">Spring</span>
+                  <p className="sidebar-news-item">Rush food, shelter, and a cold cellar before your first weather swing.</p>
                 </div>
                 <div>
-                  <span className="sidebar-news-date">2026.05</span>
-                  <p className="sidebar-news-item">Community Mod tools released, custom content surges</p>
+                  <span className="sidebar-news-date">Summer</span>
+                  <p className="sidebar-news-item">Convert early safety into workshops, brick production, and stable hauling routes.</p>
                 </div>
                 <div>
-                  <span className="sidebar-news-date">2026.03</span>
-                  <p className="sidebar-news-item">1.0 full release launches with new trading system and underground exploration</p>
+                  <span className="sidebar-news-date">Winter</span>
+                  <p className="sidebar-news-item">Shift labor into defense, indoor production, and mood protection before raids scale up.</p>
                 </div>
               </div>
             </div>
@@ -239,10 +246,10 @@ gtag('config', 'G-ET6778V62K');`}
                 <section className="footer-guides">
                   <h3 className="footer-guides-title">More Game Guides</h3>
                   <div className="footer-guides-links">
-                    <a href="https://menace-guide.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">MENACE Guide</a>
-                    <a href="https://olden-era-guide-tau.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Olden Era Guide</a>
-                    <a href="https://dispatch-guide-sigma.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Dispatch Guide</a>
-                    <a href="https://solarpunk-game-wiki.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Solarpunk Guide</a>
+                    <a href="https://menace.gguidehub.com" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">MENACE Guide</a>
+                    <a href="https://oldenera.gguidehub.com" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Olden Era Guide</a>
+                    <a href="https://dispatch.gguidehub.com" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Dispatch Guide</a>
+                    <a href="https://solarpunk.gguidehub.com" target="_blank" rel="noopener noreferrer" className="btn-primary footer-guide-link">Solarpunk Guide</a>
                   </div>
                 </section>
 
@@ -250,6 +257,7 @@ gtag('config', 'G-ET6778V62K');`}
                 <div className="footer-links">
                   <Link href="/about" className="footer-link">About</Link>
                   <Link href="/privacy" className="footer-link">Privacy</Link>
+                  <a href="https://gguidehub.com/contact" className="footer-link">Contact</a>
                   <Link href="/terms" className="footer-link">Terms</Link>
                   <Link href="/faq" className="footer-link">FAQ</Link>
                   <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener" className="footer-support-link">Support us on UniFans</a>
@@ -264,7 +272,7 @@ gtag('config', 'G-ET6778V62K');`}
                   <p className="footer-eeat-text">
                     <strong>Sources:</strong> All guides are based on the <a href="https://goingmedievalwiki.com/" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Going Medieval Wiki</a>, <a href="https://store.steampowered.com/app/1029780/?curator_clanid=46198091" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Steam patch notes</a>, and 200+ hours of gameplay testing. Data numbers are community estimates — always verify in-game.
                   </p>
-                  <p className="footer-eeat-updated">Last updated: June 2026 (verified for Game Version 0.4.x)</p>
+                  <p className="footer-eeat-updated">Last updated: July 2026 (verified against the 1.0 release environment and current community testing)</p>
                 </div>
               </div>
 

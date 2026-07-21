@@ -6,7 +6,6 @@ export const metadata = {
     "Complete work priorities and schedule guide for Going Medieval. Optimize settler productivity, task assignment, and time management.",
 };
 
-
 export default function WorkPrioritiesPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
@@ -47,7 +46,6 @@ export default function WorkPrioritiesPage() {
                   <tr><td>5 - Disabled</td><td>Never perform this task</td><td>Tasks you never want this settler touching</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The golden rule: every settler should have exactly ONE priority 1 task. This is their primary job. Spread priority 1 tasks across different settlers—never assign the same priority 1 task to multiple settlers unless the workload demands it (e.g., two farmers for a large farm). Overlapping priority 1s among settlers create confusion and inefficiency rather than speed.
               </p>

@@ -5,7 +5,6 @@ export const metadata = {
     "Complete storage optimization guide for Going Medieval. Stockpile placement, organization strategies, and hauling efficiency tips.",
 };
 
-
 export default function StorageOptimizationPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -100,7 +99,7 @@ export default function StorageOptimizationPage() {
         </p>
 
         <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-          Several factors influence the temperature of your storage room. <strong>Depth</strong> is the first consideration: building underground or into a hillside provides natural insulation from the overhead soil layer. Community testing suggests that each layer of soil above the room reduces temperature, though the effect diminishes beyond 2–3 layers. For practical early-game design, digging just one layer down provides noticeable benefit without excessive labor cost. <strong>Room size</strong> also matters: larger rooms hold more stable, cooler temperatures because they avoid the &quot;heat trap&quot; effect of small enclosed spaces. A spacious cellar performs noticeably better than a cramped 3×3 closet.
+          Several factors influence the temperature of your storage room. <strong>Depth</strong> is the first consideration: building underground or into a hillside provides natural insulation from the overhead soil layer. Each layer of soil above the room reduces temperature, though the effect diminishes beyond 2–3 layers. For practical early-game design, digging just one layer down provides noticeable benefit without excessive labor cost. <strong>Room size</strong> also matters: larger rooms hold more stable, cooler temperatures because they avoid the &quot;heat trap&quot; effect of small enclosed spaces. A spacious cellar performs noticeably better than a cramped 3×3 closet.
         </p>
 
         <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
@@ -238,7 +237,7 @@ export default function StorageOptimizationPage() {
         <div className="aged-border p-5 mb-4">
           <h3 className="font-display text-xl font-semibold text-ink mb-2">How deep do I need to dig for an effective cold storage room?</h3>
           <p className="font-serif text-base text-ink-light leading-relaxed">
-            For practical purposes, digging just one layer below the surface provides meaningful temperature reduction and is attainable in the early game without massive labor investment. Each additional layer of soil above the room provides diminishing returns—community testing shows roughly 0.2–0.3°C improvement per extra layer. A depth of two to three layers is ideal for late-game optimization, but don&apos;t delay building your first cellar waiting for the &quot;perfect&quot; depth. The combination of depth, proper wall/floor materials, and room size matters more than depth alone.
+            For practical purposes, digging just one layer below the surface provides meaningful temperature reduction and is attainable in the early game without massive labor investment. Each additional layer of soil above the room provides diminishing returns—roughly 0.2–0.3°C improvement per extra layer. A depth of two to three layers is ideal for late-game optimization, but don&apos;t delay building your first cellar waiting for the &quot;perfect&quot; depth. The combination of depth, proper wall/floor materials, and room size matters more than depth alone.
           </p>
         </div>
 
@@ -275,12 +274,6 @@ export default function StorageOptimizationPage() {
         <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
           Remember that storage optimization is not just about efficiency—it&apos;s also about resilience. A well-stocked, well-organized colony can weather sieges, harsh winters, and food shortages that would devastate a disorganized settlement. The time you invest in thoughtful storage design pays dividends in villager survival, morale, and productivity. Use the strategies in this guide as a foundation, then adapt them to your unique base layout, playstyle, and the specific challenges of your chosen biome.
         </p>
-
-        <div className="aged-border p-4 mt-6">
-          <p className="font-serif text-sm text-ink-muted leading-relaxed">
-            <strong>Data source:</strong> Community testing estimates. Going Medieval&apos;s exact spoilage rate formulas and temperature calculations are not fully documented by the developer. Values provided in this guide are based on player-reported testing and may vary with game version updates. Always verify mechanics in your own game when making critical storage decisions.
-          </p>
-        </div>
       </section>
 
     </main>

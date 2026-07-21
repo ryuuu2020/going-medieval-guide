@@ -173,7 +173,7 @@ export default function WallUpgradeGuidePage() {
         </ul>
       </aside>
 
-      <p className="text-ink-faded text-sm mt-10">Last updated: July 2, 2026. Upgrade mechanics verified against Going Medieval current build. Safe method confirmed by r/goingmedieval community testing.</p>
+      <p className="text-ink-faded text-sm mt-10">Last updated: July 2, 2026. Upgrade mechanics verified against Going Medieval current build.</p>
     </div>
   );
 }

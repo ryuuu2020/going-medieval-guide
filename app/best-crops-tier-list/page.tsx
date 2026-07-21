@@ -229,7 +229,7 @@ export default function BestCropsTierListPage() {
           <section>
             <div className="field-divider mb-4" />
             <p className="font-serif text-xs text-ink-muted italic">
-              Data verified against Going Medieval Wiki (goingmedieval.fandom.com) and community testing as of June 2026. Crop growth rates are community estimates and may vary slightly with game version, settler botany skill, soil fertility, and biome type.
+              Crop growth rates may vary slightly with game version, settler botany skill, soil fertility, and biome type.
             </p>
           </section>
 

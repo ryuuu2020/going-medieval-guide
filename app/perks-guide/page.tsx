@@ -14,7 +14,7 @@ export default function PerksGuidePage() {
             <h1 className="chapter-heading">Settler Traits & Perks Guide</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: 'var(--color-accent)' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> Going Medieval settlers possess traits and perks that affect their skills, mood, and work efficiency. However, <strong>specific trait names, exact numerical bonuses, and complete trait lists are community-documented</strong> and may vary between game versions. This guide focuses on general trait categories and evaluation strategies confirmed through the Going Medieval Wiki (goingmedieval.fandom.com) and community observation. Do not assume traits from other colony sims (e.g., RimWorld) exist in Going Medieval — the trait systems are different games with different designs.
+                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> Going Medieval settlers possess traits and perks that affect their skills, mood, and work efficiency. However, <strong>specific trait names, exact numerical bonuses, and complete trait lists may vary between game versions</strong>. This guide focuses on general trait categories and evaluation strategies. Do not assume traits from other colony sims (e.g., RimWorld) exist in Going Medieval — the trait systems are different games with different designs.
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
@@ -194,7 +194,7 @@ export default function PerksGuidePage() {
             <div className="faq-item">
               <details>
                 <summary>How many traits does each settler have?</summary>
-                <p>Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system. Community documentation on the Going Medieval Wiki (goingmedieval.fandom.com) tracks known traits and their effects across versions.</p>
+                <p>Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system, as known traits and their effects change across versions.</p>
               </details>
             </div>
             <div className="faq-item">
@@ -206,7 +206,7 @@ export default function PerksGuidePage() {
             <div className="faq-item">
               <details>
                 <summary>Where can I find a complete list of Going Medieval traits?</summary>
-                <p>The Going Medieval Wiki (goingmedieval.fandom.com) maintains a community-documented list of known traits, their effects, and which game versions they appear in. Keep in mind that Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates. For the most current information, check the wiki and cross-reference with what you see in your own game. Steam community guides may also contain up-to-date trait documentation.</p>
+                <p>Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates, so no static list stays complete for long. For the most current information, cross-reference any trait list with what you see in your own game.</p>
               </details>
             </div>
           </section>
@@ -236,7 +236,7 @@ export default function PerksGuidePage() {
           </div>
           <div className="aged-border p-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
             <p className="font-serif text-xs text-ink leading-relaxed">
-              <strong className="text-vermillion">Version Note:</strong> Going Medieval is in Early Access. Trait names, exact numerical effects, and trait availability change between game versions. Traits documented on the Going Medieval Wiki (goingmedieval.fandom.com) reflect community observation and may not match the current live version. Always check settler traits in-game before making decisions. Do not assume traits from other games exist in Going Medieval.
+              <strong className="text-vermillion">Version Note:</strong> Going Medieval is in Early Access. Trait names, exact numerical effects, and trait availability change between game versions. Documented trait lists may not match the current live version. Always check settler traits in-game before making decisions. Do not assume traits from other games exist in Going Medieval.
             </p>
           </div>
         </aside>
@@ -266,7 +266,7 @@ export default function PerksGuidePage() {
       "name": "How many traits does each settler have?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system. Community documentation on the Going Medieval Wiki (goingmedieval.fandom.com) tracks known traits and their effects across versions."
+        "text": "Settlers in Going Medieval typically have 2-4 traits, with a mix of positive and negative. The exact number and distribution depend on the game version. Early Access games frequently adjust trait generation balance. Observe your settlers' trait panels to understand the current version's system, as known traits and their effects change across versions."
       }
     },
     {
@@ -282,7 +282,7 @@ export default function PerksGuidePage() {
       "name": "Where can I find a complete list of Going Medieval traits?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Going Medieval Wiki (goingmedieval.fandom.com) maintains a community-documented list of known traits, their effects, and which game versions they appear in. Keep in mind that Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates. For the most current information, check the wiki and cross-reference with what you see in your own game. Steam community guides may also contain up-to-date trait documentation."
+        "text": "Going Medieval is in Early Access — traits may be added, removed, rebalanced, or renamed between updates, so no static list stays complete for long. For the most current information, cross-reference any trait list with what you see in your own game."
       }
     }
   ]

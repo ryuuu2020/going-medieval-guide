@@ -19,7 +19,7 @@ export default function SettlersPage() {
             <section>
               <h1 className="chapter-heading">Settler Management</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Settlers are your colony's core asset. Each settler has unique skills, personality traits, and needs. Properly assigning work, managing mood, and meeting basic needs are the keys to running an efficient colony. This guide covers the skill system, mood management, and needs system in detail to help you build a high-performing settler team. Data below is based on community compilation and is for reference only.
+                Settlers are your colony's core asset. Each settler has unique skills, personality traits, and needs. Properly assigning work, managing mood, and meeting basic needs are the keys to running an efficient colony. This guide covers the skill system, mood management, and needs system in detail to help you build a high-performing settler team.
               </p>
             </section>
 
@@ -48,7 +48,6 @@ export default function SettlersPage() {
                   <tr><td>Social</td><td>Trading, Recruiting</td><td>Affects trade prices and recruitment success rate</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community compilation</p>
             </section>
 
             <section>

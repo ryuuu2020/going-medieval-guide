@@ -14,7 +14,7 @@ export default function SteamAchievementsPage() {
             <h1 className="chapter-heading">Steam Achievements Guide</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> This guide documents what is known about Going Medieval's Steam achievements based on community observation and the Going Medieval Wiki (goingmedieval.fandom.com). The exact number, names, and unlock conditions of achievements are <strong>not fully verified</strong> and may change between game versions. This page does <strong>not</strong> contain a fabricated achievement list — it offers general achievement-hunting strategies applicable to the game. For the complete, official achievement list, check the <strong>Steam achievements page</strong> for Going Medieval (Steam App 1029780).
+                  <strong className="text-vermillion">&#9888; IMPORTANT:</strong> This guide documents what is known about Going Medieval's Steam achievements based on hands-on observation. The exact number, names, and unlock conditions of achievements are <strong>not fully verified</strong> and may change between game versions. This page does <strong>not</strong> contain a fabricated achievement list — it offers general achievement-hunting strategies applicable to the game. For the complete, official achievement list, check the <strong>Steam achievements page</strong> for Going Medieval (Steam App 1029780).
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">

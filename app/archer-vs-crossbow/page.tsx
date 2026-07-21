@@ -5,7 +5,6 @@ export const metadata = {
     "Complete comparison of archers vs crossbows in Going Medieval. Range, damage, accuracy, and best use cases for each.",
 };
 
-
 export default function ArcherVsCrossbowPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -103,6 +102,19 @@ export default function ArcherVsCrossbowPage() {
           matters. Late game, quality (crossbow penetration) dominates.
         </p>
       </div>
+
+      <figure className="mb-8">
+        <img
+          src="/images/archer-vs-crossbow-dps.png"
+          alt="Chart comparing damage by weapon quality and attack duration versus sustained DPS for Short Bow, Longbow, Crossbow and Heavy Crossbow in Going Medieval"
+          className="w-full rounded-lg border border-[#3d3528]"
+          loading="lazy"
+        />
+        <figcaption className="mt-2 text-center text-sm text-ink-light font-serif">
+          Left: per-hit damage by weapon quality. Right: attack duration vs. sustained DPS at Good quality —
+          the Longbow leads on raw speed, the Heavy Crossbow wins per hit.
+        </figcaption>
+      </figure>
 
       {/* Range and Accuracy Section */}
       <h2 className="font-display text-2xl font-semibold text-ink mb-4">Range and Accuracy</h2>
@@ -426,10 +438,8 @@ export default function ArcherVsCrossbowPage() {
       </div>
 
       <p className="font-serif text-sm text-ink-muted leading-relaxed mt-8 pt-4" style={{ borderTop: '1px solid var(--border)' }}>
-        Data source: Community testing estimates based on Going Medieval game files (version 0.22+).
-        Weapon stats reflect in-game values; tactical recommendations are derived from player experience.
-        Game mechanics may change with future updates. Cross-referenced from the Going Medieval Community Wiki
-        and Foxy Voxel developer patch notes.
+        Weapon stats reflect in-game values (version 0.22+); tactical recommendations are derived
+        from player experience. Game mechanics may change with future updates.
       </p>
 
     </main>

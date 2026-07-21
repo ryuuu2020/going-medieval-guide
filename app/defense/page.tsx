@@ -59,7 +59,6 @@ export default function DefensePage() {
                   <tr><td>Pitfall</td><td>30</td><td>None (digging)</td><td>Permanent</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Trap placement tips: Densely pack wooden spike traps 2 tiles ahead of gates — raiders will continuously trigger them while breaking the gate. Pitfalls are best placed outside walls to slow enemy advance. Note that settlers can also trigger traps, so plan safe movement routes.
               </p>

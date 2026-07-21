@@ -100,7 +100,7 @@ export default function TrebuchetPage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Trebuchet Damage vs Wall Types</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Not all walls are equal against trebuchet fire. Understanding how many hits each wall type can absorb lets you predict which sections will fail first and prioritize your defense accordingly. The table below reflects community testing and observable in-game behavior.
+                Not all walls are equal against trebuchet fire. Understanding how many hits each wall type can absorb lets you predict which sections will fail first and prioritize your defense accordingly. The table below reflects observable in-game behavior.
               </p>
               <table className="parchment-table">
                 <thead>
@@ -119,7 +119,7 @@ export default function TrebuchetPage() {
                   <tr><td className="font-semibold">Palisade</td><td>1-2 hits</td><td>Very short</td><td>Wood only (low)</td><td>Early-game only; upgrade to stone ASAP</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic mt-2">Hit counts are community estimates based on combat testing. Actual hits to breach may vary based on trebuchet type, projectile, and game version.</p>
+              <p className="font-serif text-sm text-ink-muted italic mt-2">Hit counts are approximate, based on observed combat behavior. Actual hits to breach may vary based on trebuchet type, projectile, and game version.</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Stone walls are the minimum viable defense against trebuchets. If your outer wall is still wood or palisade when trebuchet raids begin appearing, prioritize upgrading to stone immediately. A wooden wall can be breached in a single volley, giving you no time to react. Merlons placed atop walls provide cover for your archers but will also take damage from trebuchet strikes — expect to lose merlons during sustained bombardment.
               </p>

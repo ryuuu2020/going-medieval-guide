@@ -19,7 +19,7 @@ export default function BuildingsPage() {
             <section>
               <h1 className="chapter-heading">Building System In-Depth</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Building is one of the core systems in Going Medieval. From a simple wooden hut to a grand stone fortress, your building quality directly determines your colony's survivability and defensive strength. This guide covers wall types, room requirements, structural stability, and multi-story construction techniques to help you build an impenetrable medieval settlement. All data is based on community estimates and may change with game updates.
+                Building is one of the core systems in Going Medieval. From a simple wooden hut to a grand stone fortress, your building quality directly determines your colony's survivability and defensive strength. This guide covers wall types, room requirements, structural stability, and multi-story construction techniques to help you build an impenetrable medieval settlement. All data is approximate and may change with game updates.
               </p>
             </section>
 
@@ -46,7 +46,6 @@ export default function BuildingsPage() {
                   <tr><td>Iron Wall</td><td>800</td><td>Iron Ingot x3</td><td>Very High</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
             </section>
 
             <section>

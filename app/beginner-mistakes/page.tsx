@@ -5,7 +5,6 @@ export const metadata = {
     "Avoid these 10 common beginner mistakes in Going Medieval. Base building errors, defense flaws, and how to fix them early.",
 };
 
-
 export default function BeginnerMistakesPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -65,7 +64,7 @@ export default function BeginnerMistakesPage() {
         </p>
         <div className="aged-border p-4 rounded mb-4">
           <p className="font-serif text-base text-ink-light leading-relaxed">
-            <strong>Data source:</strong> Community testing estimates indicate that underground storage can extend food shelf life by 300-400% compared to surface storage during summer months. Actual results may vary based on biome and depth of storage.
+            Underground storage can extend food shelf life by 300-400% compared to surface storage during summer months. Actual results vary with biome and storage depth.
           </p>
         </div>
       </section>
@@ -125,7 +124,7 @@ export default function BeginnerMistakesPage() {
         </p>
         <div className="aged-border p-4 rounded mb-4">
           <p className="font-serif text-base text-ink-light leading-relaxed">
-            <strong>Data source:</strong> Community testing estimates suggest that crops planted at least 15 days before the end of the growing season have an 80%+ chance of reaching harvestable maturity. Planting within 10 days of season end carries significant failure risk.
+            Crops planted at least 15 days before the end of the growing season have an 80%+ chance of reaching harvestable maturity. Planting within 10 days of season end carries significant failure risk.
           </p>
         </div>
       </section>
@@ -207,9 +206,6 @@ export default function BeginnerMistakesPage() {
             </tbody>
           </table>
         </div>
-        <p className="font-serif text-base text-ink-muted leading-relaxed mt-4">
-          <strong>Data source:</strong> Information compiled from community testing, developer patch notes, and player reports. Specific values such as mood penalties and crop growing times may vary based on game version and difficulty settings.
-        </p>
       </section>
 
       {/* FAQ Section */}
@@ -255,13 +251,6 @@ export default function BeginnerMistakesPage() {
           <li><a href="/farming" className="text-vermillion hover:underline">Farming Guide</a> — Maximize your crop yields</li>
           <li><a href="/defense" className="text-vermillion hover:underline">Defense Guide</a> — Build impenetrable fortifications</li>
         </ul>
-      </section>
-
-      {/* Disclaimer */}
-      <section className="mt-8 mb-8">
-        <p className="font-serif text-sm text-ink-muted leading-relaxed italic">
-          <strong>Data source disclaimer:</strong> The gameplay mechanics, mood modifiers, and strategy recommendations in this guide are based on community testing estimates, player reports, and publicly available information. Values such as mood penalties, crop growing times, and defense bonuses may vary based on game version, difficulty settings, and individual playthrough RNG. Always verify critical information in-game, as patches may change mechanics. This guide reflects the game state as of 2026.
-        </p>
       </section>
 
     </main>

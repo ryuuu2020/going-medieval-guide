@@ -6,7 +6,6 @@ export const metadata = {
     "Complete clay and brick production guide for Going Medieval. Clay sourcing, brick mold, kiln setup, and construction applications.",
 };
 
-
 export default function ClayBrickPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-parchment)' }}>
@@ -17,7 +16,7 @@ export default function ClayBrickPage() {
             <section>
               <h1 className="chapter-heading">Clay & Brick Production Guide</h1>
               <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-                Clay and brick production is the bridge between early-game wooden hovels and late-game stone fortresses in Going Medieval. Clay bricks offer superior durability, better insulation, and improved fire resistance compared to wood, while being far more accessible than stone in the early-to-mid game. This guide covers clay gathering locations, brick kiln setup, the clay brick versus stone wall comparison, and how to build an optimal brick production pipeline. Data below is based on community testing and is for reference only.
+                Clay and brick production is the bridge between early-game wooden hovels and late-game stone fortresses in Going Medieval. Clay bricks offer superior durability, better insulation, and improved fire resistance compared to wood, while being far more accessible than stone in the early-to-mid game. This guide covers clay gathering locations, brick kiln setup, the clay brick versus stone wall comparison, and how to build an optimal brick production pipeline.
               </p>
             </section>
 
@@ -42,7 +41,6 @@ export default function ClayBrickPage() {
                   <tr><td>Underground Clay Vein</td><td>2-4 clay</td><td>Pickaxe or Shovel</td><td>Hills, Mountain</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 Designate a gathering zone over clay patches and assign a settler with the Mining labor enabled. Clay gathering is faster than stone mining—each clay tile yields resources in about half the time of stone extraction. One dedicated clay gatherer can supply enough raw clay to keep a brick kiln operating at full capacity.
               </p>
@@ -92,9 +90,8 @@ export default function ClayBrickPage() {
                   <tr><td>Availability</td><td>Widespread near water</td><td>Biome dependent</td><td>Universal</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
-                Verdict: Clay brick is the superior mid-game choice for colonies on maps with abundant clay (river, marsh biomes). It provides significantly more durability than wood at a manageable production cost. Stone walls are the long-term upgrade target, but clay brick walls serve as an excellent intermediate step that can carry your colony through the mid-game while you build up stone production infrastructure. Exact HP values are community estimates and may vary by game version.
+                Verdict: Clay brick is the superior mid-game choice for colonies on maps with abundant clay (river, marsh biomes). It provides significantly more durability than wood at a manageable production cost. Stone walls are the long-term upgrade target, but clay brick walls serve as an excellent intermediate step that can carry your colony through the mid-game while you build up stone production infrastructure. Exact HP values are approximate and may vary by game version.
               </p>
             </section>
 
@@ -119,7 +116,7 @@ export default function ClayBrickPage() {
               <div className="faq-item">
                 <details>
                   <summary>Can I skip brick and go straight to stone walls?</summary>
-                  <p>Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are community estimates).</p>
+                  <p>Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are approximate).</p>
                 </details>
               </div>
               <div className="faq-item">
@@ -142,7 +139,7 @@ export default function ClayBrickPage() {
               <h3 className="font-display text-lg font-semibold text-ink mb-4">Brick Production Quick Ref</h3>
               <div className="space-y-3">
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Raw Clay → Brick</h4><p className="font-serif text-xs text-ink-muted mt-1">3 clay + 1 fuel = 1 brick</p></div>
-                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Clay Brick Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">~4 bricks per wall | HP: community estimate</p></div>
+                <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Clay Brick Wall</h4><p className="font-serif text-xs text-ink-muted mt-1">~4 bricks per wall | HP: approximate</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Kiln Construction</h4><p className="font-serif text-xs text-ink-muted mt-1">Stone x4, Wood x6 | Skill 4+</p></div>
                 <div className="recipe-card"><h4 className="font-display text-sm font-semibold text-ink">Daily Output (1 worker)</h4><p className="font-serif text-xs text-ink-muted mt-1">15-20 bricks/day</p></div>
               </div>
@@ -168,7 +165,7 @@ export default function ClayBrickPage() {
       "name": "Can I skip brick and go straight to stone walls?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are community estimates)."
+        "text": "Yes, but only if your map has abundant surface stone (mountain or hills biome). On river, valley, or marsh maps where stone is scarce, clay bricks are essential for upgrading from wood. Brick walls are vastly better than wood and will survive raids that would instantly demolish wood walls (exact HP values are approximate)."
       }
     },
     {

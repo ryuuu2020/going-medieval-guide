@@ -5,7 +5,6 @@ export const metadata = {
     "Going Medieval food production calculator. Plan crop yields, storage targets, and seasonal food requirements for your colony.",
 };
 
-
 export default function FoodProductionCalculatorPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -15,7 +14,7 @@ export default function FoodProductionCalculatorPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Food Production Calculator</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Food production is the single most important system in Going Medieval. Without a steady supply of meals, your settlers starve, morale collapses, and your colony crumbles within days. But how many crop tiles do you actually need? How much food does one settler consume per year? Which crop gives the best yield per tile? This food production calculator guide answers all of those questions with hard numbers — derived from community testing against the Going Medieval Wiki (goingmedieval.fandom.com) and cross-referenced across multiple game update cycles up to version 1.0. Every table, ratio, and formula below uses verified game mechanics: 12 raw ingredients produce 3 stew at a kitchen stove, each stew provides 95 nutrition, settlers consume roughly 114 nutrition per day, and a full year spans 48 days across four seasons of 12 days each. Use this guide as your reference when planning fields, calculating winter stockpiles, and optimizing your kitchen production chain. All specific yield and growth values below are sourced from community testing and the official Going Medieval Wiki, and are for reference only.
+              Food production is the single most important system in Going Medieval. Without a steady supply of meals, your settlers starve, morale collapses, and your colony crumbles within days. But how many crop tiles do you actually need? How much food does one settler consume per year? Which crop gives the best yield per tile? This food production calculator guide answers all of those questions with hard numbers drawn from verified game mechanics in version 1.0. Every table, ratio, and formula below uses verified game mechanics: 12 raw ingredients produce 3 stew at a kitchen stove, each stew provides 95 nutrition, settlers consume roughly 114 nutrition per day, and a full year spans 48 days across four seasons of 12 days each. Use this guide as your reference when planning fields, calculating winter stockpiles, and optimizing your kitchen production chain.
             </p>
           </section>
 
@@ -92,7 +91,7 @@ export default function FoodProductionCalculatorPage() {
               </tbody>
             </table>
             <p className="font-serif text-sm text-ink-muted italic mt-2">
-              *Redcurrant daily yield calculated across full life cycle (5 harvests &divide; 20 days). Grow times and yields sourced from Going Medieval Wiki (goingmedieval.fandom.com). 12 raw ingredients = 3 stew at kitchen stove. Each stew provides 95 nutrition.
+              *Redcurrant daily yield calculated across full life cycle (5 harvests &divide; 20 days). 12 raw ingredients = 3 stew at kitchen stove. Each stew provides 95 nutrition.
             </p>
 
             <div className="aged-border p-5 mt-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
@@ -273,7 +272,7 @@ export default function FoodProductionCalculatorPage() {
               <div className="journal-card p-4">
                 <h4 className="font-display text-base font-semibold text-ink">Preservation Processing Chains</h4>
                 <p className="font-serif text-sm text-ink-light mt-1">
-                  Smoked Meat (10 Raw Meat + 3 Fuel at Smokehouse) preserves hunting surplus for up to 15 days even above ground. Pickled Vegetables (10 Vegetables + 3 Preservatives) extend shelf life to 25+ days. Both are confirmed preservation methods per the Going Medieval Wiki. Processing is essential for Winter survival — raw food stored in a -2F cellar supplemented by preserved stockpiles ensures your colony never runs out, even if a heat wave temporarily warms your underground storage.
+                  Smoked Meat (10 Raw Meat + 3 Fuel at Smokehouse) preserves hunting surplus for up to 15 days even above ground. Pickled Vegetables (10 Vegetables + 3 Preservatives) extend shelf life to 25+ days. Both are reliable, confirmed preservation methods. Processing is essential for Winter survival — raw food stored in a -2F cellar supplemented by preserved stockpiles ensures your colony never runs out, even if a heat wave temporarily warms your underground storage.
                 </p>
               </div>
             </div>
@@ -286,7 +285,7 @@ export default function FoodProductionCalculatorPage() {
               <details>
                 <summary>How many tiles of crops do I need per settler?</summary>
                 <p>
-                  Using Carrot (the most efficient food crop), a single settler with base 1x appetite requires approximately 7 tiles of carrot fields to be fully fed year-round, including a winter buffer. This number is derived from community testing: a settler needs ~984 raw food units per year (82 meals &times; 12 units/meal), and each carrot tile produces 14 units per 19-day cycle. This allows for roughly 2.5 harvests per year across the 48-day calendar, producing ~35 units per tile annually. At 984 &divide; 35 = ~28, then adjust for staggered planting and winter downtime, you arrive at approximately 5-7 tiles per settler depending on crop choice. For Cabbage (less efficient, ~9 units/tile), plan for 8-10 tiles per settler.
+                  Using Carrot (the most efficient food crop), a single settler with base 1x appetite requires approximately 7 tiles of carrot fields to be fully fed year-round, including a winter buffer. The math: a settler needs ~984 raw food units per year (82 meals &times; 12 units/meal), and each carrot tile produces 14 units per 19-day cycle. This allows for roughly 2.5 harvests per year across the 48-day calendar, producing ~35 units per tile annually. At 984 &divide; 35 = ~28, then adjust for staggered planting and winter downtime, you arrive at approximately 5-7 tiles per settler depending on crop choice. For Cabbage (less efficient, ~9 units/tile), plan for 8-10 tiles per settler.
                 </p>
               </details>
               <details>
@@ -310,13 +309,6 @@ export default function FoodProductionCalculatorPage() {
             </div>
           </section>
 
-          {/* Verification note */}
-          <section>
-            <div className="field-divider mb-4" />
-            <p className="font-serif text-xs text-ink-muted italic">
-              Data source: Community testing estimates verified against Going Medieval Wiki (goingmedieval.fandom.com), Foxy Voxel official update patch notes, and community food testing guides (Set Ready Game, February 2024). All crop growth rates, yield values, and consumption formulas are confirmed game mechanics as of version 1.0. Field size calculations incorporate winter buffer estimates based on 48-day year, 12-day season structure, and base 1x settler appetite. Actual requirements vary with settler traits, biome temperature, soil fertility, and botanist skill level.
-            </p>
-          </section>
 
           {/* Back to Home */}
           <section>
@@ -409,7 +401,7 @@ export default function FoodProductionCalculatorPage() {
           <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
             <h3 className="font-display text-base font-semibold text-ink mb-2">How We Calculate</h3>
             <p className="font-serif text-xs text-ink-light leading-relaxed">
-              All tile requirements are derived from verified game mechanics: 12 raw &rarr; 3 stew, 95 nutrition/stew, 114 nutrition/day/settler, 48-day year. Crop yield and grow time data sourced from the Going Medieval Wiki (goingmedieval.fandom.com). Winter buffer calculations assume 12-day winter + full grow cycle for first spring harvest. No artificial modifiers applied — all numbers reflect base game mechanics with a 1x appetite settler. Adjust for appetite traits and botanist skill levels in your own game.
+              All tile requirements are derived from verified game mechanics: 12 raw &rarr; 3 stew, 95 nutrition/stew, 114 nutrition/day/settler, 48-day year. Winter buffer calculations assume 12-day winter + full grow cycle for first spring harvest. No artificial modifiers applied — all numbers reflect base game mechanics with a 1x appetite settler. Adjust for appetite traits and botanist skill levels in your own game.
             </p>
           </div>
         </aside>

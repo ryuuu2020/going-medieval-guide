@@ -11,7 +11,7 @@ export default function TrapPlacementPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Trap Placement Guide</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Traps are one of the most cost-efficient defensive tools in Going Medieval — they deal damage passively, require no settler to operate, and can be reused indefinitely once triggered and reset. The key to effective trap use is placement: a trap in the wrong location does nothing, but a trap at a well-designed chokepoint can eliminate multiple raiders before your melee line ever engages. This guide covers every trap type currently in the game, optimal placement zones, corridor trap spacing, trap layering with archer fire, and how to maintain traps during a raid without putting settlers at risk. All data is based on community testing and current game build.
+              Traps are one of the most cost-efficient defensive tools in Going Medieval — they deal damage passively, require no settler to operate, and can be reused indefinitely once triggered and reset. The key to effective trap use is placement: a trap in the wrong location does nothing, but a trap at a well-designed chokepoint can eliminate multiple raiders before your melee line ever engages. This guide covers every trap type currently in the game, optimal placement zones, corridor trap spacing, trap layering with archer fire, and how to maintain traps during a raid without putting settlers at risk.
             </p>
           </section>
 

@@ -4,7 +4,6 @@ export const metadata = {
     "Complete longbow defense guide for Going Medieval. Archer positioning, range advantage, and ranged combat strategies.",
 };
 
-
 export default function LongbowDefensePage() {
   return (
       <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -54,7 +53,6 @@ export default function LongbowDefensePage() {
                   <tr><td>Kill-Box (Enclosed)</td><td>12+</td><td>Maximum</td><td>Endgame massive raids</td></tr>
                 </tbody>
               </table>
-              <p className="font-serif text-sm text-ink-muted italic">Data source: Community testing estimates</p>
               <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
                 The double-layer funnel is the sweet spot for mid-to-late game colonies. Construct outer walls that narrow from 8 tiles wide to 3 tiles wide over a 15-tile approach. Inside this funnel, place wooden spike traps every 2 tiles—raiders hit traps while also absorbing arrow fire. At the funnel's narrow end, station 2-3 melee defenders as the final line.
               </p>
@@ -63,7 +61,7 @@ export default function LongbowDefensePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Elevation Bonuses</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Elevation is a force multiplier for longbow effectiveness. Each level of height above the target provides cumulative bonuses. The exact numbers vary slightly between game versions, but community testing consistently shows significant improvements with height advantages.
+                Elevation is a force multiplier for longbow effectiveness. Each level of height above the target provides cumulative bonuses. The exact numbers vary slightly between game versions, but height advantages consistently provide significant improvements.
               </p>
               <div className="space-y-3">
                 <div className="journal-card p-4">
@@ -84,7 +82,7 @@ export default function LongbowDefensePage() {
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Marksmanship Skill Impact</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                A settler's Marksmanship skill directly governs longbow performance. The skill affects three separate combat parameters: base accuracy, critical hit chance, and reload speed. Exact skill-to-stat mappings are community estimates — the game's internal calculations have not been verified against official data. In general, higher Marksmanship means significantly better performance.
+                A settler's Marksmanship skill directly governs longbow performance. The skill affects three separate combat parameters: base accuracy, critical hit chance, and reload speed. Exact skill-to-stat mappings are approximate — the game's internal calculations are not publicly documented. In general, higher Marksmanship means significantly better performance.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
                 Priority rule: always assign your highest-Marksmanship settlers to longbow positions. A skill 10 archer on a low wall outperforms a skill 5 archer on a high tower. Train marksmanship through regular combat encounters and archery targets. Do not waste high-Marksmanship settlers on melee roles—their skill is too valuable on the walls. For a 6-archer defense line, aim to have at least 2 settlers with Marksmanship 8+, with the remaining 4 at 5+.

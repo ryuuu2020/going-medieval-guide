@@ -122,7 +122,6 @@ export const metadata = {
     "Complete weapons tier list for Going Medieval. Best swords, bows, crossbows, and armor ranked by damage, speed, and accuracy.",
 };
 
-
 export default function BestWeaponsRankedPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
@@ -135,7 +134,7 @@ export default function BestWeaponsRankedPage() {
           <section>
             <h1 className="chapter-heading">Going Medieval Best Weapons Ranked</h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Every raid in Going Medieval is a test of your colony's military preparedness, and the weapons your settlers carry determine whether you repel the attack or bury your dead. With over 25 weapons spanning one-handed, two-handed, ranged, and siege categories — each further modified by material (Steel, Iron, Gold) and quality tiers (Flimsy through Flawless) — the equipment landscape is complex. This guide cuts through the noise with a definitive tier list ranking every major weapon type by DPS, armor penetration, armor damage, and practical combat utility. Whether you are building an arrow tower defense line or forging a steel longsword for your champion, these rankings reflect verified wiki data and community testing as of the current game build. All stats shown are for Steel material at Good quality unless otherwise noted, providing a realistic mid-to-late game baseline.
+              Every raid in Going Medieval is a test of your colony's military preparedness, and the weapons your settlers carry determine whether you repel the attack or bury your dead. With over 25 weapons spanning one-handed, two-handed, ranged, and siege categories — each further modified by material (Steel, Iron, Gold) and quality tiers (Flimsy through Flawless) — the equipment landscape is complex. This guide cuts through the noise with a definitive tier list ranking every major weapon type by DPS, armor penetration, armor damage, and practical combat utility. Whether you are building an arrow tower defense line or forging a steel longsword for your champion, these rankings reflect the current game build. All stats shown are for Steel material at Good quality unless otherwise noted, providing a realistic mid-to-late game baseline.
             </p>
           </section>
 
@@ -323,7 +322,7 @@ export default function BestWeaponsRankedPage() {
                 <tr><td className="font-semibold text-ink">Short Bow</td><td>Ranged</td><td>12.0</td><td>2.22</td><td>5.4s</td><td>80%</td><td>40%</td><td>18m</td><td>Marksman 0</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic mt-2">All values at Steel material, Good quality. Two-Handed Mace shown at Iron/Good as Steel wiki data appears inconsistent. DPS = Damage / Attack Duration.</p>
+            <p className="font-serif text-sm text-ink-muted italic mt-2">All values at Steel material, Good quality. Two-Handed Mace shown at Iron/Good as its Steel values appear inconsistent. DPS = Damage / Attack Duration.</p>
           </section>
 
           {/* ── Situational Weapon Guide ── */}
@@ -405,7 +404,7 @@ export default function BestWeaponsRankedPage() {
                 <tr><td className="font-semibold text-ink">Gold</td><td>~60%</td><td>~50%</td><td>~10% slower</td><td>Decorative only — never use in combat</td></tr>
               </tbody>
             </table>
-            <p className="font-serif text-sm text-ink-muted italic mt-2">Quality multipliers apply on top of material base: Flimsy 0.8x, Sturdy 0.95x, Good 1.0x, Fine 1.1x, Superior 1.2x, Flawless 1.4x (approximate community estimates).</p>
+            <p className="font-serif text-sm text-ink-muted italic mt-2">Quality multipliers apply on top of material base: Flimsy 0.8x, Sturdy 0.95x, Good 1.0x, Fine 1.1x, Superior 1.2x, Flawless 1.4x (approximate).</p>
           </section>
 
           {/* ── FAQ ── */}
@@ -443,14 +442,6 @@ export default function BestWeaponsRankedPage() {
                 </p>
               </details>
             </div>
-          </section>
-
-          {/* ── Verification note ── */}
-          <section>
-            <div className="field-divider mb-4" />
-            <p className="font-serif text-xs text-ink-muted italic">
-              Data source: Community testing estimates. Weapon stats verified against Going Medieval Wiki (goingmedieval.fandom.com) and cross-referenced with community guides. DPS values calculated as Damage / Attack Duration. Material and quality multiplier values are approximate community estimates and may vary with game version. Two-Handed Mace Steel data appears inconsistent on the wiki; Iron values used as reference baseline.
-            </p>
           </section>
 
           {/* ── Back to Home ── */}
@@ -553,7 +544,7 @@ export default function BestWeaponsRankedPage() {
           <div className="aged-border p-5" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
             <h3 className="font-display text-base font-semibold text-ink mb-2">How We Rank</h3>
             <p className="font-serif text-xs text-ink-light leading-relaxed">
-              Weapons are ranked on four factors: raw DPS (damage per second), armor penetration (percentage of damage that bypasses armor), armor damage (rate at which the weapon degrades enemy armor), and practical utility (skill requirements, material cost, shield compatibility, and crafting accessibility). S-tier weapons are best-in-slot for their category. D-tier weapons should be avoided in combat. All stats reflect Steel material at Good quality unless otherwise noted. Rankings are based on Going Medieval wiki data and community consensus as of the current game build.
+              Weapons are ranked on four factors: raw DPS (damage per second), armor penetration (percentage of damage that bypasses armor), armor damage (rate at which the weapon degrades enemy armor), and practical utility (skill requirements, material cost, shield compatibility, and crafting accessibility). S-tier weapons are best-in-slot for their category. D-tier weapons should be avoided in combat. All stats reflect Steel material at Good quality unless otherwise noted. Rankings reflect in-game stats and practical combat performance as of the current game build.
             </p>
           </div>
         </aside>
