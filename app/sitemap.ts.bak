@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = "force-static";
+
 const BASE = 'https://goingmedieval.gguidehub.com';
 
 // 该文件由 scripts/sync-sitemaps.py 自动生成，新增页面后重新运行脚本即可
@@ -84,6 +86,7 @@ const ROUTES = [
     '/iron-mining',
     '/iron-smelting',
     '/irrigation-system',
+    '/item-repair-guide',
     '/killbox-design',
     '/kitchen-design',
     '/longbow-defense',
@@ -103,6 +106,7 @@ const ROUTES = [
     '/prisoner-management',
     '/privacy',
     '/production-chain-optimization',
+    '/quality-of-life-update',
     '/raid-defense',
     '/raid-defense-strategy',
     '/raid-loot-table',

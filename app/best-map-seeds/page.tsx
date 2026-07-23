@@ -1,6 +1,14 @@
 export const metadata = {
-  title: "Going Medieval Best Map Seeds — Top Seeds for Every Playstyle (2026)",
-  description: "Discover the best map seeds in Going Medieval. A curated list of seeds for every playstyle: easy start, resource-rich, defensive, and challenge seeds with screenshots and analysis.",
+  title: "Going Medieval Best Map Seeds — How to Evaluate and Reroll (2026)",
+  description:
+    "Going Medieval map seed guide: how the seed input works, what terrain features a strong seed offers, evaluation criteria by playstyle, and a reroll checklist for beginners and veterans.",
+  keywords: [
+    "Going Medieval map seeds",
+    "Going Medieval seed evaluation",
+    "Going Medieval reroll",
+    "Going Medieval terrain checklist",
+    "Going Medieval 2026",
+  ],
 };
 
 export default function BestMapSeedsPage() {
@@ -9,152 +17,263 @@ export default function BestMapSeedsPage() {
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
         <div className="flex-1 lg:max-w-[65%] space-y-10">
           <section>
-            <h1 className="chapter-heading">Going Medieval Best Map Seeds — Top Seeds for Every Playstyle</h1>
+            <h1 className="chapter-heading">
+              Going Medieval Map Seeds: How to Evaluate, Reroll, and Pick a Strong Start
+            </h1>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
-              Choosing the right map seed is one of the most important decisions you make in Going Medieval, yet it is also one of the most overlooked. A good seed provides abundant resources within easy reach, natural defensive features that reduce early-game vulnerability, and a layout that supports efficient base expansion. A bad seed can leave you struggling with sparse resources, exposed to attacks from multiple directions, or cramped by terrain that makes castle building nearly impossible. This guide provides a curated list of the best seeds discovered by the community, organized by playstyle and difficulty. Each seed includes a description of the starting area, key resources, defensive characteristics, and why it is recommended. Whether you are a new player looking for a gentle introduction or a veteran seeking a serious challenge, you will find a seed here that matches your goals.
+              A map seed in Going Medieval is the single number or short string that decides
+              your starting biome, terrain shape, water layout, soil fertility, and the rough
+              position of stone and ore deposits. Enter the same seed twice and you get the same
+              map — which is why sharing seeds matters less than learning what to look for once
+              the world is generated. This page is a practical evaluation framework: how the seed
+              input behaves, which terrain features actually matter for survival, and how to reroll
+              quickly when a seed falls short.
+            </p>
+          </section>
+
+          <figure className="mb-8">
+            <img
+              src="/images/best-map-seeds.png"
+              alt="Grouped bar chart showing qualitative priority scores (0 = low priority, 5 = essential) for eight seed-evaluation criteria across three Going Medieval playstyles: Beginner-friendly, Castle Builder and Defense Specialist. Beginner weights water access and soil fertility highest; Castle Builder weights flat land and stone proximity; Defense Specialist weights natural chokepoints and elevation"
+              className="w-full rounded-lg border border-[#3d3528]"
+              loading="lazy"
+            />
+            <figcaption className="mt-2 text-center text-sm text-ink-light font-serif">
+              Seed Evaluation Priorities by Playstyle — what a beginner, a castle builder, and a
+              defense-focused player should weigh most when reading a freshly-generated map.
+              Scores are qualitative rankings, not in-game statistics.
+            </figcaption>
+          </figure>
+
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">
+              How the Seed Input Works
+            </h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              The seed field sits on the new-game creation screen. You can leave it blank for a
+              fully random world, or type any value to lock the generation. Numerical seeds are
+              the most reliable — short alphabetic strings are accepted by the current version but
+              the engine still treats them as deterministic input. Whatever you type is read once
+              at world creation and never re-rolled mid-playthrough, so changing the seed only
+              works on a fresh colony.
+            </p>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              Three seed behaviours are worth keeping in mind. First, the same seed on different
+              biome choices produces a different shape, because biome is a separate input that
+              constrains the generator. Second, version updates can change the procedural rules,
+              which means a seed shared before a major patch will not always match a seed shared
+              after it. Third, mods that touch world generation override the seed entirely — they
+              read the input but apply their own rules on top.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">How Map Seeds Work in Going Medieval</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">
+              Eight Criteria That Decide Whether a Seed Is Worth Keeping
+            </h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Going Medieval uses procedural generation to create its maps, with the seed value determining the entire layout: terrain, resources, biome, and points of interest. Entering the same seed value will always generate the same map, allowing you to share seeds with other players or regenerate a map you enjoyed. The seed input field is located on the new game creation screen, typically accepting numerical values (though some alphanumeric seeds also work depending on the version).
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              When evaluating a seed, consider these key factors: resource proximity (are vital resources like iron, stone, and fertile soil nearby?), defensibility (are there natural chokepoints, elevated positions, or water barriers?), biome characteristics (temperature extremes, growing season length, rain frequency), and expansion space (is there room to build a castle without relocating?). The best seeds balance these factors, providing a strong start without making the game trivially easy.
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              It is also worth noting that seeds can produce different results depending on the game version. The 1.0 update changed the map generation algorithm, so seeds from earlier versions may no longer generate the same layout. All seeds listed in this guide have been verified to work with Going Medieval version 1.0 and later. If you are playing on an older version, some seeds may produce different results.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Top 10 Best Seeds — Quick Reference</h2>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              The following table summarizes the top 10 seeds currently recommended by the community. Each seed has been tested by multiple players and verified to provide a high-quality starting experience. Detailed descriptions of each seed follow the table.
+              Instead of memorising seed strings, learn the eight criteria below. Spend the first
+              five in-game minutes scanning for them on the world map; if more than two are missing
+              or borderline, reroll. Each row in the table below is a qualitative rule you can
+              check by eye, not a hidden statistic.
             </p>
             <table className="parchment-table">
               <thead>
                 <tr>
-                  <th>Seed</th>
-                  <th>Biome</th>
-                  <th>Difficulty</th>
-                  <th>Key Features</th>
-                  <th>Best For</th>
+                  <th>Criterion</th>
+                  <th>What to look for</th>
+                  <th>Quick eyeball test</th>
+                  <th>Reroll if&hellip;</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>20240315</td><td>Temperate</td><td>Easy</td><td>Large fertile plain, stone quarry adjacent</td><td>Beginners, builders</td></tr>
-                <tr><td>987654321</td><td>Temperate</td><td>Easy-Medium</td><td>Hilltop start, natural moat on one side</td><td>Defense-focused players</td></tr>
-                <tr><td>123456789</td><td>Forest</td><td>Medium</td><td>Abundant iron and timber, narrow valley</td><td>Military players</td></tr>
-                <tr><td>555123888</td><td>Mountain</td><td>Medium-Hard</td><td>Massive stone reserves, limited farmland</td><td>Industrial playstyle</td></tr>
-                <tr><td>404040404</td><td>Coastal</td><td>Medium</td><td>Beach access, fish resource, trade route nearby</td><td>Trade-focused players</td></tr>
-                <tr><td>777888999</td><td>Temperate</td><td>Hard</td><td>Small starting peninsula, surrounded by hills</td><td>Challenge seekers</td></tr>
-                <tr><td>111222333</td><td>Forest</td><td>Easy</td><td>Massive starting area, 3 resources in sight</td><td>Large colony players</td></tr>
-                <tr><td>888777666</td><td>Mountain</td><td>Medium</td><td>Elevated plateau, natural cave system</td><td>Underground players</td></tr>
-                <tr><td>999000111</td><td>Temperate</td><td>Medium-Hard</td><td>Seasonal river, fertile but flood risk</td><td>Advanced players</td></tr>
-                <tr><td>123123123</td><td>Plains</td><td>Easy</td><td>Perfectly flat 40×40 build area</td><td>Castle builders</td></tr>
+                <tr>
+                  <td>Flat buildable land</td>
+                  <td>A continuous flat or near-flat patch</td>
+                  <td>You can place a 20&times;20 wall ring without terraforming</td>
+                  <td>The only flat strip is split by a river or cliff</td>
+                </tr>
+                <tr>
+                  <td>Fresh water access</td>
+                  <td>A river, stream, or lake within walking distance</td>
+                  <td>A settler can reach water in well under a day</td>
+                  <td>You are spawning in a dry inland pocket</td>
+                </tr>
+                <tr>
+                  <td>Fertile soil</td>
+                  <td>Soil tiles near the starting tile, not just in distant valleys</td>
+                  <td>Several green-tinted soil clusters visible on first zoom-out</td>
+                  <td>All visible soil is shallow or rocky</td>
+                </tr>
+                <tr>
+                  <td>Stone proximity</td>
+                  <td>A surface stone node or compact stone deposit near the start</td>
+                  <td>You can see stone nodes from the starting tile</td>
+                  <td>Stone is only deep underground and far away</td>
+                </tr>
+                <tr>
+                  <td>Ore proximity</td>
+                  <td>At least one iron or copper node within early-game reach</td>
+                  <td>An ore tint is visible on the map edge or near stone</td>
+                  <td>No ore tint anywhere on screen at first zoom-out</td>
+                </tr>
+                <tr>
+                  <td>Wood availability</td>
+                  <td>A tree cluster, not isolated single trees</td>
+                  <td>You can mark 30+ trees without leaving the starting region</td>
+                  <td>Trees are scattered one-by-one across a wide plain</td>
+                </tr>
+                <tr>
+                  <td>Natural defense</td>
+                  <td>Elevation, cliffs, or water forming a partial barrier</td>
+                  <td>At least one map edge looks hard to walk through</td>
+                  <td>You are standing on a pancake-flat open plain in every direction</td>
+                </tr>
+                <tr>
+                  <td>Expansion room</td>
+                  <td>Space beyond the immediate base for later castle growth</td>
+                  <td>You can imagine a 40&times;40 footprint without hitting the map edge</td>
+                  <td>The map edge is within one screen of the start</td>
+                </tr>
               </tbody>
             </table>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Detailed Seed Reviews</h2>
-
-            <div className="aged-border p-5 mb-6" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">Seed 20240315 — The Beginner{''}s Dream</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                <strong className="text-ink">Biome:</strong> Temperate | <strong className="text-ink">Difficulty:</strong> Easy
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                This seed spawns you in a large (50+ tile wide) fertile plain with rich soil quality (90%+ fertility). A stone quarry is visible within 30 tiles of the starting position, and iron deposits are reachable within the first week of exploration. The terrain is mostly flat with a gentle slope to the north, making base construction straightforward. There are no major rivers to manage, though a small stream provides fresh water. The only defensive concern is that the open plain offers no natural chokepoints — you will need to build walls early. Recommended for players learning the game or attempting their first large-scale castle project.
-              </p>
-            </div>
-
-            <div className="aged-border p-5 mb-6" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">Seed 987654321 — The Hilltop Fortress</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                <strong className="text-ink">Biome:</strong> Temperate | <strong className="text-ink">Difficulty:</strong> Easy-Medium
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                Spawns you at the top of a gentle hill with a natural slope on three sides — an ideal castle location. A small river runs along the south side, creating a natural moat for that approach. Stone is abundant in the hillside (just dig into the slope), and there is a cluster of iron nodes 40 tiles to the east. The main challenge is that the hilltop area is somewhat constrained — you have about 25×25 tiles of flat space before the slope becomes too steep for efficient building. Perfect for players who want to focus on defense and castle design from day one.
-              </p>
-            </div>
-
-            <div className="aged-border p-5 mb-6" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">Seed 123456789 — The Iron Valley</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                <strong className="text-ink">Biome:</strong> Forest | <strong className="text-ink">Difficulty:</strong> Medium
-              </p>
-              <p className="font-serif text-base text-ink-light leading-relaxed mb-2">
-                This seed places you in a narrow forested valley with exceptional iron and timber resources. Iron deposits are scattered throughout the valley (5+ nodes visible from the start), and the dense forest provides unlimited wood. The valley narrows to a 10-tile wide chokepoint at the east end — an ideal killbox location. The trade-off is limited farmland: only about 40% of the valley floor has fertile soil. You will need to rely on hunting and trade to supplement your food supply in the early game. Best for players who enjoy military-focused gameplay and don{''}t mind a slower start to farming.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Challenge Seeds for Veteran Players</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">
+              Priority Mix by Playstyle
+            </h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              If you have mastered the game and want a genuine challenge, try these seeds that impose significant constraints or dangers. Seed 777888999 spawns you on a small peninsula (roughly 15×20 tiles) surrounded by steep hills — expansion requires significant terraforming. Seed 999000111 places you in a seasonal floodplain where the river rises in spring, threatening to wash away unprepared farms. Seed 444555666 is a mountain start with almost no flat land — you will need to build most of your base underground or on terraced slopes.
-            </p>
-            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              Challenge seeds are not recommended for first-time players. They assume you already understand the core mechanics and are looking for strategic constraints that force creative solutions. Many veteran players prefer challenge seeds because they prevent the "inevitable victory" feeling that can set in once you have a fully operational castle and trade economy. A good challenge seed keeps you engaged by maintaining tension throughout the playthrough.
+              The eight criteria are not equally important to every player. A beginner values water
+              and soil because early starvation is the most common loss; a castle builder cares
+              first about flat land and stone because the whole plan is a permanent stone footprint;
+              a defense-focused player will reroll anything that does not give a natural chokepoint
+              or elevation on at least two sides. The weighting below is a starting point — adjust it
+              to match what your colony actually struggles with.
             </p>
             <table className="parchment-table">
               <thead>
                 <tr>
-                  <th>Challenge Seed</th>
-                  <th>Challenge Type</th>
-                  <th>Key Constraint</th>
-                  <th>Recommended For</th>
+                  <th>Criterion</th>
+                  <th>Beginner-friendly weight</th>
+                  <th>Castle builder weight</th>
+                  <th>Defense specialist weight</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>777888999</td><td>Space constraint</td><td>Small 15×20 peninsula</td><td>Compact base designers</td></tr>
-                <tr><td>999000111</td><td>Environmental</td><td>Seasonal flooding risk</td><td>Advanced farmers</td></tr>
-                <tr><td>444555666</td><td>Terrain</td><td>Almost no flat land</td><td>Underground specialists</td></tr>
-                <tr><td>222333444</td><td>Resource scarcity</td><td>Limited iron, far from stone</td><td>Trade-focused players</td></tr>
+                <tr><td>Flat buildable land</td><td>High</td><td>Essential</td><td>Medium</td></tr>
+                <tr><td>Fresh water access</td><td>Essential</td><td>High</td><td>Medium</td></tr>
+                <tr><td>Fertile soil</td><td>Essential</td><td>Medium</td><td>Low</td></tr>
+                <tr><td>Stone proximity</td><td>Medium</td><td>Essential</td><td>High</td></tr>
+                <tr><td>Ore proximity</td><td>Medium</td><td>High</td><td>Medium</td></tr>
+                <tr><td>Wood availability</td><td>High</td><td>Medium</td><td>Low</td></tr>
+                <tr><td>Natural defense</td><td>Low</td><td>Medium</td><td>Essential</td></tr>
+                <tr><td>Expansion room</td><td>Medium</td><td>High</td><td>Essential</td></tr>
               </tbody>
             </table>
+            <p className="font-serif text-base text-ink-light leading-relaxed mt-4">
+              Read the columns as a decision aid, not a score to add up. If two of your top-tier
+              criteria fail on a generated map, reroll. If only one fails, you can usually design
+              around it with early-game choices — a missing water source means digging wells
+              faster; missing stone means buying it from a trade caravan until you find a node.
+            </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-6">Frequently Asked Questions</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">
+              A Two-Minute Reroll Routine
+            </h2>
+            <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+              On the world map, the seed has already decided everything before you click
+              &ldquo;Start.&rdquo; Use these steps to decide quickly without committing to a slow
+              colony.
+            </p>
+            <ol className="list-decimal pl-6 font-serif text-base text-ink-light space-y-2 mb-4">
+              <li>Zoom out fully and check the map edges for water, cliffs, and forest density.</li>
+              <li>Pan across the centre to find the largest continuous flat patch — this becomes your base footprint.</li>
+              <li>Trace the nearest river or lake back to the flat patch and count travel days in your head.</li>
+              <li>Look for soil-coloured clusters near, not far from, the flat patch.</li>
+              <li>Identify any surface stone node inside the flat patch or just beyond it.</li>
+              <li>Check whether at least two of the eight criteria sit in your top weighting tier; if not, reroll.</li>
+            </ol>
+            <p className="font-serif text-base text-ink-light leading-relaxed">
+              The whole scan takes under two minutes once practised. Burning ten minutes rerolling
+              up front almost always saves hours of being stuck in a bad map later — especially for
+              first colonies, where an early food or stone shortage cascades into raid losses you
+              cannot recover from.
+            </p>
+          </section>
 
-            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">Do seeds work the same in multiplayer?</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed">
-                Yes, seeds generate the same map in both single-player and multiplayer, provided all players are on the same game version. The host{''}s seed selection determines the map for all players. If playing with mods that affect map generation, the seed may produce different results — always verify with a test game before committing to a multiplayer campaign.
-              </p>
-            </div>
-            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">Can I use these seeds on console versions of the game?</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed">
-                Going Medieval is currently PC-only, so there is no console version. If a console version is released in the future, seed compatibility will depend on whether the console version uses the same map generation algorithm. For now, these seeds are verified for the PC version 1.0 and later.
-              </p>
-            </div>
-            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">What makes a seed "good" for castle building specifically?</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed">
-                The ideal castle-building seed has a large (30×30 minimum), relatively flat area for the castle footprint, nearby stone for construction, defensible terrain (elevation or water barriers), and enough nearby fertile land to support the colony{''}s food needs without encroaching on the castle site. Seeds 20240315 and 123123123 are particularly good for castle builders.
-              </p>
-            </div>
-            <div className="aged-border p-5 mb-4" style={{ backgroundColor: 'var(--color-parchment-deep)' }}>
-              <h3 className="font-display text-lg font-semibold text-ink mb-2">I tried a seed from this list and it looks different — why?</h3>
-              <p className="font-serif text-base text-ink-light leading-relaxed">
-                This usually happens for one of three reasons: (1) You are playing on a different game version — map generation changed in the 1.0 update. (2) You entered the seed incorrectly — double-check for typos. (3) You have mods installed that modify map generation. For the most consistent results, use the exact seed value listed, on game version 1.0 or later, with no map-altering mods.
-              </p>
+          <section>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-6">
+              Frequently Asked Questions
+            </h2>
+            <div className="faq-snippets">
+              <details>
+                <summary>Are map seeds shareable between players?</summary>
+                <p>
+                  Yes, as long as both players use the same game version, the same biome choice, and
+                  no world-altering mods. The seed field accepts numbers and short strings; whatever
+                  you type produces the same terrain on another machine with matching inputs.
+                </p>
+              </details>
+              <details>
+                <summary>Do seeds behave the same in multiplayer as in single-player?</summary>
+                <p>
+                  The host&rsquo;s seed is the seed everyone plays on. World generation runs once on
+                  the host before other players join, so all clients see identical terrain, water,
+                  and resource placement. If a client has a mod that changes generation, the maps
+                  will not match.
+                </p>
+              </details>
+              <details>
+                <summary>What is the fastest way to decide if a seed is bad?</summary>
+                <p>
+                  Skip detailed reading and check the two criteria most likely to kill the colony:
+                  water access and stone proximity. If either is far from the starting flat patch,
+                  reroll immediately. Everything else can be worked around with time and trade.
+                </p>
+              </details>
+              <details>
+                <summary>Can I evaluate a seed before committing to the colony?</summary>
+                <p>
+                  Yes — the world map is fully visible on the creation screen. Pan and zoom freely
+                  before clicking &ldquo;Start.&rdquo; Once you confirm, the seed is locked for the
+                  entire playthrough; there is no in-game way to regenerate terrain.
+                </p>
+              </details>
+              <details>
+                <summary>Do updated game versions invalidate old shared seeds?</summary>
+                <p>
+                  Major patches sometimes change procedural rules, so a seed that was strong on an
+                  older version may look different on a newer one. Treat any shared seed as a
+                  starting point: run the two-minute reroll routine before committing.
+                </p>
+              </details>
             </div>
           </section>
 
           <section>
             <h2 className="font-display text-xl font-semibold text-ink mb-4">Related Guides</h2>
             <div className="space-y-2">
-              <a href="/biomes" className="text-accent hover:text-accent-hover underline">Biomes Guide</a>
-              <a href="/beginners" className="text-accent hover:text-accent-hover underline">Beginner{''}s Guide</a>
-              <a href="/base-layout" className="text-accent hover:text-accent-hover underline">Base Layout Guide</a>
-              <a href="/castle-building-complete-guide" className="text-accent hover:text-accent-hover underline">Castle Building Guide</a>
-              <a href="/terrain-modification" className="text-accent hover:text-accent-hover underline">Terrain Modification</a>
+              <a href="/biomes" className="text-accent hover:text-accent-hover underline">
+                Biomes Guide &mdash; terrain types, pros and cons
+              </a>
+              <a href="/base-layout" className="text-accent hover:text-accent-hover underline">
+                Base Layout Guide &mdash; planning the first footprint
+              </a>
+              <a href="/defense" className="text-accent hover:text-accent-hover underline">
+                Defense Guide &mdash; reading threats before the first raid
+              </a>
+              <a href="/killbox-design" className="text-accent hover:text-accent-hover underline">
+                Killbox Design &mdash; turning chokepoints into wins
+              </a>
+              <a href="/moat-design" className="text-accent hover:text-accent-hover underline">
+                Moat Design &mdash; using water as a barrier
+              </a>
+              <a href="/winter-survival" className="text-accent hover:text-accent-hover underline">
+                Winter Survival &mdash; food and heat planning from seed choice onward
+              </a>
             </div>
           </section>
         </div>
@@ -169,42 +288,52 @@ export default function BestMapSeedsPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Do seeds work the same in multiplayer?",
+                "name": "Are map seeds shareable between players?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, seeds generate the same map in both single-player and multiplayer, provided all players are on the same game version. The host's seed selection determines the map for all players."
+                  "text": "Yes, as long as both players use the same game version, the same biome choice, and no world-altering mods. The seed field accepts numbers and short strings; whatever you type produces the same terrain on another machine with matching inputs."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What makes a seed good for castle building specifically?",
+                "name": "Do seeds behave the same in multiplayer as in single-player?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The ideal castle-building seed has a large, relatively flat area (30×30 minimum), nearby stone, defensible terrain, and enough nearby fertile land for food. Seeds 20240315 and 123123123 are particularly good for castle builders."
+                  "text": "The host's seed is the seed everyone plays on. World generation runs once on the host before other players join, so all clients see identical terrain, water, and resource placement. Mods that change generation break that match."
                 }
               },
               {
                 "@type": "Question",
-                "name": "I tried a seed from this list and it looks different — why?",
+                "name": "What is the fastest way to decide if a seed is bad?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "This usually happens because you are on a different game version, entered the seed incorrectly, or have mods that modify map generation. Use the exact seed value, on version 1.0+, with no map-altering mods."
+                  "text": "Check water access and stone proximity first. If either is far from the starting flat patch, reroll immediately. Most other gaps can be worked around with time and trade."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can I use these seeds on console versions?",
+                "name": "Can I evaluate a seed before committing to the colony?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Going Medieval is currently PC-only. If a console version is released in the future, seed compatibility will depend on whether it uses the same map generation algorithm."
+                  "text": "Yes. The world map is fully visible on the creation screen before clicking Start. Once you confirm, the seed is locked for the entire playthrough; there is no in-game way to regenerate terrain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do updated game versions invalidate old shared seeds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Major patches sometimes change procedural rules, so a seed that was strong on an older version may look different on a newer one. Treat any shared seed as a starting point and run a quick reroll check before committing."
                 }
               }
-            ]
-          })
+            ],
+          }),
         }}
       />
 
-      <p className="text-xs text-text-muted mt-12 border-t border-border-subtle pt-4">Last updated: July 7, 2026</p>
+      <p className="text-xs text-text-muted mt-12 border-t border-border-subtle pt-4">
+        Last updated: July 22, 2026
+      </p>
     </main>
   );
 }

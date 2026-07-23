@@ -17,6 +17,20 @@ export default function BiomesPage() {
               </p>
             </section>
 
+            <figure className="mb-8">
+              <img
+                src="/images/biomes.png"
+                alt="Grouped bar chart comparing Valley, Hillside and Mountain map types in Going Medieval across four qualitative axes: buildable flat land (Valley 5, Hillside 3, Mountain 1), wood abundance (4, 4, 2), ore abundance (2, 3, 5) and winter mildness (4, 3, 1)"
+                className="w-full rounded-lg border border-[#3d3528]"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-center text-sm text-ink-light font-serif">
+                Map Type Profile — Valley maximises buildable land and softer winters; Mountain maximises
+                ore but brings the harshest winters and the smallest buildable footprint; Hillside sits
+                in between. Scores are qualitative rankings, not in-game stats.
+              </figcaption>
+            </figure>
+
             <section>
               <h2 className="font-display text-2xl font-semibold text-ink mb-4">Temperate Forest</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
@@ -128,6 +142,7 @@ export default function BiomesPage() {
                   <p>No. The starting terrain is fixed for the entire playthrough. However, you can explore different areas within the same map, such as relocating from the forest to a nearby mountain. Choose your starting location carefully.</p>
                 </details>
               </div>
+              <p className="font-serif text-xs text-ink-muted mt-4">Last updated: July 22, 2026</p>
             </section>
           </div>
 

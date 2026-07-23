@@ -169,7 +169,7 @@ gtag('config', 'G-ET6778V62K');`}
                   <span className="sidebar-stats-value">2026.03.12</span>
                 </div>
               </div>
-              <p className="sidebar-stats-source">Data source: Steam community estimates</p>
+              <p className="sidebar-stats-source">Community-tracking estimates, refreshed each patch</p>
             </div>
 
             {/* Colony Priorities */}
@@ -267,13 +267,7 @@ gtag('config', 'G-ET6778V62K');`}
                   This is a fan-made guide site. Going Medieval is developed by Foxy Voxel. We are not affiliated with, endorsed by, or connected to Foxy Voxel in any official capacity. All game content, trademarks, and copyrights belong to their respective owners.
                 </p>
 
-                {/* E-E-A-T: Sources & Last Updated */}
-                <div className="footer-eeat">
-                  <p className="footer-eeat-text">
-                    <strong>Sources:</strong> All guides are based on the <a href="https://goingmedievalwiki.com/" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Going Medieval Wiki</a>, <a href="https://store.steampowered.com/app/1029780/?curator_clanid=46198091" target="_blank" rel="noopener noreferrer" className="footer-eeat-link">Steam patch notes</a>, and 200+ hours of gameplay testing. Data numbers are community estimates — always verify in-game.
-                  </p>
-                  <p className="footer-eeat-updated">Last updated: July 2026 (verified against the 1.0 release environment and current community testing)</p>
-                </div>
+                {/* E-E-A-T block removed */}
               </div>
 
               <p className="footer-disclaimer">Part of the <a href="https://gguidehub.com" className="footer-eeat-link">GameGuideHub</a> network.</p>

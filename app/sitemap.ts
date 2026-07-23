@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 const BASE = 'https://goingmedieval.gguidehub.com';
 
@@ -17,7 +17,6 @@ const ROUTES = [
     '/armor-weapons',
     '/base-layout',
     '/bedroom-layout',
-    '/beekeeping-guide',
     '/beginner-mistakes',
     '/beginner-walkthrough',
     '/beginners',
