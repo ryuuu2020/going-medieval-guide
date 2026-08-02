@@ -276,6 +276,13 @@ export default function HomePage() {
             </div>
           </section>
 
+          <section className="journal-card p-6" aria-labelledby="coverage-heading">
+            <h3 id="coverage-heading" className="font-display text-2xl font-semibold text-ink">Current Coverage &amp; Testing Boundary</h3>
+            <p className="font-serif text-sm text-ink-light leading-relaxed mt-3">
+              Current coverage is focused on colony starts, construction and structural planning, farming and food storage, temperature and seasons, settler jobs and mood, research, crafting, trade, and raid defense. This site does not claim a complete audit of every balance value, mod interaction, platform difference, or future patch. Version status is editorial: pages should be checked against the live in-game tooltips and patch notes before using exact numbers. See the <a href="/about" className="text-vermillion hover:underline">About and methodology notes</a> for our source, revision, and correction process.
+            </p>
+          </section>
+
           <section>
             <h3 className="font-display text-2xl font-semibold text-ink mb-6">What To Read Next</h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

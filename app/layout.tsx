@@ -264,6 +264,10 @@ gtag('config', 'G-ET6778V62K');`}
                 </div>
 
                 <p className="footer-disclaimer">
+                  Editorial owner: GameGuideHub editorial team. Last editorial review: August 2, 2026. We are responsible for reviewing, correcting, and updating the guide; send factual corrections to <a href="mailto:contact@gguidehub.com" className="footer-eeat-link">contact@gguidehub.com</a>.
+                </p>
+
+                <p className="footer-disclaimer">
                   This is a fan-made guide site. Going Medieval is developed by Foxy Voxel. We are not affiliated with, endorsed by, or connected to Foxy Voxel in any official capacity. All game content, trademarks, and copyrights belong to their respective owners.
                 </p>
 

@@ -32,12 +32,18 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold text-ink mb-4">How We Write</h2>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-4">Editorial Methodology</h2>
               <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-                Our guides are built from hands-on play and in-game testing, then re-checked whenever the game updates. Some values are approximate and may change with game updates.
+                The GameGuideHub editorial team is responsible for separating observed game behavior from advice and clearly marking uncertainty. We use in-game descriptions, official patch notes and store information, community reports, and controlled play observations when a claim needs checking. We do not present an unverified number as a measured benchmark.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                For Going Medieval specifically, our coverage examines settlement starts, building and structural mechanics, multi-level and underground layouts, crops and food storage, temperature and seasons, settler jobs, needs and mood, research, crafting, trade, and raid defense. It is not a claim that every item value, pathfinding edge case, mod, platform difference, or current patch has been independently tested.
+              </p>
+              <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
+                The current version state is an editorial boundary rather than a certification of a particular live build. Readers should compare exact values with the game client and official patch notes. Pages are revised when a change is confirmed; corrections should include the page URL, the disputed claim, and—when available—the patch number or screenshot so the team can reproduce and review it.
               </p>
               <p className="font-serif text-base text-ink-light leading-relaxed">
-                We continuously update guide content to keep pace with game version changes. If you find outdated or incorrect information in our guides, please let us know through community channels — we'll correct it promptly.
+                The GameGuideHub editorial team owns the review, correction, and update process for this site. Send factual corrections to <a href="mailto:contact@gguidehub.com" className="text-vermillion hover:underline">contact@gguidehub.com</a>.
               </p>
             </section>
 
@@ -56,6 +62,10 @@ export default function AboutPage() {
                 If you have guide suggestions, content feedback, or collaboration ideas, you can reach us through:
               </p>
               <div className="space-y-3 mt-4">
+                <a href="mailto:contact@gguidehub.com" className="block journal-card p-4">
+                  <h4 className="font-display text-base font-semibold text-ink">Corrections &amp; editorial contact</h4>
+                  <p className="font-serif text-sm text-ink-muted mt-1">contact@gguidehub.com — include the page URL and the specific issue.</p>
+                </a>
                 <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener noreferrer" className="block journal-card p-4">
                   <h4 className="font-display text-base font-semibold text-ink">UniFans Support</h4>
                   <p className="font-serif text-sm text-ink-muted mt-1">Support ongoing site updates and access more guide content</p>
