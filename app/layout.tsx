@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, IBM_Plex_Sans, Lora } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Link from "next/link";
@@ -37,6 +38,24 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
+});
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-plex-sans",
+  display: "swap",
+});
+
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Buildings", href: "/buildings" },
@@ -66,22 +85,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${cormorant.variable} ${lora.variable} ${plexSans.variable}`}>
       <head>
         <meta
           name="google-site-verification"
           content="google4cd6cdf221ea7b0b"
-        />
-        {/* Google Fonts — 3-Colony Parchment Theme */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-          rel="stylesheet"
         />
         {/* Google Analytics GA4 */}
         <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-ET6778V62K" />
