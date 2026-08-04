@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Going Medieval Guide — Colony Sim Strategy Wiki",
     metadataBase: new URL("https://goingmedieval.gguidehub.com"),
   description:
-    "The ultimate Going Medieval guide and wiki. Master colony survival with in-depth guides on buildings, research, settlers, farming, defense, trade, biomes, and more. Your go-to resource for Foxy Voxel's medieval colony sim.",
+    "A version-aware Going Medieval guide covering colony decisions, buildings, research, farming, defense, production, and survival with clear evidence boundaries.",
   keywords: [
     "Going Medieval guide",
     "colony sim",
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Going Medieval Guide — Colony Sim Strategy Wiki",
   description:
-      "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
+      "Version-aware Going Medieval guides for buildings, research, settlers, farming, defense, production, and survival.",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Going Medieval Guide — Colony Sim Strategy Wiki" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Going Medieval Guide — Colony Sim Strategy Wiki",
-    description: "Master Going Medieval with our comprehensive strategy guide. Buildings, research, settlers, farming, defense — everything you need to build a thriving medieval colony.",
+    description: "Version-aware Going Medieval guides for buildings, research, settlers, farming, defense, production, and survival.",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -103,7 +103,7 @@ gtag('config', 'G-ET6778V62K');`}
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Going Medieval Guide",
-  "description": "The ultimate Going Medieval guide and wiki. Master colony survival with in-depth guides on buildings, research, settlers, farming, defense, and more.",
+  "description": "A version-aware Going Medieval guide covering colony decisions, buildings, research, farming, defense, production, and survival."
   "url": "https://goingmedieval.gguidehub.com",
   "potentialAction": {
     "@type": "SearchAction",
@@ -162,11 +162,11 @@ gtag('config', 'G-ET6778V62K');`}
                 </div>
                 <div className="sidebar-stats-row">
                   <span className="sidebar-stats-label">Version</span>
-                  <span className="sidebar-stats-value gold">1.0</span>
+                  <span className="sidebar-stats-value gold">1.1.x</span>
                 </div>
                 <div className="sidebar-stats-row">
                   <span className="sidebar-stats-label">Release Date</span>
-                  <span className="sidebar-stats-value">2026.03.12</span>
+                  <span className="sidebar-stats-value">1.1.x line</span>
                 </div>
               </div>
               <p className="sidebar-stats-source">Community-tracking estimates, refreshed each patch</p>
@@ -264,7 +264,7 @@ gtag('config', 'G-ET6778V62K');`}
                 </div>
 
                 <p className="footer-disclaimer">
-                  Editorial owner: GameGuideHub editorial team. Last editorial review: August 2, 2026. We are responsible for reviewing, correcting, and updating the guide; send factual corrections to <a href="mailto:contact@gguidehub.com" className="footer-eeat-link">contact@gguidehub.com</a>.
+                  Editorial owner: GameGuideHub editorial team. Last editorial review: August 4, 2026. We are responsible for reviewing, correcting, and updating the guide; send factual corrections to <a href="mailto:contact@gguidehub.com" className="footer-eeat-link">contact@gguidehub.com</a>.
                 </p>
 
                 <p className="footer-disclaimer">
