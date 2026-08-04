@@ -1,0 +1,10 @@
+# Local tooling and generated artifacts
+.omc
+.next
+node_modules
+.git
+.DS_Store
+coverage
+out
+build
+*.log
