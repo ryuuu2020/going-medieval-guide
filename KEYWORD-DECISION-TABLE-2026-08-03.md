@@ -57,7 +57,7 @@
 | Metadata / H1 | 待最终 QA | 统一检查 title、description 和单一 H1 |
 | Canonical / robots / sitemap | 线上通过 | robots.txt、sitemap.xml 和目标页面线上 HTML 已验证 |
 | GA4 / GSC / ads.txt | 线上基础设施通过 | ads.txt、GA4、GSC 标记和线上页面已检查 |
-| Build / lint / diff | Build 通过；目标页定向 lint 通过；完整 lint 有既有错误；diff 通过 | 完整 lint 历史问题未混入本轮目标页 |
+| Build / lint / diff | Build 通过；目标页定向 lint 0 errors、1 layout warning；完整 lint 927 errors / 1966 warnings；diff 通过 | 本轮修复全局 Link、未使用组件和循环变量；剩余问题为旧页面技术债，不阻塞本轮发布 |
 
 ## 记录规则
 

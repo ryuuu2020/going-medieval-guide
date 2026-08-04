@@ -152,7 +152,7 @@ Going Medieval 继续 **DO**，但本轮不是批量扩写，而是先做当前�
 | Metadata / 单一 H1 | 已检查目标页 | 目标页面逐页核对 title、description 和 H1 |
 | Canonical / robots / sitemap | 线上通过 | robots.txt 和 sitemap.xml 已返回；目标页面线上内容已验证，canonical 由 metadataBase 生成 |
 | GA4 / GSC / ads.txt | 线上基础设施通过 | ads.txt、GA4、GSC 标记和线上页面已检查 |
-| Build / lint / diff | Build 通过；目标页定向 lint 通过；完整 lint 仍有既有错误；diff 通过 | 完整 lint 的历史问题未混入本轮目标页，需后续单独治理 |
+| Build / lint / diff | Build 通过；目标页定向 lint 0 errors、1 layout warning；完整 lint 927 errors / 1966 warnings；diff 通过 | 本轮修复全局 Link、未使用组件和循环变量；剩余问题为旧页面实体、图片、未使用项和字体 warning，需独立技术债批次治理 |
 
 ## 暂不扩写页面
 

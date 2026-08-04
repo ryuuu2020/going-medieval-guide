@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 import Link from "next/link";
-import SchemaMarkup from '@/shared/SchemaMarkup';
-
-
 export const metadata: Metadata = {
   title: "Going Medieval Guide — Colony Sim Strategy Wiki",
     metadataBase: new URL("https://goingmedieval.gguidehub.com"),
@@ -131,19 +128,19 @@ gtag('config', 'G-ET6778V62K');`}
           {/* ===== Sidebar ===== */}
           <aside className="sidebar">
             {/* Site identity */}
-            <a href="/" className="sidebar-brand">
+            <Link href="/" className="sidebar-brand">
               Going Medieval Guide
-            </a>
+            </Link>
 
             {/* Quick Navigation */}
             <div>
               <h3 className="sidebar-heading">Quick Navigation</h3>
               <div className="flex flex-col gap-2">
-                {SIDEBAR_LINKS.map((link, i) => (
-                  <a key={i} href={link.href} className="sidebar-nav-link">
+                {SIDEBAR_LINKS.map((link) => (
+                  <Link key={link.href} href={link.href} className="sidebar-nav-link">
                     <span className="sidebar-nav-label">{link.label}</span>
                     <span className="sidebar-nav-desc">{link.desc}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -209,19 +206,19 @@ gtag('config', 'G-ET6778V62K');`}
             <header className="header">
               <div className="header-inner">
                 <div className="header-brand-wrap">
-                  <a href="/" className="header-brand">
+                  <Link href="/" className="header-brand">
                     Going Medieval Guide
-                  </a>
+                  </Link>
                   {/* Navigation — Bookmark-like tabs */}
                   <nav className="header-nav">
-                    {NAV_LINKS.map((link, i) => (
-                      <a
+                    {NAV_LINKS.map((link) => (
+                      <Link
                         key={link.href}
                         href={link.href}
                         className="nav-link"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
