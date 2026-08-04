@@ -142,7 +142,7 @@ Going Medieval 继续 **DO**，但本轮不是批量扩写，而是先做当前�
 | `/buildings` | P1 第一轮更新完成 | 当前建筑面板、稳定性和温度行为记录 |
 | `/tips` | P1 第一轮更新完成 | 当前存档对短建议的实测记录 |
 
-这里的“完成”表示页面已通过证据边界清理，可以安全进入发布前 QA；不表示所有游戏数值已经完成实测。
+这里的“完成”表示页面已通过证据边界清理，可以进入发布和数据观察；不表示所有游戏数值已经完成实测。
 
 ## Gate E/F 统一 QA 记录
 
@@ -150,8 +150,8 @@ Going Medieval 继续 **DO**，但本轮不是批量扩写，而是先做当前�
 |---|---|---|
 | 8 页内容证据边界 | 已完成 | P0 5 页 + P1 3 页已清理固定数字和强断言 |
 | Metadata / 单一 H1 | 已检查目标页 | 目标页面逐页核对 title、description 和 H1 |
-| Canonical / robots / sitemap | 待线上最终确认 | 本地构建和静态路由已通过，发布后需抓取 HTML |
-| GA4 / GSC / ads.txt | 基础设施保留 | 发布后做线上标记、HTTP 和抓取检查 |
+| Canonical / robots / sitemap | 线上通过 | robots.txt 和 sitemap.xml 已返回；目标页面线上内容已验证，canonical 由 metadataBase 生成 |
+| GA4 / GSC / ads.txt | 线上基础设施通过 | ads.txt、GA4、GSC 标记和线上页面已检查 |
 | Build / lint / diff | Build 通过；目标页定向 lint 通过；完整 lint 仍有既有错误；diff 通过 | 完整 lint 的历史问题未混入本轮目标页，需后续单独治理 |
 
 ## 暂不扩写页面
