@@ -1,5 +1,6 @@
 
-const SEEDS = [
+const SEEDS: { name: string; code: string; difficulty: string; desc: string; pros: string; cons: string; rating: number }[] = [];
+const RETIRED_SEEDS = [
   { 
     name: 'VALLEY', 
     code: 'valley123',
@@ -47,9 +48,10 @@ const SEEDS = [
   }, 
 ];
 export const metadata = {
-  title: "Going Medieval Best Seeds & Maps — Top 10 Picks (2026)",
+  robots: { index: false, follow: true },
+  title: "Going Medieval Seeds: Procedural Map Basics",
   description:
-    "Top 10 best seeds for Going Medieval. Hand-picked maps with rich resources, defensible terrain, and optimal biome placement.",
+    "How Going Medieval procedural seeds work, why version and settings matter, and why this guide no longer publishes unverified seed strings.",
 };
 
 export default function BestSeedsPage() {
@@ -61,7 +63,7 @@ export default function BestSeedsPage() {
             <h1 className="chapter-heading">Best Seeds & Map Guide</h1>
             <div className="aged-border p-5 mb-5" style={{ backgroundColor: 'var(--color-parchment-deep)', borderColor: '#8b2500' }}>
                 <p className="font-serif text-sm text-ink leading-relaxed">
-                  <strong className="text-vermillion">&#9888; DISCLAIMER:</strong> The specific seed codes listed below (valley123, mountain42, lake77, etc.) are <strong>player-submitted and may vary by game version</strong>. Going Medieval's procedural generation is version-dependent and the same seed string may produce different results after game updates. Test any seed in a throwaway game before committing to a long playthrough. Resource availability descriptions are approximate.
+                  <strong className="text-vermillion">&#9888; CONTENT RETIRED:</strong> The earlier seed strings and map descriptions were removed because they could not be reproduced or verified. This page is noindex and now explains only the procedural-seed system and how to test a map yourself.
                 </p>
               </div>
             <p className="drop-cap font-serif text-base text-ink-light leading-relaxed">
@@ -86,9 +88,9 @@ export default function BestSeedsPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-semibold text-ink mb-4">Top 5 Recommended Seeds</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink mb-4">No Verified Seed Recommendations</h2>
             <p className="font-serif text-base text-ink-light leading-relaxed mb-4">
-              These seeds have been tested and verified by the community to produce excellent maps with favorable terrain, resource distribution, and defense potential. Each seed is rated based on beginner-friendliness, resource abundance, and build potential.
+              No seed currently has enough reproducible evidence for a recommendation. Test candidate strings with your own game version, map size, and biome before using them in a long playthrough.
             </p>
             {SEEDS.map((seed, idx) => (
               <div key={idx} className="journal-card p-5 mb-4">
